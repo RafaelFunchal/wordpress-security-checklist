@@ -1,0 +1,17 @@
+// CSS normalize.css reset
+@import "modules/normalize";
+
+// See modules/_base.scss
+@import "modules/base";
+
+@import "partials/header";
+@import "partials/footer";
+@import "partials/ie";
+
+body {
+    @include typeface;
+}
+
+#container {
+
+}
