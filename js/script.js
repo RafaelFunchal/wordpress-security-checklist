@@ -1,6 +1,8 @@
 $(function () {
     'use strict';
 
-    // JS starts here.
+    $('input[type=checkbox]').change(function (){
+    	$(this).parent().toggleClass('checked');
+    });
 
 }());
