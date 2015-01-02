@@ -27,7 +27,12 @@
 
             <nav class="menu">
                 <ul>
-                    <li><a href="https://github.com/rafaelfunchal/wordpress-security-checklist" title="Github">Github</a></li>
+                    <li>
+                        <a href="https://github.com/rafaelfunchal/wordpress-security-checklist" target="_blank" title="Github">Github</a>
+                    </li>
+                    <li>
+                        <a href="http://guwp.org/" target="_blank" title="Grupo de Usuários WordPress Brasil">GUWP</a>
+                    </li>
                 </ul>
             </nav>
         </header>
@@ -41,32 +46,32 @@
             <section class="group">
                 <h2>Página de login</h2>
                 <ul class="items">
-                    <li class="checked">
+                    <li>
                         <input type="checkbox" id="item-1">
                         <label for="item-1">Bloqueie várias tentativas de login (<a href="https://wordpress.org/plugins/login-lockdown/" target="_blank" title="Login Lockdown">Login Lockdown</a> ou <a href="https://wordpress.org/plugins/better-wp-security/" target="_blank" title="iThemes Security">iThemes Security</a> )</label>
                     </li>
-                    <li class="">
+                    <li>
                         <input type="checkbox" id="item-2">
-                        <label for="item-2">Ative <a href="http://maketecheasier.com/protect-wordpress-blog-with-two-factor-authentication/2012/12/04" target="_blank" title="Autenticação de 2 etapas">autenticação de 2 etapas</a>
+                        <label for="item-2">Ative autenticação de 2 etapas (<a href="http://maketecheasier.com/protect-wordpress-blog-with-two-factor-authentication/2012/12/04" target="_blank" title="Ativar autenticação de 2 etapas">tutorial</a>)
                         </label>
                     </li>
-                    <li class="">
+                    <li>
                         <input type="checkbox" id="item-3">
                         <label for="item-3">Use um email para fazer login ao invés de um nome de usuário (<a href="http://wordpress.org/extend/plugins/wp-email-login/" target="_blank" title="WP Email Login">WP Email Login</a>)</label>
                     </li>
-                    <li class="">
+                    <li>
                         <input type="checkbox" id="item-4">
-                        <label for="item-4">Renomeie o arquivo wp-login.php</label>
+                        <label for="item-4">Altere o endereço da sua página de login (<a href="https://wordpress.org/plugins/better-wp-security/" target="_blank" title="iThemes Security">iThemes Security</a> ou diretamente pelo .htaccess)</label>
                     </li>
-                    <li class="">
+                    <li>
                         <input type="checkbox" id="item-5">
                         <label for="item-5">Remova links para sua página de login (caso exista algum em seu tema)</label>
                     </li>
-                    <li class="">
+                    <li>
                         <input type="checkbox" id="item-6">
-                        <label for="item-6">Use senhas fortes com letras maiúsculas e minúsculas, números e caractéres especiais (<a href="http://passwordsgenerator.net/" target="_blank" title="PasswordsGenerator.net">Gerador de senhas</a>)</label>
+                        <label for="item-6">Use senhas fortes com letras maiúsculas e minúsculas, números e caractéres especiais em todas as contas (<a href="http://passwordsgenerator.net/" target="_blank" title="PasswordsGenerator.net">gerador de senhas</a>)</label>
                     </li>
-                    <li class="">
+                    <li>
                         <input type="checkbox" id="item-7">
                         <label for="item-7">Altere sua senha periodicamente</label>
                     </li>
@@ -78,31 +83,31 @@
                 <ul class="items">
                     <li>
                         <input type="checkbox" id="item-8">
-                        <label for="item-8"></label>
+                        <label for="item-8">Proteja a pasta <em>wp-admin</em> com senha</label>
                     </li>
                     <li>
                         <input type="checkbox" id="item-9">
-                        <label for="item-9"></label>
+                        <label for="item-9">Atualize o WordPress para sua versão mais recente</label>
                     </li>
                     <li>
                         <input type="checkbox" id="item-10">
-                        <label for="item-10"></label>
+                        <label for="item-10">Não utilize uma conta com nome de usuário <em>admin</em>. Caso exista, crie uma nova conta e apague a antiga</label>
                     </li>
                     <li>
                         <input type="checkbox" id="item-11">
-                        <label for="item-11"></label>
+                        <label for="item-11">Crie uma conta <em>Editor</em> e use-a somente para publicar seu conteúdo</label>
                     </li>
                     <li>
                         <input type="checkbox" id="item-12">
-                        <label for="item-12"></label>
+                        <label for="item-12">Implemente SSL em toda seção administrativa</label>
                     </li>
                     <li>
                         <input type="checkbox" id="item-13">
-                        <label for="item-13"></label>
+                        <label for="item-13">Instale algum plugin para verificar se algum arquivo foi editado (<a href="https://wordpress.org/plugins/wp-security-scan/" target="_blank" title="WP Security Scan">WP Security Scan</a>, <a href="https://wordpress.org/plugins/wordfence/" target="_blank" title="Wordfence">Wordfence</a> ou <a href="https://wordpress.org/plugins/better-wp-security/" target="_blank" title="iThemes Security">iThemes Security</a>)</label>
                     </li>
                     <li>
                         <input type="checkbox" id="item-14">
-                        <label for="item-14"></label>
+                        <label for="item-14">Scaneie o site a procura de vírus, malwares e falhas de segurança</label>
                     </li>
                 </ul>
             </section>
@@ -112,19 +117,19 @@
                 <ul class="items">
                     <li>
                         <input type="checkbox" id="item-15">
-                        <label for="item-15"></label>
+                        <label for="item-15">Atualize o tema ativo para sua versão mais recente</label>
                     </li>
                     <li>
                         <input type="checkbox" id="item-16">
-                        <label for="item-16"></label>
+                        <label for="item-16">Apague temas inativos</label>
                     </li>
                     <li>
                         <input type="checkbox" id="item-17">
-                        <label for="item-17"></label>
+                        <label for="item-17">Apenas instale temas de fontes confiáveis</label>
                     </li>
                     <li>
                         <input type="checkbox" id="item-18">
-                        <label for="item-18"></label>
+                        <label for="item-18">Remova a versão do WordPress no tema (<a href="http://www.wpbeginner.com/wp-tutorials/the-right-way-to-remove-wordpress-version-number/" target="_blank" title="Tutorial de como remover a versão do WordPress no seu tema">tutorial</a>)</label>
                     </li>
                 </ul>
             </section>
@@ -134,23 +139,23 @@
                 <ul class="items">
                     <li>
                         <input type="checkbox" id="item-19">
-                        <label for="item-19"></label>
+                        <label for="item-19">Atualize todos os plugins para suas versões mais recentes</label>
                     </li>
                     <li>
                         <input type="checkbox" id="item-20">
-                        <label for="item-20"></label>
+                        <label for="item-20">Apague plugins inativos</label>
                     </li>
                     <li>
                         <input type="checkbox" id="item-21">
-                        <label for="item-21"></label>
+                        <label for="item-21">Apenas instale plugins de fontes confiáveis</label>
                     </li>
                     <li>
                         <input type="checkbox" id="item-22">
-                        <label for="item-22"></label>
+                        <label for="item-22">Substitua plugins desatualizados por versões alternativas atualizadas</label>
                     </li>
                     <li>
                         <input type="checkbox" id="item-23">
-                        <label for="item-23"></label>
+                        <label for="item-23">Pense bem antes de instalar uma centena de plugins</label>
                     </li>
                 </ul>
             </section>
@@ -160,11 +165,15 @@
                 <ul class="items">
                     <li>
                         <input type="checkbox" id="item-24">
-                        <label for="item-24"></label>
+                        <label for="item-24">Altere o prefixo das tabelas (<a href="http://www.maketecheasier.com/the-safe-way-to-change-your-wordpress-database-table-prefix" target="_blank" title="Altere o prefixo das tabelas">tutorial</a>)</label>
                     </li>
                     <li>
                         <input type="checkbox" id="item-25">
-                        <label for="item-25"></label>
+                        <label for="item-25">Configure backups semanais do seu banco de dados (<a href="https://wordpress.org/plugins/backup-wp/" target="_blank" title="Backup WP">Backup WP</a>, <a href="https://wordpress.org/plugins/wp-db-backup/" target="_blank" title="WP DB Backup">WP DB Backup</a> etc. )</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="item-26">
+                        <label for="item-26">Use senhas fortes com letras maiúsculas e minúsculas, números e caractéres especiais no usuário do banco de dados (<a href="http://passwordsgenerator.net/" target="_blank" title="PasswordsGenerator.net">gerador de senhas</a>)</label>
                     </li>
                 </ul>
             </section>
@@ -173,20 +182,20 @@
                 <h2>Hospedagem</h2>
                 <ul class="items">
                     <li>
-                        <input type="checkbox" id="item-26">
-                        <label for="item-26"></label>
-                    </li>
-                    <li>
                         <input type="checkbox" id="item-27">
-                        <label for="item-27"></label>
+                        <label for="item-27">Contrate uma hospedagem de confiança</label>
                     </li>
                     <li>
                         <input type="checkbox" id="item-28">
-                        <label for="item-28"></label>
+                        <label for="item-28">Acesse seu servidor apenas por SFTP ou SSH</label>
                     </li>
                     <li>
                         <input type="checkbox" id="item-29">
-                        <label for="item-29"></label>
+                        <label for="item-29">Configure as permissões das <em>pastas para 755</em> e <em>arquivos para 644</em></label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="item-30">
+                        <label for="item-30">Certifique-se que seu arquivo <em>wp-config.php</em> não pode ser acessado por outras pessoas</label>
                     </li>
                 </ul>
             </section>
@@ -194,11 +203,7 @@
         </div><!-- #main -->
 
         <footer>
-            <nav class="menu">
-                <ul>
-                    <li><a href="http://guwp.org/" title="Grupo de Usuários WordPress Brasil">GUWP</a></li>
-                </ul>
-            </nav>
+            <p>Quer ajudar a melhorar essa lista? <a href="https://github.com/rafaelfunchal/wordpress-security-checklist#contribute-to-the-project" target="_blank" title="Github">Não chore, commite!</a></p>
         </footer>
 
     </div>
