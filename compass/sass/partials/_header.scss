@@ -1,1 +1,43 @@
-header {}
+header {
+	background-color: $primary-color;
+	color: $light;
+	padding-top: 1em;
+	text-align: center;
+
+	.menu {
+		background-color: $dark;
+		border: 2px solid adjust-lightness($dark, 10%);
+		border-left: none;
+		border-right: none;
+		margin-top: 1em;
+		padding: 0.5em 0;
+		width: 100%;
+
+		li {
+			display: inline-block;
+			margin-right: 0.5em;
+
+			a {
+				text-decoration: none;
+				@include link-colors($light, $light, $light, $light, $light);
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+
+.sitle-title {
+	font-size: 3em;
+	line-height: 100%;
+	margin: 0;
+}
+
+.site-slogan {
+	font-size: 1em;
+	font-weight: 700;
+	line-height: 100%;
+	margin: 0;
+}

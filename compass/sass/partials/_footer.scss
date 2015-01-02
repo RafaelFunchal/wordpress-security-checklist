@@ -1,1 +1,17 @@
-footer {}
+footer {
+	background-color: $primary-color;
+	border-top: 2px solid shade($primary-color, 20%);
+	color: $light;
+	margin-top: 2em;
+	padding: 1em 0;
+	text-align: center;
+
+	a {
+		text-decoration: none;
+		@include link-colors($light, $light, $light, $light, $light);
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
