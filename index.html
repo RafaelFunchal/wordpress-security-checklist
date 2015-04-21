@@ -191,11 +191,23 @@
                     </li>
                     <li>
                         <input type="checkbox" id="item-29">
-                        <label for="item-29">Configure as permissões das <em>pastas para 755</em> e <em>arquivos para 644</em></label>
+                        <label for="item-29">Configure as permissões das <em>pastas para 755</em> e <em>arquivos para 644</em>(<a href="http://codex.wordpress.org/Hardening_WordPress#File_Permissions" target="_blank" title="Altere o prefixo das tabelas">conforme a documentação</a>)</label>
                     </li>
                     <li>
                         <input type="checkbox" id="item-30">
                         <label for="item-30">Certifique-se que seu arquivo <em>wp-config.php</em> não possa ser acessado por outras pessoas</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="item-31">
+                        <label for="item-31">Remova ou bloqueie via <em>.htaccess</em> os arquivos license.txt, wp-config-sample.php e readme.html</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="item-32">
+                        <label for="item-32">Desabilite o editor pelo <em>wp-config.php</em> com o código: <pre>define('DISALLOW_FILE_EDIT',true);</pre></label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="item-32">
+                        <label for="item-32">Previna a pesquisa de diretórios via <em>wp-config.php</em> com o código: <pre>Options All -IndexesOptions All -Indexes</pre></label>
                     </li>
                 </ul>
             </section>
