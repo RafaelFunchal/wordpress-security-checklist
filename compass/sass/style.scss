@@ -27,6 +27,15 @@ a {
 	}
 }
 
+pre,
+code {
+	background-color: lighten($dark, 65%);
+	display: inline-block;
+	font-size: 0.8em;
+	margin: 0;
+	padding: 0 0.3em;
+}
+
 #main {
 	margin: 0 auto;
 	width: 90%;
@@ -55,6 +64,12 @@ a {
 		
 		a {
 			@include link-colors( lighten($dark, 50%), lighten($dark, 50%), lighten($dark, 50%), lighten($dark, 50%), lighten($dark, 50%) );
+		}
+
+		pre,
+		code {
+			background-color: lighten($dark, 75%);
+			text-decoration: line-through;
 		}
 		
 		input[type=checkbox] {
