@@ -3,7 +3,7 @@ title:            WordPress Security Checklist
 email:            rafaelfunchal@gmail.com
 description:      "Uma lista de ações para aumentar a segurança da sua instalação WordPress."
 baseurl:          "/wordpress-security-checklist" # the subpath of your site, e.g. /blog/
-url:              "http://rafaelfunchal.github.io" # the base hostname & protocol for your site
+url:              "https://rafaelfunchal.github.io" # the base hostname & protocol for your site
 twitter_username: rafaelfunchal
 github_username:  rafaelfunchal
 footer_br:        "Quer ajudar a melhorar essa lista? [Não chore, commite!](https://github.com/rafaelfunchal/wordpress-security-checklist#contribute-to-the-project 'Acesse o projeto no GitHub')"
