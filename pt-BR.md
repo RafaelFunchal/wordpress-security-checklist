@@ -9,14 +9,14 @@ permalink: /pt-BR/
 
 ## Página de login
 
-* <label><input type="checkbox" /> Bloqueie várias tentativas de login ([Login Lockdown](https://wordpress.org/plugins/login-lockdown/) ou [iThemes Security](https://wordpress.org/plugins/better-wp-security/) )</label>
-* <label><input type="checkbox" /> Ative autenticação de 2 etapas ([Google Authenticator for WordPress](https://wordpress.org/plugins/wp-google-authenticator/))</label>
-* <label><input type="checkbox" /> Use um email para fazer login ao invés de um nome de usuário ([WP Email Login](http://wordpress.org/extend/plugins/wp-email-login/))</label>
-* <label><input type="checkbox" /> Altere o endereço da sua página de login ([iThemes Security](https://wordpress.org/plugins/better-wp-security/) ou diretamente pelo .htaccess)</label>
+* <label><input type="checkbox" /> Bloqueie várias tentativas de login ([Login Lockdown](https://wordpress.org/plugins/login-lockdown/){:target="_blank"} ou [iThemes Security](https://wordpress.org/plugins/better-wp-security/){:target="_blank"} )</label>
+* <label><input type="checkbox" /> Ative autenticação de 2 etapas ([Google Authenticator for WordPress](https://wordpress.org/plugins/wp-google-authenticator/){:target="_blank"})</label>
+* <label><input type="checkbox" /> Use um email para fazer login ao invés de um nome de usuário ([WP Email Login](http://wordpress.org/extend/plugins/wp-email-login/){:target="_blank"})</label>
+* <label><input type="checkbox" /> Altere o endereço da sua página de login ([iThemes Security](https://wordpress.org/plugins/better-wp-security/){:target="_blank"} ou diretamente pelo .htaccess)</label>
 * <label><input type="checkbox" /> Remova links para sua página de login (caso exista algum em seu tema)</label>
-* <label><input type="checkbox" /> Use senhas fortes com letras maiúsculas e minúsculas, números e caractéres especiais em todas as contas ([gerador de senhas](http://passwordsgenerator.net/))</label>
+* <label><input type="checkbox" /> Use senhas fortes com letras maiúsculas e minúsculas, números e caractéres especiais em todas as contas ([gerador de senhas](http://passwordsgenerator.net/){:target="_blank"})</label>
 * <label><input type="checkbox" /> Altere sua senha periodicamente</label>
-* <label><input type="checkbox" /> Faça com que a mensagem de erro de login seja genérica (user/pass) ([tutorial](https://gist.github.com/zergiocosta/72f87176b236ed0c6e13))</label>
+* <label><input type="checkbox" /> Faça com que a mensagem de erro de login seja genérica (user/pass) ([tutorial](https://gist.github.com/zergiocosta/72f87176b236ed0c6e13){:target="_blank"})</label>
 
 ## Painel Administrativo
 
@@ -25,7 +25,7 @@ permalink: /pt-BR/
 * <label><input type="checkbox" /> Não utilize uma conta com nome de usuário admin. Caso exista, crie uma nova conta e apague a antiga</label>
 * <label><input type="checkbox" /> Crie uma conta Editor e use-a somente para publicar seu conteúdo</label>
 * <label><input type="checkbox" /> Implemente SSL em toda seção administrativa</label>
-* <label><input type="checkbox" /> Instale algum plugin para verificar se algum arquivo foi editado ([WP Security Scan](https://wordpress.org/plugins/wp-security-scan/), [Wordfence](https://wordpress.org/plugins/wordfence/) ou [iThemes Security](https://wordpress.org/plugins/better-wp-security/))</label>
+* <label><input type="checkbox" /> Instale algum plugin para verificar se algum arquivo foi editado ([WP Security Scan](https://wordpress.org/plugins/wp-security-scan/){:target="_blank"}, [Wordfence](https://wordpress.org/plugins/wordfence/){:target="_blank"} ou [iThemes Security](https://wordpress.org/plugins/better-wp-security/){:target="_blank"})</label>
 * <label><input type="checkbox" /> Scaneie o site a procura de vírus, malwares e falhas de segurança</label>
 
 ## Tema
@@ -33,7 +33,7 @@ permalink: /pt-BR/
 * <label><input type="checkbox" /> Atualize o tema ativo para sua versão mais recente</label>
 * <label><input type="checkbox" /> Apague temas inativos</label>
 * <label><input type="checkbox" /> Apenas instale temas de fontes confiáveis</label>
-* <label><input type="checkbox" /> Remova a versão do WordPress no tema ([tutorial](http://www.wpbeginner.com/wp-tutorials/the-right-way-to-remove-wordpress-version-number/))</label>
+* <label><input type="checkbox" /> Remova a versão do WordPress no tema ([tutorial](http://www.wpbeginner.com/wp-tutorials/the-right-way-to-remove-wordpress-version-number/){:target="_blank"})</label>
 
 ## Plugins
 
@@ -45,15 +45,15 @@ permalink: /pt-BR/
 
 ## Banco de dados
 
-* <label><input type="checkbox" /> Altere o prefixo das tabelas ([tutorial](http://www.maketecheasier.com/the-safe-way-to-change-your-wordpress-database-table-prefix))</label>
-* <label><input type="checkbox" /> Configure backups semanais do seu banco de dados ([Backup WP](https://wordpress.org/plugins/backup-wp/), [WP DB Backup](https://wordpress.org/plugins/wp-db-backup/) etc. )</label>
-* <label><input type="checkbox" /> Use senhas fortes com letras maiúsculas e minúsculas, números e caractéres especiais no usuário do banco de dados ([gerador de senhas](http://passwordsgenerator.net/))</label>
+* <label><input type="checkbox" /> Altere o prefixo das tabelas ([tutorial](http://www.maketecheasier.com/the-safe-way-to-change-your-wordpress-database-table-prefix){:target="_blank"})</label>
+* <label><input type="checkbox" /> Configure backups semanais do seu banco de dados ([Backup WP](https://wordpress.org/plugins/backup-wp/){:target="_blank"}, [WP DB Backup](https://wordpress.org/plugins/wp-db-backup/){:target="_blank"} etc. )</label>
+* <label><input type="checkbox" /> Use senhas fortes com letras maiúsculas e minúsculas, números e caractéres especiais no usuário do banco de dados ([gerador de senhas](http://passwordsgenerator.net/){:target="_blank"})</label>
 
 ## Hospedagem
 
 * <label><input type="checkbox" /> Contrate uma hospedagem de confiança</label>
 * <label><input type="checkbox" /> Acesse seu servidor apenas por SFTP ou SSH</label>
-* <label><input type="checkbox" /> Configure as permissões das pastas para 755 e arquivos para 644 ([conforme a documentação](http://codex.wordpress.org/Hardening_WordPress#File_Permissions))</label>
+* <label><input type="checkbox" /> Configure as permissões das pastas para 755 e arquivos para 644 ([conforme a documentação](http://codex.wordpress.org/Hardening_WordPress#File_Permissions){:target="_blank"})</label>
 * <label><input type="checkbox" /> Certifique-se que seu arquivo wp-config.php não possa ser acessado por outras pessoas</label>
 * <label><input type="checkbox" /> Remova ou bloqueie via .htaccess os arquivos license.txt, wp-config-sample.php e readme.html</label>
 * <label><input type="checkbox" /> Desabilite o editor pelo wp-config.php com o código: `define('DISALLOW_FILE_EDIT',true);`</label>
