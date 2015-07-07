@@ -1,0 +1,20 @@
+# Site settings
+title: WordPress Security Checklist
+email: rafaelfunchal@gmail.com
+description: "Uma lista de ações para aumentar a segurança da sua instalação WordPress."
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://rafaelfunchal.github.io/wordpress-security-checklist" # the base hostname & protocol for your site
+twitter_username: rafaelfunchal
+github_username:  rafaelfunchal
+footer_br: "Quer ajudar a melhorar essa lista? [Não chore, commite!](https://github.com/rafaelfunchal/wordpress-security-checklist#contribute-to-the-project 'Acesse o projeto no GitHub')"
+
+# Handling Reading
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+encoding: "utf-8"
+
+# Conversion
+markdown: kramdown
+
+# Markdown Processors
+kramdown:
+  input: GFM
