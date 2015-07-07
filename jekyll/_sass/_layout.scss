@@ -153,7 +153,11 @@
             list-style-image: none;
             list-style-type: none;
 
-            &.checked {
+            label {
+                cursor: pointer;
+            }
+
+            .checked {
                 text-decoration: line-through;
                 color: lighten($text-color, 50%);
 
@@ -161,6 +165,21 @@
                 a:visited {
                     color: lighten($text-color, 50%);
                 }
+        
+                pre,
+                code {
+                    background-color: lighten($text-color, 75%);
+                    text-decoration: line-through;
+                }
+        
+                input[type=checkbox] {
+                  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+                  opacity: 0.8;
+                }
+            }
+    
+            input[type=checkbox] {
+                margin-right: 5px;
             }
         }
     }
@@ -213,6 +232,9 @@
 
     h2 {
         font-size: 32px;
+        margin-bottom: 0;
+        margin-top: $spacing-unit / 2;
+
 
         @include media-query($on-laptop) {
             font-size: 28px;

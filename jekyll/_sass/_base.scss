@@ -23,6 +23,11 @@ body {
     -webkit-text-size-adjust: 100%;
 }
 
+::selection {
+  background: #fe57a1;
+  color: #ffffff;
+}
+
 
 
 /**
