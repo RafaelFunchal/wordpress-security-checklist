@@ -10,7 +10,6 @@ footer_br:        "Quer ajudar a melhorar essa lista? [Não chore, commite!](htt
 markdown:         kramdown
 kramdown:
    input:         GFM
-destination:      ./_gh_pages
 exclude:          ["README.md"]
 paginate:         5
 encoding:         UTF-8
