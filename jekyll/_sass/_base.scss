@@ -64,7 +64,6 @@ figcaption {
  * Lists
  */
 ul, ol {
-    margin-left: $spacing-unit;
 }
 
 li {
@@ -198,7 +197,7 @@ pre {
         vertical-align: middle;
 
         path {
-            fill: $grey-color;
+            fill: $grey-color-light;
         }
     }
 }

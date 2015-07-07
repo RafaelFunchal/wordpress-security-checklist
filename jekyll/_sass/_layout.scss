@@ -2,86 +2,57 @@
  * Site header
  */
 .site-header {
-    border-top: 5px solid $grey-color-dark;
-    border-bottom: 1px solid $grey-color-light;
-    min-height: 56px;
+    background-color: $brand-color;
+    color: $grey-color-light;
+    padding-top: 1em;
+    text-align: center;
 
     // Positioning context for the mobile navigation icon
     position: relative;
 }
 
 .site-title {
-    font-size: 26px;
-    line-height: 56px;
+    display: block;
+    font-size: 3em;
+    line-height: 100%;
+    margin: 0;
     letter-spacing: -1px;
-    margin-bottom: 0;
-    float: left;
 
     &,
     &:visited {
-        color: $grey-color-dark;
+        color: $grey-color-light;
     }
 }
 
+.site-description {
+    display: block;
+    font-size: 1em;
+    font-weight: 700;
+    line-height: 100%;
+    margin: 0;
+}
+
 .site-nav {
-    float: right;
-    line-height: 56px;
+    background-color: $grey-color-dark;
+    border: 2px solid lighten($grey-color-dark, 10%);
+    border-left: none;
+    border-right: none;
+    line-height: $base-line-height;
+    margin-top: 1em;
+    padding: 0.5em 0;
+    width: 100%;
 
     .menu-icon {
         display: none;
     }
 
     .page-link {
-        color: $text-color;
+        color: $grey-color-light;
         line-height: $base-line-height;
 
         // Gaps between nav items, but not on the first one
         &:not(:first-child) {
             margin-left: 20px;
-        }
-    }
-
-    @include media-query($on-palm) {
-        position: absolute;
-        top: 9px;
-        right: 30px;
-        background-color: $background-color;
-        border: 1px solid $grey-color-light;
-        border-radius: 5px;
-        text-align: right;
-
-        .menu-icon {
-            display: block;
-            float: right;
-            width: 36px;
-            height: 26px;
-            line-height: 0;
-            padding-top: 10px;
-            text-align: center;
-
-            > svg {
-                width: 18px;
-                height: 15px;
-
-                path {
-                    fill: $grey-color-dark;
-                }
-            }
-        }
-
-        .trigger {
-            clear: both;
-            display: none;
-        }
-
-        &:hover .trigger {
-            display: block;
-            padding-bottom: 5px;
-        }
-
-        .page-link {
-            display: block;
-            padding: 5px 10px;
         }
     }
 }
@@ -92,11 +63,22 @@
  * Site footer
  */
 .site-footer {
-    border-top: 1px solid $grey-color-light;
+    background-color: $brand-color;
+    border-top: 2px solid darken($brand-color, 10%);
+    color: $grey-color-light;
+    margin-top: 2em;
     padding: $spacing-unit 0;
+
+    a {
+        color: $grey-color-light;
+        &:visited {
+            color: $grey-color-light;
+        }
+    }
 }
 
 .footer-heading {
+    color: $grey-color-light;
     font-size: 18px;
     margin-bottom: $spacing-unit / 2;
 }
@@ -109,7 +91,7 @@
 
 .footer-col-wrapper {
     font-size: 15px;
-    color: $grey-color;
+    color: $grey-color-light;
     margin-left: -$spacing-unit / 2;
     @extend %clearfix;
 }
@@ -121,18 +103,18 @@
 }
 
 .footer-col-1 {
-    width: -webkit-calc(35% - (#{$spacing-unit} / 2));
-    width:         calc(35% - (#{$spacing-unit} / 2));
+    width: -webkit-calc(15% - (#{$spacing-unit} / 2));
+    width:         calc(15% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-2 {
-    width: -webkit-calc(20% - (#{$spacing-unit} / 2));
-    width:         calc(20% - (#{$spacing-unit} / 2));
+    width: -webkit-calc(30% - (#{$spacing-unit} / 2));
+    width:         calc(30% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-3 {
-    width: -webkit-calc(45% - (#{$spacing-unit} / 2));
-    width:         calc(45% - (#{$spacing-unit} / 2));
+    width: -webkit-calc(55% - (#{$spacing-unit} / 2));
+    width:         calc(55% - (#{$spacing-unit} / 2));
 }
 
 @include media-query($on-laptop) {
@@ -163,6 +145,25 @@
  */
 .page-content {
     padding: $spacing-unit 0;
+
+    ul {
+        list-style: none;
+
+        li {
+            list-style-image: none;
+            list-style-type: none;
+
+            &.checked {
+                text-decoration: line-through;
+                color: lighten($text-color, 50%);
+
+                a,
+                a:visited {
+                    color: lighten($text-color, 50%);
+                }
+            }
+        }
+    }
 }
 
 .page-heading {
