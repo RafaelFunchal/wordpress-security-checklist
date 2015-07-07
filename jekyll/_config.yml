@@ -1,14 +1,20 @@
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+title: WordPress Security Checklist
+email: rafaelfunchal@gmail.com
+description: "Uma lista de ações para aumentar a segurança da sua instalação WordPress."
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "http://rafaelfunchal.github.io/wordpress-security-checklist" # the base hostname & protocol for your site
+twitter_username: rafaelfunchal
+github_username:  rafaelfunchal
+footer_br: "Quer ajudar a melhorar essa lista? [Não chore, commite!](https://github.com/rafaelfunchal/wordpress-security-checklist#contribute-to-the-project 'Acesse o projeto no GitHub')"
 
-# Build settings
+# Handling Reading
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+encoding: "utf-8"
+
+# Conversion
 markdown: kramdown
+
+# Markdown Processors
+kramdown:
+  input: GFM
