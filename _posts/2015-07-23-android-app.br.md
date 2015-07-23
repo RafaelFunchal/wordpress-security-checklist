@@ -11,6 +11,6 @@ Para continuar com essa onda positiva, decidi criar uma versão mobile do checkl
 
 Além disso serviu como desculpa para que eu estudasse [Ionic](http://ionicframework.com/){:target="_blank"}.
 
-Você pode ver os screenshots do aplicativo e instalá-lo em seu Android diretamente do [Google Play](https://lh3.googleusercontent.com/rpjiiCdqw9VzNYxxflTgRIizVLnou8bz_863G7_4HqBnHa7f0fdGiC91wBcXyBnH2w=h900){:target="_blank"}.
+Você pode ver os screenshots do aplicativo e instalá-lo em seu Android diretamente do [Google Play](https://play.google.com/store/apps/details?id=com.ionicframework.wordpresssecuritychecklistapp804039){:target="_blank"}.
 
 Não se esqueça de dar algumas estrelinhas :-)

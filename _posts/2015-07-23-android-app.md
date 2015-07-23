@@ -11,6 +11,6 @@ In order to keep the good vibes, I decided to create a mobile version of the che
 
 Besides that, I used it as an excuse to learn about [Ionic](http://ionicframework.com/){:target="_blank"}.
 
-You can see the app screenshots and install it on your Android device on [Google Play](https://lh3.googleusercontent.com/rpjiiCdqw9VzNYxxflTgRIizVLnou8bz_863G7_4HqBnHa7f0fdGiC91wBcXyBnH2w=h900){:target="_blank"}.
+You can see the app screenshots and install it on your Android device on [Google Play](https://play.google.com/store/apps/details?id=com.ionicframework.wordpresssecuritychecklistapp804039){:target="_blank"}.
 
 Don't forget to give it some stars :-)
