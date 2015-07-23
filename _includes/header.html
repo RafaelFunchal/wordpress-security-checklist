@@ -1,7 +1,7 @@
 <header class="site-header">
 
-  <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
-  <span class="site-description">{{ site.description }}</span>
+  <a class="site-title" href="{{ site.baseurl }}/{% if page.is_default_language == false %}{{ page.language }}/{% endif %}">{{ site.title }}</a>
+  <span class="site-description">{{ site.t.[page.language].description }}</span>
 
   <nav class="site-nav">
     <a href="#" class="menu-icon">
@@ -13,12 +13,19 @@
     </a>
 
     <div class="trigger">
-      <a class="page-link" href="{{ site.baseurl }}/">Blog</a>
-      {% for page in site.pages %}
+      {% assign pages=site.pages | where:"language", page.language %}
+      {% for page in pages %}
         {% if page.title %}
-        <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+          <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">Checklist</a>
         {% endif %}
       {% endfor %}
+      <a class="page-link" href="{{ site.baseurl }}/{% if page.is_default_language == false %}{{ page.language }}/{% endif %}">Blog</a>
+
+      {% for language in site.languages %}
+        {% if page.language != language %}
+          <a class="page-link" href="{{ site.baseurl }}/{% if site.language_default != language %}{{ language }}/{% endif %}">{{ site.t.[page.language].switch }}</a>
+        {% endif %}
+      {% endfor%}
     </div>
   </nav>
 

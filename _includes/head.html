@@ -4,7 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>{% if page.title %}{{ site.title }} - {{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.t.[page.language].description }}{% endif %}">
 
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl | prepend: site.url }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
@@ -12,7 +12,7 @@
 
   <meta property="og:type" content="{% if page.title %}article{% else %}website{% endif %}">
   <meta property="og:title" content="{% if page.title %}{{ site.title }} - {{ page.title }}{% else %}{{ site.title }}{% endif %}" >
-  <meta property="og:description" content="{{ site.description }}" >
+  <meta property="og:description" content="{{ site.t.[page.language].description }}" >
   <meta property="og:url" content="{{ site.url }}{{ site.baseurl | append: page.url }}" >
   <meta property="og:site_name" content="{{ site.title }}" >
   <meta property="og:image" content="{{ "/img/screenshot.png" | prepend: site.baseurl | prepend: site.url }}">

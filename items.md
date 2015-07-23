@@ -1,7 +1,7 @@
 ---
-layout: page
-title: en-US
-permalink: /en-US/
+layout:    page
+title:     en-US
+permalink: /items/
 ---
 
 > Most of the time a website running WordPress is hacked the culprit is not WordPress, but of any silly misconfiguration that could be avoided during its development.
