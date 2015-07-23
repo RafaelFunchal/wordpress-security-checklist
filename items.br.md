@@ -1,7 +1,7 @@
 ---
-layout: page
-title: pt-BR
-permalink: /pt-BR/
+layout:    page
+title:     pt-BR
+permalink: /items/
 ---
 
 > A maioria das vezes que um site feito com WordPress é invadido a culpa não é do WordPress, mas sim de alguma falha boba que poderia ter sido evitada durante a sua construção.

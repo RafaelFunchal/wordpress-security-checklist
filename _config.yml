@@ -1,12 +1,10 @@
 # Site settings
 title:            WordPress Security Checklist
 email:            rafaelfunchal@gmail.com
-description:      "Uma lista de ações para aumentar a segurança da sua instalação WordPress."
 baseurl:          "/wordpress-security-checklist" # the subpath of your site, e.g. /blog/
 url:              "https://rafaelfunchal.github.io" # the base hostname & protocol for your site
 twitter_username: rafaelfunchal
 github_username:  rafaelfunchal
-footer_br:        "Quer ajudar a melhorar essa lista? [Não chore, commite!](https://github.com/rafaelfunchal/wordpress-security-checklist#contribute-to-the-project 'Acesse o projeto no GitHub'){:target='_blank'}"
 markdown:         kramdown
 kramdown:
    input:         GFM
@@ -17,3 +15,20 @@ future:           false
 
 # Permalinks
 permalink:   pretty
+
+# Languages
+gems:             ['jekyll-multiple-languages']
+language_default: 'en'
+languages:        ['en', 'br']
+
+t:
+  en:
+      description: "A checklist of actions that you should take to increase the security of your WordPress website."
+      commit:      "Would you like to improve the checklist? [Don't cry, commit!](https://github.com/rafaelfunchal/wordpress-security-checklist#contribute-to-the-project 'Access the project on GitHub'){:target='_blank'}"
+      switch:      "Ver em pt-BR"
+      apps:        "Get our app!"
+  br:
+      description: "Uma lista de ações para aumentar a segurança da sua instalação WordPress."
+      commit:      "Quer ajudar a melhorar essa lista? [Não chore, commite!](https://github.com/rafaelfunchal/wordpress-security-checklist#contribute-to-the-project 'Acesse o projeto no GitHub'){:target='_blank'}"
+      switch:      "View in en-US"
+      apps:        "Instale nosso aplicativo!"
