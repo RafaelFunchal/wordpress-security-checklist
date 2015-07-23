@@ -6,17 +6,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>WordPress Security Checklist</title>
+  <title>WordPress Security Checklist - en-US</title>
   <meta name="description" content="A checklist of actions that you should take to increase the security of your WordPress website.">
 
   <link rel="stylesheet" href="https://rafaelfunchal.github.io/wordpress-security-checklist/css/main.css">
-  <link rel="canonical" href="https://rafaelfunchal.github.io/wordpress-security-checklist/">
+  <link rel="canonical" href="https://rafaelfunchal.github.io/wordpress-security-checklist/items/">
   <link rel="alternate" type="application/rss+xml" title="WordPress Security Checklist" href="https://rafaelfunchal.github.io/wordpress-security-checklist/feed.xml" />
 
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="WordPress Security Checklist" >
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="WordPress Security Checklist - en-US" >
   <meta property="og:description" content="A checklist of actions that you should take to increase the security of your WordPress website." >
-  <meta property="og:url" content="https://rafaelfunchal.github.io/wordpress-security-checklist/" >
+  <meta property="og:url" content="https://rafaelfunchal.github.io/wordpress-security-checklist/items/" >
   <meta property="og:site_name" content="WordPress Security Checklist" >
   <meta property="og:image" content="https://rafaelfunchal.github.io/wordpress-security-checklist/img/screenshot.png">
   <meta property="og:image:type" content="image/png">
@@ -72,32 +72,87 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
+        <div class="post">
 
-  <h1 class="page-heading">Blog</h1>
+  <header class="post-header">
+  
+<ul>
 
-  <ul class="post-list">
-    
-    
-      <li>
-        <span class="post-meta">2015-07-13</span>
+</ul>
+    <h1 class="post-title">en-US</h1>
+  </header>
 
-        <h2>
-          <a class="post-link" href="/wordpress-security-checklist/update/2015/07/13/english-version/">Now we have an English version of the checklist</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">2015-07-06</span>
+  <article class="post-content">
+    <blockquote>
+  <p>Most of the time a website running WordPress is hacked the culprit is not WordPress, but of any silly misconfiguration that could be avoided during its development.<br />
+That’s the idea of this project: Being a checklist of actions that you should take to increase the security of your website.</p>
+</blockquote>
 
-        <h2>
-          <a class="post-link" href="/wordpress-security-checklist/update/2015/07/06/news/">Now it's easier to manage the items</a>
-        </h2>
-      </li>
-    
-  </ul>
+<h2 id="login-page">Login Page</h2>
 
-  <p class="rss-subscribe">subscribe <a href="/wordpress-security-checklist/feed.xml">via RSS</a></p>
+<ul>
+  <li><label><input type="checkbox" /> Lockdown the login page for repetitive failed login (<a href="https://wordpress.org/plugins/login-lockdown/" target="_blank">Login Lockdown</a> or <a href="https://wordpress.org/plugins/better-wp-security/" target="_blank">iThemes Security</a> )</label></li>
+  <li><label><input type="checkbox" /> Activate 2 factor authentication (<a href="https://wordpress.org/plugins/wp-google-authenticator/" target="_blank">Google Authenticator for WordPress</a>)</label></li>
+  <li><label><input type="checkbox" /> Use email address to login instead of username (<a href="http://wordpress.org/extend/plugins/wp-email-login/" target="_blank">WP Email Login</a>)</label></li>
+  <li><label><input type="checkbox" /> Rename the URL of your login page (<a href="https://wordpress.org/plugins/better-wp-security/" target="_blank">iThemes Security</a> or directly on .htaccess)</label></li>
+  <li><label><input type="checkbox" /> Remove login links from the theme (if there’s any)</label></li>
+  <li><label><input type="checkbox" /> Use a strong password contaning uppercase, lowercase, numbers, and special characters on all accounts (<a href="http://passwordsgenerator.net/" target="_blank">password generator</a>)</label></li>
+  <li><label><input type="checkbox" /> Change the passwords regularly</label></li>
+  <li><label><input type="checkbox" /> Make the login error messages more generical (user/pass) (<a href="https://gist.github.com/zergiocosta/72f87176b236ed0c6e13" target="_blank">tutorial</a>)</label></li>
+</ul>
+
+<h2 id="administrative-panel">Administrative Panel</h2>
+
+<ul>
+  <li><label><input type="checkbox" /> Password protect the folder wp-admin</label></li>
+  <li><label><input type="checkbox" /> Keep WordPress up-to-date</label></li>
+  <li><label><input type="checkbox" /> Do not create an account with username admin. If there is any, create a new Administrator account and delete the old one</label></li>
+  <li><label><input type="checkbox" /> Create an Editor account and use it solely to publish content</label></li>
+  <li><label><input type="checkbox" /> Implement SSL for the WordPress admin section</label></li>
+  <li><label><input type="checkbox" /> Install any plugins to check file changes (<a href="https://wordpress.org/plugins/wp-security-scan/" target="_blank">WP Security Scan</a>, <a href="https://wordpress.org/plugins/wordfence/" target="_blank">Wordfence</a> or <a href="https://wordpress.org/plugins/better-wp-security/" target="_blank">iThemes Security</a>)</label></li>
+  <li><label><input type="checkbox" /> Scan the website for viruses, malware, and security breaches</label></li>
+</ul>
+
+<h2 id="themes">Themes</h2>
+
+<ul>
+  <li><label><input type="checkbox" /> Keep the theme up-to-date</label></li>
+  <li><label><input type="checkbox" /> Delete and remove unused themes</label></li>
+  <li><label><input type="checkbox" /> Download and use themes only from reputable sources</label></li>
+  <li><label><input type="checkbox" /> Remove the WordPress version from the theme (<a href="http://www.wpbeginner.com/wp-tutorials/the-right-way-to-remove-wordpress-version-number/" target="_blank">tutorial</a>)</label></li>
+</ul>
+
+<h2 id="plugins">Plugins</h2>
+
+<ul>
+  <li><label><input type="checkbox" /> Keep all plugins up-to-date</label></li>
+  <li><label><input type="checkbox" /> Delete and remove unused plugins</label></li>
+  <li><label><input type="checkbox" /> Download and use plugins only from reputable sources</label></li>
+  <li><label><input type="checkbox" /> Replace outdated plugins for alternative newer plugins</label></li>
+  <li><label><input type="checkbox" /> Think twice before installing a ton of plugins</label></li>
+</ul>
+
+<h2 id="database">Database</h2>
+
+<ul>
+  <li><label><input type="checkbox" /> Change the default table prefix (<a href="http://www.maketecheasier.com/the-safe-way-to-change-your-wordpress-database-table-prefix" target="_blank">tutorial</a>)</label></li>
+  <li><label><input type="checkbox" /> Schedule weekly backup of the database (<a href="https://wordpress.org/plugins/backup-wp/" target="_blank">Backup WP</a>, <a href="https://wordpress.org/plugins/wp-db-backup/" target="_blank">WP DB Backup</a> etc. )</label></li>
+  <li><label><input type="checkbox" /> Use a strong password contaning uppercase, lowercase, numbers, and special characters for the database user (<a href="http://passwordsgenerator.net/" target="_blank">password generator</a>)</label></li>
+</ul>
+
+<h2 id="hosting-provider">Hosting provider</h2>
+
+<ul>
+  <li><label><input type="checkbox" /> Hire a reliable hosting provider</label></li>
+  <li><label><input type="checkbox" /> Connect to your server only through SFTP or SSH</label></li>
+  <li><label><input type="checkbox" /> Set all folder permission to 755 and files to 644 (<a href="http://codex.wordpress.org/Hardening_WordPress#File_Permissions" target="_blank">accourding to the Codex</a>)</label></li>
+  <li><label><input type="checkbox" /> Make sure the wp-config.php file is not accessible by others</label></li>
+  <li><label><input type="checkbox" /> Remove or block via .htaccess the files license.txt, wp-config-sample.php, and readme.html</label></li>
+  <li><label><input type="checkbox" /> Disable file edit via wp-config.php by adding the following code: <code>define('DISALLOW_FILE_EDIT',true);</code></label></li>
+  <li><label><input type="checkbox" /> Prevent directory listing via .htaccess by adding the following code: <code>Options All -IndexesOptions All -Indexes</code></label></li>
+</ul>
+
+  </article>
 
 </div>
 
