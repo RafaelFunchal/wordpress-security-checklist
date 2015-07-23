@@ -2,24 +2,8 @@
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">{{ site.title }}</h2>
-
-    <div class="trigger">
-    </div>
-
     <div class="footer-col-wrapper">
       <div class="footer-col  footer-col-1">
-        <ul class="contact-list">
-          <li>
-            <a class="page-link" href="http://guwp.org/" target="_blank">GUWP</a>
-          </li>
-          <li>
-            <a class="page-link" href="https://github.com/rafaelfunchal/wordpress-security-checklist" target="_blank">Github</a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="footer-col  footer-col-2">
         <ul class="social-media-list">
           {% if site.github_username %}
           <li>
@@ -52,11 +36,18 @@
         </ul>
       </div>
 
-      <div class="footer-col  footer-col-3">
+      <div class="footer-col  footer-col-2">
         {{ site.t.[page.language].commit | markdownify }}
       </div>
-    </div>
 
+      <div class="footer-col  footer-col-3">
+        <h2 class="footer-heading">{{ site.t.[page.language].apps }}</h2>
+        <a href="https://play.google.com/store/apps/details?id=com.ionicframework.wordpresssecuritychecklistapp804039" target="_blank">
+          <img alt="Get it on Google Play" src="https://developer.android.com/images/brand/en_generic_rgb_wo_45.png" />
+        </a>
+      </div>
+
+    </div>
   </div>
 
 </footer>

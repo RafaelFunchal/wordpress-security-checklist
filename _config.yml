@@ -26,7 +26,9 @@ t:
       description: "A checklist of actions that you should take to increase the security of your WordPress website."
       commit:      "Would you like to improve the checklist? [Don't cry, commit!](https://github.com/rafaelfunchal/wordpress-security-checklist#contribute-to-the-project 'Access the project on GitHub'){:target='_blank'}"
       switch:      "Ver em pt-BR"
+      apps:        "Get our app!"
   br:
       description: "Uma lista de ações para aumentar a segurança da sua instalação WordPress."
       commit:      "Quer ajudar a melhorar essa lista? [Não chore, commite!](https://github.com/rafaelfunchal/wordpress-security-checklist#contribute-to-the-project 'Acesse o projeto no GitHub'){:target='_blank'}"
       switch:      "View in en-US"
+      apps:        "Instale nosso aplicativo!"
