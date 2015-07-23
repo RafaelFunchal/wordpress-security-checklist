@@ -5,21 +5,46 @@
     <description></description>
     <link>https://rafaelfunchal.github.io/wordpress-security-checklist/</link>
     <atom:link href="https://rafaelfunchal.github.io/wordpress-security-checklist/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 23 Jul 2015 08:22:52 -0300</pubDate>
-    <lastBuildDate>Thu, 23 Jul 2015 08:22:52 -0300</lastBuildDate>
+    <pubDate>Thu, 23 Jul 2015 09:24:33 -0300</pubDate>
+    <lastBuildDate>Thu, 23 Jul 2015 09:24:33 -0300</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
-        <title>Now we have an English version of the checklist</title>
-        <description>&lt;p&gt;Finally I found a few time to translate the checkilist to English \o/&lt;/p&gt;
+        <title>Lançamento do aplicativo para Android</title>
+        <description>&lt;p&gt;Desde que criei esse projeto tenho recebido muitos feedbacks positivos nas redes sociais. &lt;strong&gt;Muito obrigado, galera!&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;Probably you noticed that there are a few strings in Brazilian Portuguese on header and footer. Right now, only the checklist is translated, but I intend to make the entire website multi language friendly soon.&lt;/p&gt;
+&lt;p&gt;Para continuar com essa onda positiva, decidi criar uma versão mobile do checklist. O site já é bem renderizado em dispositivos mobile, porém, acredito que um aplicativo tornará a experiência do usuário ainda melhor.&lt;/p&gt;
 
-&lt;p&gt;If you have some suggestion, please, poke me on &lt;a href=&quot;http://twitter.com/RafaelFunchal&quot; target=&quot;_blank&quot;&gt;Twitter&lt;/a&gt; or &lt;a href=&quot;https://github.com/rafaelfunchal/wordpress-security-checklist/issues&quot; target=&quot;_blank&quot;&gt;open an issue on GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Além disso serviu como desculpa para que eu estudasse &lt;a href=&quot;http://ionicframework.com/&quot; target=&quot;_blank&quot;&gt;Ionic&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Você pode ver os screenshots do aplicativo e instalá-lo em seu Android diretamente do &lt;a href=&quot;https://lh3.googleusercontent.com/rpjiiCdqw9VzNYxxflTgRIizVLnou8bz_863G7_4HqBnHa7f0fdGiC91wBcXyBnH2w=h900&quot; target=&quot;_blank&quot;&gt;Google Play&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Não se esqueça de dar algumas estrelinhas :-)&lt;/p&gt;
 </description>
-        <pubDate>Mon, 13 Jul 2015 12:30:00 -0300</pubDate>
-        <link>https://rafaelfunchal.github.io/wordpress-security-checklist/update/2015/07/13/english-version/</link>
-        <guid isPermaLink="true">https://rafaelfunchal.github.io/wordpress-security-checklist/update/2015/07/13/english-version/</guid>
+        <pubDate>Thu, 23 Jul 2015 05:53:00 -0300</pubDate>
+        <link>https://rafaelfunchal.github.io/wordpress-security-checklist/br/update/2015/07/23/android-app/</link>
+        <guid isPermaLink="true">https://rafaelfunchal.github.io/wordpress-security-checklist/br/update/2015/07/23/android-app/</guid>
+        
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>Release of our Android app</title>
+        <description>&lt;p&gt;Since I created this project I’ve received a lot of positive feedbacks on social networks. &lt;strong&gt;Thank you, guys!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;In order to keep the good vibes, I decided to create a mobile version of the checklist. The website is well rendered on mobile devices, but I believe that an app would make the user experience even better.&lt;/p&gt;
+
+&lt;p&gt;Besides that, I used it as an excuse to learn about &lt;a href=&quot;http://ionicframework.com/&quot; target=&quot;_blank&quot;&gt;Ionic&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;You can see the app screenshots and install it on your Android device on &lt;a href=&quot;https://lh3.googleusercontent.com/rpjiiCdqw9VzNYxxflTgRIizVLnou8bz_863G7_4HqBnHa7f0fdGiC91wBcXyBnH2w=h900&quot; target=&quot;_blank&quot;&gt;Google Play&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Don’t forget to give it some stars :-)&lt;/p&gt;
+</description>
+        <pubDate>Thu, 23 Jul 2015 05:53:00 -0300</pubDate>
+        <link>https://rafaelfunchal.github.io/wordpress-security-checklist/update/2015/07/23/android-app/</link>
+        <guid isPermaLink="true">https://rafaelfunchal.github.io/wordpress-security-checklist/update/2015/07/23/android-app/</guid>
         
         
         <category>update</category>
@@ -44,22 +69,16 @@
       </item>
     
       <item>
-        <title>Now it&#39;s easier to manage the items</title>
-        <description>&lt;p&gt;I created this project earlier this year inspired by a post on the group WordPress Brasil on Facebook (&lt;a href=&quot;http://www.rafaelfunchal.com.br/blog/wordpress-security-checklist/&quot;&gt;read more here&lt;/a&gt;) and made it quickly without considering its scalability and maintenance.&lt;/p&gt;
+        <title>Now we have an English version of the checklist</title>
+        <description>&lt;p&gt;Finally I found a few time to translate the checkilist to English \o/&lt;/p&gt;
 
-&lt;p&gt;As I intend to create an English version and in order to make the content management easier, it would necessary to remove the content from the HTML code.&lt;/p&gt;
+&lt;p&gt;Probably you noticed that there are a few strings in Brazilian Portuguese on header and footer. Right now, only the checklist is translated, but I intend to make the entire website multi language friendly soon.&lt;/p&gt;
 
-&lt;p&gt;In short words:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;I don’t want to rewrite unnecessary code.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;So migrating to Jekyll was the best solution because I’ll keep the project on Github :-)&lt;/p&gt;
+&lt;p&gt;If you have some suggestion, please, poke me on &lt;a href=&quot;http://twitter.com/RafaelFunchal&quot; target=&quot;_blank&quot;&gt;Twitter&lt;/a&gt; or &lt;a href=&quot;https://github.com/rafaelfunchal/wordpress-security-checklist/issues&quot; target=&quot;_blank&quot;&gt;open an issue on GitHub&lt;/a&gt;.&lt;/p&gt;
 </description>
-        <pubDate>Mon, 06 Jul 2015 22:17:07 -0300</pubDate>
-        <link>https://rafaelfunchal.github.io/wordpress-security-checklist/update/2015/07/06/news/</link>
-        <guid isPermaLink="true">https://rafaelfunchal.github.io/wordpress-security-checklist/update/2015/07/06/news/</guid>
+        <pubDate>Mon, 13 Jul 2015 12:30:00 -0300</pubDate>
+        <link>https://rafaelfunchal.github.io/wordpress-security-checklist/update/2015/07/13/english-version/</link>
+        <guid isPermaLink="true">https://rafaelfunchal.github.io/wordpress-security-checklist/update/2015/07/13/english-version/</guid>
         
         
         <category>update</category>
@@ -84,6 +103,29 @@
         <pubDate>Mon, 06 Jul 2015 22:17:07 -0300</pubDate>
         <link>https://rafaelfunchal.github.io/wordpress-security-checklist/br/update/2015/07/06/news/</link>
         <guid isPermaLink="true">https://rafaelfunchal.github.io/wordpress-security-checklist/br/update/2015/07/06/news/</guid>
+        
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>Now it&#39;s easier to manage the items</title>
+        <description>&lt;p&gt;I created this project earlier this year inspired by a post on the group WordPress Brasil on Facebook (&lt;a href=&quot;http://www.rafaelfunchal.com.br/blog/wordpress-security-checklist/&quot;&gt;read more here&lt;/a&gt;) and made it quickly without considering its scalability and maintenance.&lt;/p&gt;
+
+&lt;p&gt;As I intend to create an English version and in order to make the content management easier, it would necessary to remove the content from the HTML code.&lt;/p&gt;
+
+&lt;p&gt;In short words:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;I don’t want to rewrite unnecessary code.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So migrating to Jekyll was the best solution because I’ll keep the project on Github :-)&lt;/p&gt;
+</description>
+        <pubDate>Mon, 06 Jul 2015 22:17:07 -0300</pubDate>
+        <link>https://rafaelfunchal.github.io/wordpress-security-checklist/update/2015/07/06/news/</link>
+        <guid isPermaLink="true">https://rafaelfunchal.github.io/wordpress-security-checklist/update/2015/07/06/news/</guid>
         
         
         <category>update</category>
