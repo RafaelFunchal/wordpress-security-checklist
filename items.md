@@ -20,7 +20,7 @@ permalink: /items/
 
 ## Administrative Panel
 
-* <label><input type="checkbox" /> Password protect the folder wp-admin</label>
+* <label><input type="checkbox" /> Password protect the folder wp-admin ([unblock only the needed files](https://gist.github.com/rafaelfunchal/f9a41ea72d80600d753a){:target="_blank"})</label>
 * <label><input type="checkbox" /> Keep WordPress up-to-date</label>
 * <label><input type="checkbox" /> Do not create an account with username admin. If there is any, create a new Administrator account and delete the old one</label>
 * <label><input type="checkbox" /> Create an Editor account and use it solely to publish content</label>

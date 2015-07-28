@@ -20,7 +20,7 @@ permalink: /items/
 
 ## Painel Administrativo
 
-* <label><input type="checkbox" /> Proteja a pasta wp-admin com senha</label>
+* <label><input type="checkbox" /> Proteja a pasta wp-admin com senha ([desbloqueie apenas os arquivos necessários](https://gist.github.com/rafaelfunchal/f9a41ea72d80600d753a){:target="_blank"})</label>
 * <label><input type="checkbox" /> Atualize o WordPress para sua versão mais recente</label>
 * <label><input type="checkbox" /> Não utilize uma conta com nome de usuário admin. Caso exista, crie uma nova conta e apague a antiga</label>
 * <label><input type="checkbox" /> Crie uma conta Editor e use-a somente para publicar seu conteúdo</label>
