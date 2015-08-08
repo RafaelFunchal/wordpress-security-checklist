@@ -1,0 +1,20 @@
+@media print { 
+    .site-nav {
+        display: none;
+    }
+
+    .site-header {
+        background-color: #fff;
+        border-bottom: 1px solid $text-color;
+        padding: 1em 0;
+        color: $text-color;
+
+        .site-title {
+            color: $text-color;
+        }
+    }
+
+    .site-footer {
+        display: none;
+    }
+}
