@@ -1,4 +1,4 @@
-@media print { 
+@media print {
     .site-nav {
         display: none;
     }
@@ -16,5 +16,17 @@
 
     .site-footer {
         display: none;
+    }
+
+    a,
+    a:visited,
+    a:active {
+      color: $text-color;
+    }
+
+    .page-content a:after {
+      content: " url:" attr(href) " ";
+      font-size: 0.8em;
+      font-weight: normal;
     }
 }
