@@ -480,4 +480,14 @@ pre {
       color: #333; }
 
   .site-footer {
-    display: none; } }
+    display: none; }
+
+  a,
+  a:visited,
+  a:active {
+    color: #333; }
+
+  .page-content a:after {
+    content: " url:" attr(href) " ";
+    font-size: 0.8em;
+    font-weight: normal; } }
