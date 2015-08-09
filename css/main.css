@@ -466,3 +466,18 @@ pre {
     color: #008080; }
   .highlight .il {
     color: #099; }
+
+@media print {
+  .site-nav {
+    display: none; }
+
+  .site-header {
+    background-color: #fff;
+    border-bottom: 1px solid #333;
+    padding: 1em 0;
+    color: #333; }
+    .site-header .site-title {
+      color: #333; }
+
+  .site-footer {
+    display: none; } }
