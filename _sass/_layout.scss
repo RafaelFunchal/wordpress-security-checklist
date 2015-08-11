@@ -12,14 +12,13 @@
 }
 
 .site-title {
-    display: block;
     font-size: 3em;
     line-height: 100%;
     margin: 0;
     letter-spacing: -1px;
 
-    &,
-    &:visited {
+    a,
+    a:visited {
         color: $grey-color-light;
     }
 }
