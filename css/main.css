@@ -154,12 +154,12 @@ pre {
   position: relative; }
 
 .site-title {
-  display: block;
   font-size: 3em;
   line-height: 100%;
   margin: 0;
   letter-spacing: -1px; }
-  .site-title, .site-title:visited {
+  .site-title a,
+  .site-title a:visited {
     color: #e8e8e8; }
 
 .site-description {
@@ -466,3 +466,28 @@ pre {
     color: #008080; }
   .highlight .il {
     color: #099; }
+
+@media print {
+  .site-nav {
+    display: none; }
+
+  .site-header {
+    background-color: #fff;
+    border-bottom: 1px solid #333;
+    padding: 1em 0;
+    color: #333; }
+    .site-header .site-title {
+      color: #333; }
+
+  .site-footer {
+    display: none; }
+
+  a,
+  a:visited,
+  a:active {
+    color: #333; }
+
+  .page-content a:after {
+    content: " url:" attr(href) " ";
+    font-size: 0.8em;
+    font-weight: normal; } }
