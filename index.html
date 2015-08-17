@@ -4,7 +4,7 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Blog</h1>
+  <h2 class="page-heading">{{ site.t.[page.language].blog }}</h2>
 
   <ul class="post-list">
     {% assign posts=site.posts | where:"language", page.language %}
@@ -12,13 +12,13 @@ layout: default
       <li>
         <span class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</span>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
+        <h3>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}">{{ post.title }}</a>
+        </h3>
       </li>
     {% endfor %}
   </ul>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  <p class="rss-subscribe">{{ site.t.[page.language].subscribe }} <a href="{{ "/feed.xml" | prepend: site.baseurl }}" title="{{ site.t.[page.language].subscribe }} {{ site.t.[page.language].byrss }}">{{ site.t.[page.language].byrss }}</a></p>
 
 </div>

@@ -4,7 +4,7 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Blog</h1>
+  <h1 class="page-heading">{{ site.t.[page.language].blog }}</h1>
 
   <ul class="post-list">
     {% assign posts=site.posts | where:"language", page.language %}
@@ -19,6 +19,6 @@ layout: default
     {% endfor %}
   </ul>
 
-  <p class="rss-subscribe">inscreva-se <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  <p class="rss-subscribe">{{ site.t.[page.language].subscribe }} <a href="{{ "/feed.xml" | prepend: site.baseurl }}" title="{{ site.t.[page.language].subscribe }} {{ site.t.[page.language].byrss }}">{{ site.t.[page.language].byrss }}</a></p>
 
 </div>
