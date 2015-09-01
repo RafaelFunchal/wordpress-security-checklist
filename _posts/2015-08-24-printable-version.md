@@ -2,6 +2,7 @@
 layout: post
 title:  "Printable version"
 date:   2015-08-24 23:17:00
+image:  "/img/printable-version.png"
 categories: update
 ---
 
