@@ -10,14 +10,17 @@
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl }}" />
 
-  <meta property="og:type" content="{% if page.title %}article{% else %}website{% endif %}">
-  <meta property="og:title" content="{% if page.title %}{{ site.title }} - {{ page.title }}{% else %}{{ site.title }}{% endif %}" >
-  <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.t.[page.language].description }}{% endif %}" >
-  <meta property="og:url" content="{{ site.url }}{{ site.baseurl | append: page.url }}" >
-  <meta property="og:site_name" content="{{ site.title }}" >
-  <meta property="og:image" content="{{ "/img/screenshot.png" | prepend: site.baseurl }}">
-  <meta property="og:image:type" content="image/png">
+  <meta property="og:type" content="{% if page.title %}article{% else %}website{% endif %}" />
+  <meta property="og:title" content="{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}" />
+  <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.t.[page.language].description }}{% endif %}" />
+  <meta property="og:url" content="{{ site.url }}{{ site.baseurl | append: page.url }}" />
+  <meta property="og:site_name" content="{{ site.title }}" />
+  <meta property="og:image" content="{% if page.image %}{{ page.image | prepend: site.baseurl | prepend: site.url }}{% else %}{{ site.image | prepend: site.baseurl | prepend: site.url }}{% endif %}" />
+
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@{{ site.twitter_username }}" />
   <meta name="twitter:creator" content="@{{ site.twitter_username }}" />
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}" />
+  <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.t.[page.language].description }}{% endif %}" />
+  <meta name="twitter:image" content="{% if page.image %}{{ page.image | prepend: site.baseurl | prepend: site.url }}{% else %}{{ site.image | prepend: site.baseurl | prepend: site.url }}{% endif %}" />
 </head>
