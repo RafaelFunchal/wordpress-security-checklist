@@ -21,6 +21,11 @@
     a:visited {
         color: $grey-color-light;
     }
+
+    @include media-query($on-palm) {
+      font-size: 1.5em;
+    }
+
 }
 
 .site-description {
@@ -28,7 +33,8 @@
     font-size: 1em;
     font-weight: 700;
     line-height: 100%;
-    margin: 0;
+    margin: 0 auto;
+    max-width: 95%;
 }
 
 .site-nav {
