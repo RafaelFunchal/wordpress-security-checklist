@@ -23,11 +23,14 @@
           {% endfor %}
           <a class="page-link" href="{{ site.baseurl }}/{% if page.is_default_language == false %}{{ page.language }}/{% endif %}" title="Blog">Blog</a>
 
-          {% for language in site.languages %}
-            {% if page.language != language %}
-              <a class="page-link" href="{{ site.baseurl }}/{% if site.language_default != language %}{{ language }}/{% endif %}" title="{{ site.t.[page.language].switch }}">{{ site.t.[page.language].switch }}</a>
-            {% endif %}
-          {% endfor%}
+          <select name="language-switch" class="language-switch" onchange="location = this.options[this.selectedIndex].value;">
+            <option value="" selected="selected">Available Languages</option>
+            {% for language in site.languages %}
+              {% if page.language != language %}
+                <option value="{{ site.baseurl }}/{% if site.language_default != language %}{{ language }}/{% endif %}">{{ site.t.[language].switch }}</option>
+              {% endif %}
+            {% endfor%}
+          </select>
         </div>
     </nav>
 </header>
