@@ -5,32 +5,9 @@
     <description></description>
     <link>https://rafaelfunchal.github.io/wordpress-security-checklist/</link>
     <atom:link href="https://rafaelfunchal.github.io/wordpress-security-checklist/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 02 Sep 2015 11:32:38 -0300</pubDate>
-    <lastBuildDate>Wed, 02 Sep 2015 11:32:38 -0300</lastBuildDate>
+    <pubDate>Sat, 03 Oct 2015 16:20:52 -0300</pubDate>
+    <lastBuildDate>Sat, 03 Oct 2015 16:20:52 -0300</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
-    
-      <item>
-        <title>The checklist is available on Trello</title>
-        <description>&lt;p&gt;&lt;a href=&quot;https://twitter.com/RickBenettiBR&quot; target=&quot;_blank&quot;&gt;Rick Benetti&lt;/a&gt; created a clone of the checklist for those who prefer to use &lt;a href=&quot;https://trello.com/wordpresssecuritychecklist&quot; target=&quot;_blank&quot;&gt;Trello&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://trello.com/wordpresssecuritychecklist&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;/wordpress-security-checklist/img/trello.png&quot; alt=&quot;Trello board&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;We created an &lt;a href=&quot;https://trello.com/wordpresssecuritychecklist&quot; target=&quot;_blank&quot;&gt;organization on Trello&lt;/a&gt; to keep the boards divided by language.&lt;/p&gt;
-
-&lt;p&gt;In order to copy the desired board to your own user, you just need to follow these steps: &lt;strong&gt;Menu &amp;gt; More &amp;gt; Copy Board&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;It’s awesome to see this project getting stronger and receiving a lot of collaborations.&lt;/p&gt;
-
-&lt;p&gt;Thanks, Rick!&lt;/p&gt;
-</description>
-        <pubDate>Wed, 02 Sep 2015 07:35:00 -0300</pubDate>
-        <link>https://rafaelfunchal.github.io/wordpress-security-checklist/update/2015/09/02/trello/</link>
-        <guid isPermaLink="true">https://rafaelfunchal.github.io/wordpress-security-checklist/update/2015/09/02/trello/</guid>
-        
-        
-        <category>update</category>
-        
-      </item>
     
       <item>
         <title>A lista está disponível no Trello</title>
@@ -57,20 +34,22 @@
       </item>
     
       <item>
-        <title>Printable version</title>
-        <description>&lt;p&gt;That was the &lt;a href=&quot;https://github.com/rafaelfunchal/wordpress-security-checklist/issues/2&quot; target=&quot;_blank&quot;&gt;second issue&lt;/a&gt; I created on this project and, thanks to &lt;a href=&quot;https://github.com/fellyph&quot; target=&quot;_blank&quot;&gt;Fellyph Cintra&lt;/a&gt;, now it’s closed.&lt;/p&gt;
+        <title>The checklist is available on Trello</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://twitter.com/RickBenettiBR&quot; target=&quot;_blank&quot;&gt;Rick Benetti&lt;/a&gt; created a clone of the checklist for those who prefer to use &lt;a href=&quot;https://trello.com/wordpresssecuritychecklist&quot; target=&quot;_blank&quot;&gt;Trello&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Thanks to Fellyph the checklist will look better when you print it.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://trello.com/wordpresssecuritychecklist&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;/wordpress-security-checklist/img/trello.png&quot; alt=&quot;Trello board&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/wordpress-security-checklist/img/printable-version.png&quot; alt=&quot;printable version&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;We created an &lt;a href=&quot;https://trello.com/wordpresssecuritychecklist&quot; target=&quot;_blank&quot;&gt;organization on Trello&lt;/a&gt; to keep the boards divided by language.&lt;/p&gt;
 
-&lt;p&gt;A lot of people still use paper to manage their developed projects and now it’s possible to &lt;em&gt;print the checklist without losing the links mentioned in each item&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;In order to copy the desired board to your own user, you just need to follow these steps: &lt;strong&gt;Menu &amp;gt; More &amp;gt; Copy Board&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;Thanks, Fellyph! :-)&lt;/p&gt;
+&lt;p&gt;It’s awesome to see this project getting stronger and receiving a lot of collaborations.&lt;/p&gt;
+
+&lt;p&gt;Thanks, Rick!&lt;/p&gt;
 </description>
-        <pubDate>Mon, 24 Aug 2015 20:17:00 -0300</pubDate>
-        <link>https://rafaelfunchal.github.io/wordpress-security-checklist/update/2015/08/24/printable-version/</link>
-        <guid isPermaLink="true">https://rafaelfunchal.github.io/wordpress-security-checklist/update/2015/08/24/printable-version/</guid>
+        <pubDate>Wed, 02 Sep 2015 07:35:00 -0300</pubDate>
+        <link>https://rafaelfunchal.github.io/wordpress-security-checklist/update/2015/09/02/trello/</link>
+        <guid isPermaLink="true">https://rafaelfunchal.github.io/wordpress-security-checklist/update/2015/09/02/trello/</guid>
         
         
         <category>update</category>
@@ -92,6 +71,27 @@
         <pubDate>Mon, 24 Aug 2015 20:17:00 -0300</pubDate>
         <link>https://rafaelfunchal.github.io/wordpress-security-checklist/br/update/2015/08/24/printable-version/</link>
         <guid isPermaLink="true">https://rafaelfunchal.github.io/wordpress-security-checklist/br/update/2015/08/24/printable-version/</guid>
+        
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>Printable version</title>
+        <description>&lt;p&gt;That was the &lt;a href=&quot;https://github.com/rafaelfunchal/wordpress-security-checklist/issues/2&quot; target=&quot;_blank&quot;&gt;second issue&lt;/a&gt; I created on this project and, thanks to &lt;a href=&quot;https://github.com/fellyph&quot; target=&quot;_blank&quot;&gt;Fellyph Cintra&lt;/a&gt;, now it’s closed.&lt;/p&gt;
+
+&lt;p&gt;Thanks to Fellyph the checklist will look better when you print it.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/wordpress-security-checklist/img/printable-version.png&quot; alt=&quot;printable version&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A lot of people still use paper to manage their developed projects and now it’s possible to &lt;em&gt;print the checklist without losing the links mentioned in each item&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Thanks, Fellyph! :-)&lt;/p&gt;
+</description>
+        <pubDate>Mon, 24 Aug 2015 20:17:00 -0300</pubDate>
+        <link>https://rafaelfunchal.github.io/wordpress-security-checklist/update/2015/08/24/printable-version/</link>
+        <guid isPermaLink="true">https://rafaelfunchal.github.io/wordpress-security-checklist/update/2015/08/24/printable-version/</guid>
         
         
         <category>update</category>
@@ -141,23 +141,6 @@
       </item>
     
       <item>
-        <title>Now we have an English version of the checklist</title>
-        <description>&lt;p&gt;Finally I found a few time to translate the checkilist to English \o/&lt;/p&gt;
-
-&lt;p&gt;Probably you noticed that there are a few strings in Brazilian Portuguese on header and footer. Right now, only the checklist is translated, but I intend to make the entire website multi language friendly soon.&lt;/p&gt;
-
-&lt;p&gt;If you have some suggestion, please, poke me on &lt;a href=&quot;http://twitter.com/RafaelFunchal&quot; target=&quot;_blank&quot;&gt;Twitter&lt;/a&gt; or &lt;a href=&quot;https://github.com/rafaelfunchal/wordpress-security-checklist/issues&quot; target=&quot;_blank&quot;&gt;open an issue on GitHub&lt;/a&gt;.&lt;/p&gt;
-</description>
-        <pubDate>Mon, 13 Jul 2015 12:30:00 -0300</pubDate>
-        <link>https://rafaelfunchal.github.io/wordpress-security-checklist/update/2015/07/13/english-version/</link>
-        <guid isPermaLink="true">https://rafaelfunchal.github.io/wordpress-security-checklist/update/2015/07/13/english-version/</guid>
-        
-        
-        <category>update</category>
-        
-      </item>
-    
-      <item>
         <title>Agora nós temos uma versão em Inglês do checklist</title>
         <description>&lt;p&gt;Finalmente encontrei algum tempo livre para traduzir o checklist para inglês \o/&lt;/p&gt;
 
@@ -168,6 +151,23 @@
         <pubDate>Mon, 13 Jul 2015 12:30:00 -0300</pubDate>
         <link>https://rafaelfunchal.github.io/wordpress-security-checklist/br/update/2015/07/13/english-version/</link>
         <guid isPermaLink="true">https://rafaelfunchal.github.io/wordpress-security-checklist/br/update/2015/07/13/english-version/</guid>
+        
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>Now we have an English version of the checklist</title>
+        <description>&lt;p&gt;Finally I found a few time to translate the checkilist to English \o/&lt;/p&gt;
+
+&lt;p&gt;Probably you noticed that there are a few strings in Brazilian Portuguese on header and footer. Right now, only the checklist is translated, but I intend to make the entire website multi language friendly soon.&lt;/p&gt;
+
+&lt;p&gt;If you have some suggestion, please, poke me on &lt;a href=&quot;http://twitter.com/RafaelFunchal&quot; target=&quot;_blank&quot;&gt;Twitter&lt;/a&gt; or &lt;a href=&quot;https://github.com/rafaelfunchal/wordpress-security-checklist/issues&quot; target=&quot;_blank&quot;&gt;open an issue on GitHub&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 13 Jul 2015 12:30:00 -0300</pubDate>
+        <link>https://rafaelfunchal.github.io/wordpress-security-checklist/update/2015/07/13/english-version/</link>
+        <guid isPermaLink="true">https://rafaelfunchal.github.io/wordpress-security-checklist/update/2015/07/13/english-version/</guid>
         
         
         <category>update</category>

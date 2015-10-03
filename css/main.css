@@ -189,6 +189,8 @@ pre {
     line-height: 1.5; }
     .site-nav .page-link:not(:first-child) {
       margin-left: 20px; }
+  .site-nav .language-switch {
+    margin-left: 20px; }
 
 /**
  * Site footer
