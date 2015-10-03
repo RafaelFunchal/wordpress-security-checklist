@@ -39,3 +39,11 @@ t:
       blog:        "Blog"
       subscribe:   "Inscreva-se"
       byrss:       "via RSS"
+  ja:
+      description: "WordPress のウェブサイトのセキュリティを強化するために行うべきチェックリスト"
+      commit:      "Would you like to improve the checklist? [Don't cry, commit!](https://github.com/rafaelfunchal/wordpress-security-checklist#contribute-to-the-project 'Access the project on GitHub'){:target='_blank'}"
+      switch:      "View in en-US"
+      apps:        "Get our app!"
+      blog:        "Blog"
+      subscribe:   "Subscribe"
+      byrss:       "via RSS"
