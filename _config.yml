@@ -20,7 +20,7 @@ permalink:   pretty
 # Languages
 gems:             ['jekyll-multiple-languages']
 language_default: 'en'
-languages:        ['en', 'br']
+languages:        ['en', 'br', 'ja']
 
 t:
   en:
