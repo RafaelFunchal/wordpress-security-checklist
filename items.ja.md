@@ -56,5 +56,5 @@ permalink: /items/
 * <label><input type="checkbox" /> 全てのディレクトリのパーミッションを 755、ファイルのパーミッションを 644 に設定する ([Codex より](http://codex.wordpress.org/Hardening_WordPress#File_Permissions){:target="_blank"})</label>
 * <label><input type="checkbox" /> wp-config.php ファイルが他者からアクセスできないことを確認する</label>
 * <label><input type="checkbox" /> license.txt, wp-config-sample.php, readme.html ファイルは削除するか .htaccess でアクセスをブロックする</label>
-* <label><input type="checkbox" /> .htaccess に次のコードを追加してファイル編集機能を使用不可にする: `define('DISALLOW_FILE_EDIT',true);`</label>
+* <label><input type="checkbox" /> wp-config.php に次のコードを追加してファイル編集機能を使用不可にする: `define('DISALLOW_FILE_EDIT',true);`</label>
 * <label><input type="checkbox" /> .htaccess に次のコードを追加してディレクトリ一覧の表示を防ぐ: `Options All -IndexesOptions All -Indexes`</label>
