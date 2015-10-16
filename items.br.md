@@ -57,4 +57,4 @@ permalink: /items/
 * <label><input type="checkbox" /> Certifique-se que seu arquivo wp-config.php não possa ser acessado por outras pessoas</label>
 * <label><input type="checkbox" /> Remova ou bloqueie via .htaccess os arquivos license.txt, wp-config-sample.php e readme.html</label>
 * <label><input type="checkbox" /> Desabilite o editor pelo wp-config.php com o código: `define('DISALLOW_FILE_EDIT',true);`</label>
-* <label><input type="checkbox" /> Previna a pesquisa de diretórios via .htaccess com o código: `Options All -IndexesOptions All -Indexes`</label>
+* <label><input type="checkbox" /> Previna a pesquisa de diretórios via .htaccess com o código: `Options All -Indexes`</label>
