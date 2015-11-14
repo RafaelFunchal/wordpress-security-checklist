@@ -212,7 +212,10 @@ pre {
   margin-bottom: 15px; }
 
 .badges li {
-  list-style-type: none; }
+  list-style-type: none;
+  margin-bottom: 10px; }
+  .badges li img {
+    width: 135px; }
 
 .contact-list,
 .social-media-list {
