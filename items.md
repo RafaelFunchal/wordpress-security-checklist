@@ -7,6 +7,10 @@ permalink: /items/
 > Most of the time a website running WordPress is hacked the culprit is not WordPress, but of any silly misconfiguration that could be avoided during its development.
 > That's the idea of this project: Being a checklist of actions that you should take to increase the security of your website.
 
+## wp-config
+
+* <label><input type="checkbox" /> Change Security Key ([Generator provided by WordPress.org](https://api.wordpress.org/secret-key/1.1/salt/){:target="_blank"})</label>
+
 ## Login Page
 
 * <label><input type="checkbox" /> Lockdown the login page for repetitive failed login ([Login Lockdown](https://wordpress.org/plugins/login-lockdown/){:target="_blank"} or [iThemes Security](https://wordpress.org/plugins/better-wp-security/){:target="_blank"} )</label>

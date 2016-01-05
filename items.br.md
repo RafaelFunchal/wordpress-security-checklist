@@ -7,6 +7,9 @@ permalink: /items/
 > A maioria das vezes que um site feito com WordPress é invadido a culpa não é do WordPress, mas sim de alguma falha boba que poderia ter sido evitada durante a sua construção.
 > Essa é a ideia desse projeto: Ser um checklist de ações que você deve tomar para aumentar a segurança do seu site.
 
+## wp-config
+* <label><input type="checkbox" /> Altere as chaves de segurança ([Gerador disponibilizado pelo WordPress.org](https://api.wordpress.org/secret-key/1.1/salt/){:target="_blank"})</label>
+
 ## Página de login
 
 * <label><input type="checkbox" /> Bloqueie várias tentativas de login ([Login Lockdown](https://wordpress.org/plugins/login-lockdown/){:target="_blank"} ou [iThemes Security](https://wordpress.org/plugins/better-wp-security/){:target="_blank"} )</label>
