@@ -56,6 +56,8 @@
                 <a class="page-link" href="/wordpress-security-checklist/br/items/" title="Checklist">Checklist</a>
             
           
+            
+          
           <a class="page-link" href="/wordpress-security-checklist/br/" title="Blog">Blog</a>
 
           <select name="language-switch" class="language-switch" onchange="location = this.options[this.selectedIndex].value;">
@@ -69,6 +71,10 @@
             
               
                 <option value="/wordpress-security-checklist/ja/">日本語</option>
+              
+            
+              
+                <option value="/wordpress-security-checklist/es/">Español</option>
               
             
           </select>
@@ -89,6 +95,11 @@
   <p>A maioria das vezes que um site feito com WordPress é invadido a culpa não é do WordPress, mas sim de alguma falha boba que poderia ter sido evitada durante a sua construção.<br />
 Essa é a ideia desse projeto: Ser um checklist de ações que você deve tomar para aumentar a segurança do seu site.</p>
 </blockquote>
+
+<h2 id="wp-config">wp-config</h2>
+<ul>
+  <li><label><input type="checkbox" /> Altere as chaves de segurança (<a href="https://api.wordpress.org/secret-key/1.1/salt/" target="_blank">Gerador disponibilizado pelo WordPress.org</a>)</label></li>
+</ul>
 
 <h2 id="pgina-de-login">Página de login</h2>
 
@@ -151,7 +162,7 @@ Essa é a ideia desse projeto: Ser um checklist de ações que você deve tomar 
   <li><label><input type="checkbox" /> Certifique-se que seu arquivo wp-config.php não possa ser acessado por outras pessoas</label></li>
   <li><label><input type="checkbox" /> Remova ou bloqueie via .htaccess os arquivos license.txt, wp-config-sample.php e readme.html</label></li>
   <li><label><input type="checkbox" /> Desabilite o editor pelo wp-config.php com o código: <code>define('DISALLOW_FILE_EDIT',true);</code></label></li>
-  <li><label><input type="checkbox" /> Previna a pesquisa de diretórios via .htaccess com o código: <code>Options All -IndexesOptions All -Indexes</code></label></li>
+  <li><label><input type="checkbox" /> Previna a pesquisa de diretórios via .htaccess com o código: <code>Options All -Indexes</code></label></li>
 </ul>
 
     </article>
@@ -204,9 +215,18 @@ Essa é a ideia desse projeto: Ser um checklist de ações que você deve tomar 
 
       <div class="footer-col  footer-col-3">
         <h3 class="footer-heading">Instale nosso aplicativo!</h3>
-        <a href="https://play.google.com/store/apps/details?id=com.ionicframework.wordpresssecuritychecklistapp804039" target="_blank">
-          <img alt="Get it on Google Play" src="https://developer.android.com/images/brand/en_generic_rgb_wo_45.png" />
-        </a>
+        <ul class="badges">
+          <li>
+            <a href="https://play.google.com/store/apps/details?id=com.ionicframework.wordpresssecuritychecklistapp804039" target="_blank">
+              <img alt="Get it on Google Play" src="/wordpress-security-checklist/img/badges/google-play.png" />
+            </a>
+          </li>
+          <li>
+            <a href="https://itunes.apple.com/us/app/security-checklist-for-wordpress/id1035454332?ls=1&mt=8" target="_blank">
+              <img alt="Download it on the App Store" src="/wordpress-security-checklist/img/badges/app-store.png" />
+            </a>
+          </li>
+        </ul>
       </div>
 
     </div>
