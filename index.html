@@ -4,21 +4,23 @@ layout: default
 
 <div class="home">
 
-  <h2 class="page-heading">{{ site.t.[page.language].blog }}</h2>
-
-  <ul class="post-list">
-    {% assign posts=site.posts | where:"language", page.language %}
-    {% for post in posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</span>
-
-        <h3>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}">{{ post.title }}</a>
-        </h3>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">{{ site.t.[page.language].subscribe }} <a href="{{ "/feed.xml" | prepend: site.baseurl }}" title="{{ site.t.[page.language].subscribe }} {{ site.t.[page.language].byrss }}">{{ site.t.[page.language].byrss }}</a></p>
+  {% assign posts=site.posts | where:"language", page.language %}
+  {% if posts == empty %}
+    <meta http-equiv="refresh" content="0; url={{ site.baseurl}}/{{ page.language }}/items">
+    <p>{{ site.t.[page.language].redirecting }} <a href="{{ site.baseurl}}/{{ page.language }}/items" title="Checklist">Checklist</a></p>
+  {% else %}
+    <h1 class="page-heading">{{ site.t.[page.language].blog }}</h1>
+    <ul class="post-list">
+      {% for post in posts %}
+        <li>
+          <span class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</span>
+          <h2>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}">{{ post.title }}</a>
+          </h2>
+        </li>
+      {% endfor %}
+    </ul>
+    <p class="rss-subscribe">{{ site.t.[page.language].subscribe }} <a href="{{ "/feed.xml" | prepend: site.baseurl }}" title="{{ site.t.[page.language].subscribe }} {{ site.t.[page.language].byrss }}">{{ site.t.[page.language].byrss }}</a></p>
+  {% endif %}
 
 </div>
