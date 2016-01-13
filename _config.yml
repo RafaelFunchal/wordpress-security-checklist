@@ -1,8 +1,8 @@
 # Site settings
 title:            WordPress Security Checklist
 email:            rafaelfunchal@gmail.com
-baseurl:          "/wordpress-security-checklist" # the subpath of your site, e.g. /blog/
-url:              "https://rafaelfunchal.github.io" # the base hostname & protocol for your site
+baseurl:          "" # the subpath of your site, e.g. /blog/
+url:              "https://wpsecuritychecklist.org" # the base hostname & protocol for your site
 twitter_username: rafaelfunchal
 github_username:  rafaelfunchal
 image:            "/img/screenshot.png"
