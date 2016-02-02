@@ -18,7 +18,7 @@ future:           false
 permalink:   pretty
 
 # Languages
-gems:             ['jekyll-multiple-languages']
+gems:             ['jekyll-multiple-languages', 'jekyll-paginate']
 language_default: 'en'
 languages:        ['en', 'br', 'ja', 'es']
 
