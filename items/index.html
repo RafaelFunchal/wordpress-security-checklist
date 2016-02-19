@@ -8,6 +8,7 @@
 
   <title>WordPress Security Checklist - en-US</title>
   <meta name="description" content="A checklist of actions that you should take to increase the security of your WordPress website.">
+  <meta name="theme-color" content="#008CBA">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="http://wpsecuritychecklist.org/items/">
@@ -64,6 +65,8 @@
           
             
           
+            
+          
           <a class="page-link" href="/" title="Blog">Blog</a>
 
           <select name="language-switch" class="language-switch" onchange="location = this.options[this.selectedIndex].value;">
@@ -98,7 +101,7 @@
 
     <article class="post-content">
         <blockquote>
-  <p>Most of the time a website running WordPress is hacked the culprit is not WordPress, but of any silly misconfiguration that could be avoided during its development.<br />
+  <p>Most of the time a website running WordPress is hacked the culprit is not WordPress, but of any silly misconfiguration that could be avoided during its development.
 That’s the idea of this project: Being a checklist of actions that you should take to increase the security of your website.</p>
 </blockquote>
 
@@ -168,8 +171,8 @@ That’s the idea of this project: Being a checklist of actions that you should 
   <li><label><input type="checkbox" /> Set all folder permission to 755 and files to 644 (<a href="http://codex.wordpress.org/Hardening_WordPress#File_Permissions" target="_blank">accourding to the Codex</a>)</label></li>
   <li><label><input type="checkbox" /> Make sure the wp-config.php file is not accessible by others</label></li>
   <li><label><input type="checkbox" /> Remove or block via .htaccess the files license.txt, wp-config-sample.php, and readme.html</label></li>
-  <li><label><input type="checkbox" /> Disable file edit via wp-config.php by adding the following code: <code>define('DISALLOW_FILE_EDIT',true);</code></label></li>
-  <li><label><input type="checkbox" /> Prevent directory listing via .htaccess by adding the following code: <code>Options All -Indexes</code></label></li>
+  <li><label><input type="checkbox" /> Disable file edit via wp-config.php by adding the following code: <code class="highlighter-rouge">define('DISALLOW_FILE_EDIT',true);</code></label></li>
+  <li><label><input type="checkbox" /> Prevent directory listing via .htaccess by adding the following code: <code class="highlighter-rouge">Options All -Indexes</code></label></li>
 </ul>
 
     </article>

@@ -8,6 +8,7 @@
 
   <title>WordPress Security Checklist - es-ES</title>
   <meta name="description" content="Una lista de acciones para aumentar la seguridad de una instalación WordPress">
+  <meta name="theme-color" content="#008CBA">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="http://wpsecuritychecklist.org/es/items/">
@@ -92,7 +93,7 @@
 
     <article class="post-content">
         <blockquote>
-  <p>En la mayoría de las veces que un sitio con WordPress és invadido la culpa no es de WordPress, pero si de algunos fallos tontos que se podrían haber evitado durante su construcción.<br />
+  <p>En la mayoría de las veces que un sitio con WordPress és invadido la culpa no es de WordPress, pero si de algunos fallos tontos que se podrían haber evitado durante su construcción.
 Esa es la idea de este proyecto: Ser una lista de acciones que se debe tomar para aumentar la seguridad de su sitio.</p>
 </blockquote>
 
@@ -161,8 +162,8 @@ Esa es la idea de este proyecto: Ser una lista de acciones que se debe tomar par
   <li><label><input type="checkbox" /> Establecer permisos 755 para las carpetas y 644 a los archivos (<a href="http://codex.wordpress.org/Hardening_WordPress#File_Permissions" target="_blank">según la documentación</a>)</label></li>
   <li><label><input type="checkbox" /> Asegúrese de que su archivo wp-config.php no sea accesible por otros</label></li>
   <li><label><input type="checkbox" /> Retire o bloquee a través del .htaccess los archivos license.txt, WP-config-sample.php y readme.html</label></li>
-  <li><label><input type="checkbox" /> Desactivar el editor por el wp-config.php con el código: <code>define('DISALLOW_FILE_EDIT',true);</code></label></li>
-  <li><label><input type="checkbox" /> Impida la busca de directorios a través del .htaccess con el código: <code>Options All -Indexes</code></label></li>
+  <li><label><input type="checkbox" /> Desactivar el editor por el wp-config.php con el código: <code class="highlighter-rouge">define('DISALLOW_FILE_EDIT',true);</code></label></li>
+  <li><label><input type="checkbox" /> Impida la busca de directorios a través del .htaccess con el código: <code class="highlighter-rouge">Options All -Indexes</code></label></li>
 </ul>
 
     </article>

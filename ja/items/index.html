@@ -8,6 +8,7 @@
 
   <title>WordPress Security Checklist - ja-JP</title>
   <meta name="description" content="WordPress のウェブサイトのセキュリティを強化するために行うべきチェックリスト">
+  <meta name="theme-color" content="#008CBA">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="http://wpsecuritychecklist.org/ja/items/">
@@ -92,7 +93,7 @@
 
     <article class="post-content">
         <blockquote>
-  <p>WordPress で稼働しているウェブサイトがハッキングされる原因は WordPress にあるわけではなく、そのほとんどが開発中に回避できるいくつかの設定ミスによるものです。<br />
+  <p>WordPress で稼働しているウェブサイトがハッキングされる原因は WordPress にあるわけではなく、そのほとんどが開発中に回避できるいくつかの設定ミスによるものです。
 あなたのウェブサイトのセキュリティを高めるために取るべき行動のチェックリストであること、それがこのプロジェクトの考えです。</p>
 </blockquote>
 
@@ -156,8 +157,8 @@
   <li><label><input type="checkbox" /> 全てのディレクトリのパーミッションを 755、ファイルのパーミッションを 644 に設定する (<a href="http://codex.wordpress.org/Hardening_WordPress#File_Permissions" target="_blank">Codex より</a>)</label></li>
   <li><label><input type="checkbox" /> wp-config.php ファイルが他者からアクセスできないことを確認する</label></li>
   <li><label><input type="checkbox" /> license.txt, wp-config-sample.php, readme.html ファイルは削除するか .htaccess でアクセスをブロックする</label></li>
-  <li><label><input type="checkbox" /> wp-config.php に次のコードを追加してファイル編集機能を使用不可にする: <code>define('DISALLOW_FILE_EDIT',true);</code></label></li>
-  <li><label><input type="checkbox" /> .htaccess に次のコードを追加してディレクトリ一覧の表示を防ぐ: <code>Options All -Indexes</code></label></li>
+  <li><label><input type="checkbox" /> wp-config.php に次のコードを追加してファイル編集機能を使用不可にする: <code class="highlighter-rouge">define('DISALLOW_FILE_EDIT',true);</code></label></li>
+  <li><label><input type="checkbox" /> .htaccess に次のコードを追加してディレクトリ一覧の表示を防ぐ: <code class="highlighter-rouge">Options All -Indexes</code></label></li>
 </ul>
 
     </article>

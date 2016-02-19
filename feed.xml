@@ -5,9 +5,34 @@
     <description></description>
     <link>http://wpsecuritychecklist.org/</link>
     <atom:link href="http://wpsecuritychecklist.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 21 Jan 2016 01:29:31 -0200</pubDate>
-    <lastBuildDate>Thu, 21 Jan 2016 01:29:31 -0200</lastBuildDate>
-    <generator>Jekyll v2.5.3</generator>
+    <pubDate>Fri, 19 Feb 2016 00:41:21 -0200</pubDate>
+    <lastBuildDate>Fri, 19 Feb 2016 00:41:21 -0200</lastBuildDate>
+    <generator>Jekyll v3.1.1</generator>
+    
+      <item>
+        <title>Available on Apple Store</title>
+        <description>&lt;p&gt;&lt;a href=&quot;http://ionicframework.com/&quot; target=&quot;_blank&quot;&gt;Ionic Framework&lt;/a&gt; is the best framework, IMHO, to create hybrid apps, but nothing is perfect.&lt;/p&gt;
+
+&lt;p&gt;In order to create the app version for iOS it’s necessary to use an Apple OS and, nowadays in Brazil, a Macbook costs around US $ 6,500.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://itunes.apple.com/us/app/security-checklist-for-wordpress/id1035454332?ls=1&amp;amp;mt=8&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;/img/apple-store.png&quot; alt=&quot;WordPress Security Checklist on Apple Store&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I said that nothing is perfect, but the WordPress community &lt;em&gt;is pretty close to perfection&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.facebook.com/sergio.costa.5815&quot; target=&quot;_blank&quot;&gt;Sergio Costa&lt;/a&gt; of &lt;a href=&quot;http://republicainterativa.com.br/&quot; target=&quot;_blank&quot;&gt;República Interativa&lt;/a&gt;, &lt;strong&gt;one of the best agencies in Salvador&lt;/strong&gt;, liked the project and decided to create the iOS version of our app and, more than that, he published it on &lt;a href=&quot;https://itunes.apple.com/us/app/security-checklist-for-wordpress/id1035454332?ls=1&amp;amp;mt=8&quot; target=&quot;_blank&quot;&gt;Apple Store&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;I love the WordPress community!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Thanks a lot for that, Sergio!&lt;/p&gt;
+</description>
+        <pubDate>Fri, 13 Nov 2015 23:10:00 -0200</pubDate>
+        <link>http://wpsecuritychecklist.org/update/2015/11/13/apple-store/</link>
+        <guid isPermaLink="true">http://wpsecuritychecklist.org/update/2015/11/13/apple-store/</guid>
+        
+        
+        <category>update</category>
+        
+      </item>
     
       <item>
         <title>Estamos na Apple Store</title>
@@ -29,31 +54,6 @@
         <pubDate>Fri, 13 Nov 2015 23:10:00 -0200</pubDate>
         <link>http://wpsecuritychecklist.org/br/update/2015/11/13/apple-store/</link>
         <guid isPermaLink="true">http://wpsecuritychecklist.org/br/update/2015/11/13/apple-store/</guid>
-        
-        
-        <category>update</category>
-        
-      </item>
-    
-      <item>
-        <title>Available on Apple Store</title>
-        <description>&lt;p&gt;&lt;a href=&quot;http://ionicframework.com/&quot; target=&quot;_blank&quot;&gt;Ionic Framework&lt;/a&gt; is the best framework, IMHO, to create hybrid apps, but nothing is perfect.&lt;/p&gt;
-
-&lt;p&gt;In order to create the app version for iOS it’s necessary to use an Apple OS and, nowadays in Brazil, a Macbook costs around US $ 6,500.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://itunes.apple.com/us/app/security-checklist-for-wordpress/id1035454332?ls=1&amp;amp;mt=8&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;/img/apple-store.png&quot; alt=&quot;WordPress Security Checklist on Apple Store&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;I said that nothing is perfect, but the WordPress community &lt;em&gt;is pretty close to perfection&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.facebook.com/sergio.costa.5815&quot; target=&quot;_blank&quot;&gt;Sergio Costa&lt;/a&gt; of &lt;a href=&quot;http://republicainterativa.com.br/&quot; target=&quot;_blank&quot;&gt;República Interativa&lt;/a&gt;, &lt;strong&gt;one of the best agencies in Salvador&lt;/strong&gt;, liked the project and decided to create the iOS version of our app and, more than that, he published it on &lt;a href=&quot;https://itunes.apple.com/us/app/security-checklist-for-wordpress/id1035454332?ls=1&amp;amp;mt=8&quot; target=&quot;_blank&quot;&gt;Apple Store&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;I love the WordPress community!&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Thanks a lot for that, Sergio!&lt;/p&gt;
-</description>
-        <pubDate>Fri, 13 Nov 2015 23:10:00 -0200</pubDate>
-        <link>http://wpsecuritychecklist.org/update/2015/11/13/apple-store/</link>
-        <guid isPermaLink="true">http://wpsecuritychecklist.org/update/2015/11/13/apple-store/</guid>
         
         
         <category>update</category>
@@ -150,27 +150,6 @@
       </item>
     
       <item>
-        <title>Lançamento do aplicativo para Android</title>
-        <description>&lt;p&gt;Desde que criei esse projeto tenho recebido muitos feedbacks positivos nas redes sociais. &lt;strong&gt;Muito obrigado, galera!&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Para continuar com essa onda positiva, decidi criar uma versão mobile do checklist. O site já é bem renderizado em dispositivos mobile, porém, acredito que um aplicativo tornará a experiência do usuário ainda melhor.&lt;/p&gt;
-
-&lt;p&gt;Além disso serviu como desculpa para que eu estudasse &lt;a href=&quot;http://ionicframework.com/&quot; target=&quot;_blank&quot;&gt;Ionic&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Você pode ver os screenshots do aplicativo e instalá-lo em seu Android diretamente do &lt;a href=&quot;https://play.google.com/store/apps/details?id=com.ionicframework.wordpresssecuritychecklistapp804039&quot; target=&quot;_blank&quot;&gt;Google Play&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Não se esqueça de dar algumas estrelinhas :-)&lt;/p&gt;
-</description>
-        <pubDate>Thu, 23 Jul 2015 05:53:00 -0300</pubDate>
-        <link>http://wpsecuritychecklist.org/br/update/2015/07/23/android-app/</link>
-        <guid isPermaLink="true">http://wpsecuritychecklist.org/br/update/2015/07/23/android-app/</guid>
-        
-        
-        <category>update</category>
-        
-      </item>
-    
-      <item>
         <title>Release of our Android app</title>
         <description>&lt;p&gt;Since I created this project I’ve received a lot of positive feedbacks on social networks. &lt;strong&gt;Thank you, guys!&lt;/strong&gt;&lt;/p&gt;
 
@@ -185,6 +164,27 @@
         <pubDate>Thu, 23 Jul 2015 05:53:00 -0300</pubDate>
         <link>http://wpsecuritychecklist.org/update/2015/07/23/android-app/</link>
         <guid isPermaLink="true">http://wpsecuritychecklist.org/update/2015/07/23/android-app/</guid>
+        
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>Lançamento do aplicativo para Android</title>
+        <description>&lt;p&gt;Desde que criei esse projeto tenho recebido muitos feedbacks positivos nas redes sociais. &lt;strong&gt;Muito obrigado, galera!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Para continuar com essa onda positiva, decidi criar uma versão mobile do checklist. O site já é bem renderizado em dispositivos mobile, porém, acredito que um aplicativo tornará a experiência do usuário ainda melhor.&lt;/p&gt;
+
+&lt;p&gt;Além disso serviu como desculpa para que eu estudasse &lt;a href=&quot;http://ionicframework.com/&quot; target=&quot;_blank&quot;&gt;Ionic&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Você pode ver os screenshots do aplicativo e instalá-lo em seu Android diretamente do &lt;a href=&quot;https://play.google.com/store/apps/details?id=com.ionicframework.wordpresssecuritychecklistapp804039&quot; target=&quot;_blank&quot;&gt;Google Play&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Não se esqueça de dar algumas estrelinhas :-)&lt;/p&gt;
+</description>
+        <pubDate>Thu, 23 Jul 2015 05:53:00 -0300</pubDate>
+        <link>http://wpsecuritychecklist.org/br/update/2015/07/23/android-app/</link>
+        <guid isPermaLink="true">http://wpsecuritychecklist.org/br/update/2015/07/23/android-app/</guid>
         
         
         <category>update</category>
