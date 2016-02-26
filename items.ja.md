@@ -11,7 +11,7 @@ permalink: /items/
 
 * <label><input type="checkbox" /> 繰り返しログインに失敗したらログイン画面にロックをかける ([Login Lockdown](https://wordpress.org/plugins/login-lockdown/){:target="_blank"} , [iThemes Security](https://wordpress.org/plugins/better-wp-security/){:target="_blank"} )</label>
 * <label><input type="checkbox" /> 2段階認証を有効にする ([Google Authenticator for WordPress](https://wordpress.org/plugins/wp-google-authenticator/){:target="_blank"})</label>
-* <label><input type="checkbox" /> ユーザー名の代わりにメールアドレスをログインに使う ([WP Email Login](http://wordpress.org/extend/plugins/wp-email-login/){:target="_blank"})</label>
+* <label><input type="checkbox" /> ユーザー名の代わりにメールアドレスをログインに使う ([Force Email Login](https://br.wordpress.org/plugins/force-email-login/){:target="_blank"})</label>
 * <label><input type="checkbox" /> ログイン画面の URL を変更する ([iThemes Security](https://wordpress.org/plugins/better-wp-security/){:target="_blank"} または .htaccess に直接記述)</label>
 * <label><input type="checkbox" /> テーマからログイン画面へのリンクを削除する (もし入っていれば)</label>
 * <label><input type="checkbox" /> 全てのアカウントに対して大文字、小文字、数字、特殊文字を含む強力なパスワードを使う ([password generator](http://passwordsgenerator.net/){:target="_blank"})</label>
