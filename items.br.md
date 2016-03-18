@@ -14,7 +14,7 @@ permalink: /items/
 
 * <label><input type="checkbox" /> Bloqueie várias tentativas de login ([Login Lockdown](https://wordpress.org/plugins/login-lockdown/){:target="_blank"} ou [iThemes Security](https://wordpress.org/plugins/better-wp-security/){:target="_blank"} )</label>
 * <label><input type="checkbox" /> Ative autenticação de 2 etapas ([Google Authenticator for WordPress](https://wordpress.org/plugins/wp-google-authenticator/){:target="_blank"})</label>
-* <label><input type="checkbox" /> Use um email para fazer login ao invés de um nome de usuário ([Force Email Login](https://br.wordpress.org/plugins/force-email-login/){:target="_blank"})</label>
+* <label><input type="checkbox" /> Use um email para fazer login ao invés de um nome de usuário ([Force Email Login](https://wordpress.org/plugins/force-email-login/){:target="_blank"})</label>
 * <label><input type="checkbox" /> Altere o endereço da sua página de login ([iThemes Security](https://wordpress.org/plugins/better-wp-security/){:target="_blank"} ou diretamente pelo .htaccess)</label>
 * <label><input type="checkbox" /> Remova links para sua página de login (caso exista algum em seu tema)</label>
 * <label><input type="checkbox" /> Use senhas fortes com letras maiúsculas e minúsculas, números e caractéres especiais em todas as contas ([gerador de senhas](http://passwordsgenerator.net/){:target="_blank"})</label>
