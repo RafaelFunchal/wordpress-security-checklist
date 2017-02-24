@@ -21,6 +21,7 @@ permalink: /items/
 * <label><input type="checkbox" /> Use a strong password contaning uppercase, lowercase, numbers, and special characters on all accounts ([password generator](http://passwordsgenerator.net/){:target="_blank"})</label>
 * <label><input type="checkbox" /> Change the passwords regularly</label>
 * <label><input type="checkbox" /> Make the login error messages more generical (user/pass) ([tutorial](https://gist.github.com/zergiocosta/72f87176b236ed0c6e13){:target="_blank"})</label>
+* <label><input type="checkbox" /> Disable the WP REST API, if you aren't using it. ([Disable REST API](https://br.wordpress.org/plugins/disable-json-api/){:target="_blank"})</label>
 
 ## Administrative Panel
 
