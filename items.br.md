@@ -20,6 +20,7 @@ permalink: /items/
 * <label><input type="checkbox" /> Use senhas fortes com letras maiúsculas e minúsculas, números e caractéres especiais em todas as contas ([gerador de senhas](http://passwordsgenerator.net/){:target="_blank"})</label>
 * <label><input type="checkbox" /> Altere sua senha periodicamente</label>
 * <label><input type="checkbox" /> Faça com que a mensagem de erro de login seja genérica (user/pass) ([tutorial](https://gist.github.com/zergiocosta/72f87176b236ed0c6e13){:target="_blank"})</label>
+* <label><input type="checkbox" /> Desabilite o WP REST API caso não esteja utilizando. ([Disable REST API](https://br.wordpress.org/plugins/disable-json-api/){:target="_blank"})</label>
 
 ## Painel Administrativo<span class="items-counter"></span>
 
