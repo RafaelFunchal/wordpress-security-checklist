@@ -7,10 +7,10 @@ permalink: /items/
 > A maioria das vezes que um site feito com WordPress é invadido a culpa não é do WordPress, mas sim de alguma falha boba que poderia ter sido evitada durante a sua construção.
 > Essa é a ideia desse projeto: Ser um checklist de ações que você deve tomar para aumentar a segurança do seu site.
 
-## wp-config
+## wp-config<span class="items-counter"></span>
 * <label><input type="checkbox" /> Altere as chaves de segurança ([Gerador disponibilizado pelo WordPress.org](https://api.wordpress.org/secret-key/1.1/salt/){:target="_blank"})</label>
 
-## Página de login
+## Página de login<span class="items-counter"></span>
 
 * <label><input type="checkbox" /> Bloqueie várias tentativas de login ([Login Lockdown](https://wordpress.org/plugins/login-lockdown/){:target="_blank"} ou [iThemes Security](https://wordpress.org/plugins/better-wp-security/){:target="_blank"} )</label>
 * <label><input type="checkbox" /> Ative autenticação de 2 etapas ([Google Authenticator for WordPress](https://wordpress.org/plugins/wp-google-authenticator/){:target="_blank"})</label>
@@ -21,7 +21,7 @@ permalink: /items/
 * <label><input type="checkbox" /> Altere sua senha periodicamente</label>
 * <label><input type="checkbox" /> Faça com que a mensagem de erro de login seja genérica (user/pass) ([tutorial](https://gist.github.com/zergiocosta/72f87176b236ed0c6e13){:target="_blank"})</label>
 
-## Painel Administrativo
+## Painel Administrativo<span class="items-counter"></span>
 
 * <label><input type="checkbox" /> Proteja a pasta wp-admin com senha ([desbloqueie apenas os arquivos necessários](https://gist.github.com/rafaelfunchal/f9a41ea72d80600d753a){:target="_blank"})</label>
 * <label><input type="checkbox" /> Atualize o WordPress para sua versão mais recente</label>
@@ -31,14 +31,14 @@ permalink: /items/
 * <label><input type="checkbox" /> Instale algum plugin para verificar se algum arquivo foi editado ([WP Security Scan](https://wordpress.org/plugins/wp-security-scan/){:target="_blank"}, [Wordfence](https://wordpress.org/plugins/wordfence/){:target="_blank"} ou [iThemes Security](https://wordpress.org/plugins/better-wp-security/){:target="_blank"})</label>
 * <label><input type="checkbox" /> Scaneie o site a procura de vírus, malwares e falhas de segurança</label>
 
-## Tema
+## Tema<span class="items-counter"></span>
 
 * <label><input type="checkbox" /> Atualize o tema ativo para sua versão mais recente</label>
 * <label><input type="checkbox" /> Apague temas inativos</label>
 * <label><input type="checkbox" /> Apenas instale temas de fontes confiáveis</label>
 * <label><input type="checkbox" /> Remova a versão do WordPress no tema ([tutorial](http://www.wpbeginner.com/wp-tutorials/the-right-way-to-remove-wordpress-version-number/){:target="_blank"})</label>
 
-## Plugins
+## Plugins<span class="items-counter"></span>
 
 * <label><input type="checkbox" /> Atualize todos os plugins para suas versões mais recentes</label>
 * <label><input type="checkbox" /> Apague plugins inativos</label>
@@ -46,13 +46,13 @@ permalink: /items/
 * <label><input type="checkbox" /> Substitua plugins desatualizados por versões alternativas atualizadas</label>
 * <label><input type="checkbox" /> Pense bem antes de instalar uma centena de plugins</label>
 
-## Banco de dados
+## Banco de dados<span class="items-counter"></span>
 
 * <label><input type="checkbox" /> Altere o prefixo das tabelas ([tutorial](http://www.maketecheasier.com/the-safe-way-to-change-your-wordpress-database-table-prefix){:target="_blank"})</label>
 * <label><input type="checkbox" /> Configure backups semanais do seu banco de dados ([Backup WP](https://wordpress.org/plugins/backup-wp/){:target="_blank"}, [WP DB Backup](https://wordpress.org/plugins/wp-db-backup/){:target="_blank"} etc. )</label>
 * <label><input type="checkbox" /> Use senhas fortes com letras maiúsculas e minúsculas, números e caractéres especiais no usuário do banco de dados ([gerador de senhas](http://passwordsgenerator.net/){:target="_blank"})</label>
 
-## Hospedagem
+## Hospedagem<span class="items-counter"></span>
 
 * <label><input type="checkbox" /> Contrate uma hospedagem de confiança</label>
 * <label><input type="checkbox" /> Acesse seu servidor apenas por SFTP ou SSH</label>
