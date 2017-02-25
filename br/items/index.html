@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
+  <head lang="br">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,7 +37,7 @@
     <header class="site-header">
 
     <h1 class="site-title">
-        <a href="/br/" title="WordPress Security Checklist">WordPress Security Checklist</a>
+        <a href="/" title="WordPress Security Checklist">WordPress Security Checklist</a>
     </h1>
     <span class="site-description">Uma lista de ações para aumentar a segurança da sua instalação WordPress.</span>
 
@@ -56,7 +56,7 @@
             
           
             
-                <a class="page-link" href="/br/items/" title="Checklist">Checklist</a>
+              <a class="page-link" href="/br/items/" title="Checklist">Checklist</a>
             
           
           <a class="page-link" href="/br/" title="Blog">Blog</a>
@@ -71,11 +71,11 @@
               
             
               
-                <option value="/ja/">日本語</option>
+                <option value="/es/">Español</option>
               
             
               
-                <option value="/es/">Español</option>
+                <option value="/ja/">日本語</option>
               
             
           </select>
@@ -97,12 +97,12 @@
 Essa é a ideia desse projeto: Ser um checklist de ações que você deve tomar para aumentar a segurança do seu site.</p>
 </blockquote>
 
-<h2 id="wp-config">wp-config</h2>
+<h2 id="wp-config">wp-config<span class="items-counter"></span></h2>
 <ul>
   <li><label><input type="checkbox" /> Altere as chaves de segurança (<a href="https://api.wordpress.org/secret-key/1.1/salt/" target="_blank">Gerador disponibilizado pelo WordPress.org</a>)</label></li>
 </ul>
 
-<h2 id="pgina-de-login">Página de login</h2>
+<h2 id="página-de-login">Página de login<span class="items-counter"></span></h2>
 
 <ul>
   <li><label><input type="checkbox" /> Bloqueie várias tentativas de login (<a href="https://wordpress.org/plugins/login-lockdown/" target="_blank">Login Lockdown</a> ou <a href="https://wordpress.org/plugins/better-wp-security/" target="_blank">iThemes Security</a> )</label></li>
@@ -113,9 +113,10 @@ Essa é a ideia desse projeto: Ser um checklist de ações que você deve tomar 
   <li><label><input type="checkbox" /> Use senhas fortes com letras maiúsculas e minúsculas, números e caractéres especiais em todas as contas (<a href="http://passwordsgenerator.net/" target="_blank">gerador de senhas</a>)</label></li>
   <li><label><input type="checkbox" /> Altere sua senha periodicamente</label></li>
   <li><label><input type="checkbox" /> Faça com que a mensagem de erro de login seja genérica (user/pass) (<a href="https://gist.github.com/zergiocosta/72f87176b236ed0c6e13" target="_blank">tutorial</a>)</label></li>
+  <li><label><input type="checkbox" /> Desabilite o WP REST API caso não esteja utilizando. (<a href="https://br.wordpress.org/plugins/disable-json-api/" target="_blank">Disable REST API</a>)</label></li>
 </ul>
 
-<h2 id="painel-administrativo">Painel Administrativo</h2>
+<h2 id="painel-administrativo">Painel Administrativo<span class="items-counter"></span></h2>
 
 <ul>
   <li><label><input type="checkbox" /> Proteja a pasta wp-admin com senha (<a href="https://gist.github.com/rafaelfunchal/f9a41ea72d80600d753a" target="_blank">desbloqueie apenas os arquivos necessários</a>)</label></li>
@@ -127,7 +128,7 @@ Essa é a ideia desse projeto: Ser um checklist de ações que você deve tomar 
   <li><label><input type="checkbox" /> Scaneie o site a procura de vírus, malwares e falhas de segurança</label></li>
 </ul>
 
-<h2 id="tema">Tema</h2>
+<h2 id="tema">Tema<span class="items-counter"></span></h2>
 
 <ul>
   <li><label><input type="checkbox" /> Atualize o tema ativo para sua versão mais recente</label></li>
@@ -136,7 +137,7 @@ Essa é a ideia desse projeto: Ser um checklist de ações que você deve tomar 
   <li><label><input type="checkbox" /> Remova a versão do WordPress no tema (<a href="http://www.wpbeginner.com/wp-tutorials/the-right-way-to-remove-wordpress-version-number/" target="_blank">tutorial</a>)</label></li>
 </ul>
 
-<h2 id="plugins">Plugins</h2>
+<h2 id="plugins">Plugins<span class="items-counter"></span></h2>
 
 <ul>
   <li><label><input type="checkbox" /> Atualize todos os plugins para suas versões mais recentes</label></li>
@@ -146,7 +147,7 @@ Essa é a ideia desse projeto: Ser um checklist de ações que você deve tomar 
   <li><label><input type="checkbox" /> Pense bem antes de instalar uma centena de plugins</label></li>
 </ul>
 
-<h2 id="banco-de-dados">Banco de dados</h2>
+<h2 id="banco-de-dados">Banco de dados<span class="items-counter"></span></h2>
 
 <ul>
   <li><label><input type="checkbox" /> Altere o prefixo das tabelas (<a href="http://www.maketecheasier.com/the-safe-way-to-change-your-wordpress-database-table-prefix" target="_blank">tutorial</a>)</label></li>
@@ -154,7 +155,7 @@ Essa é a ideia desse projeto: Ser um checklist de ações que você deve tomar 
   <li><label><input type="checkbox" /> Use senhas fortes com letras maiúsculas e minúsculas, números e caractéres especiais no usuário do banco de dados (<a href="http://passwordsgenerator.net/" target="_blank">gerador de senhas</a>)</label></li>
 </ul>
 
-<h2 id="hospedagem">Hospedagem</h2>
+<h2 id="hospedagem">Hospedagem<span class="items-counter"></span></h2>
 
 <ul>
   <li><label><input type="checkbox" /> Contrate uma hospedagem de confiança</label></li>
@@ -210,6 +211,7 @@ Essa é a ideia desse projeto: Ser um checklist de ações que você deve tomar 
       </div>
 
       <div class="footer-col  footer-col-2">
+        
         <p>Quer ajudar a melhorar essa lista? <a href="https://github.com/rafaelfunchal/wordpress-security-checklist#contribute-to-the-project" title="Acesse o projeto no GitHub" target="_blank">Não chore, commite!</a></p>
 
       </div>

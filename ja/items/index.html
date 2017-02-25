@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
+  <head lang="ja">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,7 +37,7 @@
     <header class="site-header">
 
     <h1 class="site-title">
-        <a href="/ja/" title="WordPress Security Checklist">WordPress Security Checklist</a>
+        <a href="/" title="WordPress Security Checklist">WordPress Security Checklist</a>
     </h1>
     <span class="site-description">WordPress のウェブサイトのセキュリティを強化するために行うべきチェックリスト</span>
 
@@ -56,7 +56,7 @@
             
           
             
-                <a class="page-link" href="/ja/items/" title="Checklist">Checklist</a>
+              <a class="page-link" href="/ja/items/" title="Checklist">Checklist</a>
             
           
           <a class="page-link" href="/ja/" title="Blog">Blog</a>
@@ -73,9 +73,9 @@
               
             
               
-            
-              
                 <option value="/es/">Español</option>
+              
+            
               
             
           </select>
@@ -97,7 +97,7 @@
 あなたのウェブサイトのセキュリティを高めるために取るべき行動のチェックリストであること、それがこのプロジェクトの考えです。</p>
 </blockquote>
 
-<h2 id="section">ログイン画面</h2>
+<h2 id="ログイン画面">ログイン画面<span class="items-counter"></span></h2>
 
 <ul>
   <li><label><input type="checkbox" /> 繰り返しログインに失敗したらログイン画面にロックをかける (<a href="https://wordpress.org/plugins/login-lockdown/" target="_blank">Login Lockdown</a> , <a href="https://wordpress.org/plugins/better-wp-security/" target="_blank">iThemes Security</a> )</label></li>
@@ -110,7 +110,7 @@
   <li><label><input type="checkbox" /> ログインエラーメッセージを汎用的なものにする (ユーザー名/パスワード) (<a href="https://gist.github.com/zergiocosta/72f87176b236ed0c6e13" target="_blank">チュートリアル</a>)</label></li>
 </ul>
 
-<h2 id="section-1">管理画面</h2>
+<h2 id="管理画面">管理画面<span class="items-counter"></span></h2>
 
 <ul>
   <li><label><input type="checkbox" /> wp-admin ディレクトリをパスワード保護する (<a href="https://gist.github.com/rafaelfunchal/f9a41ea72d80600d753a" target="_blank">必要なファイルのみブロックを解除</a>)</label></li>
@@ -122,7 +122,7 @@
   <li><label><input type="checkbox" /> ウィルス、マルウェア、セキュリティ侵害に対してウェブサイトをスキャンする</label></li>
 </ul>
 
-<h2 id="section-2">テーマ</h2>
+<h2 id="テーマ">テーマ<span class="items-counter"></span></h2>
 
 <ul>
   <li><label><input type="checkbox" /> テーマを最新版にアップデートする</label></li>
@@ -131,7 +131,7 @@
   <li><label><input type="checkbox" /> テーマから WordPress バージョンの表記を削除する (<a href="http://www.wpbeginner.com/wp-tutorials/the-right-way-to-remove-wordpress-version-number/" target="_blank">チュートリアル</a>)</label></li>
 </ul>
 
-<h2 id="section-3">プラグイン</h2>
+<h2 id="プラグイン">プラグイン<span class="items-counter"></span></h2>
 
 <ul>
   <li><label><input type="checkbox" /> 全てのプラグインを最新版にアップデートする</label></li>
@@ -141,7 +141,7 @@
   <li><label><input type="checkbox" /> たくさんプラグインをインストールする前によく考える</label></li>
 </ul>
 
-<h2 id="section-4">データベース</h2>
+<h2 id="データベース">データベース<span class="items-counter"></span></h2>
 
 <ul>
   <li><label><input type="checkbox" /> デフォルトのテーブル接頭辞を変更する (<a href="http://www.maketecheasier.com/the-safe-way-to-change-your-wordpress-database-table-prefix" target="_blank">チュートリアル</a>)</label></li>
@@ -149,7 +149,7 @@
   <li><label><input type="checkbox" /> データベースのユーザーに対して大文字、小文字、数字、特殊文字を含む強力なパスワードを使う (<a href="http://passwordsgenerator.net/" target="_blank">password generator</a>)</label></li>
 </ul>
 
-<h2 id="section-5">ホスティングサービス</h2>
+<h2 id="ホスティングサービス">ホスティングサービス<span class="items-counter"></span></h2>
 
 <ul>
   <li><label><input type="checkbox" /> 信頼できるホスティングサービスを借りる</label></li>
@@ -205,6 +205,7 @@
       </div>
 
       <div class="footer-col  footer-col-2">
+        
         <p>Would you like to improve the checklist? <a href="https://github.com/rafaelfunchal/wordpress-security-checklist#contribute-to-the-project" title="Access the project on GitHub" target="_blank">Don’t cry, commit!</a></p>
 
       </div>

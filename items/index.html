@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
+  <head lang="en">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -54,15 +54,7 @@
           
           
             
-          
-            
-          
-            
-                <a class="page-link" href="/items/" title="Checklist">Checklist</a>
-            
-          
-            
-          
+              <a class="page-link" href="/items/" title="Checklist">Checklist</a>
             
           
             
@@ -79,11 +71,11 @@
               
             
               
-                <option value="/ja/">日本語</option>
+                <option value="/es/">Español</option>
               
             
               
-                <option value="/es/">Español</option>
+                <option value="/ja/">日本語</option>
               
             
           </select>
@@ -105,13 +97,13 @@
 That’s the idea of this project: Being a checklist of actions that you should take to increase the security of your website.</p>
 </blockquote>
 
-<h2 id="wp-config">wp-config</h2>
+<h2 id="wp-config">wp-config<span class="items-counter"></span></h2>
 
 <ul>
   <li><label><input type="checkbox" /> Change Security Key (<a href="https://api.wordpress.org/secret-key/1.1/salt/" target="_blank">Generator provided by WordPress.org</a>)</label></li>
 </ul>
 
-<h2 id="login-page">Login Page</h2>
+<h2 id="login-page">Login Page<span class="items-counter"></span></h2>
 
 <ul>
   <li><label><input type="checkbox" /> Lockdown the login page for repetitive failed login (<a href="https://wordpress.org/plugins/login-lockdown/" target="_blank">Login Lockdown</a> or <a href="https://wordpress.org/plugins/better-wp-security/" target="_blank">iThemes Security</a> )</label></li>
@@ -122,9 +114,10 @@ That’s the idea of this project: Being a checklist of actions that you should 
   <li><label><input type="checkbox" /> Use a strong password contaning uppercase, lowercase, numbers, and special characters on all accounts (<a href="http://passwordsgenerator.net/" target="_blank">password generator</a>)</label></li>
   <li><label><input type="checkbox" /> Change the passwords regularly</label></li>
   <li><label><input type="checkbox" /> Make the login error messages more generical (user/pass) (<a href="https://gist.github.com/zergiocosta/72f87176b236ed0c6e13" target="_blank">tutorial</a>)</label></li>
+  <li><label><input type="checkbox" /> Disable the WP REST API, if you aren’t using it. (<a href="https://br.wordpress.org/plugins/disable-json-api/" target="_blank">Disable REST API</a>)</label></li>
 </ul>
 
-<h2 id="administrative-panel">Administrative Panel</h2>
+<h2 id="administrative-panel">Administrative Panel<span class="items-counter"></span></h2>
 
 <ul>
   <li><label><input type="checkbox" /> Password protect the folder wp-admin (<a href="https://gist.github.com/rafaelfunchal/f9a41ea72d80600d753a" target="_blank">unblock only the needed files</a>)</label></li>
@@ -136,7 +129,7 @@ That’s the idea of this project: Being a checklist of actions that you should 
   <li><label><input type="checkbox" /> Scan the website for viruses, malware, and security breaches</label></li>
 </ul>
 
-<h2 id="themes">Themes</h2>
+<h2 id="themes">Themes<span class="items-counter"></span></h2>
 
 <ul>
   <li><label><input type="checkbox" /> Keep the theme up-to-date</label></li>
@@ -145,7 +138,7 @@ That’s the idea of this project: Being a checklist of actions that you should 
   <li><label><input type="checkbox" /> Remove the WordPress version from the theme (<a href="http://www.wpbeginner.com/wp-tutorials/the-right-way-to-remove-wordpress-version-number/" target="_blank">tutorial</a>)</label></li>
 </ul>
 
-<h2 id="plugins">Plugins</h2>
+<h2 id="plugins">Plugins<span class="items-counter"></span></h2>
 
 <ul>
   <li><label><input type="checkbox" /> Keep all plugins up-to-date</label></li>
@@ -155,7 +148,7 @@ That’s the idea of this project: Being a checklist of actions that you should 
   <li><label><input type="checkbox" /> Think twice before installing a ton of plugins</label></li>
 </ul>
 
-<h2 id="database">Database</h2>
+<h2 id="database">Database<span class="items-counter"></span></h2>
 
 <ul>
   <li><label><input type="checkbox" /> Change the default table prefix (<a href="http://www.maketecheasier.com/the-safe-way-to-change-your-wordpress-database-table-prefix" target="_blank">tutorial</a>)</label></li>
@@ -163,7 +156,7 @@ That’s the idea of this project: Being a checklist of actions that you should 
   <li><label><input type="checkbox" /> Use a strong password contaning uppercase, lowercase, numbers, and special characters for the database user (<a href="http://passwordsgenerator.net/" target="_blank">password generator</a>)</label></li>
 </ul>
 
-<h2 id="hosting-provider">Hosting provider</h2>
+<h2 id="hosting-provider">Hosting provider<span class="items-counter"></span></h2>
 
 <ul>
   <li><label><input type="checkbox" /> Hire a reliable hosting provider</label></li>
@@ -219,6 +212,7 @@ That’s the idea of this project: Being a checklist of actions that you should 
       </div>
 
       <div class="footer-col  footer-col-2">
+        
         <p>Would you like to improve the checklist? <a href="https://github.com/rafaelfunchal/wordpress-security-checklist#contribute-to-the-project" title="Access the project on GitHub" target="_blank">Don’t cry, commit!</a></p>
 
       </div>

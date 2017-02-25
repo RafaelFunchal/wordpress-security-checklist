@@ -323,6 +323,10 @@ pre {
     font-size: 32px;
     margin-bottom: 0;
     margin-top: 15px; }
+    .post-content h2 .items-counter {
+      margin-left: 10px; }
+      .post-content h2 .items-counter.all-checked {
+        color: #008CBA; }
     @media screen and (max-width: 800px) {
       .post-content h2 {
         font-size: 28px; } }
