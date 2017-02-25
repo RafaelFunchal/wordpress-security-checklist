@@ -10,15 +10,27 @@ markdown:         kramdown
 kramdown:
    input:         GFM
 exclude:          ["README.md"]
-paginate:         5
+paginate:         10
+paginate_files:
+  - index.html
+  - index.br.html
+  - index.es.html
+  - index.ja.html
 encoding:         UTF-8
 future:           false
 
 # Permalinks
 permalink:   pretty
 
+# Gems
+gems:             ['jekyll-pagination', 'jekyll-language-plugin']
+
 # Languages
-gems:             ['jekyll-multiple-languages', 'jekyll-paginate']
+
+language_data:         data.lang.%%
+language_includes_dir: _i18n
+
+
 language_default: 'en'
 languages:        ['en', 'br', 'ja', 'es']
 
