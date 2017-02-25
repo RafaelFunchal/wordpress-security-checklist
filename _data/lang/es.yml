@@ -1,0 +1,12 @@
+description: "Una lista de acciones para aumentar la seguridad de una instalación WordPress"
+commit:      "Quieres ayudar a mejorar la lista? [No llores, haz commit!](https://github.com/rafaelfunchal/wordpress-security-checklist#contribute-to-the-project 'Accede al proyecto en GitHub'){:target='_blank'}"
+apps:        "Instala nuestro app!"
+blog:        "Blog"
+subscribe:   "Suscribete"
+byrss:       "vía RSS"
+redirecting: "volver a dirigir a"
+lang:
+  en:        "English"
+  br:        "Português"
+  es:        "Español"
+  ja:        "日本語"
