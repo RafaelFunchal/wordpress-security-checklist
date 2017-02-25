@@ -3,6 +3,7 @@ layout: post
 title:  "Release of our Android app"
 date:   2015-07-23 08:53:00
 categories: update
+language: en
 ---
 
 Since I created this project I've received a lot of positive feedbacks on social networks. **Thank you, guys!**

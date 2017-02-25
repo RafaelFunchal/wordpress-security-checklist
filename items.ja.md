@@ -1,7 +1,9 @@
 ---
 layout:    page
 title:     ja-JP
-permalink: /items/
+permalink: /ja/items/
+language: ja
+subset: root
 ---
 
 > WordPress で稼働しているウェブサイトがハッキングされる原因は WordPress にあるわけではなく、そのほとんどが開発中に回避できるいくつかの設定ミスによるものです。

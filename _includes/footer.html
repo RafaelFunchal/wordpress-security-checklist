@@ -37,11 +37,12 @@
       </div>
 
       <div class="footer-col  footer-col-2">
-        {{ site.t.[page.language].commit | markdownify }}
+        {% capture commit_text %}{% t 'commit' %}{% endcapture %}
+        {{ commit_text | markdownify }}
       </div>
 
       <div class="footer-col  footer-col-3">
-        <h3 class="footer-heading">{{ site.t.[page.language].apps }}</h3>
+        <h3 class="footer-heading">{% t 'apps' %}</h3>
         <ul class="badges">
           <li>
             <a href="https://play.google.com/store/apps/details?id=com.ionicframework.wordpresssecuritychecklistapp804039" target="_blank">

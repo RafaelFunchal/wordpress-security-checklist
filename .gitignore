@@ -9,6 +9,7 @@
 *.vi
 *~
 *.sass-cache
+Gemfile.lock
 
 # OS or Editor folders
 .DS_Store

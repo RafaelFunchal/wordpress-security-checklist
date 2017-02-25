@@ -3,7 +3,7 @@
     <h1 class="site-title">
         <a href="{{ site.baseurl }}/{% if page.is_default_language == false %}{{ page.language }}/{% endif %}" title="{{ site.title }}">{{ site.title }}</a>
     </h1>
-    <span class="site-description">{{ site.t.[page.language].description }}</span>
+    <span class="site-description">{% t 'description' %}</span>
 
     <nav class="site-nav">
         <a href="#" class="menu-icon">
@@ -18,16 +18,16 @@
           {% assign pages=site.pages | where:"language", page.language %}
           {% for page in pages %}
             {% if page.title %}
-                <a class="page-link" href="{{ page.url | prepend: site.baseurl }}" title="Checklist">Checklist</a>
+              <a class="page-link" href="{{ page.url | prepend: site.baseurl }}" title="Checklist">Checklist</a>
             {% endif %}
           {% endfor %}
-          <a class="page-link" href="{{ site.baseurl }}/{% if page.is_default_language == false %}{{ page.language }}/{% endif %}" title="Blog">Blog</a>
+          <a class="page-link" href="{{ site.baseurl }}/{% if page.language != 'en' %}{{ page.language }}/{% endif %}" title="Blog">Blog</a>
 
           <select name="language-switch" class="language-switch" onchange="location = this.options[this.selectedIndex].value;">
             <option value="" selected="selected">Available Languages</option>
             {% for language in site.languages %}
               {% if page.language != language %}
-                <option value="{{ site.baseurl }}/{% if site.language_default != language %}{{ language }}/{% endif %}">{{ site.t.[language].switch }}</option>
+                <option value="{{ site.baseurl }}/{% if language != 'en' %}{{ language }}/{% endif %}">{% tl language %}</option>
               {% endif %}
             {% endfor%}
           </select>

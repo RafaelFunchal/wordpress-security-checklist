@@ -3,6 +3,7 @@ layout: post
 title:  "Lançamento do aplicativo para Android"
 date:   2015-07-23 08:53:00
 categories: update
+language: br
 ---
 
 Desde que criei esse projeto tenho recebido muitos feedbacks positivos nas redes sociais. **Muito obrigado, galera!**

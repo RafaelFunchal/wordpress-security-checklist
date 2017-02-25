@@ -1,7 +1,9 @@
 ---
 layout:    page
 title:     es-ES
-permalink: /items/
+permalink: /es/items/
+language: es
+subset: root
 ---
 
 > En la mayoría de las veces que un sitio con WordPress és invadido la culpa no es de WordPress, pero si de algunos fallos tontos que se podrían haber evitado durante su construcción.
