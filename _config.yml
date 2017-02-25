@@ -9,13 +9,9 @@ image:            "/img/screenshot.png"
 markdown:         kramdown
 kramdown:
    input:         GFM
-exclude:          ["README.md"]
+exclude:          [ "README.md" ]
 paginate:         10
-paginate_files:
-  - index.html
-  - index.br.html
-  - index.es.html
-  - index.ja.html
+paginate_file:    index.html
 encoding:         UTF-8
 future:           false
 
@@ -23,9 +19,12 @@ future:           false
 permalink:   pretty
 
 # Gems
-gems:             ['jekyll-pagination', 'jekyll-language-plugin']
+gems:
+  - github-pages
+  - jekyll-paginate
+  - jekyll-language-plugin
 
 # Languages
 language_data:         data.lang.%%
 language_includes_dir: _i18n
-languages:             ['en', 'br', 'ja', 'es']
+languages:             [ 'en', 'br', 'es', 'ja' ]
