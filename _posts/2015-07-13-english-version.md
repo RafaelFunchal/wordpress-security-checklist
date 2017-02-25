@@ -3,6 +3,7 @@ layout: post
 title:  "Now we have an English version of the checklist"
 date:   2015-07-13 15:30:00
 categories: update
+language: en
 ---
 
 Finally I found a few time to translate the checkilist to English \o/

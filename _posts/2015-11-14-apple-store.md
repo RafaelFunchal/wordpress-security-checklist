@@ -4,6 +4,7 @@ title:  "Available on Apple Store"
 date:   2015-11-14 01:10:00
 image:  "/img/apple-store.png"
 categories: update
+language: en
 ---
 
 [Ionic Framework](http://ionicframework.com/){:target="_blank"} is the best framework, IMHO, to create hybrid apps, but nothing is perfect.

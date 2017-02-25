@@ -1,5 +1,10 @@
 ---
 layout: default
+languages:
+  - br
+  - es
+  - ja
+subset: root
 ---
 
 <div class="home">
@@ -7,9 +12,9 @@ layout: default
   {% assign posts=site.posts | where:"language", page.language %}
   {% if posts == empty %}
     <meta http-equiv="refresh" content="0; url={{ site.baseurl}}/{{ page.language }}/items">
-    <p>{{ site.t.[page.language].redirecting }} <a href="{{ site.baseurl}}/{{ page.language }}/items" title="Checklist">Checklist</a></p>
+    <p>{% t 'redirecting' %} <a href="{{ site.baseurl}}/{{ page.language }}/items" title="Checklist">Checklist</a></p>
   {% else %}
-    <h1 class="page-heading">{{ site.t.[page.language].blog }}</h1>
+    <h1 class="page-heading">{% t 'blog' %}</h1>
     <ul class="post-list">
       {% for post in posts %}
         <li>
@@ -20,7 +25,7 @@ layout: default
         </li>
       {% endfor %}
     </ul>
-    <p class="rss-subscribe">{{ site.t.[page.language].subscribe }} <a href="{{ "/feed.xml" | prepend: site.baseurl }}" title="{{ site.t.[page.language].subscribe }} {{ site.t.[page.language].byrss }}">{{ site.t.[page.language].byrss }}</a></p>
+    <p class="rss-subscribe">{% t 'subscribe' %} <a href="{{ "/feed.xml" | prepend: site.baseurl }}" title="{% t 'subscribe' %} {% t 'byrss' %}">{% t 'byrss' %}</a></p>
   {% endif %}
 
 </div>
