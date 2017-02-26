@@ -107,7 +107,6 @@ GEM
     jekyll-optional-front-matter (0.1.2)
       jekyll (~> 3.0)
     jekyll-paginate (1.1.0)
-    jekyll-pagination (0.0.4)
     jekyll-readme-index (0.0.4)
       jekyll (~> 3.0)
     jekyll-redirect-from (0.12.1)
@@ -199,7 +198,7 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   jekyll-language-plugin
-  jekyll-pagination
+  jekyll-paginate
 
 BUNDLED WITH
    1.14.5
