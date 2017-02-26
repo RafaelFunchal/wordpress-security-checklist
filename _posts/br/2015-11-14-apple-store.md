@@ -5,6 +5,7 @@ date:   2015-11-14 01:10:00
 image:  "/img/apple-store.png"
 categories: update
 language: br
+permalink: /:language/:categories/:year/:month/:day/:title/
 ---
 
 O [Ionic Framework](http://ionicframework.com/){:target="_blank"} é o melhor framework, na minha opinião, para criação de aplicativos híbridos, porém, nada no mundo é perfeito.

@@ -5,6 +5,7 @@ date:   2015-08-24 23:17:00
 image:  "/img/versao-imprimivel.png"
 categories: update
 language: br
+permalink: /:language/:categories/:year/:month/:day/:title/
 ---
 
 

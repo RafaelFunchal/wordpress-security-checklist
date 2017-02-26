@@ -4,6 +4,7 @@ title:  "Lançamento do aplicativo para Android"
 date:   2015-07-23 08:53:00
 categories: update
 language: br
+permalink: /:language/:categories/:year/:month/:day/:title/
 ---
 
 Desde que criei esse projeto tenho recebido muitos feedbacks positivos nas redes sociais. **Muito obrigado, galera!**
