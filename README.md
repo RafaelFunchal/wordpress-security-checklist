@@ -1,5 +1,8 @@
 [collaborating]: https://help.github.com/categories/63/articles
 [youtube-video]: http://www.youtube.com/watch?v=H3olaBo83As
+[jekyll]: https://jekyllrb.com/
+[bundler]: http://bundler.io/
+[gem-download]: https://rubygems.org/pages/download
 
 # Sobre #
 
@@ -17,9 +20,9 @@ Você pode ver mais informações sobre como contribuir e enviar Pull Requests e
 
 #### Instalando os itens necessários ####
 
-Caso você não tenha `gem` instalado em seu computador, você pode instalá-lo usando esse (link)[https://rubygems.org/pages/download];
+Caso você não tenha `gem` instalado em seu computador, você pode instalá-lo usando esse [link][gem-download];
 
-Esse projeto utiliza (Jekyll)[https://jekyllrb.com/] como gerenciador de conteúdo e (Bundler)[http://bundler.io/] como gerenciador de dependências, então é necessário instalá-los em seu computador executando esse comando no terminal:
+Esse projeto utiliza [Jekyll][jekyll] como gerenciador de conteúdo e [Bundler][blundler] como gerenciador de dependências, então é necessário instalá-los em seu computador executando esse comando no terminal:
 
 `$ gem install jekyll bundler`
 
@@ -67,9 +70,9 @@ More details about how to contribute and send Pull Requests in [GitHub Collabora
 
 #### Installing all necessary items ####
 
-If you don't have `gem` installed on your computer, it is possible to install from this (link)[https://rubygems.org/pages/download];
+If you don't have `gem` installed on your computer, it is possible to install from this [link][gem-download];
 
-This project uses (Jekyll)[https://jekyllrb.com/] as a content management system and (Bundler)[http://bundler.io/] as a dependency manager, so it is necessary to install them on your computer by executing this command on terminal:
+This project uses [Jekyll][jekyll] as a content management system and [Bundler][bundler] as a dependency manager, so it is necessary to install them on your computer by executing this command on terminal:
 
 `$ gem install jekyll bundler`
 
