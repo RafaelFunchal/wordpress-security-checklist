@@ -22,7 +22,7 @@ Você pode ver mais informações sobre como contribuir e enviar Pull Requests e
 
 Caso você não tenha `gem` instalado em seu computador, você pode instalá-lo usando esse [link][gem-download];
 
-Esse projeto utiliza [Jekyll][jekyll] como gerenciador de conteúdo e [Bundler][blundler] como gerenciador de dependências, então é necessário instalá-los em seu computador executando esse comando no terminal:
+Esse projeto utiliza [Jekyll][jekyll] como gerenciador de conteúdo e [Bundler][bundler] como gerenciador de dependências, então é necessário instalá-los em seu computador executando esse comando no terminal:
 
 `$ gem install jekyll bundler`
 
