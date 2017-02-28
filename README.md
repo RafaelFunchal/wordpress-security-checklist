@@ -1,3 +1,6 @@
+[collaborating]: https://help.github.com/categories/63/articles
+[youtube-video]: http://www.youtube.com/watch?v=H3olaBo83As
+
 # Sobre #
 
 Uma lista simples para melhorar a segurança da sua instalação WordPress.
@@ -59,10 +62,6 @@ If you want to contribute with this project and add more items to the list, plea
 More details about how to contribute and send Pull Requests in [GitHub Collaborating][collaborating].
 
 [How to colaborate to opensource projects on GitHub][youtube-video].
-
-[collaborating]: https://help.github.com/categories/63/articles
-
-[youtube-video]: http://www.youtube.com/watch?v=H3olaBo83As
 
 ### How to install ###
 
