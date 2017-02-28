@@ -24,7 +24,7 @@ Esse projeto utiliza (Jekyll)[https://jekyllrb.com/] como gerenciador de conteú
 
 Clique no botão `Fork` para copiar o projeto para sua conta do GitHub.
 
-Após criar uma versão do projeto em seu próprio GitHub, é necessário salvá-la em seu computador. Abra o terminal e utilize esse código (note que você precisa substituir SEU-NOME-DE-USUÁRIO por seu nome de usuário real)""
+Após criar uma versão do projeto em seu próprio GitHub, é necessário salvá-la em seu computador. Abra o terminal e utilize esse código (note que você precisa substituir SEU-NOME-DE-USUÁRIO por seu nome de usuário real):
 
 `$ git clone git@github.com:SEU-NOME-DE-USUÁRIO/wordpress-security-checklist.git`
 
@@ -63,3 +63,39 @@ More details about how to contribute and send Pull Requests in [GitHub Collabora
 [collaborating]: https://help.github.com/categories/63/articles
 
 [youtube-video]: http://www.youtube.com/watch?v=H3olaBo83As
+
+### How to install ###
+
+#### Installing all necessary items ####
+
+If you don't have `gem` installed on your computer, it is possible to install from this (link)[https://rubygems.org/pages/download];
+
+This project uses (Jekyll)[https://jekyllrb.com/] as a content management system and (Bundler)[http://bundler.io/] as a dependency manager, so it is necessary to install them on your computer by executing this command on terminal:
+
+`$ gem install jekyll bundler`
+
+#### Copying the project to your computer ####
+
+Click on the `Fork` button to copy the project to your own GitHub account.
+
+After that, it is necessary to save the project on your computer by running this command on terminal (replace YOUR-USERNAME by your real username):
+
+`$ git clone git@github.com:YOUR-USERNAME/wordpress-security-checklist.git`
+
+#### Running Jekyll ####
+
+Access the directory where the project has been saved by using this command on terminal:
+
+`$ cd /path/to/directory`
+
+Let's install all dependencies (it can take a while):
+
+`$ bundle install`
+
+Now your are all set to execute Jekyll and navigate to your own copy on your browser:
+
+`$ jekyll serve`
+
+By running that command, Jekyll will give you a link. Copy and paste it on your browser.
+
+All done! Now you just need to make the changes you want to, commit them, and send me a Pull Request.
