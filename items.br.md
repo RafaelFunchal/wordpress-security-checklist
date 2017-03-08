@@ -15,7 +15,7 @@ subset: root
 ## Página de login<span class="items-counter"></span>
 
 * <label><input type="checkbox" /> Bloqueie várias tentativas de login ([Login Lockdown](https://wordpress.org/plugins/login-lockdown/){:target="_blank"} ou [iThemes Security](https://wordpress.org/plugins/better-wp-security/){:target="_blank"} )</label>
-* <label><input type="checkbox" /> Ative autenticação de 2 etapas ([Google Authenticator for WordPress](https://wordpress.org/plugins/wp-google-authenticator/){:target="_blank"})</label>
+* <label><input type="checkbox" /> Ative autenticação de 2 etapas ([Google Authenticator](https://wordpress.org/plugins/google-authenticator/){:target="_blank"})</label>
 * <label><input type="checkbox" /> Use um email para fazer login ao invés de um nome de usuário ([Force Email Login](https://wordpress.org/plugins/force-email-login/){:target="_blank"})</label>
 * <label><input type="checkbox" /> Altere o endereço da sua página de login ([iThemes Security](https://wordpress.org/plugins/better-wp-security/){:target="_blank"} ou diretamente pelo .htaccess)</label>
 * <label><input type="checkbox" /> Remova links para sua página de login (caso exista algum em seu tema)</label>

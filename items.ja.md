@@ -12,7 +12,7 @@ subset: root
 ## ログイン画面<span class="items-counter"></span>
 
 * <label><input type="checkbox" /> 繰り返しログインに失敗したらログイン画面にロックをかける ([Login Lockdown](https://wordpress.org/plugins/login-lockdown/){:target="_blank"} , [iThemes Security](https://wordpress.org/plugins/better-wp-security/){:target="_blank"} )</label>
-* <label><input type="checkbox" /> 2段階認証を有効にする ([Google Authenticator for WordPress](https://wordpress.org/plugins/wp-google-authenticator/){:target="_blank"})</label>
+* <label><input type="checkbox" /> 2段階認証を有効にする ([Google Authenticator](https://wordpress.org/plugins/google-authenticator/){:target="_blank"})</label>
 * <label><input type="checkbox" /> ユーザー名の代わりにメールアドレスをログインに使う ([Force Email Login](https://wordpress.org/plugins/force-email-login/){:target="_blank"})</label>
 * <label><input type="checkbox" /> ログイン画面の URL を変更する ([iThemes Security](https://wordpress.org/plugins/better-wp-security/){:target="_blank"} または .htaccess に直接記述)</label>
 * <label><input type="checkbox" /> テーマからログイン画面へのリンクを削除する (もし入っていれば)</label>

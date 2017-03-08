@@ -16,7 +16,7 @@ subset: root
 ## Login Page<span class="items-counter"></span>
 
 * <label><input type="checkbox" /> Lockdown the login page for repetitive failed login ([Login Lockdown](https://wordpress.org/plugins/login-lockdown/){:target="_blank"} or [iThemes Security](https://wordpress.org/plugins/better-wp-security/){:target="_blank"} )</label>
-* <label><input type="checkbox" /> Activate 2 factor authentication ([Google Authenticator for WordPress](https://wordpress.org/plugins/wp-google-authenticator/){:target="_blank"})</label>
+* <label><input type="checkbox" /> Activate 2 factor authentication ([Google Authenticator](https://wordpress.org/plugins/google-authenticator/){:target="_blank"})</label>
 * <label><input type="checkbox" /> Use email address to login instead of username ([Force Email Login](https://wordpress.org/plugins/force-email-login/){:target="_blank"})</label>
 * <label><input type="checkbox" /> Rename the URL of your login page ([iThemes Security](https://wordpress.org/plugins/better-wp-security/){:target="_blank"} or directly on .htaccess)</label>
 * <label><input type="checkbox" /> Remove login links from the theme (if there's any)</label>
