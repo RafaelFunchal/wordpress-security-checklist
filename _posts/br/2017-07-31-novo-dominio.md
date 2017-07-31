@@ -12,7 +12,7 @@ Em Maio estive em Porto Alegre para [palestrar](https://2017.portoalegre.wordcam
 
 Durante uma das minhas conversas com o [Marco Andrei Kichalowsky](http://arsnova.digital/){:target="_blank"}, organizador da edição 2017 do WordCamp Porto Alegre, ele me perguntou:
 
-> Por que o WP Security Checklist não tem um domínio em português para faciliar o acesso?
+> Por que o WP Security Checklist não tem um domínio em português para facilitar o acesso?
 
 Embora eu tenha demorado para aplicar essa ideia, gostei muito dela.
 
