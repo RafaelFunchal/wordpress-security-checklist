@@ -5,9 +5,40 @@
     <description></description>
     <link>http://wpsecuritychecklist.org/</link>
     <atom:link href="http://wpsecuritychecklist.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 08 Mar 2017 14:42:31 -0300</pubDate>
-    <lastBuildDate>Wed, 08 Mar 2017 14:42:31 -0300</lastBuildDate>
+    <pubDate>Mon, 31 Jul 2017 15:15:27 -0300</pubDate>
+    <lastBuildDate>Mon, 31 Jul 2017 15:15:27 -0300</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
+    
+      <item>
+        <title>Novo redirecionamento de domínio</title>
+        <description>&lt;p&gt;Em Maio estive em Porto Alegre para &lt;a href=&quot;https://2017.portoalegre.wordcamp.org/session/configurando-ssl-com-lets-encrypt-easyengine-e-wp-cli/&quot; target=&quot;_blank&quot;&gt;palestrar&lt;/a&gt; no &lt;a href=&quot;https://2017.portoalegre.wordcamp.org/&quot; target=&quot;_blank&quot;&gt;WordCamp&lt;/a&gt; que ocorreu no dia 6.&lt;/p&gt;
+
+&lt;p&gt;Durante uma das minhas conversas com o &lt;a href=&quot;http://arsnova.digital/&quot; target=&quot;_blank&quot;&gt;Marco Andrei Kichalowsky&lt;/a&gt;, organizador da edição 2017 do WordCamp Porto Alegre, ele me perguntou:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Por que o WP Security Checklist não tem um domínio em português para faciliar o acesso?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Embora eu tenha demorado para aplicar essa ideia, gostei muito dela.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://listadesegurancawp.org&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;/img/listadesegurancawp.org.png&quot; alt=&quot;ListaDeSegurancaWP.org&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Hoje, finalmente, essa ideia saiu da cabeça!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;listadesegurancawp.org -&amp;gt; http://wpsecuritychecklist.org/br/items/&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Agora o domínio &lt;em&gt;listadesegurancawp.org&lt;/em&gt; redirecionará diretamente para o checklist em português e ficou ainda mais simples para compartilhar a lista com aquela pessoa que pensa que segurança não é coisa séria \o/&lt;/p&gt;
+
+&lt;p&gt;Muito obrigado pela sugestão, Marco :-)&lt;/p&gt;
+</description>
+        <pubDate>Mon, 31 Jul 2017 12:00:00 -0300</pubDate>
+        <link>http://wpsecuritychecklist.org/br/update/2017/07/31/novo-dominio/</link>
+        <guid isPermaLink="true">http://wpsecuritychecklist.org/br/update/2017/07/31/novo-dominio/</guid>
+        
+        
+        <category>update</category>
+        
+      </item>
     
       <item>
         <title>Estamos na Apple Store</title>
@@ -202,23 +233,6 @@
         <pubDate>Mon, 13 Jul 2015 12:30:00 -0300</pubDate>
         <link>http://wpsecuritychecklist.org/br/update/2015/07/13/english-version/</link>
         <guid isPermaLink="true">http://wpsecuritychecklist.org/br/update/2015/07/13/english-version/</guid>
-        
-        
-        <category>update</category>
-        
-      </item>
-    
-      <item>
-        <title>Now we have an English version of the checklist</title>
-        <description>&lt;p&gt;Finally I found a few time to translate the checkilist to English \o/&lt;/p&gt;
-
-&lt;p&gt;Probably you noticed that there are a few strings in Brazilian Portuguese on header and footer. Right now, only the checklist is translated, but I intend to make the entire website multi language friendly soon.&lt;/p&gt;
-
-&lt;p&gt;If you have some suggestion, please, poke me on &lt;a href=&quot;http://twitter.com/RafaelFunchal&quot; target=&quot;_blank&quot;&gt;Twitter&lt;/a&gt; or &lt;a href=&quot;https://github.com/rafaelfunchal/wordpress-security-checklist/issues&quot; target=&quot;_blank&quot;&gt;open an issue on GitHub&lt;/a&gt;.&lt;/p&gt;
-</description>
-        <pubDate>Mon, 13 Jul 2015 12:30:00 -0300</pubDate>
-        <link>http://wpsecuritychecklist.org/update/2015/07/13/english-version/</link>
-        <guid isPermaLink="true">http://wpsecuritychecklist.org/update/2015/07/13/english-version/</guid>
         
         
         <category>update</category>
