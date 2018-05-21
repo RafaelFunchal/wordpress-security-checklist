@@ -16,13 +16,13 @@ subset: root
 
 * <label><input type="checkbox" /> Bloqueie várias tentativas de login ([Login Lockdown](https://wordpress.org/plugins/login-lockdown/){:target="_blank"} ou [iThemes Security](https://wordpress.org/plugins/better-wp-security/){:target="_blank"} )</label>
 * <label><input type="checkbox" /> Ative autenticação de 2 etapas ([Google Authenticator](https://wordpress.org/plugins/google-authenticator/){:target="_blank"})</label>
-* <label><input type="checkbox" /> Use um email para fazer login ao invés de um nome de usuário ([Force Email Login](https://wordpress.org/plugins/force-email-login/){:target="_blank"})</label>
+* <label><input type="checkbox" /> Use um e-mail para fazer login ao invés de um nome de usuário ([Force Email Login](https://wordpress.org/plugins/force-email-login/){:target="_blank"})</label>
 * <label><input type="checkbox" /> Altere o endereço da sua página de login ([iThemes Security](https://wordpress.org/plugins/better-wp-security/){:target="_blank"} ou diretamente pelo .htaccess)</label>
 * <label><input type="checkbox" /> Remova links para sua página de login (caso exista algum em seu tema)</label>
-* <label><input type="checkbox" /> Use senhas fortes com letras maiúsculas e minúsculas, números e caractéres especiais em todas as contas ([gerador de senhas](http://passwordsgenerator.net/){:target="_blank"})</label>
+* <label><input type="checkbox" /> Use senhas fortes com letras maiúsculas e minúsculas, números e caracteres especiais em todas as contas ([gerador de senhas](http://passwordsgenerator.net/){:target="_blank"})</label>
 * <label><input type="checkbox" /> Altere sua senha periodicamente</label>
 * <label><input type="checkbox" /> Faça com que a mensagem de erro de login seja genérica (user/pass) ([tutorial](https://gist.github.com/zergiocosta/72f87176b236ed0c6e13){:target="_blank"})</label>
-* <label><input type="checkbox" /> Desabilite o WP REST API caso não esteja utilizando. ([Disable REST API](https://br.wordpress.org/plugins/disable-json-api/){:target="_blank"})</label>
+* <label><input type="checkbox" /> Desabilite a API REST do WP caso não esteja utilizando. ([Disable REST API](https://br.wordpress.org/plugins/disable-json-api/){:target="_blank"})</label>
 
 ## Painel Administrativo<span class="items-counter"></span>
 
@@ -32,7 +32,7 @@ subset: root
 * <label><input type="checkbox" /> Crie uma conta Editor e use-a somente para publicar seu conteúdo</label>
 * <label><input type="checkbox" /> Implemente SSL em toda seção administrativa</label>
 * <label><input type="checkbox" /> Instale algum plugin para verificar se algum arquivo foi editado ([WP Security Scan](https://wordpress.org/plugins/wp-security-scan/){:target="_blank"}, [Wordfence](https://wordpress.org/plugins/wordfence/){:target="_blank"} ou [iThemes Security](https://wordpress.org/plugins/better-wp-security/){:target="_blank"})</label>
-* <label><input type="checkbox" /> Scaneie o site a procura de vírus, malwares e falhas de segurança</label>
+* <label><input type="checkbox" /> Escaneie o site a procura de vírus, malwares e falhas de segurança</label>
 
 ## Tema<span class="items-counter"></span>
 
@@ -52,8 +52,8 @@ subset: root
 ## Banco de dados<span class="items-counter"></span>
 
 * <label><input type="checkbox" /> Altere o prefixo das tabelas ([tutorial](http://www.maketecheasier.com/the-safe-way-to-change-your-wordpress-database-table-prefix){:target="_blank"})</label>
-* <label><input type="checkbox" /> Configure backups semanais do seu banco de dados ([Backup WP](https://wordpress.org/plugins/backup-wp/){:target="_blank"}, [WP DB Backup](https://wordpress.org/plugins/wp-db-backup/){:target="_blank"} etc. )</label>
-* <label><input type="checkbox" /> Use senhas fortes com letras maiúsculas e minúsculas, números e caractéres especiais no usuário do banco de dados ([gerador de senhas](http://passwordsgenerator.net/){:target="_blank"})</label>
+* <label><input type="checkbox" /> Configure backups semanais do seu banco de dados ([Backup WP](https://wordpress.org/plugins/backup-wp/){:target="_blank"}, [WP DB Backup](https://wordpress.org/plugins/wp-db-backup/){:target="_blank"}, etc.)</label>
+* <label><input type="checkbox" /> Use senhas fortes com letras maiúsculas e minúsculas, números e caracteres especiais no usuário do banco de dados ([gerador de senhas](http://passwordsgenerator.net/){:target="_blank"})</label>
 
 ## Hospedagem<span class="items-counter"></span>
 
