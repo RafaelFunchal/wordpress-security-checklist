@@ -3,10 +3,10 @@
   <channel>
     <title>WordPress Security Checklist</title>
     <description></description>
-    <link>http://wpsecuritychecklist.org/</link>
-    <atom:link href="http://wpsecuritychecklist.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 31 Jul 2017 15:33:23 -0300</pubDate>
-    <lastBuildDate>Mon, 31 Jul 2017 15:33:23 -0300</lastBuildDate>
+    <link>https://wpsecuritychecklist.org/</link>
+    <atom:link href="https://wpsecuritychecklist.org/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 18 Dec 2018 11:40:50 -0200</pubDate>
+    <lastBuildDate>Tue, 18 Dec 2018 11:40:50 -0200</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
     
       <item>
@@ -16,7 +16,7 @@
 &lt;p&gt;Durante uma das minhas conversas com o &lt;a href=&quot;http://arsnova.digital/&quot; target=&quot;_blank&quot;&gt;Marco Andrei Kichalowsky&lt;/a&gt;, organizador da edição 2017 do WordCamp Porto Alegre, ele me perguntou:&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;Por que o WP Security Checklist não tem um domínio em português para faciliar o acesso?&lt;/p&gt;
+  &lt;p&gt;Por que o WP Security Checklist não tem um domínio em português para facilitar o acesso?&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;Embora eu tenha demorado para aplicar essa ideia, gostei muito dela.&lt;/p&gt;
@@ -32,8 +32,8 @@
 &lt;p&gt;Muito obrigado pela sugestão, Marco :-)&lt;/p&gt;
 </description>
         <pubDate>Mon, 31 Jul 2017 12:00:00 -0300</pubDate>
-        <link>http://wpsecuritychecklist.org/br/update/2017/07/31/novo-dominio/</link>
-        <guid isPermaLink="true">http://wpsecuritychecklist.org/br/update/2017/07/31/novo-dominio/</guid>
+        <link>https://wpsecuritychecklist.org/br/update/2017/07/31/novo-dominio/</link>
+        <guid isPermaLink="true">https://wpsecuritychecklist.org/br/update/2017/07/31/novo-dominio/</guid>
         
         
         <category>update</category>
@@ -58,8 +58,8 @@
 
 </description>
         <pubDate>Fri, 13 Nov 2015 23:10:00 -0200</pubDate>
-        <link>http://wpsecuritychecklist.org/br/update/2015/11/13/apple-store/</link>
-        <guid isPermaLink="true">http://wpsecuritychecklist.org/br/update/2015/11/13/apple-store/</guid>
+        <link>https://wpsecuritychecklist.org/br/update/2015/11/14/apple-store/</link>
+        <guid isPermaLink="true">https://wpsecuritychecklist.org/br/update/2015/11/14/apple-store/</guid>
         
         
         <category>update</category>
@@ -83,8 +83,8 @@
 &lt;p&gt;Thanks a lot for that, Sergio!&lt;/p&gt;
 </description>
         <pubDate>Fri, 13 Nov 2015 23:10:00 -0200</pubDate>
-        <link>http://wpsecuritychecklist.org/update/2015/11/13/apple-store/</link>
-        <guid isPermaLink="true">http://wpsecuritychecklist.org/update/2015/11/13/apple-store/</guid>
+        <link>https://wpsecuritychecklist.org/update/2015/11/14/apple-store/</link>
+        <guid isPermaLink="true">https://wpsecuritychecklist.org/update/2015/11/14/apple-store/</guid>
         
         
         <category>update</category>
@@ -107,8 +107,8 @@
 
 </description>
         <pubDate>Wed, 02 Sep 2015 07:35:00 -0300</pubDate>
-        <link>http://wpsecuritychecklist.org/br/update/2015/09/02/trello/</link>
-        <guid isPermaLink="true">http://wpsecuritychecklist.org/br/update/2015/09/02/trello/</guid>
+        <link>https://wpsecuritychecklist.org/br/update/2015/09/02/trello/</link>
+        <guid isPermaLink="true">https://wpsecuritychecklist.org/br/update/2015/09/02/trello/</guid>
         
         
         <category>update</category>
@@ -130,8 +130,8 @@
 &lt;p&gt;Thanks, Rick!&lt;/p&gt;
 </description>
         <pubDate>Wed, 02 Sep 2015 07:35:00 -0300</pubDate>
-        <link>http://wpsecuritychecklist.org/update/2015/09/02/trello/</link>
-        <guid isPermaLink="true">http://wpsecuritychecklist.org/update/2015/09/02/trello/</guid>
+        <link>https://wpsecuritychecklist.org/update/2015/09/02/trello/</link>
+        <guid isPermaLink="true">https://wpsecuritychecklist.org/update/2015/09/02/trello/</guid>
         
         
         <category>update</category>
@@ -151,8 +151,8 @@
 &lt;p&gt;Valeu, Fellyph! :-)&lt;/p&gt;
 </description>
         <pubDate>Mon, 24 Aug 2015 20:17:00 -0300</pubDate>
-        <link>http://wpsecuritychecklist.org/br/update/2015/08/24/printable-version/</link>
-        <guid isPermaLink="true">http://wpsecuritychecklist.org/br/update/2015/08/24/printable-version/</guid>
+        <link>https://wpsecuritychecklist.org/br/update/2015/08/24/printable-version/</link>
+        <guid isPermaLink="true">https://wpsecuritychecklist.org/br/update/2015/08/24/printable-version/</guid>
         
         
         <category>update</category>
@@ -172,8 +172,8 @@
 &lt;p&gt;Thanks, Fellyph! :-)&lt;/p&gt;
 </description>
         <pubDate>Mon, 24 Aug 2015 20:17:00 -0300</pubDate>
-        <link>http://wpsecuritychecklist.org/update/2015/08/24/printable-version/</link>
-        <guid isPermaLink="true">http://wpsecuritychecklist.org/update/2015/08/24/printable-version/</guid>
+        <link>https://wpsecuritychecklist.org/update/2015/08/24/printable-version/</link>
+        <guid isPermaLink="true">https://wpsecuritychecklist.org/update/2015/08/24/printable-version/</guid>
         
         
         <category>update</category>
@@ -193,8 +193,8 @@
 &lt;p&gt;Não se esqueça de dar algumas estrelinhas :-)&lt;/p&gt;
 </description>
         <pubDate>Thu, 23 Jul 2015 05:53:00 -0300</pubDate>
-        <link>http://wpsecuritychecklist.org/br/update/2015/07/23/android-app/</link>
-        <guid isPermaLink="true">http://wpsecuritychecklist.org/br/update/2015/07/23/android-app/</guid>
+        <link>https://wpsecuritychecklist.org/br/update/2015/07/23/android-app/</link>
+        <guid isPermaLink="true">https://wpsecuritychecklist.org/br/update/2015/07/23/android-app/</guid>
         
         
         <category>update</category>
@@ -214,8 +214,8 @@
 &lt;p&gt;Don’t forget to give it some stars :-)&lt;/p&gt;
 </description>
         <pubDate>Thu, 23 Jul 2015 05:53:00 -0300</pubDate>
-        <link>http://wpsecuritychecklist.org/update/2015/07/23/android-app/</link>
-        <guid isPermaLink="true">http://wpsecuritychecklist.org/update/2015/07/23/android-app/</guid>
+        <link>https://wpsecuritychecklist.org/update/2015/07/23/android-app/</link>
+        <guid isPermaLink="true">https://wpsecuritychecklist.org/update/2015/07/23/android-app/</guid>
         
         
         <category>update</category>
@@ -231,8 +231,8 @@
 &lt;p&gt;Caso você tenha alguma sugestão, por favor, fale comigo no &lt;a href=&quot;http://twitter.com/RafaelFunchal&quot; target=&quot;_blank&quot;&gt;Twitter&lt;/a&gt; ou &lt;a href=&quot;https://github.com/rafaelfunchal/wordpress-security-checklist/issues&quot; target=&quot;_blank&quot;&gt;abra um issue no GitHub&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Mon, 13 Jul 2015 12:30:00 -0300</pubDate>
-        <link>http://wpsecuritychecklist.org/br/update/2015/07/13/english-version/</link>
-        <guid isPermaLink="true">http://wpsecuritychecklist.org/br/update/2015/07/13/english-version/</guid>
+        <link>https://wpsecuritychecklist.org/br/update/2015/07/13/english-version/</link>
+        <guid isPermaLink="true">https://wpsecuritychecklist.org/br/update/2015/07/13/english-version/</guid>
         
         
         <category>update</category>
