@@ -1,0 +1,17 @@
+{
+	"name":"Rafael Funchal",
+	"short_name":"Rafael Funchal",
+	"description":"Web Developer apaixonado por WordPress",
+	"icons":[{"src":"https:\/\/www.rafaelfunchal.com.br\/wp-content\/uploads\/2016\/07\/logo-rafaelfunchal.png",
+		"sizes":"192x192",
+	"type":"image\/png"},
+	{"src":"https:\/\/www.rafaelfunchal.com.br\/wp-content\/uploads\/2016\/07\/logo-rafaelfunchal.png",
+		"sizes":"512x512",
+	"type":"image\/png"}],
+	"background_color":"#D5E0EB",
+	"theme_color":"#D5E0EB",
+	"display":"standalone",
+	"orientation":"portrait",
+	"start_url":".",
+	"scope":"\/"
+}
