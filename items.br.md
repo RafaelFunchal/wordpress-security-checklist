@@ -53,7 +53,7 @@ subset: root
 
 * <label><input type="checkbox" /> Altere o prefixo das tabelas ([tutorial](http://www.maketecheasier.com/the-safe-way-to-change-your-wordpress-database-table-prefix){:target="_blank"})</label>
 * <label><input type="checkbox" /> Configure backups semanais do seu banco de dados ([Backup WP](https://wordpress.org/plugins/backup-wp/){:target="_blank"}, [WP DB Backup](https://wordpress.org/plugins/wp-db-backup/){:target="_blank"}, etc.)</label>
-* <label><input type="checkbox" /> Use senhas fortes com letras maiúsculas e minúsculas, números e caracteres especiais no usuário do banco de dados ([gerador de senhas](http://passwordsgenerator.net/){:target="_blank"})</label>
+* <label><input type="checkbox" /> Use senhas fortes com letras maiúsculas e minúsculas, números e caracteres especiais no usuário do banco de dados ([Gerador de Senhas](http://passwordsgenerator.net/){:target="_blank"} ou or [Password Meter]( https://www.safetydetectives.com/password-meter/){:target="_blank"}))</label>
 
 ## Hospedagem<span class="items-counter"></span>
 
