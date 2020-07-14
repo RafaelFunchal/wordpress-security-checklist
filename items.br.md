@@ -16,7 +16,7 @@ subset: root
 
 * <label><input type="checkbox" /> Bloqueie várias tentativas de login ([Login Lockdown](https://wordpress.org/plugins/login-lockdown/){:target="_blank"} ou [iThemes Security](https://wordpress.org/plugins/better-wp-security/){:target="_blank"} )</label>
 * <label><input type="checkbox" /> Ative autenticação de 2 etapas ([Google Authenticator](https://wordpress.org/plugins/google-authenticator/){:target="_blank"})</label>
-* <label><input type="checkbox" /> Use um e-mail para fazer login ao invés de um nome de usuário ([Force Email Login](https://wordpress.org/plugins/force-email-login/){:target="_blank"})</label>
+* <label><input type="checkbox" /> Use um e-mail para fazer login ao invés de um nome de usuário ([Force Login With Email](https://br.wordpress.org/plugins/force-login-with-email){:target="_blank"})</label>
 * <label><input type="checkbox" /> Altere o endereço da sua página de login ([iThemes Security](https://wordpress.org/plugins/better-wp-security/){:target="_blank"} ou diretamente pelo .htaccess)</label>
 * <label><input type="checkbox" /> Remova links para sua página de login (caso exista algum em seu tema)</label>
 * <label><input type="checkbox" /> Use senhas fortes com letras maiúsculas e minúsculas, números e caracteres especiais em todas as contas (gerador de senhas [aleatório](http://passwordsgenerator.net/){:target="_blank"} ou [baseado em palavras]( https://www.safetydetectives.com/password-meter/){:target="_blank"})</label>
