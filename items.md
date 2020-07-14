@@ -17,7 +17,7 @@ subset: root
 
 * <label><input type="checkbox" /> Lockdown the login page for repetitive failed login ([Login Lockdown](https://wordpress.org/plugins/login-lockdown/){:target="_blank"} or [iThemes Security](https://wordpress.org/plugins/better-wp-security/){:target="_blank"} )</label>
 * <label><input type="checkbox" /> Activate 2 factor authentication ([Google Authenticator](https://wordpress.org/plugins/google-authenticator/){:target="_blank"})</label>
-* <label><input type="checkbox" /> Use email address to login instead of username ([Force Login With Email](https://br.wordpress.org/plugins/force-login-with-email/){:target="_blank"})</label>
+* <label><input type="checkbox" /> Use email address to login instead of username ([Force Login With Email](https://wordpress.org/plugins/force-login-with-email/){:target="_blank"})</label>
 * <label><input type="checkbox" /> Rename the URL of your login page ([iThemes Security](https://wordpress.org/plugins/better-wp-security/){:target="_blank"} or directly on .htaccess)</label>
 * <label><input type="checkbox" /> Remove login links from the theme (if there's any)</label>
 * <label><input type="checkbox" /> Use a strong password contaning uppercase, lowercase, numbers, and special characters on all accounts ([Passwords Generator](http://passwordsgenerator.net/){:target="_blank"} or [Password Meter]( https://www.safetydetectives.com/password-meter/){:target="_blank"})</label>
