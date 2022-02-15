@@ -491,6 +491,11 @@ pre {
     color: #333; }
     .site-header .site-title {
       color: #333; }
+    .site-header .site-description:after {
+      content: "wpsecuritychecklist.org";
+      display: block;
+      margin-top: 0.5em;
+      font-size: 0.75em; }
 
   .site-footer {
     display: none; }
