@@ -1,5 +1,5 @@
 description: "Una lista de acciones para aumentar la seguridad de una instalación WordPress"
-commit:      "Quieres ayudar a mejorar la lista? [No llores, haz commit!](https://github.com/rafaelfunchal/wordpress-security-checklist#contribute-to-the-project 'Accede al proyecto en GitHub'){:target='_blank'}"
+commit:      "Quieres ayudar a mejorar la lista? [Accede al proyecto en GitHub](https://github.com/rafaelfunchal/wordpress-security-checklist#contribute-to-the-project 'Accede al proyecto en GitHub'){:target='_blank'}."
 apps:        "Instala nuestra app!"
 blog:        "Blog"
 subscribe:   "Suscríbete"

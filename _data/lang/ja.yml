@@ -1,5 +1,5 @@
 description: "WordPress のウェブサイトのセキュリティを強化するために行うべきチェックリスト"
-commit:      "Would you like to improve the checklist? [Don't cry, commit!](https://github.com/rafaelfunchal/wordpress-security-checklist#contribute-to-the-project 'Access the project on GitHub'){:target='_blank'}"
+commit:      "Would you like to improve the checklist? [Access the project on GitHub](https://github.com/rafaelfunchal/wordpress-security-checklist#contribute-to-the-project 'Access the project on GitHub'){:target='_blank'}."
 apps:        "Get our app!"
 blog:        "Blog"
 subscribe:   "Subscribe"
