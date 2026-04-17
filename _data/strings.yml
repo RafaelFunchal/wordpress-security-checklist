@@ -3,9 +3,8 @@
 locales:
   - code: en
     description: "A checklist of actions that you should take to increase the security of your WordPress website."
-    commit: "Would you like to improve the checklist? [Access the project on GitHub](https://github.com/rafaelfunchal/wordpress-security-checklist#contribute-to-the-project 'Access the project on GitHub'){:target='_blank' rel='noopener noreferrer'}."
+    commit: "Would you like to improve the checklist?<br>[Access the project on GitHub.](https://github.com/rafaelfunchal/wordpress-security-checklist#contribute-to-the-project 'Access the project on GitHub'){:target='_blank' rel='noopener noreferrer'}"
     switch: "English"
-    apps: "Get our app!"
     blog: "Blog"
     subscribe: "Subscribe"
     byrss: "via RSS"
@@ -19,12 +18,12 @@ locales:
     theme_dark: "Dark"
     theme_switch_to_light: "Switch to light theme"
     theme_switch_to_dark: "Switch to dark theme"
+    footer_personal_site: "Personal site"
 
   - code: br
     description: "Uma lista de ações para aumentar a segurança da sua instalação WordPress."
-    commit: "Quer ajudar a melhorar essa lista? [Acesse o projeto no GitHub](https://github.com/rafaelfunchal/wordpress-security-checklist#contribute-to-the-project 'Acesse o projeto no GitHub'){:target='_blank' rel='noopener noreferrer'}."
+    commit: "Quer ajudar a melhorar essa lista?<br>[Acesse o projeto no GitHub.](https://github.com/rafaelfunchal/wordpress-security-checklist#contribute-to-the-project 'Acesse o projeto no GitHub'){:target='_blank' rel='noopener noreferrer'}"
     switch: "Português"
-    apps: "Instale nosso aplicativo!"
     blog: "Blog"
     subscribe: "Inscreva-se"
     byrss: "via RSS"
@@ -38,12 +37,12 @@ locales:
     theme_dark: "Escuro"
     theme_switch_to_light: "Usar tema claro"
     theme_switch_to_dark: "Usar tema escuro"
+    footer_personal_site: "Site pessoal"
 
   - code: ja
     description: "WordPress サイトのセキュリティを高めるために取るべき行動のチェックリストです。"
-    commit: "チェックリストを改善したいですか？ [GitHub でプロジェクトを開く](https://github.com/rafaelfunchal/wordpress-security-checklist#contribute-to-the-project 'GitHub'){:target='_blank' rel='noopener noreferrer'}。"
+    commit: "チェックリストを改善したいですか？<br>[GitHub でプロジェクトを開く。](https://github.com/rafaelfunchal/wordpress-security-checklist#contribute-to-the-project 'GitHub'){:target='_blank' rel='noopener noreferrer'}"
     switch: "日本語"
-    apps: "アプリを入手"
     blog: "ブログ"
     subscribe: "購読"
     byrss: "RSS"
@@ -57,12 +56,12 @@ locales:
     theme_dark: "ダーク"
     theme_switch_to_light: "ライトテーマに切り替え"
     theme_switch_to_dark: "ダークテーマに切り替え"
+    footer_personal_site: "個人サイト"
 
   - code: es
     description: "Una lista de acciones para aumentar la seguridad de una instalación WordPress."
-    commit: "¿Quieres ayudar a mejorar la lista? [Accede al proyecto en GitHub](https://github.com/rafaelfunchal/wordpress-security-checklist#contribute-to-the-project 'Accede al proyecto en GitHub'){:target='_blank' rel='noopener noreferrer'}."
+    commit: "¿Quieres ayudar a mejorar la lista?<br>[Accede al proyecto en GitHub.](https://github.com/rafaelfunchal/wordpress-security-checklist#contribute-to-the-project 'Accede al proyecto en GitHub'){:target='_blank' rel='noopener noreferrer'}"
     switch: "Español"
-    apps: "Instala nuestra app"
     blog: "Blog"
     subscribe: "Suscríbete"
     byrss: "vía RSS"
@@ -76,3 +75,4 @@ locales:
     theme_dark: "Oscuro"
     theme_switch_to_light: "Cambiar a tema claro"
     theme_switch_to_dark: "Cambiar a tema oscuro"
+    footer_personal_site: "Sitio personal"
