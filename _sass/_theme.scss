@@ -23,6 +23,10 @@
 
     --color-accent: #008cba;
     --color-accent-hover: #00719a;
+    /* Filled CTA: darker than --color-accent so white label meets WCAG AA. */
+    --color-btn-primary-bg: #00719a;
+    --color-btn-primary-hover: #005f7a;
+    --color-btn-primary-text: #ffffff;
     --color-focus-ring: rgba(0, 140, 186, 0.45);
 
     --color-header-bg: #008cba;
@@ -54,6 +58,23 @@
     --neo-nav-pit: inset 0 3px 8px rgba(0, 0, 0, 0.28), inset 0 -1px 0 rgba(255, 255, 255, 0.06);
     --neo-chrome: 4px 4px 10px rgba(0, 0, 0, 0.35), -2px -2px 8px rgba(255, 255, 255, 0.08);
     --neo-btn-primary: 0 10px 26px rgba(0, 85, 118, 0.38), inset 0 -2px 0 rgba(0, 0, 0, 0.08);
+
+    --header-neo-surface:
+        radial-gradient(ellipse 105% 90% at 40% -35%, rgba(255, 255, 255, 0.3), transparent 55%),
+        linear-gradient(168deg, rgba(255, 255, 255, 0.22) 0%, transparent 48%),
+        linear-gradient(322deg, rgba(0, 55, 92, 0.42) 0%, transparent 46%);
+    --header-neo-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.28),
+        inset 0 -2px 5px rgba(0, 50, 82, 0.28),
+        0 14px 42px rgba(0, 40, 65, 0.2);
+    --footer-neo-surface:
+        radial-gradient(ellipse 95% 85% at 55% 125%, rgba(0, 52, 86, 0.55), transparent 58%),
+        linear-gradient(355deg, rgba(255, 255, 255, 0.16) 0%, transparent 42%),
+        linear-gradient(175deg, rgba(0, 58, 95, 0.35) 0%, transparent 45%);
+    --footer-neo-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.22),
+        inset 0 -2px 5px rgba(0, 48, 78, 0.3),
+        0 -12px 40px rgba(0, 35, 58, 0.18);
 
     --color-checked-text: #8a939e;
     --color-checked-link: #7a8494;
@@ -86,6 +107,9 @@ html {
 
         --color-accent: #3db3e8;
         --color-accent-hover: #6bc9f0;
+        --color-btn-primary-bg: #0a7a9e;
+        --color-btn-primary-hover: #0c7fa5;
+        --color-btn-primary-text: #ffffff;
         --color-focus-ring: rgba(94, 200, 255, 0.55);
 
         --color-header-bg: #0a4a63;
@@ -118,6 +142,23 @@ html {
         --neo-chrome: 4px 4px 12px rgba(0, 0, 0, 0.5), -2px -2px 8px rgba(255, 255, 255, 0.04);
         --neo-btn-primary: 0 12px 32px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.14);
 
+        --header-neo-surface:
+            radial-gradient(ellipse 100% 82% at 50% -28%, rgba(255, 255, 255, 0.14), transparent 52%),
+            linear-gradient(168deg, rgba(255, 255, 255, 0.09) 0%, transparent 44%),
+            linear-gradient(318deg, rgba(0, 0, 0, 0.52) 0%, transparent 50%);
+        --header-neo-shadow:
+            inset 0 1px 0 rgba(255, 255, 255, 0.1),
+            inset 0 -2px 6px rgba(0, 0, 0, 0.38),
+            0 12px 36px rgba(0, 0, 0, 0.32);
+        --footer-neo-surface:
+            radial-gradient(ellipse 92% 78% at 50% 128%, rgba(0, 0, 0, 0.48), transparent 56%),
+            linear-gradient(0deg, rgba(0, 0, 0, 0.38) 0%, transparent 40%),
+            linear-gradient(188deg, rgba(80, 185, 230, 0.09) 0%, transparent 36%);
+        --footer-neo-shadow:
+            inset 0 1px 0 rgba(255, 255, 255, 0.08),
+            inset 0 -2px 6px rgba(0, 0, 0, 0.42),
+            0 -14px 42px rgba(0, 0, 0, 0.32);
+
         --color-checked-text: #6b7380;
         --color-checked-link: #5c6570;
         --color-checked-code-bg: #252b34;
@@ -145,6 +186,9 @@ html {
 
     --color-accent: #3db3e8;
     --color-accent-hover: #6bc9f0;
+    --color-btn-primary-bg: #0a7a9e;
+    --color-btn-primary-hover: #0c7fa5;
+    --color-btn-primary-text: #ffffff;
     --color-focus-ring: rgba(94, 200, 255, 0.55);
 
     --color-header-bg: #0a4a63;
@@ -177,6 +221,23 @@ html {
     --neo-chrome: 4px 4px 12px rgba(0, 0, 0, 0.5), -2px -2px 8px rgba(255, 255, 255, 0.04);
     --neo-btn-primary: 0 12px 32px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.14);
 
+    --header-neo-surface:
+        radial-gradient(ellipse 100% 82% at 50% -28%, rgba(255, 255, 255, 0.14), transparent 52%),
+        linear-gradient(168deg, rgba(255, 255, 255, 0.09) 0%, transparent 44%),
+        linear-gradient(318deg, rgba(0, 0, 0, 0.52) 0%, transparent 50%);
+    --header-neo-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        inset 0 -2px 6px rgba(0, 0, 0, 0.38),
+        0 12px 36px rgba(0, 0, 0, 0.32);
+    --footer-neo-surface:
+        radial-gradient(ellipse 92% 78% at 50% 128%, rgba(0, 0, 0, 0.48), transparent 56%),
+        linear-gradient(0deg, rgba(0, 0, 0, 0.38) 0%, transparent 40%),
+        linear-gradient(188deg, rgba(80, 185, 230, 0.09) 0%, transparent 36%);
+    --footer-neo-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.08),
+        inset 0 -2px 6px rgba(0, 0, 0, 0.42),
+        0 -14px 42px rgba(0, 0, 0, 0.32);
+
     --color-checked-text: #6b7380;
     --color-checked-link: #5c6570;
     --color-checked-code-bg: #252b34;
@@ -203,6 +264,9 @@ html {
 
     --color-accent: #008cba;
     --color-accent-hover: #00719a;
+    --color-btn-primary-bg: #00719a;
+    --color-btn-primary-hover: #005f7a;
+    --color-btn-primary-text: #ffffff;
     --color-focus-ring: rgba(0, 140, 186, 0.45);
 
     --color-header-bg: #008cba;
@@ -234,6 +298,23 @@ html {
     --neo-nav-pit: inset 0 3px 8px rgba(0, 0, 0, 0.28), inset 0 -1px 0 rgba(255, 255, 255, 0.06);
     --neo-chrome: 4px 4px 10px rgba(0, 0, 0, 0.35), -2px -2px 8px rgba(255, 255, 255, 0.08);
     --neo-btn-primary: 0 10px 26px rgba(0, 85, 118, 0.38), inset 0 -2px 0 rgba(0, 0, 0, 0.08);
+
+    --header-neo-surface:
+        radial-gradient(ellipse 105% 90% at 40% -35%, rgba(255, 255, 255, 0.3), transparent 55%),
+        linear-gradient(168deg, rgba(255, 255, 255, 0.22) 0%, transparent 48%),
+        linear-gradient(322deg, rgba(0, 55, 92, 0.42) 0%, transparent 46%);
+    --header-neo-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.28),
+        inset 0 -2px 5px rgba(0, 50, 82, 0.28),
+        0 14px 42px rgba(0, 40, 65, 0.2);
+    --footer-neo-surface:
+        radial-gradient(ellipse 95% 85% at 55% 125%, rgba(0, 52, 86, 0.55), transparent 58%),
+        linear-gradient(355deg, rgba(255, 255, 255, 0.16) 0%, transparent 42%),
+        linear-gradient(175deg, rgba(0, 58, 95, 0.35) 0%, transparent 45%);
+    --footer-neo-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.22),
+        inset 0 -2px 5px rgba(0, 48, 78, 0.3),
+        0 -12px 40px rgba(0, 35, 58, 0.18);
 
     --color-checked-text: #8a939e;
     --color-checked-link: #7a8494;
