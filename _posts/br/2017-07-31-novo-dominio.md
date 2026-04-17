@@ -5,7 +5,7 @@ date:   2017-07-31 15:00:00
 image:  "/img/listadesegurancawp.org.png"
 categories: update
 language: br
-permalink: /:language/:categories/:year/:month/:day/:title/
+permalink: /br/update/:year/:month/:day/:title/
 ---
 
 Em Maio estive em Porto Alegre para [palestrar](https://2017.portoalegre.wordcamp.org/session/configurando-ssl-com-lets-encrypt-easyengine-e-wp-cli/){:target="_blank"} no [WordCamp](https://2017.portoalegre.wordcamp.org/){:target="_blank"} que ocorreu no dia 6.
