@@ -1,103 +1,79 @@
-[collaborating]: https://help.github.com/categories/63/articles
-[youtube-video]: https://www.youtube.com/watch?v=H3olaBo83As
+[collaborating]: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests
 [jekyll]: https://jekyllrb.com/
 [bundler]: https://bundler.io/
 [gem-download]: https://rubygems.org/pages/download
+[github-pages]: https://pages.github.com/versions/
 
-# Sobre #
+# WordPress Security Checklist
 
-Uma lista simples para melhorar a segurança da sua instalação WordPress.
+Static site and printable checklist for hardening WordPress—built with [Jekyll][jekyll], aligned with the [GitHub Pages][github-pages] stack (`github-pages` gem). Live site: **https://wpsecuritychecklist.org**
 
-## Contribua com o projeto ##
+---
 
-Se você quiser contribuir com esse projeto e adicionar mais itens na lista, por favor, clique no botão **Fork**, crie um **Branch**, melhore o código e envie sua contribuição como um **Pull Request**.
+## Sobre (pt-BR)
 
-Você pode ver mais informações sobre como contribuir e enviar Pull Requests em [GitHub Collaborating][collaborating].
+Lista de ações para melhorar a segurança da sua instalação WordPress. O site é gerado com Jekyll e publicado no GitHub Pages. Para rodar localmente: `bundle install` e `bundle exec jekyll serve`. Conteúdo do checklist nos arquivos `items*.md`; textos da interface em `_data/strings.yml`.
 
-[Como colaborar com projetos opensource no GitHub][youtube-video].
+---
 
-### Como instalar ###
+## Repository layout
 
-#### Instalando os itens necessários ####
+| Area | Location |
+|------|-----------|
+| Checklist (EN / pt / es / ja) | `items.md`, `items.br.md`, `items.es.md`, `items.ja.md` |
+| UI strings (nav, hero, blog labels, …) | `_data/strings.yml` |
+| English homepage (`/`) | `root-index.html` (permalink `/`, includes `home.html`) |
+| Localized homepages | `br/index.html`, `es/index.html`, `ja/index.html` |
+| Blog posts | `_posts/` — set `language: en` (or `br`, `es`, `ja`) in front matter |
+| Layouts & includes | `_layouts/`, `_includes/` |
+| Styles | `css/main.scss` → `_sass/` |
+| Scripts | `js/script.js` (checklist checkboxes, theme toggle) |
+| Site config | `_config.yml` (`languages`, `checklist_last_updated`, …) |
 
-Caso você não tenha `gem` instalado em seu computador, você pode instalá-lo usando esse [link][gem-download];
+Locales are listed in `_config.yml` under `languages` and must stay in sync with `strings.yml` and the `items.*` / index files you care about.
 
-Esse projeto utiliza [Jekyll][jekyll] como gerenciador de conteúdo e [Bundler][bundler] como gerenciador de dependências, então é necessário instalá-los em seu computador executando esse comando no terminal:
+---
 
-`$ gem install jekyll bundler`
+## Requirements
 
-#### Copiando o projeto para seu computador ####
+- Ruby and RubyGems ([install RubyGems][gem-download] if needed)
+- Bundler: `gem install bundler` (once per machine)
 
-Clique no botão `Fork` para copiar o projeto para sua conta do GitHub.
+Jekyll is pulled in via the `github-pages` gem—**use [Bundler][bundler]** so your local versions match Pages.
 
-Após criar uma versão do projeto em seu próprio GitHub, é necessário salvá-la em seu computador. Abra o terminal e utilize esse código (note que você precisa substituir SEU-NOME-DE-USUÁRIO por seu nome de usuário real):
+---
 
-`$ git clone git@github.com:SEU-NOME-DE-USUÁRIO/wordpress-security-checklist.git`
+## Local preview
 
-#### Rodando o Jekyll ####
+```bash
+git clone https://github.com/rafaelfunchal/wordpress-security-checklist.git
+cd wordpress-security-checklist
+bundle install
+bundle exec jekyll serve
+```
 
-Acesse o projeto onde você o salvou usando o comando:
+Open the URL Jekyll prints (usually `http://localhost:4000`). Edit files; the server reloads on change.
 
-`$ cd /caminho/para/o/diretorio`
+Build only (writes to `_site/`):
 
-Agora vamos instalar as dependências (isso pode demorar alguns minutos):
+```bash
+bundle exec jekyll build
+```
 
-`$ bundle install`
+---
 
-Agora você já pode executar o Jekyll para ver o projeto rodando em seu navegador:
+## Contributing
 
-`$ jekyll serve`
+1. Fork the repository and create a branch for your change.
+2. **Checklist wording or new items:** edit the appropriate `items*.md` (keep the same structure: headings, `<label><input type="checkbox" />…</label>` lines).
+3. **Translations / UI copy:** update `_data/strings.yml` for the matching `code` (`en`, `br`, `es`, `ja`).
+4. **Layout or styling:** `_layouts/`, `_includes/`, `_sass/`, or `css/main.scss`.
+5. Open a **Pull Request** when ready.
 
-Ao rodar esse comando, será exibido um link que você precisa copiar e colar em seu navegador.
+More on collaboration: [GitHub Docs — Pull requests][collaborating].
 
-Pronto! Agora você só precisa fazer as alterações que quiser, commitar e mandar o Pull Request.
+---
 
-------
+## License
 
-# About #
-
-A simple checklist to improve the security of your WordPress installation.
-
-## Contribute to the Project ##
-
-If you want to contribute with this project and add more items to the list, please, click on the **Fork** button, create a *Branch*, improve the code and send it with a **Pull Request**.
-
-More details about how to contribute and send Pull Requests in [GitHub Collaborating][collaborating].
-
-[How to collaborate to opensource projects on GitHub][youtube-video].
-
-### How to install ###
-
-#### Installing all necessary items ####
-
-If you don't have `gem` installed on your computer, it is possible to install from this [link][gem-download];
-
-This project uses [Jekyll][jekyll] as a content management system and [Bundler][bundler] as a dependency manager, so it is necessary to install them on your computer by executing this command on terminal:
-
-`$ gem install jekyll bundler`
-
-#### Copying the project to your computer ####
-
-Click on the `Fork` button to copy the project to your own GitHub account.
-
-After that, it is necessary to save the project on your computer by running this command on terminal (replace YOUR-USERNAME by your real username):
-
-`$ git clone git@github.com:YOUR-USERNAME/wordpress-security-checklist.git`
-
-#### Running Jekyll ####
-
-Access the directory where the project has been saved by using this command on terminal:
-
-`$ cd /path/to/directory`
-
-Let's install all dependencies (it can take a while):
-
-`$ bundle install`
-
-Now your are all set to execute Jekyll and navigate to your own copy on your browser:
-
-`$ jekyll serve`
-
-By running that command, Jekyll will give you a link. Copy and paste it on your browser.
-
-All done! Now you just need to make the changes you want to, commit them, and send me a Pull Request.
+See [LICENSE](LICENSE) (GNU GPL v2).
