@@ -1,0 +1,39 @@
+{% assign loc = page.language | default: 'en' %}
+{% assign t = site.data.strings.locales | where: 'code', loc | first %}
+{% assign posts = site.posts | where: 'language', loc %}
+{% assign post_count = posts | size %}
+{% if loc == 'en' %}
+  {% assign checklist_url = site.baseurl | append: '/items/' %}
+{% else %}
+  {% assign checklist_url = site.baseurl | append: '/' | append: loc | append: '/items/' %}
+{% endif %}
+
+<div class="home">
+  {% if post_count > 0 %}
+    <section class="home-hero">
+      <p class="home-lead">{{ t.description }}</p>
+      <p class="home-actions">
+        <a class="button button-primary" href="{{ checklist_url }}">{{ t.nav_checklist }}</a>
+      </p>
+      {% if site.checklist_last_updated %}
+        <p class="last-updated">{{ t.last_updated_prefix }} <time datetime="{{ site.checklist_last_updated }}">{{ site.checklist_last_updated }}</time></p>
+      {% endif %}
+    </section>
+
+    <h1 class="page-heading">{{ t.blog }}</h1>
+    <ul class="post-list">
+      {% for post in posts %}
+        <li>
+          <span class="post-meta">{{ post.date | date: '%Y-%m-%d' }}</span>
+          <h2>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}">{{ post.title }}</a>
+          </h2>
+        </li>
+      {% endfor %}
+    </ul>
+    <p class="rss-subscribe">{{ t.subscribe }} <a href="{{ '/feed.xml' | prepend: site.baseurl }}" title="{{ t.subscribe }} {{ t.byrss }}">{{ t.byrss }}</a></p>
+  {% else %}
+    <script>window.location.replace('{{ checklist_url }}');</script>
+    <p>{{ t.redirecting }} <a href="{{ checklist_url }}" title="{{ t.nav_checklist }}">{{ t.nav_checklist }}</a></p>
+  {% endif %}
+</div>
