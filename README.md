@@ -1,7 +1,7 @@
 [collaborating]: https://help.github.com/categories/63/articles
-[youtube-video]: http://www.youtube.com/watch?v=H3olaBo83As
+[youtube-video]: https://www.youtube.com/watch?v=H3olaBo83As
 [jekyll]: https://jekyllrb.com/
-[bundler]: http://bundler.io/
+[bundler]: https://bundler.io/
 [gem-download]: https://rubygems.org/pages/download
 
 # Sobre #
@@ -64,7 +64,7 @@ If you want to contribute with this project and add more items to the list, plea
 
 More details about how to contribute and send Pull Requests in [GitHub Collaborating][collaborating].
 
-[How to colaborate to opensource projects on GitHub][youtube-video].
+[How to collaborate to opensource projects on GitHub][youtube-video].
 
 ### How to install ###
 

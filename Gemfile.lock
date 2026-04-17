@@ -145,7 +145,6 @@ GEM
       octokit (~> 4.0, != 4.4.0)
     jekyll-include-cache (0.2.1)
       jekyll (>= 3.7, < 5.0)
-    jekyll-language-plugin (1.3.5)
     jekyll-mentions (1.6.0)
       html-pipeline (~> 2.3)
       jekyll (>= 3.7, < 5.0)
@@ -283,8 +282,6 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
-  jekyll-language-plugin
-  jekyll-paginate
   webrick (~> 1.7)
 
 BUNDLED WITH
