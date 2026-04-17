@@ -1,0 +1,250 @@
+/**
+ * Design tokens: light default, dark via prefers-color-scheme when no override.
+ * data-theme="light" | "dark" is always set after first paint (inline + JS); before
+ * any stored choice, omit data-theme so :root follows prefers-color-scheme.
+ */
+
+:root {
+    color-scheme: light;
+
+    --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+    /* Soft “mat” behind neumorphic panels (Figma trend: soft UI depth) */
+    --color-bg-page: #e4e9f0;
+    --color-bg-content: #f4f6fa;
+    --color-text: #1a1d21;
+    --color-text-muted: #5c6370;
+    --color-border: #d8dde6;
+    --color-border-subtle: #e8ecf2;
+
+    --color-link: #0077a8;
+    --color-link-visited: #006391;
+    --color-link-hover: #1a1d21;
+
+    --color-accent: #008cba;
+    --color-accent-hover: #00719a;
+    --color-focus-ring: rgba(0, 140, 186, 0.45);
+
+    --color-header-bg: #008cba;
+    --color-header-text: #f2f6fa;
+    --color-header-border: #00719a;
+
+    --color-nav-bg: #2f343d;
+    --color-nav-text: #e8ecf2;
+    --color-nav-border: #454b57;
+    --color-nav-icon: #e8ecf2;
+
+    --color-footer-bg: #008cba;
+    --color-footer-text: #f2f6fa;
+    --color-footer-border: #00719a;
+    --color-footer-icon: #e8ecf2;
+
+    --color-code-bg: #e8eef8;
+    --color-code-border: #d0d8e6;
+    --color-blockquote-border: #c5cdd8;
+
+    --color-home-hero-bg: #e8f4fb;
+    --color-home-hero-border: transparent;
+
+    --neo-raised: 14px 14px 34px rgba(26, 35, 52, 0.11), -10px -10px 30px rgba(255, 255, 255, 0.92);
+    --neo-raised-hover: 16px 16px 38px rgba(26, 35, 52, 0.12), -11px -11px 32px rgba(255, 255, 255, 0.95);
+    --neo-pressed: inset 5px 5px 12px rgba(26, 35, 52, 0.1), inset -4px -4px 10px rgba(255, 255, 255, 0.85);
+    --neo-inset-panel: inset 3px 3px 8px rgba(26, 35, 52, 0.07), inset -2px -2px 6px rgba(255, 255, 255, 0.75);
+    --neo-hero: 12px 12px 28px rgba(0, 95, 130, 0.12), -8px -8px 22px rgba(255, 255, 255, 0.75);
+    --neo-nav-pit: inset 0 3px 8px rgba(0, 0, 0, 0.28), inset 0 -1px 0 rgba(255, 255, 255, 0.06);
+    --neo-chrome: 4px 4px 10px rgba(0, 0, 0, 0.35), -2px -2px 8px rgba(255, 255, 255, 0.08);
+    --neo-btn-primary: 0 10px 26px rgba(0, 85, 118, 0.38), inset 0 -2px 0 rgba(0, 0, 0, 0.08);
+
+    --color-checked-text: #8a939e;
+    --color-checked-link: #7a8494;
+    --color-checked-code-bg: #dde4ef;
+
+    --color-selection-bg: #008cba;
+    --color-selection-text: #fff;
+
+    --color-syntax-bg: #f4f6fa;
+}
+
+html {
+    background-color: var(--color-bg-page);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme]) {
+        color-scheme: dark;
+
+        --color-bg-page: #0d0f12;
+        --color-bg-content: #12151a;
+        --color-text: #e8eaed;
+        --color-text-muted: #9aa3b2;
+        --color-border: #2a3038;
+        --color-border-subtle: #22262d;
+
+        --color-link: #5ec8ff;
+        --color-link-visited: #7ad4ff;
+        --color-link-hover: #ffffff;
+
+        --color-accent: #3db3e8;
+        --color-accent-hover: #6bc9f0;
+        --color-focus-ring: rgba(94, 200, 255, 0.55);
+
+        --color-header-bg: #0a4a63;
+        --color-header-text: #f0f7fb;
+        --color-header-border: #063549;
+
+        --color-nav-bg: #1a1f26;
+        --color-nav-text: #dce2ec;
+        --color-nav-border: #2f3640;
+        --color-nav-icon: #dce2ec;
+
+        --color-footer-bg: #0a4a63;
+        --color-footer-text: #f0f7fb;
+        --color-footer-border: #063549;
+        --color-footer-icon: #dce2ec;
+
+        --color-code-bg: #1e242d;
+        --color-code-border: #2f3640;
+        --color-blockquote-border: #3d4654;
+
+        --color-home-hero-bg: #161d26;
+        --color-home-hero-border: transparent;
+
+        --neo-raised: 16px 16px 36px rgba(0, 0, 0, 0.42), -8px -8px 22px rgba(255, 255, 255, 0.04);
+        --neo-raised-hover: 18px 18px 40px rgba(0, 0, 0, 0.48), -9px -9px 24px rgba(255, 255, 255, 0.05);
+        --neo-pressed: inset 5px 5px 14px rgba(0, 0, 0, 0.45), inset -3px -3px 10px rgba(255, 255, 255, 0.04);
+        --neo-inset-panel: inset 3px 3px 10px rgba(0, 0, 0, 0.35), inset -2px -2px 6px rgba(255, 255, 255, 0.03);
+        --neo-hero: 12px 12px 30px rgba(0, 0, 0, 0.5), -6px -6px 18px rgba(120, 170, 210, 0.05);
+        --neo-nav-pit: inset 0 3px 10px rgba(0, 0, 0, 0.45), inset 0 -1px 0 rgba(255, 255, 255, 0.04);
+        --neo-chrome: 4px 4px 12px rgba(0, 0, 0, 0.5), -2px -2px 8px rgba(255, 255, 255, 0.04);
+        --neo-btn-primary: 0 12px 32px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.14);
+
+        --color-checked-text: #6b7380;
+        --color-checked-link: #5c6570;
+        --color-checked-code-bg: #252b34;
+
+        --color-selection-bg: #3db3e8;
+        --color-selection-text: #0d0f12;
+
+        --color-syntax-bg: #12151a;
+    }
+}
+
+:root[data-theme="dark"] {
+    color-scheme: dark;
+
+    --color-bg-page: #0d0f12;
+    --color-bg-content: #12151a;
+    --color-text: #e8eaed;
+    --color-text-muted: #9aa3b2;
+    --color-border: #2a3038;
+    --color-border-subtle: #22262d;
+
+    --color-link: #5ec8ff;
+    --color-link-visited: #7ad4ff;
+    --color-link-hover: #ffffff;
+
+    --color-accent: #3db3e8;
+    --color-accent-hover: #6bc9f0;
+    --color-focus-ring: rgba(94, 200, 255, 0.55);
+
+    --color-header-bg: #0a4a63;
+    --color-header-text: #f0f7fb;
+    --color-header-border: #063549;
+
+    --color-nav-bg: #1a1f26;
+    --color-nav-text: #dce2ec;
+    --color-nav-border: #2f3640;
+    --color-nav-icon: #dce2ec;
+
+    --color-footer-bg: #0a4a63;
+    --color-footer-text: #f0f7fb;
+    --color-footer-border: #063549;
+    --color-footer-icon: #dce2ec;
+
+    --color-code-bg: #1e242d;
+    --color-code-border: #2f3640;
+    --color-blockquote-border: #3d4654;
+
+    --color-home-hero-bg: #161d26;
+    --color-home-hero-border: transparent;
+
+    --neo-raised: 16px 16px 36px rgba(0, 0, 0, 0.42), -8px -8px 22px rgba(255, 255, 255, 0.04);
+    --neo-raised-hover: 18px 18px 40px rgba(0, 0, 0, 0.48), -9px -9px 24px rgba(255, 255, 255, 0.05);
+    --neo-pressed: inset 5px 5px 14px rgba(0, 0, 0, 0.45), inset -3px -3px 10px rgba(255, 255, 255, 0.04);
+    --neo-inset-panel: inset 3px 3px 10px rgba(0, 0, 0, 0.35), inset -2px -2px 6px rgba(255, 255, 255, 0.03);
+    --neo-hero: 12px 12px 30px rgba(0, 0, 0, 0.5), -6px -6px 18px rgba(120, 170, 210, 0.05);
+    --neo-nav-pit: inset 0 3px 10px rgba(0, 0, 0, 0.45), inset 0 -1px 0 rgba(255, 255, 255, 0.04);
+    --neo-chrome: 4px 4px 12px rgba(0, 0, 0, 0.5), -2px -2px 8px rgba(255, 255, 255, 0.04);
+    --neo-btn-primary: 0 12px 32px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.14);
+
+    --color-checked-text: #6b7380;
+    --color-checked-link: #5c6570;
+    --color-checked-code-bg: #252b34;
+
+    --color-selection-bg: #3db3e8;
+    --color-selection-text: #0d0f12;
+
+    --color-syntax-bg: #12151a;
+}
+
+:root[data-theme="light"] {
+    color-scheme: light;
+
+    --color-bg-page: #e4e9f0;
+    --color-bg-content: #f4f6fa;
+    --color-text: #1a1d21;
+    --color-text-muted: #5c6370;
+    --color-border: #d8dde6;
+    --color-border-subtle: #e8ecf2;
+
+    --color-link: #0077a8;
+    --color-link-visited: #006391;
+    --color-link-hover: #1a1d21;
+
+    --color-accent: #008cba;
+    --color-accent-hover: #00719a;
+    --color-focus-ring: rgba(0, 140, 186, 0.45);
+
+    --color-header-bg: #008cba;
+    --color-header-text: #f2f6fa;
+    --color-header-border: #00719a;
+
+    --color-nav-bg: #2f343d;
+    --color-nav-text: #e8ecf2;
+    --color-nav-border: #454b57;
+    --color-nav-icon: #e8ecf2;
+
+    --color-footer-bg: #008cba;
+    --color-footer-text: #f2f6fa;
+    --color-footer-border: #00719a;
+    --color-footer-icon: #e8ecf2;
+
+    --color-code-bg: #e8eef8;
+    --color-code-border: #d0d8e6;
+    --color-blockquote-border: #c5cdd8;
+
+    --color-home-hero-bg: #e8f4fb;
+    --color-home-hero-border: transparent;
+
+    --neo-raised: 14px 14px 34px rgba(26, 35, 52, 0.11), -10px -10px 30px rgba(255, 255, 255, 0.92);
+    --neo-raised-hover: 16px 16px 38px rgba(26, 35, 52, 0.12), -11px -11px 32px rgba(255, 255, 255, 0.95);
+    --neo-pressed: inset 5px 5px 12px rgba(26, 35, 52, 0.1), inset -4px -4px 10px rgba(255, 255, 255, 0.85);
+    --neo-inset-panel: inset 3px 3px 8px rgba(26, 35, 52, 0.07), inset -2px -2px 6px rgba(255, 255, 255, 0.75);
+    --neo-hero: 12px 12px 28px rgba(0, 95, 130, 0.12), -8px -8px 22px rgba(255, 255, 255, 0.75);
+    --neo-nav-pit: inset 0 3px 8px rgba(0, 0, 0, 0.28), inset 0 -1px 0 rgba(255, 255, 255, 0.06);
+    --neo-chrome: 4px 4px 10px rgba(0, 0, 0, 0.35), -2px -2px 8px rgba(255, 255, 255, 0.08);
+    --neo-btn-primary: 0 10px 26px rgba(0, 85, 118, 0.38), inset 0 -2px 0 rgba(0, 0, 0, 0.08);
+
+    --color-checked-text: #8a939e;
+    --color-checked-link: #7a8494;
+    --color-checked-code-bg: #dde4ef;
+
+    --color-selection-bg: #008cba;
+    --color-selection-text: #fff;
+
+    --color-syntax-bg: #f4f6fa;
+}
+
+.page-content {
+    background-color: transparent;
+}
