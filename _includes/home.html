@@ -21,13 +21,13 @@
     </section>
 
     <h1 class="page-heading">{{ t.blog }}</h1>
-    <ul class="post-list">
+    <ul class="post-list post-list--cards">
       {% for post in posts %}
         <li>
-          <span class="post-meta">{{ post.date | date: '%Y-%m-%d' }}</span>
-          <h2>
-            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}">{{ post.title }}</a>
-          </h2>
+          <a class="post-card" href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}">
+            <time class="post-meta post-card__meta" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y-%m-%d' }}</time>
+            <h2 class="post-card__title">{{ post.title }}</h2>
+          </a>
         </li>
       {% endfor %}
     </ul>
