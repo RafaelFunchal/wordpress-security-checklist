@@ -521,8 +521,38 @@ $home-blog-rss-rhythm: $spacing-unit * 2.25;
             }
 
             input[type=checkbox] {
-                margin-right: 5px;
-                transform: translateY(1px);
+                appearance: none;
+                -webkit-appearance: none;
+                width: 1.3rem;
+                height: 1.3rem;
+                margin-right: 0.65rem;
+                border: 2px solid var(--color-border);
+                border-radius: 10px;
+                background-color: var(--color-bg-page);
+                box-shadow: var(--neo-inset-panel);
+                vertical-align: middle;
+                transform: translateY(0.08em);
+                cursor: pointer;
+                flex-shrink: 0;
+
+                &:hover {
+                    border-color: var(--color-accent);
+                }
+
+                &:focus-visible {
+                    outline: 2px solid var(--color-focus-ring);
+                    outline-offset: 2px;
+                }
+
+                &:checked {
+                    border-color: var(--color-btn-primary-bg);
+                    background-color: var(--color-btn-primary-bg);
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 10'%3E%3Cpath fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M1.5 5.5 4.5 8.5 10.5 1.5'/%3E%3C/svg%3E");
+                    background-size: 0.72rem 0.58rem;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    box-shadow: none;
+                }
             }
         }
     }
