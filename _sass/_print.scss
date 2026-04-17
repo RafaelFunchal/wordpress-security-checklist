@@ -44,8 +44,14 @@
     }
 
     .page-content > .wrapper,
-    .home-hero {
+    .home-hero,
+    .post-card {
         box-shadow: none !important;
+    }
+
+    .post-card {
+        border: 1px solid #ccc;
+        break-inside: avoid;
     }
 
     pre {
