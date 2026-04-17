@@ -1,22 +1,41 @@
-<head lang="{{ page.language }}">
+<head>
+  <script>
+    (function(){try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
+  </script>
+  {% assign loc = page.language | default: 'en' %}
+  {% assign ti = site.data.strings.locales | where: 'code', loc | first %}
+  {% if page.excerpt %}
+    {% assign meta_desc = page.excerpt | strip_html | strip_newlines | truncate: 160 %}
+  {% else %}
+    {% assign meta_desc = ti.description | truncate: 160 %}
+  {% endif %}
+  {% assign canonical_path = page.url | replace: 'index.html', '' %}
+  {% assign canonical_url = canonical_path | absolute_url %}
+
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
 
   <title>{% if page.title %}{{ site.title }} - {{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{% t 'description' %}{% endif %}">
-  <meta name="theme-color" content="#008CBA">
+  <meta name="description" content="{{ meta_desc | escape }}">
+  <meta name="theme-color" content="#008cba" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a4a63" media="(prefers-color-scheme: dark)">
 
-  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.url }}" />
+  <link rel="stylesheet" href="{{ '/css/main.css' | prepend: site.baseurl }}">
+  <link rel="canonical" href="{{ canonical_url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | absolute_url }}" />
 
-  <link rel="shortcut icon" href="{{ "/img/favicon.png" | prepend: site.baseurl }}">
+  <link rel="shortcut icon" href="{{ '/img/favicon.png' | prepend: site.baseurl }}">
 
   <meta property="og:type" content="{% if page.title %}article{% else %}website{% endif %}" />
   <meta property="og:title" content="{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}" />
-  <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{% t 'description' %}{% endif %}" />
-  <meta property="og:url" content="{{ site.url }}{{ site.baseurl | append: page.url }}" />
+  <meta property="og:description" content="{{ meta_desc | escape }}" />
+  <meta property="og:url" content="{{ canonical_url }}" />
   <meta property="og:site_name" content="{{ site.title }}" />
   <meta property="og:image" content="{% if page.image %}{{ page.image | prepend: site.baseurl | prepend: site.url }}{% else %}{{ site.image | prepend: site.baseurl | prepend: site.url }}{% endif %}" />
 
@@ -24,6 +43,6 @@
   <meta name="twitter:site" content="@{{ site.twitter_username }}" />
   <meta name="twitter:creator" content="@{{ site.twitter_username }}" />
   <meta name="twitter:title" content="{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}" />
-  <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{% t 'description' %}{% endif %}" />
+  <meta name="twitter:description" content="{{ meta_desc | escape }}" />
   <meta name="twitter:image" content="{% if page.image %}{{ page.image | prepend: site.baseurl | prepend: site.url }}{% else %}{{ site.image | prepend: site.baseurl | prepend: site.url }}{% endif %}" />
 </head>

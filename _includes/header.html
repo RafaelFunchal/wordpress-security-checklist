@@ -1,33 +1,61 @@
+{% assign loc = page.language | default: 'en' %}
+{% assign ti = site.data.strings.locales | where: 'code', loc | first %}
+{% if loc == 'en' %}
+  {% assign home_url = site.baseurl | append: '/' %}
+  {% assign checklist_url = site.baseurl | append: '/items/' %}
+{% else %}
+  {% assign home_url = site.baseurl | append: '/' | append: loc | append: '/' %}
+  {% assign checklist_url = site.baseurl | append: '/' | append: loc | append: '/items/' %}
+{% endif %}
+{% assign blog_url = site.baseurl | append: '/' %}
+{% if loc != 'en' %}
+  {% assign blog_url = site.baseurl | append: '/' | append: loc | append: '/' %}
+{% endif %}
+
 <header class="site-header">
 
-    <h1 class="site-title">
-        <a href="{{ site.baseurl }}/{% if page.is_default_language == false %}{{ page.language }}/{% endif %}" title="{{ site.title }}">{{ site.title }}</a>
-    </h1>
-    <span class="site-description">{% t 'description' %}</span>
+    <div class="wrapper site-header__intro">
+        <h1 class="site-title">
+            <a href="{{ home_url }}" title="{{ site.title }}">{{ site.title }}</a>
+        </h1>
+        <p class="site-description">{{ ti.description }}</p>
+    </div>
 
     <nav class="site-nav">
-        <a href="#" class="menu-icon">
-            <svg viewBox="0 0 18 15">
-                <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
-                <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
-                <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
-            </svg>
-        </a>
+        <div class="nav-tools">
+            <button type="button" class="theme-toggle" id="theme-toggle"
+                data-theme-label="{{ ti.theme_label }}"
+                data-tip-light="{{ ti.theme_light }}"
+                data-tip-dark="{{ ti.theme_dark }}"
+                data-switch-to-light="{{ ti.theme_switch_to_light }}"
+                data-switch-to-dark="{{ ti.theme_switch_to_dark }}"
+                aria-label="{{ ti.theme_label }}">
+                <span class="theme-toggle-icons" aria-hidden="true">
+                    <svg class="theme-icon theme-icon--light" viewBox="0 0 24 24" width="22" height="22" focusable="false"><path fill="currentColor" d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM1 13h4v2H1v-2zm11 9v-4h2v4h-2zm7.24-17.16l1.79-1.79 1.41 1.41-1.79 1.79-1.41-1.41zM17.24 19.16l1.79 1.79 1.41-1.41-1.79-1.79-1.41 1.41zM23 11v2h-4v-2h4zM12 7a5 5 0 100 10 5 5 0 000-10z"/></svg>
+                    <svg class="theme-icon theme-icon--dark" viewBox="0 0 24 24" width="22" height="22" focusable="false"><path fill="currentColor" d="M9.37 5.51A7.5 7.5 0 1016.5 19a7.5 7.5 0 002.13-14.49 6 6 0 01-9.26 1z"/></svg>
+                </span>
+            </button>
+            <button class="menu-icon" type="button" aria-expanded="false" aria-controls="site-nav-trigger" aria-label="Toggle menu">
+                <svg viewBox="0 0 18 15">
+                    <path fill="currentColor" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+                    <path fill="currentColor" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+                    <path fill="currentColor" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+                </svg>
+            </button>
+        </div>
 
-        <div class="trigger">
-          {% assign pages=site.pages | where:"language", page.language %}
-          {% for page in pages %}
-            {% if page.title %}
-              <a class="page-link" href="{{ page.url | prepend: site.baseurl }}" title="Checklist">Checklist</a>
-            {% endif %}
-          {% endfor %}
-          <a class="page-link" href="{{ site.baseurl }}/{% if page.language != 'en' %}{{ page.language }}/{% endif %}" title="Blog">Blog</a>
+        <div class="trigger" id="site-nav-trigger">
+          <a class="page-link" href="{{ checklist_url }}" title="{{ ti.nav_checklist }}">{{ ti.nav_checklist }}</a>
+          {% if loc != 'es' and loc != 'ja' %}
+          <a class="page-link" href="{{ blog_url }}" title="{{ ti.nav_blog }}">{{ ti.nav_blog }}</a>
+          {% endif %}
 
-          <select name="language-switch" class="language-switch" onchange="location = this.options[this.selectedIndex].value;">
-            <option value="" selected="selected">Available Languages</option>
+          <select name="language-switch" class="language-switch" aria-label="{{ ti.language_switch_label }}" onchange="location = this.options[this.selectedIndex].value;">
+            <option value="" selected="selected">{{ ti.language_switch_label }}</option>
             {% for language in site.languages %}
-              {% if page.language != language %}
-                <option value="{{ site.baseurl }}/{% if language != 'en' %}{{ language }}/{% endif %}">{% tl language %}</option>
+              {% if loc != language %}
+                {% assign lang_row = site.data.strings.locales | where: 'code', language | first %}
+                <option value="{{ site.baseurl }}/{% if language != 'en' %}{{ language }}/{% endif %}">{{ lang_row.switch }}</option>
               {% endif %}
             {% endfor%}
           </select>
