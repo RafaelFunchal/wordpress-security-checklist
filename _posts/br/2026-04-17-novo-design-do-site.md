@@ -32,6 +32,6 @@ As recomendações do checklist foram **revisadas para o WordPress atual** (data
 
 ## A mesma proposta de sempre
 
-O checklist continua **gratuito**, **open source** e focado em ações práticas para endurecer o WordPress. Sugestões de texto ou traduções são bem-vindas no repositório no [GitHub](https://github.com/rafaelfunchal/wordpress-security-checklist){:target="_blank" rel="noopener noreferrer"}.
+O checklist continua **gratuito**, **open source** e focado em ações práticas para fortalecer o WordPress. Sugestões de texto ou traduções são bem-vindas no repositório no [GitHub](https://github.com/rafaelfunchal/wordpress-security-checklist){:target="_blank" rel="noopener noreferrer"}.
 
-Obrigado por usar o site—se algo quebrar no seu navegador ou idioma, abra uma issue que a gente olha.
+Obrigado por usar o site—se algo quebrar no seu navegador ou idioma, abra uma issue que dou uma olhada.
