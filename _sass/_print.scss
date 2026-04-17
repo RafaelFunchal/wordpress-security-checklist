@@ -4,10 +4,16 @@
     }
 
     .site-header {
-        background-color: #fff;
+        background: #fff;
+        background-image: none;
+        box-shadow: none;
         border-bottom: 1px solid $text-color;
         padding: 1em 0;
         color: $text-color;
+
+        &::after {
+            display: none;
+        }
 
         .site-title {
             color: $text-color;
@@ -35,5 +41,14 @@
       content: " url:" attr(href) " ";
       font-size: 0.8em;
       font-weight: normal;
+    }
+
+    .page-content > .wrapper,
+    .home-hero {
+        box-shadow: none !important;
+    }
+
+    pre {
+        box-shadow: none !important;
     }
 }

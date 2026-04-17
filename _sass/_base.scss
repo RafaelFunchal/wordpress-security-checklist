@@ -14,18 +14,19 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-    font-family: $base-font-family;
+    font-family: var(--font-sans);
     font-size: $base-font-size;
     line-height: $base-line-height;
-    font-weight: 300;
-    color: $text-color;
-    background-color: $background-color;
+    font-weight: 500;
+    color: var(--color-text);
+    background-color: var(--color-bg-page);
     -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
 }
 
 ::selection {
-  background: #fe57a1;
-  color: #ffffff;
+  background: var(--color-selection-bg);
+  color: var(--color-selection-text);
 }
 
 
@@ -84,7 +85,9 @@ li {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 300;
+    font-family: var(--font-sans);
+    font-weight: 700;
+    letter-spacing: -0.02em;
 }
 
 
@@ -93,17 +96,30 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-    color: $brand-color;
+    color: var(--color-link);
     text-decoration: none;
 
     &:visited {
-        color: darken($brand-color, 15%);
+        color: var(--color-link-visited);
     }
 
     &:hover {
-        color: $text-color;
+        color: var(--color-link-hover);
         text-decoration: underline;
     }
+
+    &:focus-visible {
+        outline: 3px solid var(--color-focus-ring);
+        outline-offset: 2px;
+        text-decoration: underline;
+    }
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+    outline: 3px solid var(--color-focus-ring);
+    outline-offset: 2px;
 }
 
 
@@ -112,12 +128,13 @@ a {
  * Blockquotes
  */
 blockquote {
-    color: $grey-color;
-    border-left: 4px solid $grey-color-light;
+    color: var(--color-text-muted);
+    border-left: 4px solid var(--color-blockquote-border);
     padding-left: $spacing-unit / 2;
     font-size: 18px;
-    letter-spacing: -1px;
+    letter-spacing: 0;
     font-style: italic;
+    font-weight: 500;
 
     > :last-child {
         margin-bottom: 0;
@@ -132,9 +149,10 @@ blockquote {
 pre,
 code {
     font-size: 15px;
-    border: 1px solid $grey-color-light;
-    border-radius: 3px;
-    background-color: #eef;
+    border: 1px solid var(--color-code-border);
+    border-radius: 8px;
+    background-color: var(--color-code-bg);
+    color: var(--color-text);
 }
 
 code {
@@ -144,6 +162,8 @@ code {
 pre {
     padding: 8px 12px;
     overflow-x: scroll;
+    box-shadow: var(--neo-inset-panel);
+    border-color: transparent;
 
     > code {
         border: 0;
@@ -171,6 +191,21 @@ pre {
         max-width:         calc(#{$content-width} - (#{$spacing-unit}));
         padding-right: $spacing-unit / 2;
         padding-left: $spacing-unit / 2;
+    }
+}
+
+.page-content > .wrapper {
+    background-color: var(--color-bg-content);
+    border-radius: 22px;
+    box-shadow: var(--neo-raised);
+    padding-top: $spacing-unit * 1.1;
+    padding-bottom: $spacing-unit * 1.1;
+    transition: box-shadow 0.22s ease;
+
+    @include media-query($on-palm) {
+        border-radius: 16px;
+        padding-top: $spacing-unit * 0.9;
+        padding-bottom: $spacing-unit * 0.9;
     }
 }
 
@@ -202,7 +237,7 @@ pre {
         vertical-align: middle;
 
         path {
-            fill: $grey-color-light;
+            fill: currentColor;
         }
     }
 }
