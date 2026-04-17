@@ -23,18 +23,6 @@
 
     <nav class="site-nav">
         <div class="nav-tools">
-            <button type="button" class="theme-toggle" id="theme-toggle"
-                data-theme-label="{{ ti.theme_label }}"
-                data-tip-light="{{ ti.theme_light }}"
-                data-tip-dark="{{ ti.theme_dark }}"
-                data-switch-to-light="{{ ti.theme_switch_to_light }}"
-                data-switch-to-dark="{{ ti.theme_switch_to_dark }}"
-                aria-label="{{ ti.theme_label }}">
-                <span class="theme-toggle-icons" aria-hidden="true">
-                    <svg class="theme-icon theme-icon--light" viewBox="0 0 24 24" width="22" height="22" focusable="false"><path fill="currentColor" d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM1 13h4v2H1v-2zm11 9v-4h2v4h-2zm7.24-17.16l1.79-1.79 1.41 1.41-1.79 1.79-1.41-1.41zM17.24 19.16l1.79 1.79 1.41-1.41-1.79-1.79-1.41 1.41zM23 11v2h-4v-2h4zM12 7a5 5 0 100 10 5 5 0 000-10z"/></svg>
-                    <svg class="theme-icon theme-icon--dark" viewBox="0 0 24 24" width="22" height="22" focusable="false"><path fill="currentColor" d="M9.37 5.51A7.5 7.5 0 1016.5 19a7.5 7.5 0 002.13-14.49 6 6 0 01-9.26 1z"/></svg>
-                </span>
-            </button>
             <button class="menu-icon" type="button" aria-expanded="false" aria-controls="site-nav-trigger" aria-label="Toggle menu">
                 <svg viewBox="0 0 18 15">
                     <path fill="currentColor" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
@@ -45,20 +33,43 @@
         </div>
 
         <div class="trigger" id="site-nav-trigger">
-          <a class="page-link" href="{{ checklist_url }}" title="{{ ti.nav_checklist }}">{{ ti.nav_checklist }}</a>
-          {% if loc != 'es' and loc != 'ja' %}
-          <a class="page-link" href="{{ blog_url }}" title="{{ ti.nav_blog }}">{{ ti.nav_blog }}</a>
-          {% endif %}
+          <div class="trigger__collapsible">
+            <a class="page-link" href="{{ checklist_url }}" title="{{ ti.nav_checklist }}">{{ ti.nav_checklist }}</a>
+            {% if loc != 'es' and loc != 'ja' %}
+            <a class="page-link" href="{{ blog_url }}" title="{{ ti.nav_blog }}">{{ ti.nav_blog }}</a>
+            {% endif %}
 
-          <select name="language-switch" class="language-switch" aria-label="{{ ti.language_switch_label }}" onchange="location = this.options[this.selectedIndex].value;">
-            <option value="" selected="selected">{{ ti.language_switch_label }}</option>
-            {% for language in site.languages %}
-              {% if loc != language %}
-                {% assign lang_row = site.data.strings.locales | where: 'code', language | first %}
-                <option value="{{ site.baseurl }}/{% if language != 'en' %}{{ language }}/{% endif %}">{{ lang_row.switch }}</option>
-              {% endif %}
-            {% endfor%}
-          </select>
+            <select name="language-switch" class="language-switch" aria-label="{{ ti.language_switch_label }}" onchange="location = this.options[this.selectedIndex].value;">
+              <option value="" selected="selected">{{ ti.language_switch_label }}</option>
+              {% for language in site.languages %}
+                {% if loc != language %}
+                  {% assign lang_row = site.data.strings.locales | where: 'code', language | first %}
+                  <option value="{{ site.baseurl }}/{% if language != 'en' %}{{ language }}/{% endif %}">{{ lang_row.switch }}</option>
+                {% endif %}
+              {% endfor%}
+            </select>
+          </div>
+
+          <button type="button" class="theme-toggle" id="theme-toggle"
+              data-theme-label="{{ ti.theme_label }}"
+              data-tip-light="{{ ti.theme_light }}"
+              data-tip-dark="{{ ti.theme_dark }}"
+              data-switch-to-light="{{ ti.theme_switch_to_light }}"
+              data-switch-to-dark="{{ ti.theme_switch_to_dark }}"
+              aria-label="{{ ti.theme_label }}">
+              <span class="theme-toggle-icons" aria-hidden="true">
+                  <svg class="theme-icon theme-icon--light" viewBox="0 0 24 24" width="22" height="22" focusable="false" aria-hidden="true">
+                      <!-- Lit bulb: 5 shine strokes on a 0°–180° semicircle (45° apart), inner ends ~3 user units from bulb top. -->
+                      <path fill="currentColor" d="M12 5.25c2.35 0 4.25 1.9 4.25 4.25 0 1.25-.54 2.37-1.4 3.15L14 14.25h-4l-.85-1.6a4.23 4.23 0 01-1.4-3.15c0-2.35 1.9-4.25 4.25-4.25zm-1.38 10.25h2.76a.62.62 0 010 1.25h-2.76a.62.62 0 010-1.25zM11 17h2a1 1 0 011 1v1.25H10V18a1 1 0 011-1z"/>
+                      <path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" d="M18.55 8.80L20.10 8.80M16.63 4.17L17.73 3.07M12.00 2.25L12.00 0.70M7.37 4.17L6.27 3.07M5.45 8.80L3.90 8.80"/>
+                  </svg>
+                  <svg class="theme-icon theme-icon--dark" viewBox="0 0 24 24" width="22" height="22" focusable="false" aria-hidden="true">
+                      <!-- Lightbulb “off”: same bulb + diagonal strike. -->
+                      <path fill="currentColor" d="M12 5.25c2.35 0 4.25 1.9 4.25 4.25 0 1.25-.54 2.37-1.4 3.15L14 14.25h-4l-.85-1.6a4.23 4.23 0 01-1.4-3.15c0-2.35 1.9-4.25 4.25-4.25zm-1.38 10.25h2.76a.62.62 0 010 1.25h-2.76a.62.62 0 010-1.25zM11 17h2a1 1 0 011 1v1.25H10V18a1 1 0 011-1z"/>
+                      <path fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" d="M5.25 18.75L18.75 5.25"/>
+                  </svg>
+              </span>
+          </button>
         </div>
     </nav>
 </header>
