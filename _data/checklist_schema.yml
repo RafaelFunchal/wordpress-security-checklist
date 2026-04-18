@@ -156,7 +156,7 @@ br:
   - id: "wsc-hosting-sftp-ssh-only"
     name: "Acesse seu servidor apenas por SFTP ou SSH"
   - id: "wsc-hosting-permissions-755-644"
-    name: "Configure as permissões das pastas para 755 e arquivos para 644 (Guia de segurança e endurecimento do WordPress)"
+    name: "Configure as permissões das pastas para 755 e arquivos para 644 (Guia de segurança e fortalecimento do WordPress)"
   - id: "wsc-hosting-wpconfig-protected"
     name: "Certifique-se que seu arquivo wp-config.php não possa ser acessado por outras pessoas"
   - id: "wsc-hosting-block-sensitive-files"
@@ -170,7 +170,7 @@ br:
   - id: "wsc-login-xmlrpc-off"
     name: "Mantenha XML-RPC desativado, exceto se você realmente precisar dele"
   - id: "wsc-login-block-author-enumeration"
-    name: "Evite enumeração de nomes de usuário via URL pública (por exemplo `?author=` com ID numérico que redireciona para o slug do autor): use regras no servidor (`.htaccess` no Apache, nginx), um plugin de segurança, ou desative arquivos públicos de autor se não precisar deles (Guia de segurança e endurecimento do WordPress)."
+    name: "Evite enumeração de nomes de usuário via URL pública (por exemplo `?author=` com ID numérico que redireciona para o slug do autor): use regras no servidor (`.htaccess` no Apache, nginx), um plugin de segurança, ou desative arquivos públicos de autor se não precisar deles (Guia de segurança e fortalecimento do WordPress)."
 
 es:
   - id: "wsc-wpconfig-secret-keys"

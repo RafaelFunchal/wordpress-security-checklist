@@ -66,14 +66,14 @@ checklist: true
 
 * <label><input type="checkbox" data-item-id="wsc-hosting-reliable" /> Contrate uma hospedagem de confiança</label>
 * <label><input type="checkbox" data-item-id="wsc-hosting-sftp-ssh-only" /> Acesse seu servidor apenas por SFTP ou SSH</label>
-* <label><input type="checkbox" data-item-id="wsc-hosting-permissions-755-644" /> Configure as permissões das pastas para 755 e arquivos para 644 ([Guia de segurança e endurecimento do WordPress](https://developer.wordpress.org/advanced-administration/security/hardening/){:target="_blank" rel="noopener noreferrer"})</label>
+* <label><input type="checkbox" data-item-id="wsc-hosting-permissions-755-644" /> Configure as permissões das pastas para 755 e arquivos para 644 ([Guia de segurança e fortalecimento do WordPress](https://developer.wordpress.org/advanced-administration/security/hardening/){:target="_blank" rel="noopener noreferrer"})</label>
 * <label><input type="checkbox" data-item-id="wsc-hosting-wpconfig-protected" /> Certifique-se que seu arquivo wp-config.php não possa ser acessado por outras pessoas</label>
 * <label><input type="checkbox" data-item-id="wsc-hosting-block-sensitive-files" /> Remova ou bloqueie via .htaccess os arquivos license.txt, wp-config-sample.php e readme.html</label>
 * <label><input type="checkbox" data-item-id="wsc-hosting-no-directory-listing" /> Previna a pesquisa de diretórios via .htaccess com o código: `Options All -Indexes`</label>
 * <label><input type="checkbox" data-item-id="wsc-hosting-waf-cdn" /> Use WAF/CDN com proteção contra bots e DDoS quando possível</label>
 * <label><input type="checkbox" data-item-id="wsc-hosting-monitoring-alerts" /> Ative monitoramento e alertas (uptime, expiração de SSL, picos de login, malware)</label>
 * <label><input type="checkbox" data-item-id="wsc-login-xmlrpc-off" /> Mantenha XML-RPC desativado, exceto se você realmente precisar dele</label>
-* <label><input type="checkbox" data-item-id="wsc-login-block-author-enumeration" /> Evite enumeração de nomes de usuário via URL pública (por exemplo `?author=` com ID numérico que redireciona para o slug do autor): use regras no servidor (`.htaccess` no Apache, nginx), um plugin de segurança, ou desative arquivos públicos de autor se não precisar deles ([Guia de segurança e endurecimento do WordPress](https://developer.wordpress.org/advanced-administration/security/hardening/){:target="_blank" rel="noopener noreferrer"}).</label>
+* <label><input type="checkbox" data-item-id="wsc-login-block-author-enumeration" /> Evite enumeração de nomes de usuário via URL pública (por exemplo `?author=` com ID numérico que redireciona para o slug do autor): use regras no servidor (`.htaccess` no Apache, nginx), um plugin de segurança, ou desative arquivos públicos de autor se não precisar deles ([Guia de segurança e fortalecimento do WordPress](https://developer.wordpress.org/advanced-administration/security/hardening/){:target="_blank" rel="noopener noreferrer"}).</label>
     <details class="checklist-item-details">
     <summary>{{ ti.checklist_author_enum_details_summary }}</summary>
     <pre><code># Bloqueia varreduras com author= numérico (301 remove a query string)
