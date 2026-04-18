@@ -5,8 +5,12 @@
 /* Home/blog: space from cards to RSS line equals space from RSS line to panel bottom. */
 $home-blog-rss-rhythm: $spacing-unit * 2.25;
 
+/* Checklist: nudge checkbox + pen overlay right so the mark sits centered in the control. */
+$checklist-checkbox-offset-x: 0.12rem;
+
 .site-header {
     position: relative;
+    z-index: 20;
     padding: 1.75rem 0 0;
     text-align: center;
     color: var(--color-header-text);
@@ -89,6 +93,7 @@ $home-blog-rss-rhythm: $spacing-unit * 2.25;
 .site-nav {
     position: relative;
     z-index: 1;
+    box-sizing: border-box;
     max-width: calc(#{$content-width} + 80px);
     margin: 1.35rem auto 0;
     width: calc(100% - 24px);
@@ -112,7 +117,7 @@ $home-blog-rss-rhythm: $spacing-unit * 2.25;
     }
 
     @include media-query($on-palm) {
-        max-width: none;
+        max-width: 100%;
         width: 100%;
         margin: 1.15rem 0 0;
         border-radius: 0;
@@ -123,16 +128,23 @@ $home-blog-rss-rhythm: $spacing-unit * 2.25;
         flex-wrap: wrap;
         justify-content: flex-start;
         align-items: center;
-        column-gap: 0;
+        column-gap: 0.65rem;
         row-gap: 0;
+        min-width: 0;
+        overflow-x: hidden;
 
         .nav-tools {
             order: 1;
+            position: relative;
+            z-index: 2;
+            flex-shrink: 0;
         }
 
         .trigger {
             order: 2;
-            margin-left: auto;
+            flex: 1 1 0;
+            min-width: 0;
+            max-width: 100%;
             justify-self: auto;
             grid-column: auto;
         }
@@ -156,9 +168,57 @@ $home-blog-rss-rhythm: $spacing-unit * 2.25;
         &:active {
             box-shadow: var(--neo-pressed);
         }
+    }
 
-        svg path {
-            fill: currentColor;
+    /* Hamburger → X (state follows `aria-expanded` from script.js). */
+    .menu-icon__inner {
+        position: relative;
+        display: block;
+        width: 1.125rem;
+        height: 0.875rem;
+    }
+
+    .menu-icon__bar {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        border-radius: 2px;
+        background-color: currentColor;
+        transform-origin: 50% 50%;
+        transition:
+            transform 0.28s cubic-bezier(0.45, 0.05, 0.2, 1),
+            opacity 0.22s ease;
+    }
+
+    .menu-icon__bar:nth-child(1) {
+        top: 0;
+    }
+
+    .menu-icon__bar:nth-child(2) {
+        top: calc(50% - 1px);
+    }
+
+    .menu-icon__bar:nth-child(3) {
+        bottom: 0;
+    }
+
+    .menu-icon[aria-expanded="true"] .menu-icon__bar:nth-child(1) {
+        transform: translateY(calc(0.4375rem - 1px)) rotate(45deg);
+    }
+
+    .menu-icon[aria-expanded="true"] .menu-icon__bar:nth-child(2) {
+        opacity: 0;
+        transform: scaleX(0.2);
+    }
+
+    .menu-icon[aria-expanded="true"] .menu-icon__bar:nth-child(3) {
+        transform: translateY(calc(-0.4375rem + 1px)) rotate(-45deg);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .menu-icon__bar {
+            transition-duration: 0.01ms !important;
         }
     }
 
@@ -191,10 +251,12 @@ $home-blog-rss-rhythm: $spacing-unit * 2.25;
 
     .language-switch {
         padding: 0.45em 0.85em;
+        /* Extra end padding so the native chevron sits inset from the rounded edge. */
+        padding-inline-end: 2.35rem;
         min-height: 2.25rem;
         font-family: var(--font-sans);
         font-weight: 600;
-        font-size: 0.88rem;
+        font-size: 0.95rem;
         color: var(--color-nav-text);
         background-color: rgba(255, 255, 255, 0.07);
         border: 1px solid rgba(255, 255, 255, 0.1);
@@ -202,6 +264,11 @@ $home-blog-rss-rhythm: $spacing-unit * 2.25;
         box-shadow: var(--neo-inset-panel);
         cursor: pointer;
         transition: background 0.16s ease, border-color 0.16s ease;
+        /* Cap width (native selects size to longest option; max-width keeps the control compact). */
+        box-sizing: border-box;
+        width: auto;
+        max-width: 11.5rem;
+        min-width: 0;
 
         &:hover {
             background-color: rgba(255, 255, 255, 0.11);
@@ -213,22 +280,26 @@ $home-blog-rss-rhythm: $spacing-unit * 2.25;
             display: inline-flex;
             align-items: center;
             justify-content: center;
+            touch-action: manipulation;
         }
 
-        .page-link,
+        .page-link {
+            display: block;
+            box-sizing: border-box;
+            width: min(100%, 20rem);
+            max-width: 100%;
+            margin: 0.45em auto;
+            text-align: center;
+            overflow-wrap: anywhere;
+        }
+
         .language-switch {
             display: block;
+            width: min(100%, 11.5rem);
+            max-width: 100%;
             margin: 0.45em auto;
-            max-width: 20rem;
             text-align: center;
-        }
-
-        .page-link:not(:first-child) {
-            margin-left: auto;
-        }
-
-        .language-switch {
-            margin-left: auto;
+            overflow-wrap: anywhere;
         }
     }
 }
@@ -279,6 +350,8 @@ $home-blog-rss-rhythm: $spacing-unit * 2.25;
         align-items: stretch;
         grid-column: 1 / -1;
         grid-row: 2;
+        min-width: 0;
+        max-width: 100%;
         margin-top: 0.85em;
         padding-top: 0.85em;
         border-top: 1px solid rgba(255, 255, 255, 0.08);
@@ -497,11 +570,33 @@ $home-blog-rss-rhythm: $spacing-unit * 2.25;
 
             label {
                 cursor: pointer;
+                position: relative;
+                color: var(--color-text);
+                transition: color 0.32s ease;
+                text-decoration: none;
+
+                a,
+                a:visited {
+                    transition: color 0.32s ease;
+                }
+
+                pre,
+                code {
+                    transition:
+                        background-color 0.32s ease,
+                        color 0.32s ease;
+                }
+
+                input[type=checkbox] {
+                    transition: opacity 0.28s ease;
+                }
             }
 
-            .checked {
-                text-decoration: line-through;
+            label.checked {
                 color: var(--color-checked-text);
+                text-decoration: line-through;
+                text-decoration-color: currentColor;
+                text-decoration-thickness: max(2px, 0.1em);
 
                 a,
                 a:visited {
@@ -511,12 +606,11 @@ $home-blog-rss-rhythm: $spacing-unit * 2.25;
                 pre,
                 code {
                     background-color: var(--color-checked-code-bg);
-                    text-decoration: line-through;
                 }
 
                 input[type=checkbox] {
-                  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
-                  opacity: 0.8;
+                    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+                    opacity: 0.8;
                 }
             }
 
@@ -525,6 +619,7 @@ $home-blog-rss-rhythm: $spacing-unit * 2.25;
                 -webkit-appearance: none;
                 width: 1.3rem;
                 height: 1.3rem;
+                margin-left: $checklist-checkbox-offset-x;
                 margin-right: 0.65rem;
                 border: 2px solid var(--color-border);
                 border-radius: 10px;
@@ -552,6 +647,22 @@ $home-blog-rss-rhythm: $spacing-unit * 2.25;
                     background-position: center;
                     background-repeat: no-repeat;
                     box-shadow: none;
+                }
+            }
+
+            @media (prefers-reduced-motion: reduce) {
+                label,
+                label a,
+                label a:visited,
+                label pre,
+                label code,
+                label input[type=checkbox] {
+                    transition: none !important;
+                }
+
+                .post-content.checklist-check-draw-enabled .check-draw-stroke {
+                    animation: none !important;
+                    stroke-dashoffset: 0 !important;
                 }
             }
         }
@@ -683,6 +794,230 @@ $home-blog-rss-rhythm: $spacing-unit * 2.25;
     margin-bottom: $spacing-unit;
 }
 
+.post--checklist .post-header {
+    position: relative;
+    margin-bottom: $spacing-unit * 0.85;
+}
+
+.checklist-complete-announcer {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    border: 0;
+    white-space: nowrap;
+}
+
+.checklist-celebration {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.checklist-celebration__piece {
+    position: fixed;
+    width: 8px;
+    height: 5px;
+    margin-left: -4px;
+    margin-top: -2px;
+    border-radius: 2px;
+    opacity: 1;
+    will-change: transform, opacity;
+    animation: checklist-confetti-burst var(--cele-dur, 1.1s) var(--cele-delay, 0s) ease-out forwards;
+}
+
+.checklist-celebration__piece--lg {
+    width: 15px;
+    height: 9px;
+    margin-left: -7.5px;
+    margin-top: -4.5px;
+    border-radius: 3px;
+}
+
+@keyframes checklist-confetti-burst {
+    0% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(var(--cele-tx), var(--cele-ty)) rotate(var(--cele-rot)) scale(0.45);
+        opacity: 0;
+    }
+}
+
+.checklist-progress.checklist-progress--celebrate .checklist-progress__fill {
+    animation: checklist-progress-fill-celebrate 0.75s ease-in-out 2;
+}
+
+.checklist-progress.checklist-progress--celebrate .checklist-progress__pct {
+    animation: checklist-progress-pct-celebrate 0.65s ease-out forwards;
+}
+
+@keyframes checklist-progress-fill-celebrate {
+    0%,
+    100% {
+        filter: brightness(1);
+    }
+
+    50% {
+        filter: brightness(1.22) saturate(1.15);
+    }
+}
+
+@keyframes checklist-progress-pct-celebrate {
+    0% {
+        transform: scale(1);
+        color: var(--color-text-muted);
+    }
+
+    35% {
+        transform: scale(1.18);
+        color: var(--color-accent);
+    }
+
+    100% {
+        transform: scale(1);
+        color: var(--color-text-muted);
+    }
+}
+
+.checklist-progress.checklist-progress--celebrate-quiet .checklist-progress__fill {
+    animation: checklist-progress-fill-quiet 1.85s ease-out 1;
+}
+
+.checklist-progress.checklist-progress--celebrate-quiet .checklist-progress__pct {
+    animation: checklist-progress-pct-quiet 1.85s ease-out forwards;
+}
+
+@keyframes checklist-progress-pct-quiet {
+    0%,
+    100% {
+        color: var(--color-text-muted);
+    }
+
+    50% {
+        color: var(--color-accent);
+    }
+}
+
+@keyframes checklist-progress-fill-quiet {
+    0%,
+    100% {
+        filter: brightness(1);
+    }
+
+    50% {
+        filter: brightness(1.12);
+    }
+}
+
+.checklist-progress-slot {
+    position: relative;
+}
+
+.checklist-progress-spacer {
+    display: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    pointer-events: none;
+}
+
+.checklist-progress-spacer.checklist-progress-spacer--active {
+    display: block;
+}
+
+.checklist-progress {
+    position: relative;
+    z-index: 30;
+    margin-top: 0.85rem;
+    box-sizing: border-box;
+}
+
+.checklist-progress.checklist-progress--pinned {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: auto;
+    max-width: none;
+    margin-top: 0;
+    z-index: 40;
+    background-color: var(--color-bg-content);
+    border-bottom: 1px solid var(--color-border-subtle);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.04);
+}
+
+:root[data-theme="dark"] .checklist-progress.checklist-progress--pinned {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.checklist-progress--pinned .checklist-progress__inner {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0.55rem $spacing-unit 0.65rem;
+    background-color: transparent;
+    border-bottom: 0;
+    box-shadow: none;
+
+    @include media-query($on-laptop) {
+        padding-left: $spacing-unit / 2;
+        padding-right: $spacing-unit / 2;
+    }
+}
+
+.checklist-progress__inner {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.55rem 0 0.65rem;
+    background-color: var(--color-bg-content);
+    border-bottom: 1px solid var(--color-border-subtle);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.04);
+}
+
+:root[data-theme="dark"] .checklist-progress:not(.checklist-progress--pinned) .checklist-progress__inner {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.checklist-progress__track {
+    flex: 1;
+    min-width: 0;
+    height: 11px;
+    border-radius: 999px;
+    background-color: var(--color-border-subtle);
+    overflow: hidden;
+}
+
+.checklist-progress__fill {
+    height: 100%;
+    width: 0%;
+    border-radius: inherit;
+    background-color: var(--color-btn-primary-bg);
+    transition: width 0.28s ease;
+}
+
+.checklist-progress__pct {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.02em;
+    color: var(--color-text-muted);
+    min-width: 3.25rem;
+    text-align: right;
+}
+
 .post-title {
     font-family: var(--font-sans);
     font-size: clamp(1.85rem, calc(3vw + 1rem), 2.75rem);
@@ -741,6 +1076,96 @@ $home-blog-rss-rhythm: $spacing-unit * 2.25;
             font-size: 18px;
         }
     }
+}
+
+.post--checklist .post-content {
+    margin-bottom: $spacing-unit * 0.35;
+}
+
+@keyframes checklist-check-pen-draw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.post-content.checklist-check-draw-enabled ul li {
+    .check-draw {
+        position: absolute;
+        z-index: 2;
+        left: $checklist-checkbox-offset-x;
+        top: 0;
+        width: 1.3rem;
+        height: 1.3rem;
+        transform: translateY(0.08em);
+        pointer-events: none;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .check-draw-svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .check-draw-stroke {
+        stroke: #fff;
+        stroke-dasharray: var(--check-len, 15);
+        stroke-dashoffset: var(--check-len, 15);
+    }
+
+    label.checked .check-draw {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    label.checked.check-draw-static .check-draw-stroke {
+        stroke-dashoffset: 0;
+    }
+
+    label.checked:not(.check-draw-static) .check-draw-stroke {
+        animation: checklist-check-pen-draw 0.42s cubic-bezier(0.33, 1, 0.32, 1) forwards;
+    }
+
+    input[type=checkbox]:checked {
+        background-image: none;
+    }
+}
+
+/* Pen-draw check: blue halo so the white stroke reads on the primary fill in light appearance. */
+@media (prefers-color-scheme: light) {
+    :root:not([data-theme]) .post-content.checklist-check-draw-enabled ul li .check-draw-stroke {
+        filter: drop-shadow(0 0 0.7px var(--color-btn-primary-hover))
+            drop-shadow(0 0 1.65px var(--color-btn-primary-bg))
+            drop-shadow(0 0 2.4px rgba(0, 65, 95, 0.35));
+    }
+}
+
+:root[data-theme="light"] .post-content.checklist-check-draw-enabled ul li .check-draw-stroke {
+    filter: drop-shadow(0 0 0.7px var(--color-btn-primary-hover))
+        drop-shadow(0 0 1.65px var(--color-btn-primary-bg))
+        drop-shadow(0 0 2.4px rgba(0, 65, 95, 0.35));
+}
+
+:root[data-theme="dark"] .post-content.checklist-check-draw-enabled ul li .check-draw-stroke {
+    filter: none;
+}
+
+.checklist-reset-wrap {
+    padding-top: $spacing-unit * 0.75;
+    border-top: 1px solid var(--color-border-subtle);
+}
+
+.checklist-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 1rem;
+}
+
+.checklist-celebration-toggle {
+    min-width: 8.5rem;
+    text-align: center;
 }
 
 /**
