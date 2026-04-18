@@ -39,6 +39,7 @@ locales:
     pdf_cover_project: "Project name"
     pdf_cover_progress: "Progress"
     pdf_cover_generated: "Created"
+    checklist_author_enum_details_summary: "Show Apache .htaccess example"
 
   - code: br
     description: "Uma lista de ações para aumentar a segurança da sua instalação WordPress."
@@ -78,6 +79,7 @@ locales:
     pdf_cover_project: "Nome do projeto"
     pdf_cover_progress: "Progresso"
     pdf_cover_generated: "Gerado em"
+    checklist_author_enum_details_summary: "Mostrar exemplo em Apache (.htaccess)"
 
   - code: ja
     description: "WordPress サイトのセキュリティを高めるために取るべき行動のチェックリストです。"
@@ -117,6 +119,7 @@ locales:
     pdf_cover_project: "プロジェクト名"
     pdf_cover_progress: "進捗"
     pdf_cover_generated: "作成日時"
+    checklist_author_enum_details_summary: "Apache（.htaccess）の例を表示"
 
   - code: es
     description: "Una lista de acciones para aumentar la seguridad de una instalación WordPress."
@@ -156,3 +159,4 @@ locales:
     pdf_cover_project: "Nombre del proyecto"
     pdf_cover_progress: "Progreso"
     pdf_cover_generated: "Generado el"
+    checklist_author_enum_details_summary: "Mostrar ejemplo en Apache (.htaccess)"

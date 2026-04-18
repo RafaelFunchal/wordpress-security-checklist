@@ -7,6 +7,8 @@ subset: root
 checklist: true
 ---
 
+{% assign ti = site.data.strings.locales | where: 'code', page.language | first %}
+
 > WordPress で稼働しているウェブサイトがハッキングされる原因は WordPress にあるわけではなく、そのほとんどが開発中に回避できるいくつかの設定ミスによるものです。
 > あなたのウェブサイトのセキュリティを高めるために取るべき行動のチェックリストであること、それがこのプロジェクトの考えです。
 
@@ -27,11 +29,15 @@ checklist: true
 * <label><input type="checkbox" data-item-id="wsc-login-revoke-sessions-rotate" /> インシデント発生時や担当変更時にセッション無効化とパスワードローテーションを実施する</label>
 * <label><input type="checkbox" data-item-id="wsc-login-generic-errors" /> ログインエラーメッセージを汎用的なものにする (ユーザー名/パスワード) ([チュートリアル](https://gist.github.com/zergiocosta/72f87176b236ed0c6e13){:target="_blank" rel="noopener noreferrer"})</label>
 * <label><input type="checkbox" data-item-id="wsc-login-xmlrpc-off" /> 必要がない限り XML-RPC を無効化する</label>
-* <label><input type="checkbox" data-item-id="wsc-login-block-author-enumeration" /> 公開リクエストによるユーザー名の列挙を防ぐ (`?author=` など): Web サーバーのルール (Apache `.htaccess`、nginx)、セキュリティプラグイン、または不要なら公開の著者アーカイブを無効化する ([WordPress のセキュリティ強化](https://developer.wordpress.org/advanced-administration/security/hardening/){:target="_blank" rel="noopener noreferrer"}).<br />Apache の例 (<code>.htaccess</code> や vhost の設定。著者アーカイブを公開している場合は調整):<br /><pre><code># 数値の author= 列挙をブロック（301 でクエリを外す）
+* <label><input type="checkbox" data-item-id="wsc-login-block-author-enumeration" /> 公開リクエストによるユーザー名の列挙を防ぐ (`?author=` など): Web サーバーのルール (Apache `.htaccess`、nginx)、セキュリティプラグイン、または不要なら公開の著者アーカイブを無効化する ([WordPress のセキュリティ強化](https://developer.wordpress.org/advanced-administration/security/hardening/){:target="_blank" rel="noopener noreferrer"}).</label>
+    <details class="checklist-item-details">
+    <summary>{{ ti.checklist_author_enum_details_summary }}</summary>
+    <pre><code># 数値の author= 列挙をブロック（301 でクエリを外す）
 RewriteEngine On
 RewriteCond %{QUERY_STRING} ^author=\d [NC]
 RewriteRule ^ %{REQUEST_URI}? [L,R=301]
-</code></pre></label>
+</code></pre>
+    </details>
 
 ## 管理画面<span class="items-counter"></span>
 

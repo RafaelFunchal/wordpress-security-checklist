@@ -166,6 +166,21 @@
         .post--checklist .post-content label input[type="checkbox"] {
             accent-color: #111;
         }
+
+        /* Expand code snippets in PDF/print even when <details> is closed in the UI */
+        .post--checklist .post-content .checklist-item-details > :not(summary) {
+            display: block !important;
+        }
+
+        .post--checklist .post-content .checklist-item-details summary {
+            display: none !important;
+        }
+
+        .post--checklist .post-content .checklist-item-details {
+            border: none !important;
+            box-shadow: none !important;
+            margin-top: 0.25rem !important;
+        }
     }
 }
 
