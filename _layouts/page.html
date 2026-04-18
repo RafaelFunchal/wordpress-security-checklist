@@ -4,6 +4,9 @@ layout: default
 {% assign loc = page.language | default: 'en' %}
 {% assign ti = site.data.strings.locales | where: 'code', loc | first %}
 <div class="post{% if page.checklist %} post--checklist{% endif %}"{% if page.checklist %} data-checklist-complete-msg="{{ ti.checklist_complete_message | xml_escape }}"{% endif %}>
+    {% if page.checklist %}
+    {% include checklist-pdf.html %}
+    {% endif %}
     <header class="post-header">
         <h2 class="post-title">{% if page.checklist %}{{ ti.switch }}{% else %}{{ page.title }}{% endif %}</h2>
         {% if page.checklist %}
@@ -29,8 +32,41 @@ layout: default
     {% if page.checklist %}
     <div class="checklist-reset-wrap">
         <div class="checklist-actions">
-            <button type="button" class="button button-primary" id="checklist-reset" aria-label="{{ ti.checklist_reset_aria }}">{{ ti.checklist_reset }}</button>
-            <button type="button" class="button button-primary checklist-celebration-toggle" id="checklist-celebration-toggle" aria-pressed="true" aria-label="{{ ti.checklist_celebration_toggle_aria_on }}" data-label-on="{{ ti.checklist_celebration_disable | xml_escape }}" data-label-off="{{ ti.checklist_celebration_enable | xml_escape }}" data-aria-on="{{ ti.checklist_celebration_toggle_aria_on | xml_escape }}" data-aria-off="{{ ti.checklist_celebration_toggle_aria_off | xml_escape }}">{{ ti.checklist_celebration_disable }}</button>
+            <button type="button" class="button button-primary checklist-action-btn" id="checklist-check-all" aria-label="{{ ti.checklist_check_all_aria }}">
+                <span class="checklist-action-btn__icon" aria-hidden="true">
+                    <svg class="checklist-action-btn__svg" viewBox="0 0 24 24" width="20" height="20" focusable="false" aria-hidden="true">
+                        <path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+                    </svg>
+                </span>
+                <span class="checklist-action-btn__label">{{ ti.checklist_check_all }}</span>
+            </button>
+            <button type="button" class="button button-primary checklist-action-btn" id="checklist-uncheck-all" aria-label="{{ ti.checklist_reset_aria }}">
+                <span class="checklist-action-btn__icon" aria-hidden="true">
+                    <svg class="checklist-action-btn__svg" viewBox="0 0 24 24" width="20" height="20" focusable="false" aria-hidden="true">
+                        <path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+                    </svg>
+                </span>
+                <span class="checklist-action-btn__label">{{ ti.checklist_reset }}</span>
+            </button>
+            <button type="button" class="button button-primary checklist-action-btn checklist-celebration-toggle" id="checklist-celebration-toggle" aria-pressed="true" aria-label="{{ ti.checklist_celebration_toggle_aria_on }}" data-aria-on="{{ ti.checklist_celebration_toggle_aria_on | xml_escape }}" data-aria-off="{{ ti.checklist_celebration_toggle_aria_off | xml_escape }}">
+                <span class="checklist-action-btn__icon" aria-hidden="true">
+                    <svg class="checklist-action-btn__svg" viewBox="0 0 24 24" width="20" height="20" focusable="false" aria-hidden="true">
+                        <path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z"/>
+                    </svg>
+                </span>
+                <span class="checklist-action-btn__label checklist-celebration-toggle__stack">
+                    <span class="checklist-celebration-toggle__text checklist-celebration-toggle__text--on" aria-hidden="false">{{ ti.checklist_celebration_disable }}</span>
+                    <span class="checklist-celebration-toggle__text checklist-celebration-toggle__text--off" aria-hidden="true">{{ ti.checklist_celebration_enable }}</span>
+                </span>
+            </button>
+            <button type="button" class="button button-primary checklist-action-btn" id="checklist-pdf-open">
+                <span class="checklist-action-btn__icon" aria-hidden="true">
+                    <svg class="checklist-action-btn__svg" viewBox="0 0 24 24" width="20" height="20" focusable="false" aria-hidden="true">
+                        <path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"/>
+                    </svg>
+                </span>
+                <span class="checklist-action-btn__label">{{ ti.pdf_button }}</span>
+            </button>
         </div>
     </div>
     {% endif %}

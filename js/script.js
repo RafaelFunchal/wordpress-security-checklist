@@ -154,11 +154,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     var checklistScope = (function () {
-        var btn = document.getElementById('checklist-reset');
-        if (!btn) {
-            return null;
-        }
-        var post = btn.closest('.post');
+        var post = document.querySelector('.post--checklist');
         return post ? post.querySelector('.post-content') : null;
     }());
 
@@ -479,7 +475,14 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         var on = isCelebrationEnabled();
         btn.setAttribute('aria-pressed', on ? 'true' : 'false');
-        btn.textContent = on ? btn.getAttribute('data-label-on') || 'On' : btn.getAttribute('data-label-off') || 'Off';
+        var textOn = btn.querySelector('.checklist-celebration-toggle__text--on');
+        var textOff = btn.querySelector('.checklist-celebration-toggle__text--off');
+        if (textOn) {
+            textOn.setAttribute('aria-hidden', on ? 'false' : 'true');
+        }
+        if (textOff) {
+            textOff.setAttribute('aria-hidden', on ? 'true' : 'false');
+        }
         btn.setAttribute(
             'aria-label',
             on ? btn.getAttribute('data-aria-on') || '' : btn.getAttribute('data-aria-off') || ''
@@ -666,29 +669,46 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    var checklistReset = document.getElementById('checklist-reset');
-    if (checklistReset) {
-        checklistReset.addEventListener('click', function () {
-            var post = checklistReset.closest('.post');
-            var scope = post ? post.querySelector('.post-content') : null;
-            if (!scope) {
-                return;
-            }
-            scope.querySelectorAll('input[type="checkbox"]').forEach(function (checkbox) {
-                if (!checkbox.checked) {
+    function syncChecklistScopeFromButtons() {
+        if (!checklistScope) {
+            return;
+        }
+        document.querySelectorAll('.items-counter').forEach(function (counter) {
+            updateItemsCounter(counter);
+        });
+        saveChecklistState();
+        updateChecklistProgress();
+    }
+
+    var checklistCheckAll = document.getElementById('checklist-check-all');
+    if (checklistCheckAll && checklistScope) {
+        checklistCheckAll.addEventListener('click', function () {
+            checklistScope.querySelectorAll('input[type="checkbox"]').forEach(function (checkbox) {
+                if (checkbox.checked) {
                     return;
                 }
-                checkbox.checked = false;
+                applyCheckboxState(checkbox, true);
                 if (checkbox.parentElement) {
-                    checkbox.parentElement.classList.remove('checked');
                     checkbox.parentElement.classList.remove('check-draw-static');
                 }
             });
-            document.querySelectorAll('.items-counter').forEach(function (counter) {
-                updateItemsCounter(counter);
+            syncChecklistScopeFromButtons();
+        });
+    }
+
+    var checklistUncheckAll = document.getElementById('checklist-uncheck-all');
+    if (checklistUncheckAll && checklistScope) {
+        checklistUncheckAll.addEventListener('click', function () {
+            checklistScope.querySelectorAll('input[type="checkbox"]').forEach(function (checkbox) {
+                if (!checkbox.checked) {
+                    return;
+                }
+                applyCheckboxState(checkbox, false);
+                if (checkbox.parentElement) {
+                    checkbox.parentElement.classList.remove('check-draw-static');
+                }
             });
-            saveChecklistState();
-            updateChecklistProgress();
+            syncChecklistScopeFromButtons();
         });
     }
 
@@ -705,6 +725,200 @@ document.addEventListener('DOMContentLoaded', function () {
         window.addEventListener('scroll', scheduleChecklistProgressPinSync, { passive: true });
         window.addEventListener('resize', scheduleChecklistProgressPinSync);
     }
+
+    (function initChecklistPdfExport() {
+        var openBtn = document.getElementById('checklist-pdf-open');
+        var modal = document.getElementById('checklist-pdf-modal');
+        if (!openBtn || !modal) {
+            return;
+        }
+        var input = document.getElementById('checklist-pdf-project-input');
+        var submitBtn = document.getElementById('checklist-pdf-submit');
+        var skipBtn = document.getElementById('checklist-pdf-skip');
+        var closeBtn = document.getElementById('checklist-pdf-modal-close');
+        var backdrop = modal.querySelector('[data-pdf-modal-dismiss]');
+
+        var lastFocus = null;
+        var printCleanupTimer = null;
+
+        function clearPrintCleanupTimer() {
+            if (printCleanupTimer) {
+                window.clearTimeout(printCleanupTimer);
+                printCleanupTimer = null;
+            }
+        }
+
+        function endPrintSession() {
+            document.body.classList.remove('wsc-print-checklist');
+            clearPrintCleanupTimer();
+        }
+
+        window.addEventListener('afterprint', endPrintSession);
+
+        if (window.matchMedia) {
+            var mqPrint = window.matchMedia('print');
+            function onPrintMediaChange() {
+                if (!mqPrint.matches) {
+                    endPrintSession();
+                }
+            }
+            if (mqPrint.addEventListener) {
+                mqPrint.addEventListener('change', onPrintMediaChange);
+            } else if (mqPrint.addListener) {
+                mqPrint.addListener(onPrintMediaChange);
+            }
+        }
+
+        function openModal() {
+            lastFocus = document.activeElement;
+            modal.removeAttribute('hidden');
+            if (input) {
+                input.value = '';
+                window.setTimeout(function () {
+                    input.focus();
+                }, 0);
+            }
+            document.documentElement.classList.add('wsc-checklist-pdf-modal-open');
+            document.addEventListener('keydown', onDocKeydown);
+        }
+
+        function closeModal() {
+            modal.setAttribute('hidden', '');
+            document.documentElement.classList.remove('wsc-checklist-pdf-modal-open');
+            document.removeEventListener('keydown', onDocKeydown);
+            if (lastFocus && typeof lastFocus.focus === 'function') {
+                lastFocus.focus();
+            }
+        }
+
+        function onDocKeydown(e) {
+            if (e.key === 'Escape' && !modal.hasAttribute('hidden')) {
+                e.preventDefault();
+                closeModal();
+            }
+        }
+
+        function resolvePrintDateLocale() {
+            var cover = document.getElementById('checklist-print-cover');
+            var fromAttr = cover && cover.getAttribute('data-intl-locale');
+            if (fromAttr) {
+                return fromAttr.trim();
+            }
+            var htmlLang = (document.documentElement.getAttribute('lang') || 'en').toLowerCase();
+            if (htmlLang === 'br') {
+                return 'pt-BR';
+            }
+            if (htmlLang === 'es' || htmlLang === 'ja' || htmlLang === 'en') {
+                return htmlLang;
+            }
+            return 'en';
+        }
+
+        function formatGeneratedAt(date) {
+            var d = date || new Date();
+            var locale = resolvePrintDateLocale();
+            var modern = { dateStyle: 'full', timeStyle: 'short' };
+            var legacy = {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: 'numeric',
+                minute: '2-digit'
+            };
+            try {
+                return new Intl.DateTimeFormat(locale, modern).format(d);
+            } catch (err1) {
+                try {
+                    return new Intl.DateTimeFormat(locale, legacy).format(d);
+                } catch (err2) {
+                    try {
+                        return d.toLocaleString(locale);
+                    } catch (err3) {
+                        return d.toLocaleString('en');
+                    }
+                }
+            }
+        }
+
+        function populatePrintCover(projectNameTrimmed) {
+            var urlEl = document.getElementById('checklist-print-url');
+            var row = document.getElementById('checklist-print-project-row');
+            var projectDd = document.getElementById('checklist-print-project');
+            var pct = document.getElementById('checklist-print-pct');
+            var timeEl = document.getElementById('checklist-print-time');
+            var srcPct = document.getElementById('checklist-progress-pct');
+
+            if (urlEl) {
+                urlEl.textContent = window.location.href;
+            }
+            if (row && projectDd) {
+                if (projectNameTrimmed) {
+                    projectDd.textContent = projectNameTrimmed;
+                    row.removeAttribute('hidden');
+                } else {
+                    projectDd.textContent = '';
+                    row.setAttribute('hidden', '');
+                }
+            }
+            if (pct && srcPct) {
+                pct.textContent = srcPct.textContent;
+            }
+            if (timeEl) {
+                var stamp = new Date();
+                if (timeEl.tagName === 'TIME') {
+                    timeEl.dateTime = stamp.toISOString();
+                }
+                timeEl.textContent = formatGeneratedAt(stamp);
+            }
+        }
+
+        function startPrint(projectName) {
+            var raw = projectName || '';
+            var trimmed = raw.replace(/\s+/g, ' ').trim();
+            populatePrintCover(trimmed);
+            closeModal();
+            document.body.classList.add('wsc-print-checklist');
+            clearPrintCleanupTimer();
+            printCleanupTimer = window.setTimeout(function () {
+                endPrintSession();
+            }, 2500);
+
+            window.requestAnimationFrame(function () {
+                window.requestAnimationFrame(function () {
+                    window.print();
+                });
+            });
+        }
+
+        openBtn.addEventListener('click', function () {
+            openModal();
+        });
+
+        if (backdrop) {
+            backdrop.addEventListener('click', closeModal);
+        }
+        if (closeBtn) {
+            closeBtn.addEventListener('click', closeModal);
+        }
+        if (skipBtn) {
+            skipBtn.addEventListener('click', function () {
+                startPrint('');
+            });
+        }
+        if (submitBtn) {
+            submitBtn.addEventListener('click', function () {
+                startPrint(input ? input.value : '');
+            });
+        }
+        if (input) {
+            input.addEventListener('keydown', function (e) {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    startPrint(input.value);
+                }
+            });
+        }
+    }());
 
     updateChecklistProgress();
     scheduleChecklistProgressPinSync();

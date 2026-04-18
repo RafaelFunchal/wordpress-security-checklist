@@ -1,0 +1,36 @@
+<div id="checklist-print-cover" class="checklist-print-cover" aria-hidden="true" data-intl-locale="{% case loc %}{% when 'br' %}pt-BR{% when 'es' %}es{% when 'ja' %}ja{% else %}en{% endcase %}">
+    <div class="checklist-print-cover__inner">
+        <h1 class="checklist-print-cover__title">{{ site.title | xml_escape }}</h1>
+        <p id="checklist-print-url" class="checklist-print-cover__url"></p>
+        <dl class="checklist-print-cover__meta">
+            <div id="checklist-print-project-row" class="checklist-print-cover__row checklist-print-cover__row--project" hidden>
+                <dt>{{ ti.pdf_cover_project }}</dt>
+                <dd id="checklist-print-project" class="checklist-print-cover__project"></dd>
+            </div>
+            <div class="checklist-print-cover__row">
+                <dt>{{ ti.pdf_cover_progress }}</dt>
+                <dd class="checklist-print-cover__progress-dd">
+                    <span id="checklist-print-pct" class="checklist-print-cover__pct"></span>
+                </dd>
+            </div>
+        </dl>
+        <p class="checklist-print-cover__generated">
+            <span class="checklist-print-cover__generated-label">{{ ti.pdf_cover_generated }}</span>
+            <time id="checklist-print-time"></time>
+        </p>
+    </div>
+</div>
+
+<div id="checklist-pdf-modal" class="checklist-pdf-modal" role="dialog" aria-modal="true" aria-labelledby="checklist-pdf-modal-title" hidden>
+    <div class="checklist-pdf-modal__backdrop" data-pdf-modal-dismiss tabindex="-1"></div>
+    <div class="checklist-pdf-modal__panel">
+        <button type="button" class="checklist-pdf-modal__close" id="checklist-pdf-modal-close" aria-label="{{ ti.pdf_modal_close | xml_escape }}">&times;</button>
+        <h2 id="checklist-pdf-modal-title" class="checklist-pdf-modal__title">{{ ti.pdf_modal_title }}</h2>
+        <label class="checklist-pdf-modal__label" for="checklist-pdf-project-input">{{ ti.pdf_field_label }}</label>
+        <input type="text" class="checklist-pdf-modal__input" id="checklist-pdf-project-input" maxlength="160" autocomplete="off" placeholder="{{ ti.pdf_field_placeholder }}" />
+        <div class="checklist-pdf-modal__actions">
+            <button type="button" class="button button-primary" id="checklist-pdf-submit">{{ ti.pdf_modal_submit }}</button>
+            <button type="button" class="button checklist-pdf-modal__skip" id="checklist-pdf-skip">{{ ti.pdf_modal_skip }}</button>
+        </div>
+    </div>
+</div>

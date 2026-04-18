@@ -1,0 +1,155 @@
+/* --------------------------------------------------------------------------
+   Checklist “Save to PDF” (screen UI + print cover, non-print rules)
+   -------------------------------------------------------------------------- */
+
+html.wsc-checklist-pdf-modal-open,
+html.wsc-checklist-pdf-modal-open body {
+    overflow: hidden;
+}
+
+.checklist-print-cover {
+    display: none;
+}
+
+.checklist-pdf-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 220;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem;
+    box-sizing: border-box;
+
+    &[hidden] {
+        display: none !important;
+    }
+}
+
+.checklist-pdf-modal__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    cursor: default;
+}
+
+.checklist-pdf-modal__panel {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 22.5rem;
+    padding: 1.35rem 1.35rem 1.25rem;
+    border-radius: 16px;
+    background: var(--color-nav-bg);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow:
+        var(--neo-nav-pit),
+        0 18px 48px rgba(0, 0, 0, 0.35);
+    color: var(--color-nav-text);
+}
+
+.checklist-pdf-modal__close {
+    position: absolute;
+    top: 0.55rem;
+    inset-inline-end: 0.55rem;
+    width: 2.25rem;
+    height: 2.25rem;
+    padding: 0;
+    border: 0;
+    border-radius: 10px;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.08);
+        color: #fff;
+    }
+
+    &:focus-visible {
+        outline: 2px solid var(--color-focus-ring);
+        outline-offset: 2px;
+    }
+}
+
+.checklist-pdf-modal__title {
+    margin: 0 2rem 0.85rem 0;
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: #fff;
+    line-height: 1.35;
+}
+
+.checklist-pdf-modal__label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-family: var(--font-sans);
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.88);
+}
+
+.checklist-pdf-modal__input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 1.1rem;
+    padding: 0.55em 0.75rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+
+    &::placeholder {
+        color: rgba(255, 255, 255, 0.45);
+    }
+
+    &:focus-visible {
+        outline: 2px solid var(--color-focus-ring);
+        outline-offset: 2px;
+    }
+}
+
+.checklist-pdf-modal__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+
+    .button-primary {
+        text-align: center;
+    }
+}
+
+.checklist-pdf-modal__skip {
+    background: transparent;
+    color: rgba(255, 255, 255, 0.88);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    box-shadow: none;
+
+    &:visited {
+        color: rgba(255, 255, 255, 0.88);
+    }
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.08);
+        color: #fff;
+        transform: none;
+    }
+
+    &:active {
+        transform: none;
+        box-shadow: none;
+    }
+
+    &:focus-visible {
+        color: #fff;
+        outline-color: var(--color-focus-ring);
+    }
+}
