@@ -1,12 +1,37 @@
 ---
 layout: default
 ---
-<div class="post">
+{% assign loc = page.language | default: 'en' %}
+{% assign ti = site.data.strings.locales | where: 'code', loc | first %}
+<div class="post{% if page.checklist %} post--checklist{% endif %}"{% if page.checklist %} data-checklist-complete-msg="{{ ti.checklist_complete_message | xml_escape }}"{% endif %}>
     <header class="post-header">
-        <h2 class="post-title">{{ page.title }}</h2>
+        <h2 class="post-title">{% if page.checklist %}{{ ti.switch }}{% else %}{{ page.title }}{% endif %}</h2>
+        {% if page.checklist %}
+        <div class="checklist-progress-slot" id="checklist-progress-slot">
+            <div id="checklist-progress-spacer" class="checklist-progress-spacer" aria-hidden="true"></div>
+            <div id="checklist-progress" class="checklist-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-valuetext="0%" aria-label="{{ ti.checklist_progress_label }}">
+                <div class="checklist-progress__inner">
+                    <div class="checklist-progress__track">
+                        <div id="checklist-progress-fill" class="checklist-progress__fill"></div>
+                    </div>
+                    <span id="checklist-progress-pct" class="checklist-progress__pct" aria-hidden="true">0%</span>
+                </div>
+            </div>
+        </div>
+        <span id="checklist-complete-announcer" class="checklist-complete-announcer" role="status" aria-live="polite" aria-atomic="true"></span>
+        {% endif %}
     </header>
 
     <article class="post-content">
         {{ content }}
     </article>
+
+    {% if page.checklist %}
+    <div class="checklist-reset-wrap">
+        <div class="checklist-actions">
+            <button type="button" class="button button-primary" id="checklist-reset" aria-label="{{ ti.checklist_reset_aria }}">{{ ti.checklist_reset }}</button>
+            <button type="button" class="button button-primary checklist-celebration-toggle" id="checklist-celebration-toggle" aria-pressed="true" aria-label="{{ ti.checklist_celebration_toggle_aria_on }}" data-label-on="{{ ti.checklist_celebration_disable | xml_escape }}" data-label-off="{{ ti.checklist_celebration_enable | xml_escape }}" data-aria-on="{{ ti.checklist_celebration_toggle_aria_on | xml_escape }}" data-aria-off="{{ ti.checklist_celebration_toggle_aria_off | xml_escape }}">{{ ti.checklist_celebration_disable }}</button>
+        </div>
+    </div>
+    {% endif %}
 </div>

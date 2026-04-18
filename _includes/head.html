@@ -4,6 +4,11 @@
   </script>
   {% assign loc = page.language | default: 'en' %}
   {% assign ti = site.data.strings.locales | where: 'code', loc | first %}
+  {% if page.checklist %}
+    {% assign seo_page_title = ti.switch %}
+  {% else %}
+    {% assign seo_page_title = page.title %}
+  {% endif %}
   {% if page.excerpt %}
     {% assign meta_desc = page.excerpt | strip_html | strip_newlines | truncate: 160 %}
   {% else %}
@@ -21,7 +26,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
 
-  <title>{% if page.title %}{{ site.title }} - {{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <title>{% if seo_page_title %}{{ site.title }} - {{ seo_page_title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{{ meta_desc | escape }}">
   <meta name="theme-color" content="#008cba" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0a4a63" media="(prefers-color-scheme: dark)">
@@ -32,8 +37,8 @@
 
   <link rel="shortcut icon" href="{{ '/img/favicon.png' | prepend: site.baseurl }}">
 
-  <meta property="og:type" content="{% if page.title %}article{% else %}website{% endif %}" />
-  <meta property="og:title" content="{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}" />
+  <meta property="og:type" content="{% if seo_page_title %}article{% else %}website{% endif %}" />
+  <meta property="og:title" content="{% if seo_page_title %}{{ seo_page_title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}" />
   <meta property="og:description" content="{{ meta_desc | escape }}" />
   <meta property="og:url" content="{{ canonical_url }}" />
   <meta property="og:site_name" content="{{ site.title }}" />
@@ -42,7 +47,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@{{ site.twitter_username }}" />
   <meta name="twitter:creator" content="@{{ site.twitter_username }}" />
-  <meta name="twitter:title" content="{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}" />
+  <meta name="twitter:title" content="{% if seo_page_title %}{{ seo_page_title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}" />
   <meta name="twitter:description" content="{{ meta_desc | escape }}" />
   <meta name="twitter:image" content="{% if page.image %}{{ page.image | prepend: site.baseurl | prepend: site.url }}{% else %}{{ site.image | prepend: site.baseurl | prepend: site.url }}{% endif %}" />
 </head>
