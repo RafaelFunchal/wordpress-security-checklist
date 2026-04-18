@@ -51,7 +51,5 @@
   <meta name="twitter:description" content="{{ meta_desc | escape }}" />
   <meta name="twitter:image" content="{% if page.image %}{{ page.image | prepend: site.baseurl | prepend: site.url }}{% else %}{{ site.image | prepend: site.baseurl | prepend: site.url }}{% endif %}" />
 
-  {% if page.checklist %}
-    {% include schema-checklist-jsonld.html %}
-  {% endif %}
+  {% include schema-jsonld.html %}
 </head>

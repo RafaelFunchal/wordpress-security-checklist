@@ -1,0 +1,147 @@
+{% case loc %}
+  {% when 'br' %}
+    {% assign schema_in_lang = 'pt-BR' %}
+  {% when 'es' %}
+    {% assign schema_in_lang = 'es' %}
+  {% when 'ja' %}
+    {% assign schema_in_lang = 'ja' %}
+  {% else %}
+    {% assign schema_in_lang = 'en' %}
+{% endcase %}
+{% if seo_page_title %}
+  {% assign schema_webpage_name = seo_page_title | append: ' - ' | append: site.title %}
+{% else %}
+  {% assign schema_webpage_name = site.title %}
+{% endif %}
+{% assign site_root = '/' | absolute_url %}
+{% assign org_id = site_root | append: '#organization' %}
+{% assign website_id = site_root | append: '#website' %}
+{% assign webpage_id = canonical_url | append: '#webpage' %}
+{% assign site_logo = site.image | absolute_url %}
+{% assign twitter_profile = 'https://twitter.com/' | append: site.twitter_username %}
+{% assign github_profile = 'https://github.com/' | append: site.github_username %}
+{% if loc == 'en' %}
+  {% assign schema_checklist_url = site.baseurl | append: '/items/' | absolute_url %}
+{% else %}
+  {% assign schema_checklist_url = site.baseurl | append: '/' | append: loc | append: '/items/' | absolute_url %}
+{% endif %}
+{% assign schema_blog_url = site.baseurl | append: '/' | absolute_url %}
+{% if loc != 'en' %}
+  {% assign schema_blog_url = site.baseurl | append: '/' | append: loc | append: '/' | absolute_url %}
+{% endif %}
+{% assign nav_list_id = site_root | append: '#site-navigation' %}
+{% if page.checklist %}
+  {% assign checklist_rows = site.data.checklist_schema[loc] %}
+  {% if checklist_rows == nil or checklist_rows.size == 0 %}
+    {% assign checklist_rows = site.data.checklist_schema.en %}
+  {% endif %}
+  {% assign checklist_itemlist_id = canonical_url | append: '#checklist-itemlist' %}
+  {% assign checklist_itemlist_name = site.title | append: ' — ' | append: ti.nav_checklist %}
+{% endif %}
+{% if page.layout == 'post' %}
+  {% assign article_id = canonical_url | append: '#blog-posting' %}
+  {% assign article_image = page.image | default: site.image | absolute_url %}
+{% endif %}
+{% capture schema_json %}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": {{ org_id | jsonify }},
+      "name": {{ site.title | jsonify }},
+      "url": {{ site_root | jsonify }},
+      "logo": {{ site_logo | jsonify }},
+      "sameAs": [
+        {{ twitter_profile | jsonify }},
+        {{ github_profile | jsonify }}
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": {{ website_id | jsonify }},
+      "url": {{ site_root | jsonify }},
+      "name": {{ site.title | jsonify }},
+      "inLanguage": ["en", "pt-BR", "es", "ja"],
+      "publisher": { "@id": {{ org_id | jsonify }} }
+    },
+    {
+      "@type": "WebPage",
+      "@id": {{ webpage_id | jsonify }},
+      "url": {{ canonical_url | jsonify }},
+      "name": {{ schema_webpage_name | jsonify }},
+      "description": {{ meta_desc | strip | jsonify }},
+      "inLanguage": {{ schema_in_lang | jsonify }},
+      "isPartOf": { "@id": {{ website_id | jsonify }} },
+      "publisher": { "@id": {{ org_id | jsonify }} }{% if page.checklist %}
+      ,"mainEntity": { "@id": {{ checklist_itemlist_id | jsonify }} }{% elsif page.layout == 'post' %}
+      ,"mainEntity": { "@id": {{ article_id | jsonify }} }{% endif %}
+    }{% if page.checklist %}
+    ,
+    {
+      "@type": "ItemList",
+      "@id": {{ checklist_itemlist_id | jsonify }},
+      "name": {{ checklist_itemlist_name | jsonify }},
+      "inLanguage": {{ schema_in_lang | jsonify }},
+      "numberOfItems": {{ checklist_rows.size }},
+      "itemListElement": [
+        {% for row in checklist_rows %}
+        {
+          "@type": "ListItem",
+          "position": {{ forloop.index }},
+          "item": {
+            "@type": "Thing",
+            "identifier": {{ row.id | jsonify }},
+            "name": {{ row.name | jsonify }}
+          }
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]
+    }{% endif %}{% if page.layout == 'post' %}
+    ,
+    {
+      "@type": "BlogPosting",
+      "@id": {{ article_id | jsonify }},
+      "mainEntityOfPage": { "@id": {{ webpage_id | jsonify }} },
+      "isPartOf": { "@id": {{ website_id | jsonify }} },
+      "headline": {{ page.title | jsonify }},
+      "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+      "dateModified": {{ page.date | date_to_xmlschema | jsonify }},
+      "author": { "@id": {{ org_id | jsonify }} },
+      "publisher": { "@id": {{ org_id | jsonify }} },
+      "image": {{ article_image | jsonify }},
+      "inLanguage": {{ schema_in_lang | jsonify }}
+    }{% endif %}
+    ,
+    {
+      "@type": "ItemList",
+      "@id": {{ nav_list_id | jsonify }},
+      "name": "Main navigation",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "SiteNavigationElement",
+            "name": {{ ti.nav_checklist | jsonify }},
+            "url": {{ schema_checklist_url | jsonify }}
+          }
+        }{% if loc != 'es' and loc != 'ja' %}
+        ,
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "SiteNavigationElement",
+            "name": {{ ti.nav_blog | jsonify }},
+            "url": {{ schema_blog_url | jsonify }}
+          }
+        }{% endif %}
+      ]
+    }
+  ]
+}
+{% endcapture %}
+<script type="application/ld+json">
+{{ schema_json | strip | replace: '</script>', '<\/script>' }}
+</script>
