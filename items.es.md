@@ -27,6 +27,7 @@ checklist: true
 * <label><input type="checkbox" data-item-id="wsc-login-revoke-sessions-rotate" /> Cierre sesiones antiguas y rote contraseñas después de incidentes o cambios de equipo</label>
 * <label><input type="checkbox" data-item-id="wsc-login-generic-errors" /> Deje genérico el mensaje de error de la página de ingreso (usuario/clave) ([tutorial](https://gist.github.com/zergiocosta/72f87176b236ed0c6e13){:target="_blank" rel="noopener noreferrer"})</label>
 * <label><input type="checkbox" data-item-id="wsc-login-xmlrpc-off" /> Mantenga XML-RPC desactivado salvo que lo necesite explícitamente</label>
+* <label><input type="checkbox" data-item-id="wsc-login-block-author-enumeration" /> Evite la enumeración de usuarios en peticiones públicas (por ejemplo `?author=` con ID numérico): reglas en el servidor (Apache `.htaccess`, nginx), un plugin de seguridad o desactive los archivos de autor públicos si no los necesita ([hardening de WordPress](https://developer.wordpress.org/advanced-administration/security/hardening/){:target="_blank" rel="noopener noreferrer"})</label>
 
 ## Panel Administrativo<span class="items-counter"></span>
 
