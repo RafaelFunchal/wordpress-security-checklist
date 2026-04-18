@@ -27,7 +27,11 @@ checklist: true
 * <label><input type="checkbox" data-item-id="wsc-login-revoke-sessions-rotate" /> Revoke old sessions and rotate passwords after incidents or team changes</label>
 * <label><input type="checkbox" data-item-id="wsc-login-generic-errors" /> Make login error messages generic (user/pass) ([tutorial](https://gist.github.com/zergiocosta/72f87176b236ed0c6e13){:target="_blank" rel="noopener noreferrer"})</label>
 * <label><input type="checkbox" data-item-id="wsc-login-xmlrpc-off" /> Keep XML-RPC disabled unless you explicitly need it</label>
-* <label><input type="checkbox" data-item-id="wsc-login-block-author-enumeration" /> Block username enumeration from public requests (for example `?author=` queries that expose valid accounts): use web server rules (Apache `.htaccess` or nginx), a security plugin, or disable public author archives if you do not need them ([WordPress security hardening](https://developer.wordpress.org/advanced-administration/security/hardening/){:target="_blank" rel="noopener noreferrer"})</label>
+* <label><input type="checkbox" data-item-id="wsc-login-block-author-enumeration" /> Block username enumeration from public requests (for example `?author=` queries that expose valid accounts): use web server rules (Apache `.htaccess` or nginx), a security plugin, or disable public author archives if you do not need them ([WordPress security hardening](https://developer.wordpress.org/advanced-administration/security/hardening/){:target="_blank" rel="noopener noreferrer"}).<br />Apache example (<code>.htaccess</code> or your vhost includes; skip or adapt if you rely on public author archives):<br /><pre><code># Block numeric author=… probes (redirect drops the query string)
+RewriteEngine On
+RewriteCond %{QUERY_STRING} ^author=\d [NC]
+RewriteRule ^ %{REQUEST_URI}? [L,R=301]
+</code></pre></label>
 
 ## Administrative Panel<span class="items-counter"></span>
 
