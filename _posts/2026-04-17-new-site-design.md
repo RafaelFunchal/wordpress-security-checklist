@@ -8,7 +8,7 @@ language: en
 permalink: /:categories/:year/:month/:day/:title/
 ---
 
-We have rolled out a **major refresh** of [wpsecuritychecklist.org](https://wpsecuritychecklist.org/){:target="_blank" rel="noopener noreferrer"}—new visual design, clearer navigation, and a more maintainable codebase so the checklist stays easy to use on phones, desktops, and GitHub Pages.
+I've rolled out a **major refresh** of [wpsecuritychecklist.org](https://wpsecuritychecklist.org/){:target="_blank" rel="noopener noreferrer"}—new visual design, clearer navigation, and a more maintainable codebase so the checklist stays easy to use on phones, desktops, and GitHub Pages.
 
 ## What you will notice
 
@@ -40,4 +40,4 @@ There is a **skip link** straight to the main content, a proper **`main` landmar
 
 The checklist remains **free**, **open source**, and focused on practical steps you can take to harden WordPress. If you want to suggest edits or translations, the repo is on [GitHub](https://github.com/rafaelfunchal/wordpress-security-checklist){:target="_blank" rel="noopener noreferrer"}.
 
-Thank you for using the site—and if something looks wrong on your browser or language, open an issue and we will take a look.
+Thank you for using the site—and if something looks wrong on your browser or language, open an issue and I will take a look.

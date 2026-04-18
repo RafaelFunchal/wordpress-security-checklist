@@ -8,7 +8,7 @@ language: br
 permalink: /br/update/:year/:month/:day/:title/
 ---
 
-Lançamos uma **grande atualização** no [wpsecuritychecklist.org](https://wpsecuritychecklist.org/){:target="_blank" rel="noopener noreferrer"}: novo design, navegação mais clara e um código mais simples de manter, para o checklist continuar fácil de usar no celular, no desktop e no GitHub Pages.
+Lancei uma **grande atualização** no [wpsecuritychecklist.org](https://wpsecuritychecklist.org/){:target="_blank" rel="noopener noreferrer"}: novo design, navegação mais clara e um código mais simples de manter, para o checklist continuar fácil de usar no celular, no desktop e no GitHub Pages.
 
 ## O que mudou na prática
 
