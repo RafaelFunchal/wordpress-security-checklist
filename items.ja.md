@@ -67,14 +67,14 @@ checklist: true
 
 * <label><input type="checkbox" data-item-id="wsc-hosting-reliable" /> 信頼できるホスティングサービスを借りる</label>
 * <label><input type="checkbox" data-item-id="wsc-hosting-sftp-ssh-only" /> サーバへの接続は SFTP か SSH を使用する</label>
-* <label><input type="checkbox" data-item-id="wsc-hosting-permissions-755-644" /> 全てのディレクトリを 755、ファイルを 644 に設定する ([WordPress hardening ガイド](https://developer.wordpress.org/advanced-administration/security/hardening/){:target="_blank" rel="noopener noreferrer"})</label>
+* <label><input type="checkbox" data-item-id="wsc-hosting-permissions-755-644" /> 全てのディレクトリを 755、ファイルを 644 に設定する ([WordPress 公式セキュリティ強化ガイド](https://developer.wordpress.org/advanced-administration/security/hardening/){:target="_blank" rel="noopener noreferrer"})</label>
 * <label><input type="checkbox" data-item-id="wsc-hosting-wpconfig-protected" /> wp-config.php ファイルが他者からアクセスできないことを確認する</label>
 * <label><input type="checkbox" data-item-id="wsc-hosting-block-sensitive-files" /> license.txt, wp-config-sample.php, readme.html ファイルは削除するか .htaccess でアクセスをブロックする</label>
 * <label><input type="checkbox" data-item-id="wsc-hosting-no-directory-listing" /> .htaccess に次のコードを追加してディレクトリ一覧の表示を防ぐ: `Options All -Indexes`</label>
 * <label><input type="checkbox" data-item-id="wsc-hosting-waf-cdn" /> 可能であれば WAF/CDN を導入し、Bot/DDoS 防御を有効化する</label>
 * <label><input type="checkbox" data-item-id="wsc-hosting-monitoring-alerts" /> 稼働監視とセキュリティ通知 (SSL期限/ログイン急増/マルウェア) を設定する</label>
 * <label><input type="checkbox" data-item-id="wsc-login-xmlrpc-off" /> 必要がない限り XML-RPC を無効化する</label>
-* <label><input type="checkbox" data-item-id="wsc-login-block-author-enumeration" /> 公開リクエストによるユーザー名の列挙を防ぐ (`?author=` など): Web サーバーのルール (Apache `.htaccess`、nginx)、セキュリティプラグイン、または不要なら公開の著者アーカイブを無効化する ([WordPress のセキュリティ強化](https://developer.wordpress.org/advanced-administration/security/hardening/){:target="_blank" rel="noopener noreferrer"}).</label>
+* <label><input type="checkbox" data-item-id="wsc-login-block-author-enumeration" /> 公開リクエストによるユーザー名の列挙を防ぐ (`?author=` など): Web サーバーのルール (Apache `.htaccess`、nginx)、セキュリティプラグイン、または不要なら公開の著者アーカイブを無効化する ([WordPress 公式セキュリティ強化ガイド](https://developer.wordpress.org/advanced-administration/security/hardening/){:target="_blank" rel="noopener noreferrer"}).</label>
     <details class="checklist-item-details">
     <summary>{{ ti.checklist_author_enum_details_summary }}</summary>
     <pre><code># 数値の author= 列挙をブロック（301 でクエリを外す）

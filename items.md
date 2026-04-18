@@ -65,7 +65,7 @@ checklist: true
 
 * <label><input type="checkbox" data-item-id="wsc-hosting-reliable" /> Hire a reliable hosting provider</label>
 * <label><input type="checkbox" data-item-id="wsc-hosting-sftp-ssh-only" /> Connect to your server only through SFTP or SSH</label>
-* <label><input type="checkbox" data-item-id="wsc-hosting-permissions-755-644" /> Set all folder permissions to 755 and files to 644 ([according to WordPress hardening docs](https://developer.wordpress.org/advanced-administration/security/hardening/){:target="_blank" rel="noopener noreferrer"})</label>
+* <label><input type="checkbox" data-item-id="wsc-hosting-permissions-755-644" /> Set all folder permissions to 755 and files to 644 ([WordPress security hardening](https://developer.wordpress.org/advanced-administration/security/hardening/){:target="_blank" rel="noopener noreferrer"})</label>
 * <label><input type="checkbox" data-item-id="wsc-hosting-wpconfig-protected" /> Make sure the wp-config.php file is not accessible by others</label>
 * <label><input type="checkbox" data-item-id="wsc-hosting-block-sensitive-files" /> Remove or block via .htaccess the files license.txt, wp-config-sample.php, and readme.html</label>
 * <label><input type="checkbox" data-item-id="wsc-hosting-no-directory-listing" /> Prevent directory listing via .htaccess by adding the following code: `Options All -Indexes`</label>
