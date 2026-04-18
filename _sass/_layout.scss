@@ -133,6 +133,11 @@ $checklist-checkbox-offset-x: 0.12rem;
         min-width: 0;
         overflow-x: hidden;
 
+        @supports (overflow: clip) {
+            overflow-x: clip;
+            overflow-y: visible;
+        }
+
         .nav-tools {
             order: 1;
             position: relative;
@@ -249,29 +254,124 @@ $checklist-checkbox-offset-x: 0.12rem;
         }
     }
 
-    .language-switch {
-        padding: 0.45em 0.85em;
-        /* Extra end padding so the native chevron sits inset from the rounded edge. */
-        padding-inline-end: 2.35rem;
-        min-height: 2.25rem;
-        font-family: var(--font-sans);
-        font-weight: 600;
-        font-size: 0.95rem;
-        color: var(--color-nav-text);
-        background-color: rgba(255, 255, 255, 0.07);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 12px;
-        box-shadow: var(--neo-inset-panel);
+    .lang-menu {
+        position: relative;
+        z-index: 4;
+        display: inline-flex;
+        flex-shrink: 0;
+        line-height: 0;
+    }
+
+    .lang-menu__trigger {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.45em;
+        border: 0;
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.07);
+        box-shadow: var(--neo-chrome);
+        color: var(--color-nav-icon);
         cursor: pointer;
-        transition: background 0.16s ease, border-color 0.16s ease;
-        /* Cap width (native selects size to longest option; max-width keeps the control compact). */
-        box-sizing: border-box;
-        width: auto;
-        max-width: 11.5rem;
-        min-width: 0;
+        line-height: 0;
+        transition: background 0.15s ease, box-shadow 0.15s ease;
 
         &:hover {
-            background-color: rgba(255, 255, 255, 0.11);
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        &:active {
+            box-shadow: var(--neo-pressed);
+        }
+
+        &:focus-visible {
+            outline: 2px solid var(--color-focus-ring);
+            outline-offset: 2px;
+        }
+    }
+
+    .lang-menu__icon {
+        display: block;
+        width: 22px;
+        height: 22px;
+    }
+
+    .lang-menu__panel {
+        position: absolute;
+        /* Slight overlap avoids a hover dead zone between the trigger and the panel. */
+        top: calc(100% - 2px);
+        inset-inline-end: 0;
+        box-sizing: border-box;
+        min-width: 0;
+        width: max-content;
+        max-width: min(9.25rem, calc(100vw - 1.5rem));
+        padding: 0.45rem 0 0.4rem;
+        margin: 0;
+        list-style: none;
+        text-align: end;
+        background-color: var(--color-nav-bg);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 12px;
+        box-shadow:
+            var(--neo-nav-pit),
+            0 10px 28px rgba(0, 0, 0, 0.22);
+        z-index: 50;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateY(-4px);
+        transition:
+            opacity 0.14s ease,
+            transform 0.14s ease,
+            visibility 0.14s;
+    }
+
+    .lang-menu:hover .lang-menu__panel,
+    .lang-menu:focus-within .lang-menu__panel,
+    .lang-menu.lang-menu--open .lang-menu__panel {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
+    .lang-menu__list {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.45rem;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .lang-menu__link {
+        display: block;
+        padding: 0.65em 0.65rem 0.65em 0.75rem;
+        text-align: end;
+        font-family: var(--font-sans);
+        font-weight: 600;
+        font-size: 0.9rem;
+        letter-spacing: 0.02em;
+        color: var(--color-nav-text);
+        text-decoration: none;
+        white-space: nowrap;
+        transition: background 0.12s ease, color 0.12s ease;
+
+        &:hover {
+            color: #fff;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        &:focus-visible {
+            outline: 2px solid var(--color-focus-ring);
+            outline-offset: -2px;
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .lang-menu__panel {
+            transition-duration: 0.01ms !important;
         }
     }
 
@@ -293,13 +393,27 @@ $checklist-checkbox-offset-x: 0.12rem;
             overflow-wrap: anywhere;
         }
 
-        .language-switch {
+        .lang-menu {
             display: block;
-            width: min(100%, 11.5rem);
+            width: fit-content;
             max-width: 100%;
             margin: 0.45em auto;
-            text-align: center;
-            overflow-wrap: anywhere;
+        }
+
+        .lang-menu__trigger {
+            margin-inline: auto;
+        }
+
+        .lang-menu__panel {
+            inset-inline-end: 0;
+            inset-inline-start: auto;
+            transform: translateY(-4px);
+        }
+
+        .lang-menu:hover .lang-menu__panel,
+        .lang-menu:focus-within .lang-menu__panel,
+        .lang-menu.lang-menu--open .lang-menu__panel {
+            transform: translateY(0);
         }
     }
 }

@@ -39,15 +39,32 @@
             <a class="page-link" href="{{ blog_url }}" title="{{ ti.nav_blog }}">{{ ti.nav_blog }}</a>
             {% endif %}
 
-            <select name="language-switch" class="language-switch" aria-label="{{ ti.language_switch_label }}" onchange="location = this.options[this.selectedIndex].value;">
-              <option value="" selected="selected">{{ ti.language_switch_label }}</option>
-              {% for language in site.languages %}
-                {% if loc != language %}
-                  {% assign lang_row = site.data.strings.locales | where: 'code', language | first %}
-                  <option value="{{ site.baseurl }}/{% if language != 'en' %}{{ language }}/{% endif %}">{{ lang_row.switch }}</option>
-                {% endif %}
-              {% endfor%}
-            </select>
+            {% assign lang_menu_count = 0 %}
+            {% for language in site.languages %}
+              {% if loc != language %}
+                {% assign lang_menu_count = lang_menu_count | plus: 1 %}
+              {% endif %}
+            {% endfor %}
+            {% if lang_menu_count > 0 %}
+            <div class="lang-menu" data-lang-menu>
+              <button type="button" class="lang-menu__trigger" id="lang-menu-trigger" aria-haspopup="true" aria-expanded="false" aria-controls="lang-menu-panel" title="{{ ti.language_switch_label }}" aria-label="{{ ti.language_switch_label }}">
+                <svg class="lang-menu__icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
+                  <!-- Language / i18n (Heroicons MIT, outline “language”) -->
+                  <path fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" d="m10.5 21 5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 01-3.827-5.802"/>
+                </svg>
+              </button>
+              <div id="lang-menu-panel" class="lang-menu__panel" role="region" aria-label="{{ ti.language_switch_label }}">
+                <ul class="lang-menu__list">
+                  {% for language in site.languages %}
+                    {% if loc != language %}
+                      {% assign lang_row = site.data.strings.locales | where: 'code', language | first %}
+                      <li><a class="lang-menu__link" href="{{ site.baseurl }}/{% if language != 'en' %}{{ language }}/{% endif %}">{{ lang_row.switch }}</a></li>
+                    {% endif %}
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+            {% endif %}
           </div>
 
           <button type="button" class="theme-toggle" id="theme-toggle"

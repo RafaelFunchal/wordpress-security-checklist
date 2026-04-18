@@ -78,6 +78,70 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    var langMenu = document.querySelector('[data-lang-menu]');
+    if (langMenu) {
+        var langBtn = langMenu.querySelector('.lang-menu__trigger');
+        var mqHoverFine = window.matchMedia('(hover: hover)');
+
+        function langMenuIsOpenVisually() {
+            if (langMenu.classList.contains('lang-menu--open')) {
+                return true;
+            }
+            try {
+                if (langMenu.matches(':hover') || langMenu.matches(':focus-within')) {
+                    return true;
+                }
+            } catch (err) {
+                /* ignore */
+            }
+            return false;
+        }
+
+        function syncLangMenuExpanded() {
+            if (!langBtn) {
+                return;
+            }
+            langBtn.setAttribute('aria-expanded', langMenuIsOpenVisually() ? 'true' : 'false');
+        }
+
+        function closeLangMenu() {
+            langMenu.classList.remove('lang-menu--open');
+            syncLangMenuExpanded();
+        }
+
+        if (langBtn) {
+            langBtn.addEventListener('click', function () {
+                if (!mqHoverFine.matches) {
+                    langMenu.classList.toggle('lang-menu--open');
+                    syncLangMenuExpanded();
+                }
+            });
+        }
+
+        ['mouseenter', 'mouseleave', 'focusin', 'focusout'].forEach(function (ev) {
+            langMenu.addEventListener(ev, function () {
+                window.requestAnimationFrame(syncLangMenuExpanded);
+            });
+        });
+
+        document.addEventListener('click', function (e) {
+            if (!langMenu.contains(e.target)) {
+                closeLangMenu();
+            }
+        });
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                closeLangMenu();
+                if (langBtn && langMenu.contains(document.activeElement)) {
+                    langBtn.blur();
+                }
+            }
+        });
+
+        syncLangMenuExpanded();
+    }
+
     var menuButton = document.querySelector('.menu-icon');
     var navTrigger = document.getElementById('site-nav-trigger');
 
