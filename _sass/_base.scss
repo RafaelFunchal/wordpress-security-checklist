@@ -24,6 +24,36 @@ body {
     text-rendering: optimizeLegibility;
 }
 
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0.5rem;
+    z-index: 100000;
+    padding: 0.55rem 1rem;
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    color: var(--color-text);
+    background: var(--color-bg-page);
+    border: 2px solid var(--color-focus-ring);
+    border-radius: 8px;
+    box-shadow: var(--neo-inset-panel);
+
+    &:focus {
+        left: 0.75rem;
+    }
+
+    &:focus-visible {
+        outline: 3px solid var(--color-focus-ring);
+        outline-offset: 2px;
+    }
+
+    &:focus:not(:focus-visible) {
+        outline: none;
+    }
+}
+
 ::selection {
   background: var(--color-selection-bg);
   color: var(--color-selection-text);

@@ -769,6 +769,22 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
 
+        function getPdfModalFocusables() {
+            var panel = modal.querySelector('.checklist-pdf-modal__panel');
+            if (!panel) {
+                return [];
+            }
+            var candidates = panel.querySelectorAll(
+                'button:not([disabled]), a[href]:not([disabled]), input:not([disabled]):not([type="hidden"]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+            );
+            return Array.prototype.slice.call(candidates).filter(function (el) {
+                if (el.getAttribute('aria-hidden') === 'true') {
+                    return false;
+                }
+                return el.offsetParent !== null || el.getClientRects().length > 0;
+            });
+        }
+
         function openModal() {
             lastFocus = document.activeElement;
             modal.removeAttribute('hidden');
@@ -792,9 +808,32 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         function onDocKeydown(e) {
-            if (e.key === 'Escape' && !modal.hasAttribute('hidden')) {
+            if (modal.hasAttribute('hidden')) {
+                return;
+            }
+            if (e.key === 'Escape') {
                 e.preventDefault();
                 closeModal();
+                return;
+            }
+            if (e.key !== 'Tab') {
+                return;
+            }
+            var list = getPdfModalFocusables();
+            if (!list.length) {
+                return;
+            }
+            var first = list[0];
+            var last = list[list.length - 1];
+            var active = document.activeElement;
+            if (e.shiftKey) {
+                if (active === first || !modal.contains(active)) {
+                    e.preventDefault();
+                    last.focus();
+                }
+            } else if (active === last) {
+                e.preventDefault();
+                first.focus();
             }
         }
 

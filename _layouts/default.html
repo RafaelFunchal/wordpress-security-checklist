@@ -4,14 +4,17 @@
   {% include head.html %}
 
   <body>
+    {% assign loc = page.language | default: 'en' %}
+    {% assign ti = site.data.strings.locales | where: 'code', loc | first %}
+    <a class="skip-link" href="#main-content">{{ ti.skip_to_main | xml_escape }}</a>
 
     {% include header.html %}
 
-    <div class="page-content">
+    <main id="main-content" class="page-content" tabindex="-1">
       <div class="wrapper">
         {{ content }}
       </div>
-    </div>
+    </main>
 
     {% include footer.html %}
 
