@@ -9,7 +9,7 @@ checklist: true
 
 {% assign ti = site.data.strings.locales | where: 'code', page.language | first %}
 
-> En la mayoría de las veces que un sitio con WordPress és invadido la culpa no es de WordPress, pero si de algunos fallos tontos que se podrían haber evitado durante su construcción.
+> En la mayoría de las veces en que un sitio con WordPress es invadido, la culpa no es de WordPress, sino de algunos fallos tontos que se podrían haber evitado durante su construcción.
 > Esa es la idea de este proyecto: Ser una lista de acciones que se debe tomar para aumentar la seguridad de su sitio.
 
 ## wp-config<span class="items-counter"></span>
@@ -67,14 +67,14 @@ checklist: true
 
 * <label><input type="checkbox" data-item-id="wsc-hosting-reliable" /> Contrate un hosting confiable</label>
 * <label><input type="checkbox" data-item-id="wsc-hosting-sftp-ssh-only" /> Acceda a su servidor sólo por SFTP o SSH</label>
-* <label><input type="checkbox" data-item-id="wsc-hosting-permissions-755-644" /> Establecer permisos 755 para carpetas y 644 para archivos ([Guía de seguridad y endurecimiento de WordPress](https://developer.wordpress.org/advanced-administration/security/hardening/){:target="_blank" rel="noopener noreferrer"})</label>
+* <label><input type="checkbox" data-item-id="wsc-hosting-permissions-755-644" /> Establecer permisos 755 para carpetas y 644 para archivos ([Guía de seguridad y fortalecimiento de WordPress](https://developer.wordpress.org/advanced-administration/security/hardening/){:target="_blank" rel="noopener noreferrer"})</label>
 * <label><input type="checkbox" data-item-id="wsc-hosting-wpconfig-protected" /> Asegúrese de que su archivo wp-config.php no sea accesible por otros</label>
 * <label><input type="checkbox" data-item-id="wsc-hosting-block-sensitive-files" /> Retire o bloquee a través del .htaccess los archivos license.txt, WP-config-sample.php y readme.html</label>
 * <label><input type="checkbox" data-item-id="wsc-hosting-no-directory-listing" /> Impida la busca de directorios a través del .htaccess con el código: `Options All -Indexes`</label>
 * <label><input type="checkbox" data-item-id="wsc-hosting-waf-cdn" /> Use WAF/CDN con protección contra bots y DDoS cuando sea posible</label>
 * <label><input type="checkbox" data-item-id="wsc-hosting-monitoring-alerts" /> Active monitoreo y alertas (uptime, SSL, intentos de login, malware)</label>
 * <label><input type="checkbox" data-item-id="wsc-login-xmlrpc-off" /> Mantenga XML-RPC desactivado salvo que lo necesite explícitamente</label>
-* <label><input type="checkbox" data-item-id="wsc-login-block-author-enumeration" /> Evite la enumeración de usuarios en peticiones públicas (por ejemplo `?author=` con ID numérico): reglas en el servidor (Apache `.htaccess`, nginx), un plugin de seguridad o desactive los archivos de autor públicos si no los necesita ([Guía de seguridad y endurecimiento de WordPress](https://developer.wordpress.org/advanced-administration/security/hardening/){:target="_blank" rel="noopener noreferrer"}).</label>
+* <label><input type="checkbox" data-item-id="wsc-login-block-author-enumeration" /> Evite la enumeración de usuarios en peticiones públicas (por ejemplo `?author=` con ID numérico): reglas en el servidor (Apache `.htaccess`, nginx), un plugin de seguridad o desactive los archivos de autor públicos si no los necesita ([Guía de seguridad y fortalecimiento de WordPress](https://developer.wordpress.org/advanced-administration/security/hardening/){:target="_blank" rel="noopener noreferrer"}).</label>
     <details class="checklist-item-details">
     <summary>{{ ti.checklist_author_enum_details_summary }}</summary>
     <pre><code># Bloquea sondas con author= numérico (301 quita la query)

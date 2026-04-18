@@ -246,7 +246,7 @@ es:
   - id: "wsc-hosting-sftp-ssh-only"
     name: "Acceda a su servidor sólo por SFTP o SSH"
   - id: "wsc-hosting-permissions-755-644"
-    name: "Establecer permisos 755 para carpetas y 644 para archivos (Guía de seguridad y endurecimiento de WordPress)"
+    name: "Establecer permisos 755 para carpetas y 644 para archivos (Guía de seguridad y fortalecimiento de WordPress)"
   - id: "wsc-hosting-wpconfig-protected"
     name: "Asegúrese de que su archivo wp-config.php no sea accesible por otros"
   - id: "wsc-hosting-block-sensitive-files"
@@ -260,7 +260,7 @@ es:
   - id: "wsc-login-xmlrpc-off"
     name: "Mantenga XML-RPC desactivado salvo que lo necesite explícitamente"
   - id: "wsc-login-block-author-enumeration"
-    name: "Evite la enumeración de usuarios en peticiones públicas (por ejemplo `?author=` con ID numérico): reglas en el servidor (Apache `.htaccess`, nginx), un plugin de seguridad o desactive los archivos de autor públicos si no los necesita (Guía de seguridad y endurecimiento de WordPress)."
+    name: "Evite la enumeración de usuarios en peticiones públicas (por ejemplo `?author=` con ID numérico): reglas en el servidor (Apache `.htaccess`, nginx), un plugin de seguridad o desactive los archivos de autor públicos si no los necesita (Guía de seguridad y fortalecimiento de WordPress)."
 
 ja:
   - id: "wsc-wpconfig-secret-keys"
@@ -334,7 +334,7 @@ ja:
   - id: "wsc-hosting-sftp-ssh-only"
     name: "サーバへの接続は SFTP か SSH を使用する"
   - id: "wsc-hosting-permissions-755-644"
-    name: "全てのディレクトリを 755、ファイルを 644 に設定する (WordPress 公式セキュリティ強化ガイド)"
+    name: "全てのディレクトリを 755、ファイルを 644 に設定する (WordPress の公式セキュリティ強化ガイド)"
   - id: "wsc-hosting-wpconfig-protected"
     name: "wp-config.php ファイルが他者からアクセスできないことを確認する"
   - id: "wsc-hosting-block-sensitive-files"
@@ -348,4 +348,4 @@ ja:
   - id: "wsc-login-xmlrpc-off"
     name: "必要がない限り XML-RPC を無効化する"
   - id: "wsc-login-block-author-enumeration"
-    name: "公開リクエストによるユーザー名の列挙を防ぐ (`?author=` など): Web サーバーのルール (Apache `.htaccess`、nginx)、セキュリティプラグイン、または不要なら公開の著者アーカイブを無効化する (WordPress 公式セキュリティ強化ガイド)."
+    name: "公開リクエストによるユーザー名の列挙を防ぐ (`?author=` など): Web サーバーのルール (Apache `.htaccess`、nginx)、セキュリティプラグイン、または不要なら公開の著者アーカイブを無効化する (WordPress の公式セキュリティ強化ガイド)."
