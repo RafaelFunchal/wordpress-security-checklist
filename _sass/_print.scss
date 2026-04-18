@@ -164,7 +164,12 @@
         }
 
         .post--checklist .post-content label input[type="checkbox"] {
-            accent-color: #111;
+            accent-color: #000;
+        }
+
+        .post--checklist .post-content .check-draw-stroke {
+            stroke: #000 !important;
+            filter: none !important;
         }
 
         /* Expand code snippets in PDF/print even when <details> is closed in the UI */
