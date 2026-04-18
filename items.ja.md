@@ -28,16 +28,6 @@ checklist: true
 * <label><input type="checkbox" data-item-id="wsc-login-strong-passwords" /> すべてのアカウントで強力かつ一意のパスワードを使う (パスワードマネージャー推奨)</label>
 * <label><input type="checkbox" data-item-id="wsc-login-revoke-sessions-rotate" /> インシデント発生時や担当変更時にセッション無効化とパスワードローテーションを実施する</label>
 * <label><input type="checkbox" data-item-id="wsc-login-generic-errors" /> ログインエラーメッセージを汎用的なものにする (ユーザー名/パスワード) ([チュートリアル](https://gist.github.com/zergiocosta/72f87176b236ed0c6e13){:target="_blank" rel="noopener noreferrer"})</label>
-* <label><input type="checkbox" data-item-id="wsc-login-xmlrpc-off" /> 必要がない限り XML-RPC を無効化する</label>
-* <label><input type="checkbox" data-item-id="wsc-login-block-author-enumeration" /> 公開リクエストによるユーザー名の列挙を防ぐ (`?author=` など): Web サーバーのルール (Apache `.htaccess`、nginx)、セキュリティプラグイン、または不要なら公開の著者アーカイブを無効化する ([WordPress のセキュリティ強化](https://developer.wordpress.org/advanced-administration/security/hardening/){:target="_blank" rel="noopener noreferrer"}).</label>
-    <details class="checklist-item-details">
-    <summary>{{ ti.checklist_author_enum_details_summary }}</summary>
-    <pre><code># 数値の author= 列挙をブロック（301 でクエリを外す）
-RewriteEngine On
-RewriteCond %{QUERY_STRING} ^author=\d [NC]
-RewriteRule ^ %{REQUEST_URI}? [L,R=301]
-</code></pre>
-    </details>
 
 ## 管理画面<span class="items-counter"></span>
 
@@ -83,3 +73,13 @@ RewriteRule ^ %{REQUEST_URI}? [L,R=301]
 * <label><input type="checkbox" data-item-id="wsc-hosting-no-directory-listing" /> .htaccess に次のコードを追加してディレクトリ一覧の表示を防ぐ: `Options All -Indexes`</label>
 * <label><input type="checkbox" data-item-id="wsc-hosting-waf-cdn" /> 可能であれば WAF/CDN を導入し、Bot/DDoS 防御を有効化する</label>
 * <label><input type="checkbox" data-item-id="wsc-hosting-monitoring-alerts" /> 稼働監視とセキュリティ通知 (SSL期限/ログイン急増/マルウェア) を設定する</label>
+* <label><input type="checkbox" data-item-id="wsc-login-xmlrpc-off" /> 必要がない限り XML-RPC を無効化する</label>
+* <label><input type="checkbox" data-item-id="wsc-login-block-author-enumeration" /> 公開リクエストによるユーザー名の列挙を防ぐ (`?author=` など): Web サーバーのルール (Apache `.htaccess`、nginx)、セキュリティプラグイン、または不要なら公開の著者アーカイブを無効化する ([WordPress のセキュリティ強化](https://developer.wordpress.org/advanced-administration/security/hardening/){:target="_blank" rel="noopener noreferrer"}).</label>
+    <details class="checklist-item-details">
+    <summary>{{ ti.checklist_author_enum_details_summary }}</summary>
+    <pre><code># 数値の author= 列挙をブロック（301 でクエリを外す）
+RewriteEngine On
+RewriteCond %{QUERY_STRING} ^author=\d [NC]
+RewriteRule ^ %{REQUEST_URI}? [L,R=301]
+</code></pre>
+    </details>

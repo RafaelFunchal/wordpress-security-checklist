@@ -28,16 +28,6 @@ checklist: true
 * <label><input type="checkbox" data-item-id="wsc-login-strong-passwords" /> Use strong unique passwords on every account (prefer password manager-generated credentials)</label>
 * <label><input type="checkbox" data-item-id="wsc-login-revoke-sessions-rotate" /> Revoke old sessions and rotate passwords after incidents or team changes</label>
 * <label><input type="checkbox" data-item-id="wsc-login-generic-errors" /> Make login error messages generic (user/pass) ([tutorial](https://gist.github.com/zergiocosta/72f87176b236ed0c6e13){:target="_blank" rel="noopener noreferrer"})</label>
-* <label><input type="checkbox" data-item-id="wsc-login-xmlrpc-off" /> Keep XML-RPC disabled unless you explicitly need it</label>
-* <label><input type="checkbox" data-item-id="wsc-login-block-author-enumeration" /> Block username enumeration from public requests (for example `?author=` queries that expose valid accounts): use web server rules (Apache `.htaccess` or nginx), a security plugin, or disable public author archives if you do not need them ([WordPress security hardening](https://developer.wordpress.org/advanced-administration/security/hardening/){:target="_blank" rel="noopener noreferrer"}).</label>
-    <details class="checklist-item-details">
-    <summary>{{ ti.checklist_author_enum_details_summary }}</summary>
-    <pre><code># Block numeric author=… probes (redirect drops the query string)
-RewriteEngine On
-RewriteCond %{QUERY_STRING} ^author=\d [NC]
-RewriteRule ^ %{REQUEST_URI}? [L,R=301]
-</code></pre>
-    </details>
 
 ## Administrative Panel<span class="items-counter"></span>
 
@@ -81,3 +71,13 @@ RewriteRule ^ %{REQUEST_URI}? [L,R=301]
 * <label><input type="checkbox" data-item-id="wsc-hosting-no-directory-listing" /> Prevent directory listing via .htaccess by adding the following code: `Options All -Indexes`</label>
 * <label><input type="checkbox" data-item-id="wsc-hosting-waf-cdn" /> Put your site behind a WAF/CDN and enable DDoS/bot protection when possible</label>
 * <label><input type="checkbox" data-item-id="wsc-hosting-monitoring-alerts" /> Enable uptime and security alerting (certificate expiry, file changes, login spikes, malware findings)</label>
+* <label><input type="checkbox" data-item-id="wsc-login-xmlrpc-off" /> Keep XML-RPC disabled unless you explicitly need it</label>
+* <label><input type="checkbox" data-item-id="wsc-login-block-author-enumeration" /> Block username enumeration from public requests (for example `?author=` queries that expose valid accounts): use web server rules (Apache `.htaccess` or nginx), a security plugin, or disable public author archives if you do not need them ([WordPress security hardening](https://developer.wordpress.org/advanced-administration/security/hardening/){:target="_blank" rel="noopener noreferrer"}).</label>
+    <details class="checklist-item-details">
+    <summary>{{ ti.checklist_author_enum_details_summary }}</summary>
+    <pre><code># Block numeric author=… probes (redirect drops the query string)
+RewriteEngine On
+RewriteCond %{QUERY_STRING} ^author=\d [NC]
+RewriteRule ^ %{REQUEST_URI}? [L,R=301]
+</code></pre>
+    </details>

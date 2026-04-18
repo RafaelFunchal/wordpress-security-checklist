@@ -27,16 +27,6 @@ checklist: true
 * <label><input type="checkbox" data-item-id="wsc-login-strong-passwords" /> Use senhas fortes e únicas em todas as contas (com gerenciador de senhas)</label>
 * <label><input type="checkbox" data-item-id="wsc-login-revoke-sessions-rotate" /> Revogue sessões antigas e altere senhas após incidentes ou troca de equipe</label>
 * <label><input type="checkbox" data-item-id="wsc-login-generic-errors" /> Faça com que a mensagem de erro de login seja genérica (user/pass) ([tutorial](https://gist.github.com/zergiocosta/72f87176b236ed0c6e13){:target="_blank" rel="noopener noreferrer"})</label>
-* <label><input type="checkbox" data-item-id="wsc-login-xmlrpc-off" /> Mantenha XML-RPC desativado, exceto se você realmente precisar dele</label>
-* <label><input type="checkbox" data-item-id="wsc-login-block-author-enumeration" /> Evite enumeração de nomes de usuário via URL pública (por exemplo `?author=` com ID numérico que redireciona para o slug do autor): use regras no servidor (`.htaccess` no Apache, nginx), um plugin de segurança, ou desative arquivos públicos de autor se não precisar deles ([hardening do WordPress](https://developer.wordpress.org/advanced-administration/security/hardening/){:target="_blank" rel="noopener noreferrer"}).</label>
-    <details class="checklist-item-details">
-    <summary>{{ ti.checklist_author_enum_details_summary }}</summary>
-    <pre><code># Bloqueia varreduras com author= numérico (301 remove a query string)
-RewriteEngine On
-RewriteCond %{QUERY_STRING} ^author=\d [NC]
-RewriteRule ^ %{REQUEST_URI}? [L,R=301]
-</code></pre>
-    </details>
 
 ## Painel Administrativo<span class="items-counter"></span>
 
@@ -82,3 +72,13 @@ RewriteRule ^ %{REQUEST_URI}? [L,R=301]
 * <label><input type="checkbox" data-item-id="wsc-hosting-no-directory-listing" /> Previna a pesquisa de diretórios via .htaccess com o código: `Options All -Indexes`</label>
 * <label><input type="checkbox" data-item-id="wsc-hosting-waf-cdn" /> Use WAF/CDN com proteção contra bots e DDoS quando possível</label>
 * <label><input type="checkbox" data-item-id="wsc-hosting-monitoring-alerts" /> Ative monitoramento e alertas (uptime, expiração de SSL, picos de login, malware)</label>
+* <label><input type="checkbox" data-item-id="wsc-login-xmlrpc-off" /> Mantenha XML-RPC desativado, exceto se você realmente precisar dele</label>
+* <label><input type="checkbox" data-item-id="wsc-login-block-author-enumeration" /> Evite enumeração de nomes de usuário via URL pública (por exemplo `?author=` com ID numérico que redireciona para o slug do autor): use regras no servidor (`.htaccess` no Apache, nginx), um plugin de segurança, ou desative arquivos públicos de autor se não precisar deles ([hardening do WordPress](https://developer.wordpress.org/advanced-administration/security/hardening/){:target="_blank" rel="noopener noreferrer"}).</label>
+    <details class="checklist-item-details">
+    <summary>{{ ti.checklist_author_enum_details_summary }}</summary>
+    <pre><code># Bloqueia varreduras com author= numérico (301 remove a query string)
+RewriteEngine On
+RewriteCond %{QUERY_STRING} ^author=\d [NC]
+RewriteRule ^ %{REQUEST_URI}? [L,R=301]
+</code></pre>
+    </details>
