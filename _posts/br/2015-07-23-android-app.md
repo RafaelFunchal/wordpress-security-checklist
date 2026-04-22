@@ -7,7 +7,7 @@ language: br
 permalink: /br/update/:year/:month/:day/:title/
 ---
 
-Desde que criei esse projeto tenho recebido muitos feedbacks positivos nas redes sociais. **Muito obrigado, galera!**
+Desde que criei esse projeto tenho recebido muito feedback positivo nas redes sociais. **Muito obrigado, galera!**
 
 Para continuar com essa onda positiva, decidi criar uma versão mobile do checklist. O site já é bem renderizado em dispositivos mobile, porém, acredito que um aplicativo tornará a experiência do usuário ainda melhor.
 

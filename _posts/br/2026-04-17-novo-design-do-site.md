@@ -8,7 +8,7 @@ language: br
 permalink: /br/update/:year/:month/:day/:title/
 ---
 
-Lancei uma **grande atualização** no [wpsecuritychecklist.org](https://wpsecuritychecklist.org/){:target="_blank" rel="noopener noreferrer"}: novo design, navegação mais clara e um código mais simples de manter, para o checklist continuar fácil de usar no celular, no desktop e no GitHub Pages.
+Lancei uma **grande atualização** no [wpsecuritychecklist.org](https://wpsecuritychecklist.org/){:target="_blank" rel="noopener noreferrer"}: novo design, navegação mais clara e um código mais simples de manter, para que o checklist continue fácil de usar no celular, no desktop e no GitHub Pages.
 
 ## O que mudou na prática
 
@@ -40,4 +40,4 @@ Há **link para pular** direto ao conteúdo principal, landmark **`main`** corre
 
 O checklist continua **gratuito**, **open source** e focado em ações práticas para fortalecer o WordPress. Sugestões de texto ou traduções são bem-vindas no repositório no [GitHub](https://github.com/rafaelfunchal/wordpress-security-checklist){:target="_blank" rel="noopener noreferrer"}.
 
-Obrigado por usar o site—se algo quebrar no seu navegador ou idioma, abra uma issue que dou uma olhada.
+Obrigado por usar o site—se algo quebrar no seu navegador ou no seu idioma, abra uma issue e eu dou uma olhada.
