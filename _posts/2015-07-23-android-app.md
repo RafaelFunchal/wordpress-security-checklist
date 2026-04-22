@@ -7,7 +7,7 @@ language: en
 permalink: /:categories/:year/:month/:day/:title/
 ---
 
-Since I created this project I've received a lot of positive feedbacks on social networks. **Thank you, guys!**
+Since I created this project I've received a lot of positive feedback on social networks. **Thank you, guys!**
 
 In order to keep the good vibes, I decided to create a mobile version of the checklist. The website is well rendered on mobile devices, but I believe that an app would make the user experience even better.
 
