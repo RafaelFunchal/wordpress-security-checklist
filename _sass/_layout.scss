@@ -583,6 +583,18 @@ $checklist-checkbox-offset-x: 0.12rem;
     }
 }
 
+.site-footer .footer-follow-heading {
+    margin: 0 0 0.85rem;
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    line-height: 1.3;
+    color: inherit;
+    opacity: 0.95;
+}
+
 .contact-list,
 .social-media-list {
     list-style: none;
