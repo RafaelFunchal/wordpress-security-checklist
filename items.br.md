@@ -9,8 +9,8 @@ checklist: true
 
 {% assign ti = site.data.strings.locales | where: 'code', page.language | first %}
 
-> A maioria das vezes que um site feito com WordPress é invadido a culpa não é do WordPress, mas sim de alguma falha boba que poderia ter sido evitada durante a sua construção.
-> Essa é a ideia desse projeto: Ser um checklist de ações que você deve tomar para aumentar a segurança do seu site.
+> Na maioria das vezes em que um site feito com WordPress é invadido, a culpa não é do WordPress, mas sim de alguma falha boba que poderia ter sido evitada durante a sua construção.
+> Essa é a ideia deste projeto: um checklist de ações que você deve tomar para aumentar a segurança do seu site.
 
 ## wp-config<span class="items-counter"></span>
 * <label><input type="checkbox" data-item-id="wsc-wpconfig-secret-keys" /> Altere as chaves de segurança ([Gerador disponibilizado pelo WordPress.org](https://api.wordpress.org/secret-key/1.1/salt/){:target="_blank" rel="noopener noreferrer"})</label>
@@ -67,9 +67,9 @@ checklist: true
 * <label><input type="checkbox" data-item-id="wsc-hosting-reliable" /> Contrate uma hospedagem de confiança</label>
 * <label><input type="checkbox" data-item-id="wsc-hosting-sftp-ssh-only" /> Acesse seu servidor apenas por SFTP ou SSH</label>
 * <label><input type="checkbox" data-item-id="wsc-hosting-permissions-755-644" /> Configure as permissões das pastas para 755 e arquivos para 644 ([Guia de segurança e fortalecimento do WordPress](https://developer.wordpress.org/advanced-administration/security/hardening/){:target="_blank" rel="noopener noreferrer"})</label>
-* <label><input type="checkbox" data-item-id="wsc-hosting-wpconfig-protected" /> Certifique-se que seu arquivo wp-config.php não possa ser acessado por outras pessoas</label>
+* <label><input type="checkbox" data-item-id="wsc-hosting-wpconfig-protected" /> Certifique-se de que seu arquivo wp-config.php não possa ser acessado por outras pessoas</label>
 * <label><input type="checkbox" data-item-id="wsc-hosting-block-sensitive-files" /> Remova ou bloqueie via .htaccess os arquivos license.txt, wp-config-sample.php e readme.html</label>
-* <label><input type="checkbox" data-item-id="wsc-hosting-no-directory-listing" /> Previna a pesquisa de diretórios via .htaccess com o código: `Options All -Indexes`</label>
+* <label><input type="checkbox" data-item-id="wsc-hosting-no-directory-listing" /> Evite a listagem de diretórios via .htaccess com o código: `Options All -Indexes`</label>
 * <label><input type="checkbox" data-item-id="wsc-hosting-waf-cdn" /> Use WAF/CDN com proteção contra bots e DDoS quando possível</label>
 * <label><input type="checkbox" data-item-id="wsc-hosting-monitoring-alerts" /> Ative monitoramento e alertas (uptime, expiração de SSL, picos de login, malware)</label>
 * <label><input type="checkbox" data-item-id="wsc-login-xmlrpc-off" /> Mantenha XML-RPC desativado, exceto se você realmente precisar dele</label>

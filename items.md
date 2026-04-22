@@ -9,8 +9,8 @@ checklist: true
 
 {% assign ti = site.data.strings.locales | where: 'code', page.language | first %}
 
-> Most of the time a website running WordPress is hacked the culprit is not WordPress, but of any silly misconfiguration that could be avoided during its development.
-> That's the idea of this project: Being a checklist of actions that you should take to increase the security of your website.
+> Most of the time, when a WordPress site is hacked, the culprit is not WordPress itself, but rather a silly misconfiguration that could have been avoided during development.
+> That is what this project is for: a checklist of actions you should take to increase the security of your website.
 
 ## wp-config<span class="items-counter"></span>
 
@@ -24,7 +24,7 @@ checklist: true
 * <label><input type="checkbox" data-item-id="wsc-login-brute-rate-limit" /> Add brute-force protection and rate limiting for repetitive failed logins</label>
 * <label><input type="checkbox" data-item-id="wsc-login-mfa-admins" /> Enable multi-factor authentication for all administrator accounts (passkeys/WebAuthn preferred, TOTP as fallback)</label>
 * <label><input type="checkbox" data-item-id="wsc-login-unique-usernames" /> Use unique usernames (never `admin`) and avoid shared accounts</label>
-* <label><input type="checkbox" data-item-id="wsc-login-remove-theme-links" /> Remove login links from the theme (if there's any)</label>
+* <label><input type="checkbox" data-item-id="wsc-login-remove-theme-links" /> Remove login links from the theme (if there are any)</label>
 * <label><input type="checkbox" data-item-id="wsc-login-strong-passwords" /> Use strong unique passwords on every account (prefer password manager-generated credentials)</label>
 * <label><input type="checkbox" data-item-id="wsc-login-revoke-sessions-rotate" /> Revoke old sessions and rotate passwords after incidents or team changes</label>
 * <label><input type="checkbox" data-item-id="wsc-login-generic-errors" /> Make login error messages generic (user/pass) ([tutorial](https://gist.github.com/zergiocosta/72f87176b236ed0c6e13){:target="_blank" rel="noopener noreferrer"})</label>
@@ -41,14 +41,14 @@ checklist: true
 ## Themes<span class="items-counter"></span>
 
 * <label><input type="checkbox" data-item-id="wsc-theme-keep-updated" /> Keep the theme up-to-date</label>
-* <label><input type="checkbox" data-item-id="wsc-theme-remove-unused" /> Delete and remove unused themes</label>
+* <label><input type="checkbox" data-item-id="wsc-theme-remove-unused" /> Delete unused themes</label>
 * <label><input type="checkbox" data-item-id="wsc-theme-reputable-sources" /> Download and use themes only from reputable sources</label>
 * <label><input type="checkbox" data-item-id="wsc-theme-active-maintenance" /> Prefer themes with active maintenance, clear changelogs, and recent security fixes</label>
 
 ## Plugins<span class="items-counter"></span>
 
 * <label><input type="checkbox" data-item-id="wsc-plugin-keep-updated" /> Keep all plugins up-to-date</label>
-* <label><input type="checkbox" data-item-id="wsc-plugin-remove-unused" /> Delete and remove unused plugins</label>
+* <label><input type="checkbox" data-item-id="wsc-plugin-remove-unused" /> Delete unused plugins</label>
 * <label><input type="checkbox" data-item-id="wsc-plugin-reputable-sources" /> Download and use plugins only from reputable sources</label>
 * <label><input type="checkbox" data-item-id="wsc-plugin-replace-abandoned" /> Replace abandoned plugins with actively maintained alternatives</label>
 * <label><input type="checkbox" data-item-id="wsc-plugin-think-before-many" /> Think twice before installing a ton of plugins</label>
@@ -58,7 +58,7 @@ checklist: true
 
 * <label><input type="checkbox" data-item-id="wsc-db-strong-user-privileges" /> Use strong unique credentials for the database user and limit its privileges to the minimum needed</label>
 * <label><input type="checkbox" data-item-id="wsc-db-backups-offsite" /> Schedule automated backups and store copies offsite</label>
-* <label><input type="checkbox" data-item-id="wsc-db-test-restores" /> Test backup restores regularly (a backup is only useful if restore works)</label>
+* <label><input type="checkbox" data-item-id="wsc-db-test-restores" /> Test backup restores regularly (a backup is only useful if the restore works)</label>
 * <label><input type="checkbox" data-item-id="wsc-db-encrypt-backups" /> Encrypt backups at rest and in transit</label>
 
 ## Hosting provider<span class="items-counter"></span>
