@@ -1,4 +1,8 @@
 source 'https://rubygems.org'
-gem 'github-pages'
 
-gem "webrick", "~> 1.7"
+# Pin to the current GitHub Pages release so local builds match production
+# and Dependabot gets a modern transitive dependency tree.
+# See https://pages.github.com/versions.json
+gem 'github-pages', '~> 232'
+
+gem 'webrick', '~> 1.8'

@@ -9,7 +9,6 @@
 *.vi
 *~
 *.sass-cache
-Gemfile.lock
 
 # OS or Editor folders
 .DS_Store
@@ -26,6 +25,10 @@ dwsync.xml
 # Komodo
 *.komodoproject
 .komodotools
+
+# Bundler (gems are resolved via Gemfile.lock; do not commit installed gems)
+vendor/bundle/
+.bundle/
 
 # Folders to ignore
 .hg
