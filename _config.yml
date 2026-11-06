@@ -21,7 +21,15 @@ permalink:   pretty
 
 # Plugins
 plugins:
-  - github-pages
+  - jekyll-coffeescript
+  - jekyll-default-layout
+  - jekyll-gist
+  - jekyll-github-metadata
+  - jekyll-optional-front-matter
+  - jekyll-paginate
+  - jekyll-readme-index
+  - jekyll-relative-links
+  - jekyll-titles-from-headings
 
 # Languages (used by the language switcher; strings in _data/strings.yml)
 languages:             [ 'en', 'br', 'es', 'ja' ]
