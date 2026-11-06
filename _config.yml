@@ -15,6 +15,7 @@ kramdown:
 exclude:          [ "README.md", "vendor", ".bundle", "Gemfile.lock" ]
 encoding:         UTF-8
 future:           false
+timezone:         UTC # match GitHub Pages so local post dates/URLs equal production
 
 # Permalinks
 permalink:   pretty
