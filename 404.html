@@ -1,40 +1,709 @@
 ---
-layout: page
+layout: default
 language: en
-title: "404 — Page not found"
+title: "404 — Endpoint Not Found"
 permalink: /404.html
 ---
 
-<section class="home-hero">
-  <p class="home-lead">The page you are looking for doesn't exist or may have moved.</p>
-  <p class="home-actions">
-    <a class="button button-primary" href="{{ '/items/' | prepend: site.baseurl }}">Open Checklist</a>
-  </p>
-</section>
+<div class="error-404" id="error-404-root" data-mood="0">
+  <div class="error-404__scanner">
+    <div class="error-404__shield-col">
+      <button type="button" class="error-404__shield-wrap" id="e404-shield-wrap" aria-label="Interact with security shield">
+        <svg class="error-404__shield-svg" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <g class="error-404__shield-character">
+            <g class="error-404__shield-look" id="e404-shield-look">
+              <path d="M24 6.5L10.5 12V22.8C10.5 32.3 16.3 39.5 24 42.2C31.7 39.5 37.5 32.3 37.5 22.8V12L24 6.5Z" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+              <g class="error-404__shield-face" id="e404-shield-face">
+                <g class="error-404__shield-eyes" id="e404-shield-eyes">
+                  <circle id="e404-eye-l" cx="19.2" cy="20.8" r="1.75" fill="currentColor"/>
+                  <circle id="e404-eye-r" cx="28.8" cy="20.8" r="1.75" fill="currentColor"/>
+                  <path id="e404-wink-l" d="M 16.8 21.4 Q 19.2 18.2 21.6 21.4" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" fill="none" style="display:none"/>
+                  <path id="e404-wink-r" d="M 26.4 21.4 Q 28.8 18.2 31.2 21.4" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" fill="none" style="display:none"/>
+                  <path id="e404-dead-l" d="M 17.2 18.8 L 21.2 22.8 M 21.2 18.8 L 17.2 22.8" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" fill="none" style="display:none"/>
+                  <path id="e404-dead-r" d="M 26.8 18.8 L 30.8 22.8 M 30.8 18.8 L 26.8 22.8" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" fill="none" style="display:none"/>
+                  <path id="e404-brow-l" d="M 15.8 16.4 L 21.8 18.8" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" fill="none" style="display:none"/>
+                  <path id="e404-brow-r" d="M 32.2 16.4 L 26.2 18.8" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" fill="none" style="display:none"/>
+                </g>
+                <path id="e404-shield-mouth" d="M 18.2 29.6 Q 24 24.6 29.8 29.6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                <path id="e404-dead-tongue" d="M 24.5 28.8 V 32.2 A 1.7 1.7 0 0 0 27.9 32.2 V 28.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" fill="none" style="display:none"/>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </button>
+      <a class="error-404__speech" id="e404-speech" href="{{ '/items/' | prepend: site.baseurl }}" hidden>All set! Open the Security Checklist →</a>
+    </div>
 
-<ul class="post-list post-list--cards">
-  <li lang="en">
-    <a class="post-card" href="{{ '/items/' | prepend: site.baseurl }}">
-      <span class="post-meta post-card__meta">English</span>
-      <h3 class="post-card__title">WordPress Security Checklist</h3>
-    </a>
-  </li>
-  <li lang="pt-BR">
-    <a class="post-card" href="{{ '/br/items/' | prepend: site.baseurl }}">
-      <span class="post-meta post-card__meta">Português — Página não encontrada</span>
-      <h3 class="post-card__title">Abrir Checklist de Segurança</h3>
-    </a>
-  </li>
-  <li lang="es">
-    <a class="post-card" href="{{ '/es/items/' | prepend: site.baseurl }}">
-      <span class="post-meta post-card__meta">Español — Página no encontrada</span>
-      <h3 class="post-card__title">Abrir Checklist de Seguridad</h3>
-    </a>
-  </li>
-  <li lang="ja">
-    <a class="post-card" href="{{ '/ja/items/' | prepend: site.baseurl }}">
-      <span class="post-meta post-card__meta">日本語 — ページが見つかりません</span>
-      <h3 class="post-card__title">セキュリティチェックリストを開く</h3>
-    </a>
-  </li>
-</ul>
+    <div class="error-404__scanner-body">
+      <div class="error-404__badge">
+        <span class="error-404__badge-dot" aria-hidden="true"></span>
+        <span id="e404-badge-text">HTTP 404 · UNINDEXED ENDPOINT</span>
+      </div>
+      <h2 class="error-404__title" id="error-404-heading">This URL isn't on the allowlist.</h2>
+      <p class="error-404__lead" id="e404-lead">Either this page moved, there's a typo in the address, or we hid it so well even our security scanner couldn't find it.</p>
+
+      <div class="error-404__log" role="status" aria-live="polite">
+        <span class="error-404__log-method">GET</span>
+        <code id="e404-path">/404</code>
+        <span>→ <strong>404 Not Found</strong></span>
+        <div class="error-404__log-tip" id="e404-probe-tip">No sensitive WordPress files or stack traces leaked at this path.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="error-404__audit">
+    <div class="error-404__audit-head">
+      <h3 class="error-404__audit-title" id="e404-audit-heading">404 Incident Response Mini-Checklist</h3>
+    </div>
+
+    <div class="checklist-progress" id="e404-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-valuetext="0%" aria-labelledby="e404-audit-heading">
+      <div class="checklist-progress__inner">
+        <div class="checklist-progress__track">
+          <div class="checklist-progress__fill" id="e404-progress-fill" style="width: 0%"></div>
+        </div>
+        <span class="checklist-progress__pct" id="e404-progress-pct" aria-hidden="true">0%</span>
+      </div>
+    </div>
+
+    <div class="error-404__list" id="e404-checklist" role="group" aria-labelledby="e404-audit-heading">
+      <div class="error-404__check-item">
+        <label for="e404-cb-1">
+          <input type="checkbox" id="e404-cb-1" data-e404-check>
+          <span id="e404-item-1">Confirm <code>wp-config.php</code> and <code>xmlrpc.php</code> aren't exposed at this URL</span>
+        </label>
+      </div>
+      <div class="error-404__check-item">
+        <label for="e404-cb-2">
+          <input type="checkbox" id="e404-cb-2" data-e404-check>
+          <span id="e404-item-2">Verify the 404 response doesn't leak server versions or PHP stack traces</span>
+        </label>
+      </div>
+      <div class="error-404__check-item">
+        <label for="e404-cb-3">
+          <input type="checkbox" id="e404-cb-3" data-e404-check>
+          <span id="e404-item-3">Inspect the URL for typos — then head back to the full security checklist</span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="error-404__actions">
+    <div class="error-404__cta-group">
+      <a class="button button-primary" id="e404-cta" href="{{ '/items/' | prepend: site.baseurl }}">Open Security Checklist</a>
+      <button type="button" class="button error-404__btn-secondary" id="e404-probe-btn">Simulate WP Probe</button>
+    </div>
+
+    <div class="error-404__langs" id="e404-langs" role="group" aria-label="Language">
+      <button type="button" class="error-404__lang-btn" lang="en" data-e404-lang="en" aria-label="EN — English" aria-pressed="true">EN</button>
+      <button type="button" class="error-404__lang-btn" lang="pt-BR" data-e404-lang="br" aria-label="PT-BR — Português" aria-pressed="false">PT-BR</button>
+      <button type="button" class="error-404__lang-btn" lang="es" data-e404-lang="es" aria-label="ES — Español" aria-pressed="false">ES</button>
+      <button type="button" class="error-404__lang-btn" lang="ja" data-e404-lang="ja" aria-label="日本語" aria-pressed="false">日本語</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var base = '{{ site.baseurl }}';
+  var root = document.getElementById('error-404-root');
+  if (!root) return;
+
+  var i18n = {
+    en: {
+      pageTitle: '{{ site.title }} - 404 — Endpoint Not Found',
+      shieldAria: 'Interact with security shield',
+      langGroupAria: 'Language',
+      badge: 'HTTP 404 · UNINDEXED ENDPOINT',
+      badgeDone: 'HTTP 404 · INCIDENT RESOLVED',
+      title: "This URL isn't on the allowlist.",
+      lead: "Either this page moved, there's a typo in the address, or we hid it so well even our security scanner couldn't find it.",
+      tipDefault: 'No sensitive WordPress files or stack traces leaked at this path.',
+      auditTitle: '404 Incident Response Mini-Checklist',
+      item1: 'Confirm <code>wp-config.php</code> and <code>xmlrpc.php</code> aren\'t exposed at this URL',
+      item2: 'Verify the 404 response doesn\'t leak server versions or PHP stack traces',
+      item3: 'Inspect the URL for typos — then head back to the full security checklist',
+      cta: 'Open Security Checklist',
+      speech: 'All set! Open the Security Checklist →',
+      clickQuips: [
+        'Hey!',
+        'That tickles!',
+        'Touching me is not secure!',
+        "It was nice the first time, but it's enough.",
+        "I'm telling Funchal!",
+        '💀 Playing dead…',
+        'Just kidding!'
+      ],
+      ctaUrl: base + '/items/',
+      probeBtn: 'Simulate WP Probe'
+    },
+    br: {
+      pageTitle: '{{ site.title }} - 404 — Endpoint Não Encontrado',
+      shieldAria: 'Interagir com o escudo de segurança',
+      langGroupAria: 'Idioma',
+      badge: 'HTTP 404 · ENDPOINT NÃO ENCONTRADO',
+      badgeDone: 'HTTP 404 · INCIDENTE RESOLVIDO',
+      title: 'Este URL não está na lista de permissões.',
+      lead: 'A página mudou de endereço, há um erro de digitação ou nós a escondemos tão bem que nem nosso scanner encontrou.',
+      tipDefault: 'Nenhum arquivo sensível do WordPress ou erro interno vazou neste caminho.',
+      auditTitle: 'Mini-Checklist de Resposta ao 404',
+      item1: 'Confirmar que <code>wp-config.php</code> e <code>xmlrpc.php</code> não estão expostos neste URL',
+      item2: 'Verificar que a página 404 não exibe versões do servidor nem erros de PHP',
+      item3: 'Conferir se há erros de digitação no URL — e abrir o checklist completo',
+      cta: 'Abrir Checklist de Segurança',
+      speech: 'Tudo pronto! Abrir o Checklist de Segurança →',
+      clickQuips: [
+        'Ei!',
+        'Isso faz cócegas!',
+        'Me tocar assim não é seguro!',
+        'Na primeira vez foi legal, mas já chega.',
+        'Vou falar para o Funchal!',
+        '💀 Morri! (fingindo de morto…)',
+        'Brincadeirinha!'
+      ],
+      ctaUrl: base + '/br/items/',
+      probeBtn: 'Simular Varredura WP'
+    },
+    es: {
+      pageTitle: '{{ site.title }} - 404 — Endpoint No Encontrado',
+      shieldAria: 'Interactuar con el escudo de seguridad',
+      langGroupAria: 'Idioma',
+      badge: 'HTTP 404 · ENDPOINT NO ENCONTRADO',
+      badgeDone: 'HTTP 404 · INCIDENTE RESOLVIDO',
+      title: 'Esta URL no está en la lista permitida.',
+      lead: 'La página se movió, hay un error al escribir la dirección o la ocultamos tan bien que ni nuestro escáner la encontró.',
+      tipDefault: 'Ningún archivo sensible de WordPress ni traza del servidor quedó expuesto.',
+      auditTitle: 'Mini-Checklist de Respuesta al 404',
+      item1: 'Confirmar que <code>wp-config.php</code> y <code>xmlrpc.php</code> no están expuestos aquí',
+      item2: 'Verificar que el error 404 no filtre versiones del servidor ni errores PHP',
+      item3: 'Revisar si hay errores en la URL y volver al checklist de seguridad completo',
+      cta: 'Abrir Checklist de Seguridad',
+      speech: '¡Todo listo! Abrir el Checklist de Seguridad →',
+      clickQuips: [
+        '¡Oye!',
+        '¡Eso hace cosquillas!',
+        '¡Tocarme no es seguro!',
+        'La primera vez estuvo bien, pero ya basta.',
+        '¡Le voy a decir a Funchal!',
+        '💀 ¡Me muero! (haciéndose el muerto…)',
+        '¡Era broma!'
+      ],
+      ctaUrl: base + '/es/items/',
+      probeBtn: 'Simular Escaneo WP'
+    },
+    ja: {
+      pageTitle: '{{ site.title }} - 404 — 未登録のエンドポイント',
+      shieldAria: 'セキュリティシールドを動かす',
+      langGroupAria: '言語',
+      badge: 'HTTP 404 · 未登録のエンドポイント',
+      badgeDone: 'HTTP 404 · インシデント対応完了',
+      title: 'この URL は許可リストにありません。',
+      lead: 'ページが移動したか、URL の入力ミスか、あるいはセキュリティスキャナーでも見つからないほど厳重に隠されています。',
+      tipDefault: 'このパスから WordPress の機密ファイルやスタックトレースは漏洩していません。',
+      auditTitle: '404 インシデント対応ミニチェックリスト',
+      item1: '<code>wp-config.php</code> や <code>xmlrpc.php</code> が公開されていないことを確認する',
+      item2: '404 レスポンスにサーバー情報や PHP エラーが含まれないことを確認する',
+      item3: 'URL のタイプミスを確認し、完全版のセキュリティチェックリストへ移動する',
+      cta: 'セキュリティチェックリストを開く',
+      speech: '準備完了！セキュリティチェックリストを開く →',
+      clickQuips: [
+        'ちょっと！',
+        'くすぐったいってば！',
+        'むやみに触るのはセキュリティ上危険です！',
+        '最初はよかったけど、もう十分です。',
+        'Funchal に言いつけますよ！',
+        '💀 パタッ…（死んだふり中）',
+        'なんてね！'
+      ],
+      ctaUrl: base + '/ja/items/',
+      probeBtn: 'WP プローブを試す'
+    }
+  };
+
+  var probes = [
+    {
+      path: '/wp-login.php',
+      tip: {
+        en: 'Checklist tip: Limit login attempts & enable 2FA to stop brute-force bots on /wp-login.php.',
+        br: 'Dica do checklist: Limite tentativas de login e ative 2FA para bloquear ataques de força bruta em /wp-login.php.',
+        es: 'Consejo del checklist: Limita los intentos de acceso y activa 2FA para frenar bots de fuerza bruta en /wp-login.php.',
+        ja: 'チェックリストのヒント: /wp-login.php へのブルートフォース攻撃を防ぐため、ログイン試行回数の制限と 2FA を有効にしましょう。'
+      }
+    },
+    {
+      path: '/xmlrpc.php',
+      tip: {
+        en: 'Checklist tip: Disable XML-RPC if you don\'t need remote publishing or pingbacks.',
+        br: 'Dica do checklist: Desative o XML-RPC se você não precisar de publicação remota ou pingbacks.',
+        es: 'Consejo del checklist: Desactiva XML-RPC si no necesitas publicación remota ni pingbacks.',
+        ja: 'チェックリストのヒント: リモート投稿やピンバックが不要な場合は XML-RPC を無効にしましょう。'
+      }
+    },
+    {
+      path: '/wp-config.php.bak',
+      tip: {
+        en: 'Checklist tip: Block access to wp-config.php and backup files at the web server level.',
+        br: 'Dica do checklist: Bloqueie o acesso ao wp-config.php e a arquivos de backup diretamente no servidor web.',
+        es: 'Consejo del checklist: Bloquea el acceso a wp-config.php y a copias de seguridad en el servidor web.',
+        ja: 'チェックリストのヒント: Web サーバーの設定で wp-config.php やバックアップファイルへのアクセスを遮断しましょう。'
+      }
+    },
+    {
+      path: '/?author=1',
+      tip: {
+        en: 'Checklist tip: Block author archive enumeration (?author=N) so bots can\'t harvest usernames.',
+        br: 'Dica do checklist: Bloqueie a enumeração de autores (?author=N) via URL público para evitar coleta de usuários.',
+        es: 'Consejo del checklist: Bloquea la enumeración de autores (?author=N) para que los bots no obtengan usuarios.',
+        ja: 'チェックリストのヒント: ボットによるユーザー名収集を防ぐため、著者アーカイブの列挙（?author=N）をブロックしましょう。'
+      }
+    },
+    {
+      path: '/wp-content/debug.log',
+      tip: {
+        en: 'Checklist tip: Never leave WP_DEBUG_LOG publicly readable on a production site.',
+        br: 'Dica do checklist: Nunca deixe o arquivo WP_DEBUG_LOG acessível publicamente em produção.',
+        es: 'Consejo del checklist: Nunca dejes WP_DEBUG_LOG accesible públicamente en un sitio en producción.',
+        ja: 'チェックリストのヒント: 本番環境では WP_DEBUG_LOG を外部から閲覧できる状態にしないよう注意しましょう。'
+      }
+    }
+  ];
+  var probeIdx = -1;
+
+  var pathEl = document.getElementById('e404-path');
+  var tipEl = document.getElementById('e404-probe-tip');
+  var rawPath = window.location.pathname || '/404';
+  if (pathEl) {
+    pathEl.textContent = rawPath + (window.location.search || '');
+  }
+
+  var siteLocales = {
+    {% for row in site.data.strings.locales %}
+    {{ row.code | jsonify }}: {
+      description: {{ row.description | jsonify }},
+      navChecklist: {{ row.nav_checklist | jsonify }},
+      navBlog: {{ row.nav_blog | jsonify }},
+      followHeading: {{ row.footer_follow_heading | jsonify }},
+      personalSite: {{ row.footer_personal_site | jsonify }},
+      commitHtml: {{ row.commit | markdownify | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  };
+
+  function detectInitialLang() {
+    if (rawPath.indexOf('/br/') === 0 || rawPath === '/br') return 'br';
+    if (rawPath.indexOf('/es/') === 0 || rawPath === '/es') return 'es';
+    if (rawPath.indexOf('/ja/') === 0 || rawPath === '/ja') return 'ja';
+    try {
+      if (document.referrer) {
+        var refPath = new URL(document.referrer).pathname;
+        if (refPath.indexOf('/br/') === 0 || refPath === '/br') return 'br';
+        if (refPath.indexOf('/es/') === 0 || refPath === '/es') return 'es';
+        if (refPath.indexOf('/ja/') === 0 || refPath === '/ja') return 'ja';
+      }
+    } catch (e) {}
+    return 'en';
+  }
+
+  var currentLang = detectInitialLang();
+  var boxes = Array.prototype.slice.call(root.querySelectorAll('[data-e404-check]'));
+  var fillEl = document.getElementById('e404-progress-fill');
+  var pctEl = document.getElementById('e404-progress-pct');
+  var progEl = document.getElementById('e404-progress');
+
+  function isAllChecked() {
+    return boxes.every(function (cb) { return cb.checked; });
+  }
+
+  function applyLang(lang) {
+    if (!i18n[lang]) lang = 'en';
+    currentLang = lang;
+    var t = i18n[lang];
+    document.documentElement.setAttribute('lang', lang === 'br' ? 'pt-BR' : lang);
+    document.title = t.pageTitle;
+    var shieldBtn = document.getElementById('e404-shield-wrap');
+    if (shieldBtn) shieldBtn.setAttribute('aria-label', t.shieldAria);
+    var langGroup = document.getElementById('e404-langs');
+    if (langGroup) langGroup.setAttribute('aria-label', t.langGroupAria);
+    document.getElementById('e404-badge-text').textContent = isAllChecked() ? t.badgeDone : t.badge;
+    document.getElementById('error-404-heading').textContent = t.title;
+    document.getElementById('e404-lead').textContent = t.lead;
+    if (tipEl) {
+      tipEl.textContent = probeIdx === -1 ? t.tipDefault : (probes[probeIdx].tip[lang] || probes[probeIdx].tip.en);
+    }
+    document.getElementById('e404-audit-heading').textContent = t.auditTitle;
+    document.getElementById('e404-item-1').innerHTML = t.item1;
+    document.getElementById('e404-item-2').innerHTML = t.item2;
+    document.getElementById('e404-item-3').innerHTML = t.item3;
+    var cta = document.getElementById('e404-cta');
+    if (cta) {
+      cta.textContent = t.cta;
+      cta.setAttribute('href', t.ctaUrl);
+    }
+    syncSpeechBalloon();
+    var probeBtn = document.getElementById('e404-probe-btn');
+    if (probeBtn) {
+      probeBtn.textContent = t.probeBtn;
+    }
+    var sl = siteLocales[lang];
+    if (sl) {
+      var homeHref = base + (lang === 'en' ? '/' : '/' + lang + '/');
+      var descEl = document.querySelector('.site-description');
+      if (descEl) descEl.textContent = sl.description;
+      var titleLink = document.querySelector('.site-title a');
+      if (titleLink) titleLink.setAttribute('href', homeHref);
+      var navLinks = document.querySelectorAll('.site-nav .page-link');
+      if (navLinks[0]) {
+        navLinks[0].textContent = sl.navChecklist;
+        navLinks[0].setAttribute('title', sl.navChecklist);
+        navLinks[0].setAttribute('href', t.ctaUrl);
+      }
+      if (navLinks[1]) {
+        if (lang === 'es' || lang === 'ja') {
+          navLinks[1].style.display = 'none';
+        } else {
+          navLinks[1].style.display = '';
+          navLinks[1].textContent = sl.navBlog;
+          navLinks[1].setAttribute('title', sl.navBlog);
+          navLinks[1].setAttribute('href', homeHref);
+        }
+      }
+      var followEl = document.querySelector('.footer-follow-heading');
+      if (followEl) followEl.textContent = sl.followHeading;
+      var personalSpan = document.querySelector('.icon--laptop + .username');
+      if (personalSpan) {
+        personalSpan.textContent = sl.personalSite;
+        if (personalSpan.parentElement) personalSpan.parentElement.setAttribute('title', sl.personalSite);
+      }
+      var commitCol = document.querySelector('.footer-col-2');
+      if (commitCol) commitCol.innerHTML = sl.commitHtml;
+    }
+    root.querySelectorAll('[data-e404-lang]').forEach(function (btn) {
+      btn.setAttribute('aria-pressed', btn.getAttribute('data-e404-lang') === lang ? 'true' : 'false');
+    });
+  }
+
+  function burstConfetti() {
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      return;
+    }
+    var layer = document.createElement('div');
+    layer.className = 'checklist-celebration';
+    layer.setAttribute('aria-hidden', 'true');
+    var colors = ['#008cba', '#3db3e8', '#f59e0b', '#10b981', '#ec4899', '#6366f1'];
+    var rect = progEl ? progEl.getBoundingClientRect() : { left: window.innerWidth / 2, top: window.innerHeight / 3, width: 200 };
+    var ox = rect.left + rect.width * 0.5;
+    var oy = rect.top;
+    for (var i = 0; i < 36; i++) {
+      var p = document.createElement('span');
+      p.className = 'checklist-celebration__piece' + (i % 3 === 0 ? ' checklist-celebration__piece--lg' : '');
+      var angle = (Math.PI * 2 * i) / 36 + (Math.random() - 0.5) * 0.35;
+      var dist = 60 + Math.random() * 140;
+      p.style.left = ox + 'px';
+      p.style.top = oy + 'px';
+      p.style.backgroundColor = colors[i % colors.length];
+      p.style.setProperty('--cele-tx', Math.round(Math.cos(angle) * dist) + 'px');
+      p.style.setProperty('--cele-ty', Math.round(Math.sin(angle) * dist - 40) + 'px');
+      p.style.setProperty('--cele-rot', Math.round((Math.random() - 0.5) * 520) + 'deg');
+      layer.appendChild(p);
+    }
+    document.body.appendChild(layer);
+    window.setTimeout(function () {
+      if (layer.parentNode) layer.parentNode.removeChild(layer);
+    }, 1300);
+  }
+
+  var mouthEl = document.getElementById('e404-shield-mouth');
+  var faceEl = document.getElementById('e404-shield-face');
+  var lookEl = document.getElementById('e404-shield-look');
+  var wrapEl = document.getElementById('e404-shield-wrap');
+  var eyeL = document.getElementById('e404-eye-l');
+  var eyeR = document.getElementById('e404-eye-r');
+  var winkL = document.getElementById('e404-wink-l');
+  var winkR = document.getElementById('e404-wink-r');
+  var deadL = document.getElementById('e404-dead-l');
+  var deadR = document.getElementById('e404-dead-r');
+  var deadTongue = document.getElementById('e404-dead-tongue');
+  var browL = document.getElementById('e404-brow-l');
+  var browR = document.getElementById('e404-brow-r');
+  var mouthPaths = [
+    'M 18.2 29.6 Q 24 24.6 29.8 29.6',
+    'M 18.8 28.2 Q 24 28.6 29.2 28.2',
+    'M 17.8 26.8 Q 24 31.4 30.2 26.8',
+    'M 16.8 25.6 Q 24 33.8 31.2 25.6'
+  ];
+  var reactTimer = null;
+  var quipTimer = null;
+  var activeQuipIndex = -1;
+  var clickStep = 0;
+  var isPlayingDead = false;
+
+  function syncSpeechBalloon() {
+    var speechEl = document.getElementById('e404-speech');
+    if (!speechEl) return;
+    var t = i18n[currentLang] || i18n.en;
+    speechEl.setAttribute('href', t.ctaUrl);
+    if (activeQuipIndex >= 0 && t.clickQuips && t.clickQuips[activeQuipIndex]) {
+      speechEl.textContent = t.clickQuips[activeQuipIndex];
+      speechEl.hidden = false;
+    } else if (isAllChecked()) {
+      speechEl.textContent = t.speech;
+      speechEl.hidden = false;
+    } else {
+      speechEl.hidden = true;
+    }
+  }
+
+  function showDeadFace() {
+    if (eyeL) eyeL.style.display = 'none';
+    if (eyeR) eyeR.style.display = 'none';
+    if (winkL) winkL.style.display = 'none';
+    if (winkR) winkR.style.display = 'none';
+    if (browL) browL.style.display = 'none';
+    if (browR) browR.style.display = 'none';
+    if (deadL) deadL.style.display = '';
+    if (deadR) deadR.style.display = '';
+    if (deadTongue) deadTongue.style.display = '';
+    if (mouthEl) mouthEl.setAttribute('d', 'M 18.5 28.8 L 29.5 28.8');
+    if (faceEl) faceEl.style.transform = '';
+    if (lookEl) lookEl.style.transform = '';
+  }
+
+  function restoreMoodFace() {
+    if (isPlayingDead) {
+      showDeadFace();
+      return;
+    }
+    var done = boxes.filter(function (cb) { return cb.checked; }).length;
+    if (eyeL) { eyeL.style.display = ''; eyeL.setAttribute('r', '1.75'); }
+    if (eyeR) { eyeR.style.display = ''; eyeR.setAttribute('r', '1.75'); }
+    if (winkL) winkL.style.display = 'none';
+    if (winkR) winkR.style.display = 'none';
+    if (browL) browL.style.display = 'none';
+    if (browR) browR.style.display = 'none';
+    if (deadL) deadL.style.display = 'none';
+    if (deadR) deadR.style.display = 'none';
+    if (deadTongue) deadTongue.style.display = 'none';
+    if (mouthEl && mouthPaths[done]) {
+      mouthEl.setAttribute('d', mouthPaths[done]);
+    }
+    if (wrapEl) {
+      wrapEl.classList.remove('is-react-hop', 'is-react-wiggle', 'is-react-spin', 'is-playing-dead', 'is-getting-up');
+    }
+  }
+
+  function wakeUpJustKidding() {
+    if (reactTimer) window.clearTimeout(reactTimer);
+    if (quipTimer) window.clearTimeout(quipTimer);
+    isPlayingDead = false;
+    clickStep = 0;
+    if (wrapEl) {
+      wrapEl.classList.remove('is-playing-dead', 'is-react-hop', 'is-react-wiggle', 'is-react-spin');
+      void wrapEl.offsetWidth;
+      wrapEl.classList.add('is-getting-up');
+    }
+    if (eyeL) { eyeL.style.display = ''; eyeL.setAttribute('r', '1.75'); }
+    if (eyeR) { eyeR.style.display = ''; eyeR.setAttribute('r', '1.75'); }
+    if (winkL) winkL.style.display = 'none';
+    if (winkR) winkR.style.display = 'none';
+    if (browL) browL.style.display = 'none';
+    if (browR) browR.style.display = 'none';
+    if (deadL) deadL.style.display = 'none';
+    if (deadR) deadR.style.display = 'none';
+    if (deadTongue) deadTongue.style.display = 'none';
+    if (mouthEl) mouthEl.setAttribute('d', 'M 19 28.4 L 29 28.4');
+
+    reactTimer = window.setTimeout(function () {
+      if (wrapEl) wrapEl.classList.remove('is-getting-up');
+      if (eyeL) eyeL.style.display = 'none';
+      if (eyeR) { eyeR.style.display = ''; eyeR.setAttribute('r', '1.85'); }
+      if (winkL) winkL.style.display = '';
+      if (mouthEl) mouthEl.setAttribute('d', 'M 17 25.8 Q 24 33.5 31 25.8');
+
+      var speechEl = document.getElementById('e404-speech');
+      if (speechEl) {
+        speechEl.hidden = true;
+        void speechEl.offsetWidth;
+      }
+      activeQuipIndex = 6;
+      syncSpeechBalloon();
+      quipTimer = window.setTimeout(function () {
+        activeQuipIndex = -1;
+        syncSpeechBalloon();
+      }, 2400);
+      reactTimer = window.setTimeout(restoreMoodFace, 2750);
+    }, 520);
+  }
+
+  if (faceEl && wrapEl && !(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+    document.addEventListener('mousemove', function (e) {
+      if (isPlayingDead) return;
+      var r = wrapEl.getBoundingClientRect();
+      var cx = r.left + r.width / 2;
+      var cy = r.top + r.height / 2;
+      var nx = Math.max(-1, Math.min(1, (e.clientX - cx) / 220));
+      var ny = Math.max(-1, Math.min(1, (e.clientY - cy) / 220));
+      faceEl.style.transform = 'translate(' + (nx * 4.8).toFixed(2) + 'px, ' + (ny * 3.6).toFixed(2) + 'px)';
+      if (lookEl) {
+        lookEl.style.transform = 'translate(' + (nx * 1.8).toFixed(2) + 'px, ' + (ny * 1.4).toFixed(2) + 'px) rotate(' + (nx * 4.5).toFixed(2) + 'deg)';
+      }
+    });
+  }
+
+  if (wrapEl) {
+    wrapEl.addEventListener('click', function () {
+      if (isPlayingDead) {
+        return;
+      }
+      if (reactTimer) window.clearTimeout(reactTimer);
+      if (quipTimer) window.clearTimeout(quipTimer);
+      wrapEl.classList.remove('is-react-hop', 'is-react-wiggle', 'is-react-spin');
+      if (browL) browL.style.display = 'none';
+      if (browR) browR.style.display = 'none';
+      void wrapEl.offsetWidth;
+
+      if (clickStep === 0) {
+        activeQuipIndex = -1;
+        syncSpeechBalloon();
+        wrapEl.classList.add('is-react-hop');
+        if (eyeL) eyeL.style.display = 'none';
+        if (eyeR) { eyeR.style.display = ''; eyeR.setAttribute('r', '1.85'); }
+        if (winkL) winkL.style.display = '';
+        if (winkR) winkR.style.display = 'none';
+        if (mouthEl) mouthEl.setAttribute('d', 'M 17.5 26.2 Q 24 32.2 30.5 26.2');
+        reactTimer = window.setTimeout(restoreMoodFace, 1200);
+      } else if (clickStep <= 5) {
+        activeQuipIndex = clickStep - 1;
+        var speechEl = document.getElementById('e404-speech');
+        if (speechEl) {
+          speechEl.hidden = true;
+          void speechEl.offsetWidth;
+        }
+        syncSpeechBalloon();
+
+        if (activeQuipIndex === 0) {
+          wrapEl.classList.add('is-react-wiggle');
+          if (eyeL) { eyeL.style.display = ''; eyeL.setAttribute('r', '2.25'); }
+          if (eyeR) { eyeR.style.display = ''; eyeR.setAttribute('r', '2.25'); }
+          if (winkL) winkL.style.display = 'none';
+          if (winkR) winkR.style.display = 'none';
+          if (mouthEl) mouthEl.setAttribute('d', 'M 21.8 27.6 A 2.2 2.2 0 1 1 26.2 27.6 A 2.2 2.2 0 1 1 21.8 27.6');
+        } else if (activeQuipIndex === 1) {
+          wrapEl.classList.add('is-react-wiggle');
+          if (eyeL) eyeL.style.display = 'none';
+          if (eyeR) eyeR.style.display = 'none';
+          if (winkL) winkL.style.display = '';
+          if (winkR) winkR.style.display = '';
+          if (mouthEl) mouthEl.setAttribute('d', 'M 17 26 Q 24 33.5 31 26');
+        } else if (activeQuipIndex === 2) {
+          wrapEl.classList.add('is-react-wiggle');
+          if (eyeL) { eyeL.style.display = ''; eyeL.setAttribute('r', '1.75'); }
+          if (eyeR) { eyeR.style.display = ''; eyeR.setAttribute('r', '1.75'); }
+          if (winkL) winkL.style.display = 'none';
+          if (winkR) winkR.style.display = 'none';
+          if (mouthEl) mouthEl.setAttribute('d', 'M 18 29.8 Q 24 25.2 30 29.8');
+        } else if (activeQuipIndex === 3) {
+          wrapEl.classList.add('is-react-hop');
+          if (eyeL) { eyeL.style.display = ''; eyeL.setAttribute('r', '1.6'); }
+          if (eyeR) { eyeR.style.display = ''; eyeR.setAttribute('r', '1.6'); }
+          if (winkL) winkL.style.display = 'none';
+          if (winkR) winkR.style.display = 'none';
+          if (mouthEl) mouthEl.setAttribute('d', 'M 18.5 28.6 L 29.5 28.2');
+        } else {
+          wrapEl.classList.add('is-react-wiggle');
+          if (eyeL) { eyeL.style.display = ''; eyeL.setAttribute('r', '1.7'); }
+          if (eyeR) { eyeR.style.display = ''; eyeR.setAttribute('r', '1.7'); }
+          if (winkL) winkL.style.display = 'none';
+          if (winkR) winkR.style.display = 'none';
+          if (browL) browL.style.display = '';
+          if (browR) browR.style.display = '';
+          if (mouthEl) mouthEl.setAttribute('d', 'M 18 30.2 Q 24 24.8 30 30.2');
+        }
+
+        quipTimer = window.setTimeout(function () {
+          activeQuipIndex = -1;
+          syncSpeechBalloon();
+        }, 2400);
+        reactTimer = window.setTimeout(restoreMoodFace, 2750);
+      } else {
+        var speechElDead = document.getElementById('e404-speech');
+        if (speechElDead) {
+          speechElDead.hidden = true;
+          void speechElDead.offsetWidth;
+        }
+        isPlayingDead = true;
+        activeQuipIndex = 5;
+        wrapEl.classList.add('is-playing-dead');
+        showDeadFace();
+        syncSpeechBalloon();
+        quipTimer = window.setTimeout(function () {
+          activeQuipIndex = -1;
+          syncSpeechBalloon();
+        }, 2400);
+        reactTimer = window.setTimeout(wakeUpJustKidding, 5000);
+      }
+
+      clickStep++;
+    });
+  }
+
+  function updateProgress(userTriggered) {
+    if (userTriggered && isPlayingDead) {
+      isPlayingDead = false;
+      clickStep = 0;
+      activeQuipIndex = -1;
+      restoreMoodFace();
+    }
+    var done = boxes.filter(function (cb) { return cb.checked; }).length;
+    var pct = Math.round((done / boxes.length) * 100);
+    if (fillEl) fillEl.style.width = pct + '%';
+    if (pctEl) pctEl.textContent = pct + '%';
+    if (progEl) {
+      progEl.setAttribute('aria-valuenow', String(pct));
+      progEl.setAttribute('aria-valuetext', pct + '%');
+    }
+    root.setAttribute('data-mood', String(done));
+    if (mouthEl && mouthPaths[done]) {
+      mouthEl.setAttribute('d', mouthPaths[done]);
+    }
+    var allDone = done === boxes.length;
+    root.classList.toggle('is-all-checked', allDone);
+    if (allDone && userTriggered) {
+      activeQuipIndex = -1;
+      if (quipTimer) window.clearTimeout(quipTimer);
+    }
+    syncSpeechBalloon();
+    var t = i18n[currentLang] || i18n.en;
+    document.getElementById('e404-badge-text').textContent = allDone ? t.badgeDone : t.badge;
+    if (allDone && userTriggered) {
+      burstConfetti();
+    }
+  }
+
+  boxes.forEach(function (cb) {
+    cb.addEventListener('change', function () {
+      if (cb.parentElement) {
+        cb.parentElement.classList.toggle('checked', cb.checked);
+      }
+      updateProgress(true);
+    });
+  });
+
+  root.querySelectorAll('[data-e404-lang]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      applyLang(btn.getAttribute('data-e404-lang'));
+    });
+  });
+
+  var probeBtn = document.getElementById('e404-probe-btn');
+  if (probeBtn) {
+    probeBtn.addEventListener('click', function () {
+      probeIdx = (probeIdx + 1) % probes.length;
+      var probe = probes[probeIdx];
+      if (pathEl) pathEl.textContent = probe.path;
+      if (tipEl) tipEl.textContent = probe.tip[currentLang] || probe.tip.en;
+    });
+  }
+
+  applyLang(currentLang);
+  updateProgress(false);
+})();
+</script>
