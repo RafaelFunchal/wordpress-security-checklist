@@ -1,0 +1,40 @@
+---
+layout: page
+language: en
+title: "404 — Page not found"
+permalink: /404.html
+---
+
+<section class="home-hero">
+  <p class="home-lead">The page you are looking for doesn't exist or may have moved.</p>
+  <p class="home-actions">
+    <a class="button button-primary" href="{{ '/items/' | prepend: site.baseurl }}">Open Checklist</a>
+  </p>
+</section>
+
+<ul class="post-list post-list--cards">
+  <li lang="en">
+    <a class="post-card" href="{{ '/items/' | prepend: site.baseurl }}">
+      <span class="post-meta post-card__meta">English</span>
+      <h3 class="post-card__title">WordPress Security Checklist</h3>
+    </a>
+  </li>
+  <li lang="pt-BR">
+    <a class="post-card" href="{{ '/br/items/' | prepend: site.baseurl }}">
+      <span class="post-meta post-card__meta">Português — Página não encontrada</span>
+      <h3 class="post-card__title">Abrir Checklist de Segurança</h3>
+    </a>
+  </li>
+  <li lang="es">
+    <a class="post-card" href="{{ '/es/items/' | prepend: site.baseurl }}">
+      <span class="post-meta post-card__meta">Español — Página no encontrada</span>
+      <h3 class="post-card__title">Abrir Checklist de Seguridad</h3>
+    </a>
+  </li>
+  <li lang="ja">
+    <a class="post-card" href="{{ '/ja/items/' | prepend: site.baseurl }}">
+      <span class="post-meta post-card__meta">日本語 — ページが見つかりません</span>
+      <h3 class="post-card__title">セキュリティチェックリストを開く</h3>
+    </a>
+  </li>
+</ul>
