@@ -6,7 +6,7 @@ Each entry is keyed by the item ID from `checklist.md`. Entries use these labels
 - **Check:** how to verify it. **Files** means inspect the WordPress files, **WP-CLI** means run `wp` commands, **HTTP** means send `GET` or `HEAD` requests to a public URL the user is authorized to test, and **Manual** means only the user can confirm it.
 - **Fix:** how to meet the item.
 
-All checks are read-only. Follow the safety rules in `SKILL.md`, especially: never print secret values.
+All checks are read-only. Follow the safety rules in `SKILL.md`, especially: never print secret values, and validate `<domain>` before using it in a command (a plain hostname, optionally with `:port`). Keep URLs single-quoted and passed with `--url`, as in the examples.
 
 `scripts/sync-checklist-schema.py` in the website repository fails if this file and `checklist.md` list different IDs. When you add an item to the checklist, add its entry here too.
 
@@ -27,13 +27,13 @@ All checks are read-only. Follow the safety rules in `SKILL.md`, especially: nev
 ### wsc-wpconfig-force-ssl-admin
 
 - **Why:** Without HTTPS, login credentials and admin session cookies can be intercepted.
-- **Check:** Files: look for `define( 'FORCE_SSL_ADMIN', true );`. WP-CLI: `wp option get siteurl` and `wp option get home` should start with `https://`. HTTP: `curl -sI http://<domain>/wp-login.php` should redirect to `https://`. If the site is fully HTTPS and redirects all HTTP traffic, report ✅ Pass even without the constant.
+- **Check:** Files: look for `define( 'FORCE_SSL_ADMIN', true );`. WP-CLI: `wp option get siteurl` and `wp option get home` should start with `https://`. HTTP: `curl -sI --url 'http://<domain>/wp-login.php'` should redirect to `https://`. If the site is fully HTTPS and redirects all HTTP traffic, report ✅ Pass even without the constant.
 - **Fix:** Enable HTTPS with the host (most offer free certificates), set the site URLs to `https://`, and add `define( 'FORCE_SSL_ADMIN', true );`.
 
 ### wsc-wpconfig-wp-debug-off
 
 - **Why:** Debug output exposes file paths, queries, and plugin internals. A public `debug.log` can leak personal data and secrets.
-- **Check:** Files: in `wp-config.php`, `WP_DEBUG` should be `false` or undefined in production. If it is `true`, `WP_DEBUG_DISPLAY` must be `false`, and `WP_DEBUG_LOG` should point outside the web root. Also look for a `wp-content/debug.log` file. HTTP: `curl -sI https://<domain>/wp-content/debug.log` must not return `200`. Only report this item for production; on local or staging sites, mark it ⚠️ Review with a note.
+- **Check:** Files: in `wp-config.php`, `WP_DEBUG` should be `false` or undefined in production. If it is `true`, `WP_DEBUG_DISPLAY` must be `false`, and `WP_DEBUG_LOG` should point outside the web root. Also look for a `wp-content/debug.log` file. HTTP: `curl -sI --url 'https://<domain>/wp-content/debug.log'` must not return `200`. Only report this item for production; on local or staging sites, mark it ⚠️ Review with a note.
 - **Fix:** Set `define( 'WP_DEBUG', false );` in production. If you need logs, set `WP_DEBUG_DISPLAY` to `false`, write the log outside the web root, and delete any public `debug.log`.
 
 ## Login Page
@@ -85,7 +85,7 @@ All checks are read-only. Follow the safety rules in `SKILL.md`, especially: nev
 ### wsc-admin-wpadmin-password
 
 - **Why:** A second password at the web server blocks bots and stolen sessions from reaching the admin area.
-- **Check:** Files: look for HTTP authentication (`AuthType Basic`) in `wp-admin/.htaccess`, or for `auth_basic` in the nginx configuration if it is accessible. HTTP: `curl -sI https://<domain>/wp-admin/` returning `401` means it is protected. A redirect to `wp-login.php` means it is not. Many managed hosts do not support this; mark ⚠️ Review there instead of ❌ Fail.
+- **Check:** Files: look for HTTP authentication (`AuthType Basic`) in `wp-admin/.htaccess`, or for `auth_basic` in the nginx configuration if it is accessible. HTTP: `curl -sI --url 'https://<domain>/wp-admin/'` returning `401` means it is protected. A redirect to `wp-login.php` means it is not. Many managed hosts do not support this; mark ⚠️ Review there instead of ❌ Fail.
 - **Fix:** Add HTTP authentication to `/wp-admin/`, but keep `admin-ajax.php` (and any assets the front end uses) accessible, or the public site breaks. The checklist links an example configuration for this.
 
 ### wsc-admin-core-plugins-updated
@@ -231,7 +231,7 @@ All checks are read-only. Follow the safety rules in `SKILL.md`, especially: nev
 ### wsc-hosting-wpconfig-protected
 
 - **Why:** `wp-config.php` holds the database password and salts. Exposing it, or a backup copy of it, gives away the site.
-- **Check:** Files: its permissions should not be world-readable where the host allows it (`640`, `600`, or `440`). Look for copies such as `wp-config.php.bak`, `.old`, `.orig`, `.save`, `.txt`, `wp-config.php~`, and `.wp-config.php.swp`. HTTP: `curl -s https://<domain>/wp-config.php` must return an empty body or `403`; any PHP source in the response is critical. Also `HEAD` request each backup copy found locally; a `200` response is critical.
+- **Check:** Files: its permissions should not be world-readable where the host allows it (`640`, `600`, or `440`). Look for copies such as `wp-config.php.bak`, `.old`, `.orig`, `.save`, `.txt`, `wp-config.php~`, and `.wp-config.php.swp`. HTTP: `curl -s --url 'https://<domain>/wp-config.php'` must return an empty body or `403`; any PHP source in the response is critical. Also `HEAD` request each backup copy found locally; a `200` response is critical.
 - **Fix:** Delete backup copies, tighten permissions, and deny web access to `wp-config.php` in the server configuration. Moving it one directory above the web root is also supported by WordPress.
 
 ### wsc-hosting-block-sensitive-files
@@ -243,29 +243,29 @@ All checks are read-only. Follow the safety rules in `SKILL.md`, especially: nev
 ### wsc-hosting-no-directory-listing
 
 - **Why:** Directory listings reveal plugin versions, backups, and uploaded files that should not be browsable.
-- **Check:** HTTP: `curl -s https://<domain>/wp-content/uploads/` and `https://<domain>/wp-includes/`. An `Index of /` page is ❌ Fail. Files: look for `Options -Indexes` (or `Options All -Indexes`) in `.htaccess`, or `autoindex on` in the nginx configuration if it is accessible.
+- **Check:** HTTP: `curl -s --url 'https://<domain>/wp-content/uploads/'` and `https://<domain>/wp-includes/`. An `Index of /` page is ❌ Fail. Files: look for `Options -Indexes` (or `Options All -Indexes`) in `.htaccess`, or `autoindex on` in the nginx configuration if it is accessible.
 - **Fix:** Apache: add `Options -Indexes` to `.htaccess`. nginx: make sure `autoindex` is off (it is off by default).
 
 ### wsc-hosting-waf-cdn
 
 - **Why:** A web application firewall blocks common exploit traffic and abusive bots before they reach WordPress.
-- **Check:** HTTP: `curl -sI https://<domain>/` and look for signs of a WAF or CDN, such as `cf-ray` or `server: cloudflare` (Cloudflare), `x-sucuri-id` (Sucuri), Fastly or Akamai headers, or the host's edge headers. Security plugins with a firewall (such as Wordfence) count, but report them as ⚠️ Review, because they run inside WordPress. If nothing is found, mark ❔ Unknown and ask.
+- **Check:** HTTP: `curl -sI --url 'https://<domain>/'` and look for signs of a WAF or CDN, such as `cf-ray` or `server: cloudflare` (Cloudflare), `x-sucuri-id` (Sucuri), Fastly or Akamai headers, or the host's edge headers. Security plugins with a firewall (such as Wordfence) count, but report them as ⚠️ Review, because they run inside WordPress. If nothing is found, mark ❔ Unknown and ask.
 - **Fix:** Put the site behind a WAF or CDN with bot and DDoS protection, through the host or a provider such as Cloudflare or Sucuri.
 
 ### wsc-hosting-monitoring-alerts
 
 - **Why:** Alerts for downtime, expiring certificates, file changes, and login spikes are how incidents are noticed early.
-- **Check:** Manual. Supporting evidence: a monitoring plugin or service (Jetpack Monitor, Wordfence alerts, an uptime service). HTTP: check the certificate expiry date with `curl -vI https://<domain>/ 2>&1 | grep -i 'expire'`. Ask who receives the alerts.
+- **Check:** Manual. Supporting evidence: a monitoring plugin or service (Jetpack Monitor, Wordfence alerts, an uptime service). HTTP: check the certificate expiry date with `curl -vI --url 'https://<domain>/' 2>&1 | grep -i 'expire'`. Ask who receives the alerts.
 - **Fix:** Enable uptime monitoring, certificate expiry alerts, file-change alerts, and failed-login alerts, and send them to someone who will act on them.
 
 ### wsc-login-xmlrpc-off
 
 - **Why:** XML-RPC allows many password guesses in one request (`system.multicall`) and is often abused for pingback attacks.
-- **Check:** HTTP: `curl -s https://<domain>/xmlrpc.php`. The response `XML-RPC server accepts POST requests only.` means it is reachable. A `403` or `404` response means it is blocked. Do not send XML-RPC method calls. Files: look for `add_filter( 'xmlrpc_enabled', '__return_false' )` or a server rule that blocks `xmlrpc.php`. That filter only disables authenticated methods, so a reachable endpoint with the filter is ⚠️ Review. Jetpack and some mobile apps need XML-RPC; ask before recommending a full block.
+- **Check:** HTTP: `curl -s --url 'https://<domain>/xmlrpc.php'`. The response `XML-RPC server accepts POST requests only.` means it is reachable. A `403` or `404` response means it is blocked. Do not send XML-RPC method calls. Files: look for `add_filter( 'xmlrpc_enabled', '__return_false' )` or a server rule that blocks `xmlrpc.php`. That filter only disables authenticated methods, so a reachable endpoint with the filter is ⚠️ Review. Jetpack and some mobile apps need XML-RPC; ask before recommending a full block.
 - **Fix:** Block `xmlrpc.php` at the web server or WAF if nothing needs it. If Jetpack needs it, allow only Jetpack's IP ranges.
 
 ### wsc-login-block-author-enumeration
 
 - **Why:** Revealing valid usernames does half of a password-guessing attack's work.
-- **Check:** HTTP: `curl -sI 'https://<domain>/?author=1'` without following redirects. A `Location` header with `/author/<slug>/` reveals a username and is ❌ Fail. Also run `curl -s https://<domain>/wp-json/wp/v2/users`. A list of users with their `slug` values also reveals usernames; report it under this item. Files: look for the rewrite rule from the checklist in `.htaccess`, an equivalent nginx rule, or a security plugin setting.
+- **Check:** HTTP: `curl -sI --url 'https://<domain>/?author=1'` without following redirects. A `Location` header with `/author/<slug>/` reveals a username and is ❌ Fail. Also run `curl -s --url 'https://<domain>/wp-json/wp/v2/users'`. A list of users with their `slug` values also reveals usernames; report it under this item. Files: look for the rewrite rule from the checklist in `.htaccess`, an equivalent nginx rule, or a security plugin setting.
 - **Fix:** Add the checklist's `.htaccess` rule (or an nginx equivalent), and restrict the REST API users endpoint to logged-in users with a filter or a security plugin. Making usernames differ from display names also reduces the exposure.
