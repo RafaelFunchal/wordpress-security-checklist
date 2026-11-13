@@ -38,6 +38,7 @@
             {% if loc != 'es' and loc != 'ja' %}
             <a class="page-link" href="{{ blog_url }}" title="{{ ti.nav_blog }}">{{ ti.nav_blog }}</a>
             {% endif %}
+            <a class="page-link" href="https://github.com/WP-Security-Checklist/skill" title="{{ ti.nav_skill_title }}" target="_blank" rel="noopener noreferrer">{{ ti.nav_skill }}</a>
 
             {% assign lang_menu_count = 0 %}
             {% for language in site.languages %}
