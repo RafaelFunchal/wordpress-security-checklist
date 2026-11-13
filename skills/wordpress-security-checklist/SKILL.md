@@ -1,0 +1,92 @@
+---
+name: wordpress-security-checklist
+description: Audit a WordPress site against the WordPress Security Checklist (wpsecuritychecklist.org) or explain and walk through its hardening items. Use when someone asks to check, audit, review, or harden the security of a WordPress install, codebase, server, or public URL; asks whether wp-config.php, .htaccess, plugins, users, or file permissions are secure; or asks what a checklist item means and how to apply it. Also triggers on "is my WordPress site secure", "WordPress hardening", "checklist de segurança WordPress", "lista de seguridad WordPress".
+---
+
+# WordPress Security Checklist
+
+This skill applies the community [WordPress Security Checklist](https://wpsecuritychecklist.org) in two modes:
+
+- **Audit:** inspect a WordPress site and report, item by item, what passes, what fails, and how to fix it.
+- **Guide:** explain the checklist, answer questions about specific items, and walk someone through hardening their site.
+
+An audit report always includes the guide explanation for each failing item, so the two modes work together.
+
+## Reference files
+
+Both files are in the `references/` folder next to this `SKILL.md`. Resolve their absolute paths from this file's location before reading them; do not assume the current working directory is the skill folder.
+
+- `references/checklist.md` lists every checklist item, grouped by section, with its stable ID and its wording in English, Brazilian Portuguese, Spanish, and Japanese. It is generated from the website source. Treat it as the canonical list: do not invent, merge, or drop items.
+- `references/checks.md` explains, for each item ID, why it matters, how to verify it, and how to fix it.
+
+Read `checklist.md` first. Read `checks.md` when auditing or when explaining how to verify or fix an item.
+
+## Choose the mode
+
+- Use **Audit** when the user wants their site, codebase, server, or URL checked.
+- Use **Guide** when the user asks what an item means, why it matters, how to do it, or wants a walkthrough without an inspection.
+- If the request is ambiguous ("help me secure my WordPress site"), ask whether they want you to inspect the site or walk them through the checklist.
+
+Reply in the user's language. When linking to the checklist, use the matching locale:
+
+| Language | Checklist URL |
+|---|---|
+| English | https://wpsecuritychecklist.org/items/ |
+| Português (BR) | https://wpsecuritychecklist.org/br/items/ |
+| Español | https://wpsecuritychecklist.org/es/items/ |
+| 日本語 | https://wpsecuritychecklist.org/ja/items/ |
+
+## Safety rules (always apply)
+
+1. **Read-only by default.** Do not change files, settings, users, or the database during an audit. Offer fixes after the report and apply them only when the user asks. Back up any file before editing it.
+2. **Authorized targets only.** Make HTTP requests only to sites the user says they own or are authorized to test. If that is not clear, ask before sending any request.
+3. **Non-intrusive requests only.** Use a small number of ordinary `GET` or `HEAD` requests to public URLs (for example, with `curl -sI`). Never attempt logins, password guessing, brute force, vulnerability exploits, injection payloads, port scans, or load testing.
+4. **Never reveal secrets.** Do not print or repeat database passwords, authentication keys, salts, API keys, or password hashes. Report only whether a value is present, default, or weak (for example, "set, 64 characters"), and redact values in any command output you show.
+5. **Escalate signs of compromise.** If you find indicators of a possible compromise (for example, core checksum mismatches, PHP files in `wp-content/uploads`, unknown administrator accounts, or obfuscated code such as `eval(base64_decode(...))`), tell the user right away and put the evidence at the top of the report, under a **Possible compromise** heading, before the summary. Point them to the incident response item (`wsc-admin-incident-response-plan`). Do not open, run, move, or delete suspicious files, and do not try to clean the site unless the user explicitly asks. Finish the remaining read-only checks, because exposed secrets and weak settings tell the user what to rotate and fix during recovery.
+
+## Audit workflow
+
+### 1. Establish scope
+
+Find out what you can inspect. Any combination of these sources may be available:
+
+- **Files:** a local WordPress root, found by looking for `wp-config.php` (it can also be one directory above the root) and `wp-includes/version.php`.
+- **WP-CLI:** check with `wp --info` and `wp core is-installed`. Add `--path=<root>` when the shell is not in the WordPress root. If WP-CLI is unavailable, use file inspection only.
+- **Public URL:** only if the user provides one and confirms they are authorized to test it.
+
+If none of these are available, switch to Guide mode and offer a self-assessment walkthrough instead.
+
+Ask whether the site is production, staging, or local development, because some items (such as `WP_DEBUG`) depend on it.
+
+### 2. Run the checks
+
+For every item in `references/checklist.md`, follow its entry in `references/checks.md`. Each check is labeled with the sources it needs: **Files**, **WP-CLI**, **HTTP**, or **Manual**. Run what the available sources allow, then give each item one status:
+
+| Status | Meaning |
+|---|---|
+| ✅ Pass | Verified and meets the item. |
+| ❌ Fail | Verified and does not meet the item. |
+| ⚠️ Review | Partially meets the item, or meeting it depends on a judgment the user must make. |
+| ❔ Unknown | Could not be verified with the available sources. Say which source would settle it. |
+| 📝 Manual | Cannot be checked automatically (process, hosting, or policy item). Ask the user to confirm it. |
+
+Base each status on evidence you observed, and record that evidence (the file and line, the command and its relevant output, or the HTTP status). Do not mark an item ✅ Pass without evidence.
+
+### 3. Write the report
+
+Structure the report like this:
+
+1. **Summary:** what you inspected (files, WP-CLI, URL), the environment, and the count of items per status.
+2. **Fix first:** up to five ❌ Fail items, ordered by risk. Rank exposed secrets or backups, outdated or abandoned software with known vulnerabilities, administrator account weaknesses, and public debug output highest.
+3. **Results by section:** follow the checklist's section order. For each item, show its status, ID, and evidence. For ❌ and ⚠️ items, also add one or two sentences on why it matters and the specific fix, taken from `checks.md` and adapted to what you found.
+4. **Manual items:** list the 📝 items as questions for the user to confirm.
+5. **Other observations:** anything security-relevant you noticed that is not a checklist item. Keep these separate so the checklist results stay comparable between audits.
+
+End by offering to apply the fixes that can be made safely in files or with WP-CLI, and say which ones need hosting or account access instead.
+
+## Guide workflow
+
+- **Single question:** identify the matching item or items in `checklist.md`, then explain why it matters and how to apply it using `checks.md`. Include the item ID so the user can find it on the checklist page, and link the checklist in their language.
+- **Walkthrough:** go section by section in checklist order. For each item, explain it briefly and ask whether it is already done. Track the answers, and finish with a summary of what is left to do, ordered by risk.
+- **Hosting differences:** some fixes differ between Apache (`.htaccess`), nginx, and managed WordPress hosting, where some items are handled by the host. Ask which one the user has before giving server configuration.
+- **Unlisted topics:** if the user asks about something the checklist does not cover, answer it, but say clearly that it is not a checklist item.
