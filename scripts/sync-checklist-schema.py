@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
-"""Regenerate _data/checklist_schema.yml from items*.md (run after editing checklists)."""
+"""Regenerate _data/checklist_schema.yml from items*.md (run after editing checklists).
+
+Fails if the locales do not share the same item IDs in the same order.
+"""
 from __future__ import annotations
 
 import re
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -26,6 +30,19 @@ def parse_items(path: Path) -> list[dict[str, str]]:
         name = re.sub(r"\s+", " ", name).strip()
         items.append({"id": iid, "name": name})
     return items
+
+
+def check_locales(out: dict[str, list[dict[str, str]]]) -> list[str]:
+    errors: list[str] = []
+    en_ids = [row["id"] for row in out.get("en", [])]
+    for lang, rows in out.items():
+        ids = [row["id"] for row in rows]
+        if ids != en_ids:
+            missing = sorted(set(en_ids) - set(ids))
+            extra = sorted(set(ids) - set(en_ids))
+            detail = f"missing {missing}, extra {extra}" if missing or extra else "different order"
+            errors.append(f"{lang}: item IDs differ from en ({detail})")
+    return errors
 
 
 def main() -> None:
@@ -58,6 +75,12 @@ def main() -> None:
     for lang, rows in out.items():
         print(f"{lang}: {len(rows)} items")
     print(f"Wrote {OUT.relative_to(ROOT)}")
+
+    errors = check_locales(out)
+    for err in errors:
+        print(f"ERROR: {err}", file=sys.stderr)
+    if errors:
+        sys.exit(1)
 
 
 if __name__ == "__main__":
