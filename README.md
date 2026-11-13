@@ -36,7 +36,7 @@ Locales are listed in `_config.yml` under `languages` and must stay in sync with
 
 ## Requirements
 
-- **Ruby 3.1+** (GitHub Pages currently uses **3.3.4**; see [.ruby-version](.ruby-version) and [Pages dependency versions](https://pages.github.com/versions.json))
+- **Ruby 3.3+** (GitHub Pages currently uses **3.3.4**; see [.ruby-version](.ruby-version) and [Pages dependency versions](https://pages.github.com/versions.json))
 - RubyGems ([install RubyGems][gem-download] if needed)
 - Bundler 2.x: `gem install bundler` (once per machine, if `bundle` is missing)
 
