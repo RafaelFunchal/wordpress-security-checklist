@@ -12,7 +12,7 @@ checklist_last_updated: "2026-04-17"
 markdown:         kramdown
 kramdown:
    input:         GFM
-exclude:          [ "README.md", "vendor", ".bundle", "Gemfile.lock" ]
+exclude:          [ "README.md", "vendor", ".bundle", "Gemfile.lock", "skills" ]
 encoding:         UTF-8
 future:           false
 timezone:         UTC # match GitHub Pages so local post dates/URLs equal production
