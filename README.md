@@ -47,8 +47,8 @@ Jekyll is pulled in via the `github-pages` gem—**use [Bundler][bundler]** with
 ## Local preview
 
 ```bash
-git clone https://github.com/rafaelfunchal/wordpress-security-checklist.git
-cd wordpress-security-checklist
+git clone https://github.com/WP-Security-Checklist/website.git
+cd website
 bundle install
 bundle exec jekyll serve
 ```
