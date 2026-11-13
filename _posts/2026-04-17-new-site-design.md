@@ -38,6 +38,6 @@ There is a **skip link** straight to the main content, a proper **`main` landmar
 
 ## Still the same mission
 
-The checklist remains **free**, **open source**, and focused on practical steps you can take to harden WordPress. If you want to suggest edits or translations, the repo is on [GitHub](https://github.com/rafaelfunchal/wordpress-security-checklist){:target="_blank" rel="noopener noreferrer"}.
+The checklist remains **free**, **open source**, and focused on practical steps you can take to harden WordPress. If you want to suggest edits or translations, the repo is on [GitHub](https://github.com/WP-Security-Checklist/website){:target="_blank" rel="noopener noreferrer"}.
 
 Thank you for using the site—and if something looks wrong in your browser or in your language, open an issue and I will take a look.

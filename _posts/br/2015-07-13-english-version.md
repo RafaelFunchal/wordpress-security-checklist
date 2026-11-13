@@ -11,4 +11,4 @@ Finalmente encontrei algum tempo livre para traduzir o checklist para inglês \o
 
 Provavelmente você percebeu que ainda há alguns elementos em português no cabeçalho e no rodapé. Isso acontece porque, no momento, apenas a lista está traduzida, mas eu pretendo deixar o site totalmente bilíngue em breve.
 
-Caso você tenha alguma sugestão, por favor, fale comigo no [Twitter](http://twitter.com/RafaelFunchal){:target="_blank"} ou [abra um issue no GitHub](https://github.com/rafaelfunchal/wordpress-security-checklist/issues){:target="_blank"}.
+Caso você tenha alguma sugestão, por favor, fale comigo no [Twitter](http://twitter.com/RafaelFunchal){:target="_blank"} ou [abra um issue no GitHub](https://github.com/WP-Security-Checklist/website/issues){:target="_blank"}.

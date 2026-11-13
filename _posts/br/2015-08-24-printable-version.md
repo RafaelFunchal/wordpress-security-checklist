@@ -9,7 +9,7 @@ permalink: /br/update/:year/:month/:day/:title/
 ---
 
 
-Essa foi a [segunda issue](https://github.com/rafaelfunchal/wordpress-security-checklist/issues/2){:target="_blank"} que criei no projeto e graças ao [Fellyph Cintra](https://github.com/fellyph){:target="_blank"} agora está fechada.
+Essa foi a [segunda issue](https://github.com/WP-Security-Checklist/website/issues/2){:target="_blank"} que criei no projeto e graças ao [Fellyph Cintra](https://github.com/fellyph){:target="_blank"} agora está fechada.
 
 Graças ao Fellyph o checklist ficará muito mais bonito caso você precise imprimí-lo.
 

@@ -9,7 +9,7 @@ permalink: /:categories/:year/:month/:day/:title/
 ---
 
 
-That was the [second issue](https://github.com/rafaelfunchal/wordpress-security-checklist/issues/2){:target="_blank"} I created on this project and, thanks to [Fellyph Cintra](https://github.com/fellyph){:target="_blank"}, now it's closed.
+That was the [second issue](https://github.com/WP-Security-Checklist/website/issues/2){:target="_blank"} I created on this project and, thanks to [Fellyph Cintra](https://github.com/fellyph){:target="_blank"}, now it's closed.
 
 Thanks to Fellyph the checklist will look better when you print it.
 
