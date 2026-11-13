@@ -53,7 +53,7 @@ All checks are read-only. Follow the safety rules in `SKILL.md`, especially: nev
 ### wsc-login-unique-usernames
 
 - **Why:** Predictable usernames such as `admin` give password-guessing attacks half of the credentials. Shared accounts make it impossible to trace or revoke one person's access.
-- **Check:** WP-CLI: `wp user list --role=administrator --fields=ID,user_login,user_email,display_name`. Mark ❌ Fail if any login is `admin`, `administrator`, `root`, `test`, `user`, or the site or domain name. Mark ⚠️ Review for generic shared addresses such as `info@` or `webmaster@`.
+- **Check:** WP-CLI: `wp user list --role=administrator --fields=ID,user_login,user_email,display_name`. Mark ❌ Fail if any login is `admin`, `administrator`, `root`, `test`, `user`, or the site or domain name. Mark ⚠️ Review for generic shared addresses such as `info@` or `webmaster@`. Mask other email addresses in the report.
 - **Fix:** Create a new administrator with a unique username, sign in as that user, then delete the old account with `wp user delete <old-ID> --reassign=<new-ID>` so its content is kept.
 
 ### wsc-login-remove-theme-links
@@ -103,7 +103,7 @@ All checks are read-only. Follow the safety rules in `SKILL.md`, especially: nev
 ### wsc-admin-review-admins-quarterly
 
 - **Why:** Forgotten accounts of former staff, contractors, or agencies are an easy way in and are rarely monitored.
-- **Check:** WP-CLI: `wp user list --role=administrator --fields=ID,user_login,user_email,user_registered`. WordPress does not record the last login date unless a plugin does. Flag accounts the user does not recognize. An unknown administrator is a possible compromise; follow the safety rules. Then mark 📝 Manual: ask whether the list is reviewed regularly.
+- **Check:** WP-CLI: `wp user list --role=administrator --fields=ID,user_login,user_email,user_registered`. WordPress does not record the last login date unless a plugin does. Flag accounts the user does not recognize, and mask their email addresses in the report. An unknown administrator is a possible compromise; follow the safety rules. Then mark 📝 Manual: ask whether the list is reviewed regularly.
 - **Fix:** Review administrators every quarter, and immediately when someone leaves. Delete or downgrade stale accounts.
 
 ### wsc-admin-malware-scheduled-scan
