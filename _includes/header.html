@@ -34,9 +34,9 @@
 
         <div class="trigger" id="site-nav-trigger">
           <div class="trigger__collapsible">
-            <a class="page-link" href="{{ checklist_url }}" title="{{ ti.nav_checklist }}">{{ ti.nav_checklist }}</a>
+            <a class="page-link" href="{{ checklist_url }}" title="{{ ti.nav_checklist_title | default: ti.nav_checklist }}">{{ ti.nav_checklist }}</a>
             {% if loc != 'es' and loc != 'ja' %}
-            <a class="page-link" href="{{ blog_url }}" title="{{ ti.nav_blog }}">{{ ti.nav_blog }}</a>
+            <a class="page-link" href="{{ blog_url }}" title="{{ ti.nav_blog_title | default: ti.nav_blog }}">{{ ti.nav_blog }}</a>
             {% endif %}
             <a class="page-link" href="https://github.com/WP-Security-Checklist/skill" title="{{ ti.nav_skill_title }}" target="_blank" rel="noopener noreferrer">{{ ti.nav_skill }}</a>
 
