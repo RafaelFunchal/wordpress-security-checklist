@@ -31,10 +31,8 @@ checklist: true
 ## Painel Administrativo<span class="items-counter"></span>
 
 * <label><input type="checkbox" data-item-id="wsc-admin-wpadmin-password" /> Proteja a pasta wp-admin com senha ([desbloqueie apenas os arquivos necessários](https://gist.github.com/rafaelfunchal/f9a41ea72d80600d753a){:target="_blank" rel="noopener noreferrer"})</label>
-* <label><input type="checkbox" data-item-id="wsc-admin-core-plugins-updated" /> Atualize o WordPress para sua versão mais recente</label>
-* <label><input type="checkbox" data-item-id="wsc-admin-no-default-admin-user" /> Não utilize uma conta com nome de usuário admin. Caso exista, crie uma nova conta e apague a antiga</label>
-* <label><input type="checkbox" data-item-id="wsc-admin-editor-publishing-account" /> Crie uma conta Editor e use-a somente para publicar seu conteúdo</label>
-* <label><input type="checkbox" data-item-id="wsc-admin-ssl-wp-admin" /> Implemente SSL em toda seção administrativa</label>
+* <label><input type="checkbox" data-item-id="wsc-admin-core-plugins-updated" /> Mantenha o WordPress, temas e plugins atualizados (ative atualizações automáticas quando fizer sentido)</label>
+* <label><input type="checkbox" data-item-id="wsc-admin-least-privilege-accounts" /> Use o princípio do menor privilégio: mantenha as contas de publicação diária como Editor/Autor e reserve o perfil Administrador apenas quando necessário</label>
 * <label><input type="checkbox" data-item-id="wsc-admin-review-admins-quarterly" /> Revise contas de administrador periodicamente e remova usuários inativos</label>
 * <label><input type="checkbox" data-item-id="wsc-admin-malware-scheduled-scan" /> Escaneie o site regularmente em busca de malware e alterações inesperadas de arquivos</label>
 * <label><input type="checkbox" data-item-id="wsc-admin-incident-response-plan" /> Tenha um plano de resposta a incidentes com contenção, recuperação e rotação de segredos</label>

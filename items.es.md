@@ -25,17 +25,14 @@ checklist: true
 * <label><input type="checkbox" data-item-id="wsc-login-unique-usernames" /> Use usuarios únicos (nunca `admin`) y evite cuentas compartidas</label>
 * <label><input type="checkbox" data-item-id="wsc-login-remove-theme-links" /> Retire enlaces para su página de ingreso (si lo hay en su tema)</label>
 * <label><input type="checkbox" data-item-id="wsc-login-strong-passwords" /> Utilice contraseñas fuertes y únicas en todas las cuentas (idealmente generadas por gestor de contraseñas)</label>
-* <label><input type="checkbox" data-item-id="wsc-login-periodic-password-change" /> Cambie su contraseña con regularidad</label>
 * <label><input type="checkbox" data-item-id="wsc-login-revoke-sessions-rotate" /> Cierre sesiones antiguas y rote contraseñas después de incidentes o cambios de equipo</label>
 * <label><input type="checkbox" data-item-id="wsc-login-generic-errors" /> Deje genérico el mensaje de error de la página de ingreso (usuario/clave) ([tutorial](https://gist.github.com/zergiocosta/72f87176b236ed0c6e13){:target="_blank" rel="noopener noreferrer"})</label>
 
 ## Panel Administrativo<span class="items-counter"></span>
 
 * <label><input type="checkbox" data-item-id="wsc-admin-wpadmin-password" /> Proteja la carpeta wp-admin con contraseña ([desbloquear sólo los archivos necesarios](https://gist.github.com/rafaelfunchal/f9a41ea72d80600d753a){:target="_blank" rel="noopener noreferrer"})</label>
-* <label><input type="checkbox" data-item-id="wsc-admin-core-plugins-updated" /> Mantenga WordPress actualizado en su última versión</label>
-* <label><input type="checkbox" data-item-id="wsc-admin-no-default-admin-user" /> No utilice una cuenta con nombre de usuario "admin". Si la hay, cree una nueva cuenta y borre la antigua</label>
-* <label><input type="checkbox" data-item-id="wsc-admin-editor-publishing-account" /> Cree una cuenta de editor y úsela sólo para publicar contenido</label>
-* <label><input type="checkbox" data-item-id="wsc-admin-ssl-wp-admin" /> Implemente SSL en toda la sección administrativa</label>
+* <label><input type="checkbox" data-item-id="wsc-admin-core-plugins-updated" /> Mantenga WordPress, temas y plugins actualizados (active las actualizaciones automáticas cuando sea apropiado)</label>
+* <label><input type="checkbox" data-item-id="wsc-admin-least-privilege-accounts" /> Aplique el principio de mínimo privilegio: use cuentas de Editor/Autor para publicar a diario y reserve el rol de Administrador solo cuando sea necesario</label>
 * <label><input type="checkbox" data-item-id="wsc-admin-review-admins-quarterly" /> Revise cuentas de administrador cada trimestre y elimine usuarios inactivos</label>
 * <label><input type="checkbox" data-item-id="wsc-admin-malware-scheduled-scan" /> Escanee el sitio periódicamente en busca de malware y cambios inesperados de archivos</label>
 * <label><input type="checkbox" data-item-id="wsc-admin-incident-response-plan" /> Mantenga un plan de respuesta a incidentes (contención, recuperación y rotación de secretos)</label>

@@ -32,10 +32,8 @@ checklist: true
 ## 管理画面<span class="items-counter"></span>
 
 * <label><input type="checkbox" data-item-id="wsc-admin-wpadmin-password" /> wp-admin ディレクトリをパスワード保護する ([必要なファイルのみブロックを解除](https://gist.github.com/rafaelfunchal/f9a41ea72d80600d753a){:target="_blank" rel="noopener noreferrer"})</label>
-* <label><input type="checkbox" data-item-id="wsc-admin-core-plugins-updated" /> WordPress を最新版にアップデートする</label>
-* <label><input type="checkbox" data-item-id="wsc-admin-no-default-admin-user" /> admin という名前でユーザーを作成しない。もしある場合、そのアカウントは削除して新しい管理者ユーザーを作成する</label>
-* <label><input type="checkbox" data-item-id="wsc-admin-editor-publishing-account" /> 編集者権限のユーザーを作成し、コンテンツの公開はそのユーザーを使用する</label>
-* <label><input type="checkbox" data-item-id="wsc-admin-ssl-wp-admin" /> 管理画面のアクセスには SSL を使用する</label>
+* <label><input type="checkbox" data-item-id="wsc-admin-core-plugins-updated" /> WordPress 本体、テーマ、プラグインを最新に保つ (必要に応じて自動更新を有効にする)</label>
+* <label><input type="checkbox" data-item-id="wsc-admin-least-privilege-accounts" /> 最小権限の原則に従う: 日常の投稿には編集者/投稿者アカウントを使い、管理者権限は必要な時だけ使用する</label>
 * <label><input type="checkbox" data-item-id="wsc-admin-review-admins-quarterly" /> 管理者アカウントを定期的に棚卸しし、不要ユーザーを削除する</label>
 * <label><input type="checkbox" data-item-id="wsc-admin-malware-scheduled-scan" /> マルウェアスキャンと改ざん検知を定期実行する</label>
 * <label><input type="checkbox" data-item-id="wsc-admin-incident-response-plan" /> 侵害時の対応手順 (封じ込め/復旧/秘密情報ローテーション) を用意する</label>
